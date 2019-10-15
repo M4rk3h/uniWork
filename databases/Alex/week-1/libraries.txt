@@ -1,0 +1,15 @@
+c50
+tm
+ggplot2
+arules
+RMongo
+XML
+rattle
+rmr2(rMR)
+twitteR
+wordcloud
+SnowballC
+gmodels
+randomForest
+car
+plyr

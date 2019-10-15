@@ -1,0 +1,18 @@
+# Using Bash on Windows (WSL or GIT Bash)
+# Create the files for all the episodes in season 1.
+for i in `echo {1..8}`; do touch S1e$i.txt; done
+
+# Create the files for all the episodes in season 2.
+for i in `echo {1..22}`; do touch S2e$i.txt; done
+
+# Create the files for all the episodes in season 3.
+for i in `echo {1..18}`; do touch S3e$i.txt; done
+
+# Where I got the scripts
+https://www.springfieldspringfield.co.uk/episode_scripts.php?tv-show=twin-peaks
+
+# Show list of required packages via pip
+pip wheel -r requirements.txt 
+
+# Install requirements
+pip install -r requirements.txt --use-wheel --no-index --find-links wheelhouse

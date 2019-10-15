@@ -1,0 +1,33 @@
+Defining the product requirement definitions,
+these could be grouped by:
+	Functional requirements
+		What is the product surposed to do? it helped
+		to draw up some use case to start with.
+	Non-functional
+		All those things that are required for the
+		product to work but will have nothing to do
+		with the function itself, for example user 
+		training, operating system, 
+		instillation requirements, user manual.
+	Data Requirements
+		Amount of data, confidentiality issues,
+		security and safety requirements, 
+		data backup requirements, duration of storage?
+	Legal requirements
+		Data Protection Act, use of images
+	Ethical & Social requirements
+		Don't really think mine has any ethical requirements.
+	Professional requirements
+		Standards and/or best practice guidelines that
+		have to be applied (Technical standard, development standards)
+
+
+Links:
+Copyright Exceptions:
+https://www.copyrightuser.org/understand/exceptions/text-data-mining/
+
+Legal and Ethical Issues of Text/Data Mining in Research:
+https://www.sciencedirect.com/science/article/pii/B9781843347491000032
+
+Considerations - Ethics, Copyright, Licencing, Etiquette:
+https://guides.library.uq.edu.au/research-techniques/text-mining-analysis/considerations
