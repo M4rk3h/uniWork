@@ -1,0 +1,80 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+	font-size: 1em;
+}
+
+.header
+{
+	color: blueviolet;
+	text-align: center;
+	border-top: 5px solid #000000; /* Black Line */
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize
+}
+
+
+.bold {
+  font-weight: bold;
+}
+
+.number {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.imgPort {
+  border-radius: 50%;
+}
+
+/* Nav bar CSS */
+/* Style the top navigation bar */
+.topnav {
+  text-align: center;
+  overflow: hidden;
+  background-color: #1f1b1b;
+  
+}
+
+/* Style the topnav links */
+.topnav a {
+  display: inline-block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #333232;
+  color: white;
+}
+
+.sec1 {
+  width: 90%;
+  height: 90%;
+  position: fixed;
+  text-align: center
+}
+
+map {
+  width: 70%;
+  height: 100%;
+  margin-left: auto;
+  display: inline-block
+}
