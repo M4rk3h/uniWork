@@ -79,15 +79,32 @@ function manipulateDOM9() {
     parel.className = 'rounded';
 }
 
+// Change the next two items in the DOM-Tree to class full
 function manipulateDOM10() {
-    var el = document.getElementById('one');
-    var preSib = el.previousSibling;
-    var nexSib = el.nextSibling;
+    var el = document.getElementById('two');
+    var preSib = el.previousSibling; //Select previous
+    var nexSib = el.nextSibling; // Select next
 
     if (preSib !== null) {
         preSib.className = 'full';
     }
     if (nexSib) {
         nexSib.className = 'full';
-    }    
+    }
+}
+
+function manipulateDOM11() {
+    var els = document.getElementsByTagName('ul');
+
+    if (els.length >= 1) {
+        var firChi = els[0].firstChild;
+        var lasChi = els[0].lastChild;
+
+        if (firChi) {
+            firChi.className = 'full';
+        }
+        if (lasChi) {
+            lasChi.className = 'full';
+        }
+    }
 }
