@@ -112,24 +112,19 @@ function manipulateDOM11() {
 }
 
 function manipulateDOM11Up() {
-    var findLI = document.getElementsByTagName('ul'); // Find all UL's (Only 1)   
-    
-    if (findLI.length >= 0) {
-        var fullRun = findLI[0];
-
-        console.log(fullRun);
-
-        if (fullRun) {
-            fullRun.className = 'full';
+    var findAllLI = document.getElementsByTagName('li'); // Find all LI's
+    // If the LI's are great than 1 do this
+    if (findAllLI.length > 1) {
+        var findRunning = findAllLI[2];
+        
+        if (findRunning) {
+            findRunning.className = 'full'
+            console.log(findRunning);
         }
-        console.log(fullRun);
-        
-        
-        if (fullRun !== null) {
-            fullRun.className = 'running';
-        }
-        // console.log(firChi); // Check if it got the first li
-        
-        
-    }
+
+    } else if (findAllLI !== null) {
+        console.log("Shit son");
+    };
+
+
 }
