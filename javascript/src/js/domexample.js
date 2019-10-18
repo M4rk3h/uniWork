@@ -94,17 +94,42 @@ function manipulateDOM10() {
 }
 
 function manipulateDOM11() {
-    var els = document.getElementsByTagName('ul');
+    var findUL = document.getElementsByTagName('ul'); // Find all UL's (Only 1)
+    console.log(findUL);
+    if (findUL.length >= 1) {
 
-    if (els.length >= 1) {
-        var firChi = els[0].firstChild;
-        var lasChi = els[0].lastChild;
-
+        var firChi = findUL[0].firstChild;
+        var lasChi = findUL[0].lastChild;
         if (firChi) {
             firChi.className = 'full';
         }
+        // console.log(firChi); // Check if it got the first li
         if (lasChi) {
             lasChi.className = 'full';
         }
+        // console.log(lasChi); // Check if it got the last li
+    }
+}
+
+function manipulateDOM11Up() {
+    var findLI = document.getElementsByTagName('ul'); // Find all UL's (Only 1)   
+    
+    if (findLI.length >= 0) {
+        var fullRun = findLI[0];
+
+        console.log(fullRun);
+
+        if (fullRun) {
+            fullRun.className = 'full';
+        }
+        console.log(fullRun);
+        
+        
+        if (fullRun !== null) {
+            fullRun.className = 'running';
+        }
+        // console.log(firChi); // Check if it got the first li
+        
+        
     }
 }
