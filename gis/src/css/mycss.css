@@ -1,17 +1,17 @@
-*{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
-	font-size: 1em;
+  font-size: 1em;
 }
 
-.header
-{
-	color: blueviolet;
-	text-align: center;
-	border-top: 5px solid #000000; /* Black Line */
+.header {
+  color: blueviolet;
+  text-align: center;
+  border-top: 5px solid #000000;
+  /* Black Line */
 }
 
 h1,
@@ -47,7 +47,7 @@ img {
   text-align: center;
   overflow: hidden;
   background-color: #1f1b1b;
-  
+
 }
 
 /* Style the topnav links */
@@ -72,9 +72,28 @@ img {
   text-align: center
 }
 
-map {
+/*map {
   width: 70%;
   height: 100%;
   margin-left: auto;
   display: inline-block
+}*/
+
+map {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+}
+
+@media (max-width:600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottomcol {
+    width: 100%;
+    height: auto;
+  }
 }
