@@ -115,7 +115,8 @@ function manipulateDOM11Up() {
     var findAllLI = document.getElementsByTagName('li'); // Find all LI's
     // If the LI's are great than 1 do this
     if (findAllLI.length > 1) {
-        var findRunning = findAllLI[2];
+        for (var i = 0; findAllLI.length > 1; i++)
+        var findRunning = findAllLI[0];
         
         if (findRunning) {
             findRunning.className = 'full'
