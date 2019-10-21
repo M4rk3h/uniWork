@@ -9,8 +9,10 @@
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }*/
 
+
+
 // Styled Map
-function initMap() {
+/*function initMap() {
     // Styles a map in night mode.
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 51.58959, lng: -3.3279},
@@ -100,4 +102,14 @@ function initMap() {
         }
       ]
     });
-  }
+  }*/
+
+
+/*function plotMap() {
+    var mapOptions = {
+        center:new google.maps.LatLng(52, -3),
+        zoom:7,
+        MapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions); 
+}*/
