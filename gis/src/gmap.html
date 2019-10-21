@@ -27,18 +27,9 @@
     <div id="map" style="height:400px; width:100%;">
         Google Map
     </div>
-    <script>
-    function plotMap() {
-    var mapOptions = {
-        center:new google.maps.LatLng(52, -3),
-        zoom:7,
-        MapTypeId:google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions); 
-    }
-    </script>
+    
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAla7mEjLMo3cJhcFHTLSyYsWXuPwksxno&callback=plotMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAla7mEjLMo3cJhcFHTLSyYsWXuPwksxno&callback=initMap">
     </script>
 </body>
 

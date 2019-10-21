@@ -12,15 +12,15 @@
 
 
 // Styled Map
-/*function initMap() {
+function initMap() {
     // Styles a map in night mode.
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 51.58959, lng: -3.3279},
-      zoom: 15,
+      zoom: 12,
       disableDefaultUI: true,
       // Disable the gestures (Zooming and Moving)
-      gestureHandling: 'none',
-      zoomControl: false,
+      /*gestureHandling: 'none',
+      zoomControl: false,*/
       styles: [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
         {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -102,14 +102,4 @@
         }
       ]
     });
-  }*/
-
-
-/*function plotMap() {
-    var mapOptions = {
-        center:new google.maps.LatLng(52, -3),
-        zoom:7,
-        MapTypeId:google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions); 
-}*/
+  }
