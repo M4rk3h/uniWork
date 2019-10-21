@@ -76,6 +76,7 @@ function manipulateDOM8() {
 function manipulateDOM9() {
     var el = document.getElementById('one');
     var parel = el.parentNode;
+
     parel.className = 'rounded';
 }
 
@@ -116,8 +117,8 @@ function manipulateDOM11Up() {
     // If the LI's are great than 1 do this
     if (findAllLI.length > 1) {
         for (var i = 0; findAllLI.length > 1; i++)
-        var findRunning = findAllLI[0];
-        
+            var findRunning = findAllLI[0];
+
         if (findRunning) {
             findRunning.className = 'full'
             console.log(findRunning);
@@ -126,6 +127,54 @@ function manipulateDOM11Up() {
     } else if (findAllLI !== null) {
         console.log("Shit son");
     };
+}
 
+function manipulateDOM13() { // Change element 4 to text below
+    var el = document.getElementById('four');
+    var elTxt = el.textContent;
 
+    elTxt = elTxt.replace('Mechatronics', 'Multimedia Studies');
+    el.textContent = elTxt;
+}
+
+function manipulateDOM14() {
+    var courseUpdated = '<b> Updated!</b>'
+    var el = document.getElementById('four');
+    var elTxt = el.textContent;
+
+    elTxt = elTxt + courseUpdated;
+    el.innerHTML = elTxt;
+}
+
+function manipulateDOM15() {
+    var newEl = document.createElement('li');
+    var newTxt = document.createTextNode('BSc Theoretical Robotics');
+
+    newEl.appendChild(newTxt);
+    var loc = document.getElementsByTagName('ul')[0];
+    loc.appendChild(newEl);
+}
+
+// PAGE 15
+function manipulateDOM16() { 
+    // Delete third in array
+    var delEl = document.getElementsByTagName('li')[2];
+    var parDelEl = delEl.parentNode;
+    // Remove 
+    parDelEl.removeChild(delEl);
+}
+
+function manipulateDOM16Up() {
+    //
+}
+
+function manipulateDOM17() {
+    // Find elements with no class
+    var el = document.getElementsByTagName('li')[2];
+    var revClass = ' Has no class attribute';
+    
+    if (el.hasAttribute('class')) {
+        revClass = ' ' + el.getAttribute('class');
+    }
+    el.textContent = el.textContent + revClass;
 }
