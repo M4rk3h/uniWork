@@ -47,7 +47,6 @@ img {
   text-align: center;
   overflow: hidden;
   background-color: #1f1b1b;
-
 }
 
 /* Style the topnav links */
@@ -71,13 +70,6 @@ img {
   position: fixed;
   text-align: center
 }
-
-/*map {
-  width: 70%;
-  height: 100%;
-  margin-left: auto;
-  display: inline-block
-}*/
 
 map {
   max-width: 100%;
