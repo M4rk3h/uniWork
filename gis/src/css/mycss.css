@@ -89,3 +89,11 @@ map {
     height: auto;
   }
 }
+
+.btn {
+  text-align: center;
+  margin: 0.5em;
+  color: black;
+  cursor: pointer;
+  
+}
