@@ -31,3 +31,9 @@ https://www.sciencedirect.com/science/article/pii/B9781843347491000032
 
 Considerations - Ethics, Copyright, Licencing, Etiquette:
 https://guides.library.uq.edu.au/research-techniques/text-mining-analysis/considerations
+
+If using IMDB Datasets, use:
+	"Information courtesy of
+	IMDb
+	(http://www.imdb.com).
+	Used with permission."
