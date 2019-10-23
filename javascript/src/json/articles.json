@@ -1,0 +1,12 @@
+{
+    "articles": [
+        {
+            "id":1,
+            "name": "Ollie"
+        },
+        {
+            "id":2,
+            "name": "Max"
+        }
+    ]
+}

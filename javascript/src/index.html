@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <!-- CSS Ref -->
     <link rel="stylesheet" href="css/domcss.css">
-    <script src="js/domexample.js"></script>
+    <script src="js/myjs.js"></script>
+    <!-- Insert JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>JS External Procedure Example</title>
 </head>
 
@@ -14,15 +16,13 @@
     <br>
     <div class="topnav">
         <a class="active" href="index.html">Home</a>
-        <a href="dom1.html">Dom1</a>
-        <a href="dom2.html">Dom2</a>
-        <a href="dom3.html">Dom3</a>
-        <a href="example.html">Example</a>
-        </ul>
     </div>
-    <div class="app"></div>
+    <div class="app">
+
+    </div>
     <script>
-        // Scripts go here 
+        getJsonFiles();
+        getJsonAjax();
     </script>
 </body>
 
