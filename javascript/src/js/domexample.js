@@ -156,7 +156,7 @@ function manipulateDOM15() {
 }
 
 // PAGE 15
-function manipulateDOM16() { 
+function manipulateDOM16() {
     // Delete third in array
     var delEl = document.getElementsByTagName('li')[2];
     var parDelEl = delEl.parentNode;
@@ -172,9 +172,21 @@ function manipulateDOM17() {
     // Find elements with no class
     var el = document.getElementsByTagName('li')[2];
     var revClass = ' Has no class attribute';
-    
+
     if (el.hasAttribute('class')) {
         revClass = ' ' + el.getAttribute('class');
     }
     el.textContent = el.textContent + revClass;
+}
+
+function manipulateDOM18() {
+    var el = document.getElementsByTagName('link')[0];
+    el.setAttribute('href', 'domcss2.css');
+}
+
+function manipulateDOM19() {
+    var el = document.getElementsByTagName('li')[2];
+    if (el.hasAttribute('class')) {
+        el.removeAttribute('class');
+    }
 }
