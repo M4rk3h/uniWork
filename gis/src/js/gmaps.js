@@ -1,20 +1,50 @@
 function initMap() {
-  var myLatLng = {lat:51.590046, lng:-3.328866};
+  var myLatLng = {
+    lat: 51.590046,
+    lng: -3.328866
+  };
   var map = new google.maps.Map(document.getElementById('gmapDefault'), {
     center: myLatLng,
     zoom: 15,
     mapTypeId: 'hybrid',
     disableDefaultUI: true,
-    
-  });
 
+  });
+  // Create a marker icon using local file.
+  var markerIcon = 'icons/flag2.png';
+  // Place the marker at my LatLng location
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
+    icon: markerIcon,
     title: 'GIS!'
   });
 }
 
+// initMap1 - Tutorial
+function initMap1() {
+  var myLatLng = {
+    lat: 51.6422,
+    lng: -3.9351
+  };
+
+  var map = new google.maps.Map(document.getElementById('gmapDefault'), {
+    center: myLatLng,
+    zoom: 17,
+    mapTypeId: 'hybrid',
+    disableDefaultUI: true,
+
+  });
+  // Create a marker icon using local file.
+  var markerIcon = 'icons/eiffel2.png';
+  // Place the marker at my LatLng location
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    icon: markerIcon,
+    title: 'Liberty Stadium'
+  });
+}
 
 // Styled Map
 function initStyledMap() {

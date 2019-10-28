@@ -125,7 +125,7 @@ function manipulateDOM11Up() {
         }
 
     } else if (findAllLI !== null) {
-        console.log("Shit son");
+        console.log("son");
     };
 }
 

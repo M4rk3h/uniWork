@@ -90,10 +90,10 @@ map {
   }
 }
 
-.btn {
-  text-align: center;
-  margin: 0.5em;
-  color: black;
-  cursor: pointer;
-  
+a.button {
+  -moz-appearance: button;
+  margin-top: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: initial;
 }
