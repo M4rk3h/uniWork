@@ -1,3 +1,4 @@
+// Default Map
 function initMap() {
   var myLatLng = {
     lat: 51.590046,
@@ -7,7 +8,7 @@ function initMap() {
     center: myLatLng,
     zoom: 15,
     mapTypeId: 'hybrid',
-    disableDefaultUI: true,
+    disableDefaultUI: false,
 
   });
   // Create a marker icon using local file.
