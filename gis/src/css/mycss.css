@@ -10,8 +10,7 @@ body {
 .header {
   color: blueviolet;
   text-align: center;
-  border-top: 5px solid #000000;
-  /* Black Line */
+  border-top: 5px solid #1f1b1b;
 }
 
 h1,
@@ -20,14 +19,18 @@ h3 {
   text-transform: capitalize
 }
 
-
 .bold {
   font-weight: bold;
+}
+
+.centered {
+  text-align: center;
 }
 
 .number {
   margin-right: 1em;
   margin-bottom: 1em;
+  text-align: center;
 }
 
 img {
@@ -60,6 +63,8 @@ img {
 
 /* Change color on hover */
 .topnav a:hover {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
   background-color: #333232;
   color: white;
 }
@@ -90,10 +95,33 @@ map {
   }
 }
 
-a.button {
-  -moz-appearance: button;
-  margin-top: 5px;
-  margin-left: 10px;
-  text-decoration: none;
-  color: initial;
+.button {
+  background-color: white;
+  border: 2px solid #1f1b1b;
+  /* Green */
+  color: black;
+  padding: 10px 8px;
+  margin-left: 5px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.button:hover {
+  background-color: #1f1b1b;
+  color: white;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.disabled {
+  background-color: white;
+  border: 2px solid #1f1b1b;
+  /* Green */
+  color: black;
+  padding: 10px 8px;
+  margin-left: 5px;
+  text-align: center;
+  font-size: 1em;
+  opacity: 0.6;
+  cursor: not-allowed;
 }

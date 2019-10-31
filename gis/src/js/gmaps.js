@@ -25,30 +25,90 @@ function initMap() {
 // initMap1 - Tutorial
 function initMap1() {
   var myLatLng = {
-    lat: 51.6422,
-    lng: -3.9351
+    lat: 51.642895,
+    lng: -3.934575
+  };
+  var myLatLng1 = {
+    lat: 51.478,
+    lng: -3.182
+  };
+  var middleGround = {
+    lat: 51.527402,
+    lng: -3.583342
   };
 
-  var map = new google.maps.Map(document.getElementById('gmapDefault'), {
-    center: myLatLng,
-    zoom: 17,
+  var map = new google.maps.Map(document.getElementById('gmapTutorial'), {
+    center: middleGround,
+    zoom: 10,
     mapTypeId: 'hybrid',
     disableDefaultUI: true,
-
   });
   // Create a marker icon using local file.
-  var markerIcon = 'icons/eiffel2.png';
-  // Place the marker at my LatLng location
+  var markerIcon = 'icons/flag2.png';
+  
+  // Maker for Liberty Stadium
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
     icon: markerIcon,
     title: 'Liberty Stadium'
   });
+  // Marker for Principality Stadium
+  var marker1 = new google.maps.Marker({
+    position: myLatLng1,
+    map: map,
+    icon: markerIcon,
+    title: 'Principality Stadium'
+  });
+
+  
 }
 
+function initMapClick() {
+  // Declare your locations here
+  var libStadium = {lat: 51.642895,lng: -3.934575};
+  var priStadium = {lat: 51.478,lng: -3.182};
+  var middleGround = {lat: 51.527402,lng: -3.583342};
+  // Create an instance of your map
+  var map = new google.maps.Map(document.getElementById('gmapClick'), {
+    zoom: 9,
+    center: middleGround,
+    disableDefaultUI: false,
+  });
+  // Declare your content to appear on click
+  var libContent = 'This is the Liberty Stadium.';
+  var priContent = 'This is the Principality Stadium';
+  // Create your info windows for each pin
+  var libInfo = new google.maps.InfoWindow({
+    content: libContent
+  });
+  
+  var priInfo = new google.maps.InfoWindow({
+    content: priContent
+  });
+  // Declare marker locations
+  var markerLib = new google.maps.Marker({
+    position: libStadium,
+    map: map,
+    title: 'Liberty Stadium'
+  });
+  var markerPri = new google.maps.Marker({
+    position: priStadium,
+    map: map,
+    title: 'Liberty Stadium'
+  });
+  // Declare your 'On Click' functions
+  markerLib.addListener('click', function () {
+    libInfo.open(map, markerLib);
+  });
+  markerPri.addListener('click', function () {
+    priInfo.open(map, markerPri);
+  });
+}
+
+
 // Styled Map
-function initStyledMap() {
+function initMapDark() {
   // Styles a map in night mode.
   var map = new google.maps.Map(document.getElementById('gmapStyled'), {
     center: {
