@@ -5,14 +5,31 @@
     <meta charset="utf-8">
     <title>Catalogue</title>
     <link rel="stylesheet" href="/css/mydom.css">
-    <script src="/js/js3.js"></script>
+    <script src="/js/myjs2.js"></script>
 </head>
 
 <body>
+    <h1 class="header">Mark Baber Assignment</h1>
+    <br>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="dom1.html">Dom 1</a>
+        <a href="dom2.html">Dom 2</a>
+        <a href="dom3.html">Dom 3</a>
+        <a href="example.html">Example</a>
+        <a class="active" href="myjs1.html">JS1</a>
+        <a href="myjs2.html">JS2</a>
+    </div>
+
     <div id="page">
         <h1 id="header">Course Catalogue</h1>
         <h2>Course Status</h2>
-        <ul><li id="one" class="running"><em>new</em> BSc Computer Networking</li><li id="two" class="running">BSc Computing</li><li id="three" class="running">BSc Informatics</li><li id="four">BSc Mechatronics</li></ul>
+        <ul>
+            <li id="one" class="running"><em>new</em> BSc Computer Networking</li>
+            <li id="two" class="running">BSc Computing</li>
+            <li id="three" class="running">BSc Informatics</li>
+            <li id="four">BSc Mechatronics</li>
+        </ul>
         <script>
             doEvents();
             toggleStatus();

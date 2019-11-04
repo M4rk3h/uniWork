@@ -7,10 +7,15 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('gmapDefault'), {
     center: myLatLng,
     zoom: 15,
+    // Use 1 MapType
     mapTypeId: 'hybrid',
     disableDefaultUI: false,
-
-  });
+    // Zoom Control & Position
+    zoomControl: true,
+    zoomControlOptions: {
+    position: google.maps.ControlPosition.LEFT_CENTER
+    }
+    });
   // Create a marker icon using local file.
   var markerIcon = 'icons/flag2.png';
   // Place the marker at my LatLng location
@@ -66,8 +71,13 @@ function initMap1() {
 
 function initMapClick() {
   // Declare your locations here
-  var libStadium = {lat: 51.642895,lng: -3.934575};
-  var priStadium = {lat: 51.478,lng: -3.182};
+  var castellCoch = {lat: 51.543765,lng: -3.251874};
+  var caerphillyC = {lat:51.582942,lng:-3.219495};
+  var cardiffC = {lat:51.482365,lng:-3.181159};
+  var ruperraC = {lat:51.575950,lng:-3.125767};
+  var hensolC = {lat:51.500998,lng:-3.373461};
+  var llantrisantC =  {lat:51.541689,lng:-3.374694};
+  // Where to start the map
   var middleGround = {lat: 51.527402,lng: -3.583342};
   // Create an instance of your map
   var map = new google.maps.Map(document.getElementById('gmapClick'), {
@@ -76,34 +86,29 @@ function initMapClick() {
     disableDefaultUI: false,
   });
   // Declare your content to appear on click
-  var libContent = 'This is the Liberty Stadium.';
-  var priContent = 'This is the Principality Stadium';
+  var castellContent = 'This is Castell Coch';
+  var caerphillyContent = 'This is Caerphilly Castle';
+  var cardiffContent = 'This is Cardiff';
+  var ruperraContent = 'This is Ruperra Castle';
+  var hensolContent = 'This is Hensol Castle';
+  var llantrisantContent = 'This is Llantrisant Castle';
   // Create your info windows for each pin
-  var libInfo = new google.maps.InfoWindow({
-    content: libContent
+  var castellInfo = new google.maps.InfoWindow({
+    content: castellContent
   });
   
-  var priInfo = new google.maps.InfoWindow({
-    content: priContent
-  });
   // Declare marker locations
-  var markerLib = new google.maps.Marker({
-    position: libStadium,
+  var markerCastell = new google.maps.Marker({
+    position: castellCoch,
     map: map,
-    title: 'Liberty Stadium'
+    title: 'Castell Coch'
   });
-  var markerPri = new google.maps.Marker({
-    position: priStadium,
-    map: map,
-    title: 'Liberty Stadium'
-  });
+
   // Declare your 'On Click' functions
-  markerLib.addListener('click', function () {
-    libInfo.open(map, markerLib);
+  markerCastell.addListener('click', function () {
+    castellInfo.open(map, markerCastell);
   });
-  markerPri.addListener('click', function () {
-    priInfo.open(map, markerPri);
-  });
+  
 }
 
 
