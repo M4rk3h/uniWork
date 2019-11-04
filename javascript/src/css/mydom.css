@@ -56,3 +56,30 @@ li {
     border-top: 1px solid hsl(12, 60%, 60%);
     border-bottom: 1px solid hsl(12, 60%, 40%);
 }
+
+.topnav {
+    text-align: center;
+    overflow: hidden;
+    background-color: #1f1b1b;
+}
+
+.topnav a {
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #333232;
+    color: white;
+}
+
+.active {
+    background-color: #4f483f
+}
+
+.header {
+    text-align: center;
+}
