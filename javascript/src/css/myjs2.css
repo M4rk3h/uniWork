@@ -72,7 +72,12 @@ input[type='submit']:hover {
     position: relative;
 }
 
-#feedback {
+#userFeedback {
+    color: hsl(360, 70%, 70%);
+    padding: 10px 0 0 22px;
+}
+
+#passFeedback {
     color: hsl(360, 70%, 70%);
     padding: 10px 0 0 22px;
 }

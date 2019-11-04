@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Form</title>
-    <link rel="stylesheet" href="css/myjs2.css" />
+    <link rel="stylesheet" href="css/myjs2.css">
+    <script src="js/myjs2.js"></script>
 </head>
 
 <body>
@@ -26,13 +27,17 @@
         <form action="FormEcho.php" method="post" id="account">
             <label for="username">Create a username: </label>
             <input type="text" id="username" name="username">
-            <div id="feedback"></div>
+            <div id="userFeedback"></div>
             <label for="password">Create a password: </label>
             <input type="password" id="password" name="password">
+            <div id="passFeedback"></div>
             <input type="submit" id='submit' value="Create">
         </form>
     </div>
-    <script src="js/myjs2.js"></script>
+    <script>
+        checkUserDetails();
+    </script>
+    
 </body>
 
 </html>

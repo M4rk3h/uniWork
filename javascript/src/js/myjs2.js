@@ -19,20 +19,21 @@ function toggleStatus() {
 function checkUserDetails() {
     var elUsername = document.getElementById('username');
     var elPassword = document.getElementById('password');
-    var elFeedback = document.getElementById('feedback');
+    var userFeedback = document.getElementById('userFeedback');
+    var passFeedback = document.getElementById('passFeedback');
 
     function checkUsername(minLength) {
         if (elUsername.value.length < minLength) {
-            elFeedback.textContent = 'Username must be ' + minLength + ' characters or more ';
+            userFeedback.textContent = 'Username must be ' + minLength + ' characters or more ';
         } else {
             elMsg.textContent = '';
         }
     }
     function checkPassword(minLength){
         if (elPassword.value.length < minLength) {
-            elFeedback.textContent = 'Password must be ' + minLength + ' characters or more ';
+            passFeedback.textContent = 'Password must be ' + minLength + ' characters or more ';
         } else { 
-            elMsg.textContent = '';
+            elMsg2.textContent = '';
         }
     }
 
