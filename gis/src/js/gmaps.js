@@ -7,10 +7,15 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('gmapDefault'), {
     center: myLatLng,
     zoom: 15,
+    // Use 1 MapType
     mapTypeId: 'hybrid',
     disableDefaultUI: false,
-
-  });
+    // Zoom Control & Position
+    zoomControl: true,
+    zoomControlOptions: {
+    position: google.maps.ControlPosition.LEFT_CENTER
+    }
+    });
   // Create a marker icon using local file.
   var markerIcon = 'icons/flag2.png';
   // Place the marker at my LatLng location
