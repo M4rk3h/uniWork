@@ -233,8 +233,8 @@ function initMapFlight(){
   // Create where you want the center of the map
   var middleGround = {lat:54.231486,lng:-4.541848};
   // Create a variable for cardiff airport
-  var cardiffAirport = {lat:51.398163, lng: -3.345564}
-  var dublinAirport = {lat:51.398163, lng: -3.345564}
+  var cardiffAirport = {lat:51.398139, lng: -3.345478}
+  var dublinAirport = {lat:53.426474, lng: -6.250049}
   var edinburghAirport = {lat:55.950707,lnt:-3.361507}
   var leedsAirport = {lat:53.867943, lnt:-1.661477 }
   var bangorAirport = {lat:44.808194,lnt:-68.816434}
@@ -253,12 +253,12 @@ function initMapFlight(){
     }
     });
 
-    var my_path = [
-       dublinAirport,
-       edinburghAirport
-    ];							
+    var toDublin = [
+      cardiffAirport,
+      dublinAirport
+    ];						
     var plotline = new google.maps.Polyline({
-      path: my_path,
+      path: toDublin,
       strokeColor: '#0000FF',
       strokeOpacity: 0.7,
       strokeWeight: 12
