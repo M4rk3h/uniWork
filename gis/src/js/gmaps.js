@@ -4,7 +4,7 @@ function initMap() {
   
   var map = new google.maps.Map(document.getElementById('gmapDefault'), {
     center: myLatLng,
-    zoom: 15,
+    zoom: 16,
     // Use 1 MapType
     mapTypeId: 'hybrid',
     disableDefaultUI: false,
@@ -38,7 +38,7 @@ function initMap1() {
     disableDefaultUI: true
   });
   // Create a marker icon using local file.
-  var markerIcon = 'icons/flag2.png';
+  var markerIcon = 'icons/pushpin1.png';
   
   // Maker for Liberty Stadium
   var marker = new google.maps.Marker({
