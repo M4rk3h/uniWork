@@ -1,9 +1,7 @@
 // Default Map
 function initMap() {
-  var myLatLng = {
-    lat: 51.590046,
-    lng: -3.328866
-  };
+  var myLatLng = {lat: 51.590046,lng: -3.328866};
+  
   var map = new google.maps.Map(document.getElementById('gmapDefault'), {
     center: myLatLng,
     zoom: 15,
@@ -29,24 +27,15 @@ function initMap() {
 
 // initMap1 - Tutorial
 function initMap1() {
-  var myLatLng = {
-    lat: 51.642895,
-    lng: -3.934575
-  };
-  var myLatLng1 = {
-    lat: 51.478,
-    lng: -3.182
-  };
-  var middleGround = {
-    lat: 51.527402,
-    lng: -3.583342
-  };
+  var myLatLng = {lat: 51.642895,lng: -3.934575};
+  var myLatLng1 = {lat: 51.478,lng: -3.182};
+  var middleGround = {lat: 51.527402,lng: -3.583342};
 
   var map = new google.maps.Map(document.getElementById('gmapTutorial'), {
     center: middleGround,
     zoom: 10,
     mapTypeId: 'hybrid',
-    disableDefaultUI: true,
+    disableDefaultUI: true
   });
   // Create a marker icon using local file.
   var markerIcon = 'icons/flag2.png';
@@ -93,21 +82,28 @@ function initMapClick() {
   var hensolContent = 'This is Hensol Castle';
   var llantrisantContent = 'This is Llantrisant Castle';
   // Create your info windows for each pin
-  var castellInfo = new google.maps.InfoWindow({
-    content: castellContent
-  });
+  var castellInfo = new google.maps.InfoWindow({content: castellContent});
+  var caerphillyInfo = new google.maps.InfoWindow({content: caerphillyContent});
+  var cardiffInfo = new google.maps.InfoWindow({content: cardiffContent});
+  var ruperraInfo = new google.maps.InfoWindow({content: ruperraContent});
+  var hensolInfo = new google.maps.InfoWindow({content: hensolContent});
+  var llantrisantInfo = new google.maps.InfoWindow({content: llantrisantContent});
   
   // Declare marker locations
-  var markerCastell = new google.maps.Marker({
-    position: castellCoch,
-    map: map,
-    title: 'Castell Coch'
-  });
+  var markerCastell = new google.maps.Marker({position: castellCoch,map: map,title: 'Castell Coch'});
+  var markerCaerphilly = new google.maps.Marker({position: caerphillyC,map: map,title: 'Caerohilly Castle'});
+  var markerCardiff = new google.maps.Marker({position: cardiffC,map: map,title: 'Cardiff Castle'});
+  var markerRuperra = new google.maps.Marker({position: ruperraC,map: map,title: 'Ruperra Castle'});
+  var markerHensol = new google.maps.Marker({position: hensolC,map: map,title: 'Hensol Castle'});
+  var markerLlantrisant = new google.maps.Marker({position: llantrisantC,map: map,title: 'Llantrisant Castle'});
 
   // Declare your 'On Click' functions
-  markerCastell.addListener('click', function () {
-    castellInfo.open(map, markerCastell);
-  });
+  markerCastell.addListener('click', function () {castellInfo.open(map, markerCastell);});
+  markerCaerphilly.addListener('click', function () {castellInfo.open(map, markerCastell);});
+  markerCardiff.addListener('click', function () {castellInfo.open(map, markerCastell);});
+  markerRuperra.addListener('click', function () {castellInfo.open(map, markerCastell);});
+  markerHensol.addListener('click', function () {castellInfo.open(map, markerCastell);});
+  markerLlantrisant.addListener('click', function () {castellInfo.open(map, markerCastell);});
   
 }
 
