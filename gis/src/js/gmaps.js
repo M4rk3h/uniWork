@@ -57,12 +57,12 @@ function initMap1() {
 
 function initMapClick() {
   // Declare your locations here
-  var castellCoch = {lat: 51.543765,lng: -3.251874};
-  var caerphillyC = {lat:51.582942,lng:-3.219495};
-  var cardiffC = {lat:51.482365,lng:-3.181159};
-  var ruperraC = {lat:51.575950,lng:-3.125767};
-  var hensolC = {lat:51.500998,lng:-3.373461};
-  var llantrisantC =  {lat:51.541689,lng:-3.374694};
+  var castellCoch = {lat: 51.543765, lng: -3.251874};
+  var caerphillyC = {lat: 51.582942, lng: -3.219495};
+  var cardiffC = {lat: 51.482365, lng: -3.181159};
+  var ruperraC = {lat: 51.575950, lng: -3.125767};
+  var hensolC = {lat: 51.500998, lng: -3.373461};
+  var llantrisantC =  {lat: 51.541689, lng: -3.374694};
   // Where to start the map
   var middleGround = {lat: 51.547992,lng: -3.277032};
   // Create an instance of your map
@@ -87,7 +87,6 @@ function initMapClick() {
   var ruperraInfo = new google.maps.InfoWindow({content: ruperraContent});
   var hensolInfo = new google.maps.InfoWindow({content: hensolContent});
   var llantrisantInfo = new google.maps.InfoWindow({content: llantrisantContent});
-  
   // Declare marker locations
   var markerCastell = new google.maps.Marker({position: castellCoch,map: map,title: 'Castell Coch', icon: markerIcon});
   var markerCaerphilly = new google.maps.Marker({position: caerphillyC,map: map,title: 'Caerohilly Castle', icon: markerIcon});
@@ -95,7 +94,6 @@ function initMapClick() {
   var markerRuperra = new google.maps.Marker({position: ruperraC,map: map,title: 'Ruperra Castle', icon: markerIcon});
   var markerHensol = new google.maps.Marker({position: hensolC,map: map,title: 'Hensol Castle', icon: markerIcon});
   var markerLlantrisant = new google.maps.Marker({position: llantrisantC,map: map,title: 'Llantrisant Castle', icon: markerIcon});
-
   // Declare your 'On Click' functions
   markerCastell.addListener('click', function () {castellInfo.open(map, markerCastell);});
   markerCaerphilly.addListener('click', function () {caerphillyInfo.open(map, markerCaerphilly);});
@@ -103,6 +101,53 @@ function initMapClick() {
   markerRuperra.addListener('click', function () {ruperraInfo.open(map, markerRuperra);});
   markerHensol.addListener('click', function () {hensolInfo.open(map, markerHensol);});
   markerLlantrisant.addListener('click', function () {llantrisantInfo.open(map, markerLlantrisant);});
+}
+
+function initMapFlight(){
+  // Create where you want the center of the map
+  var middleGround = {lat: 54.231486, lng: -4.541848};
+  // Create a variable for cardiff airport
+  var cardiffAirport = {lat: 51.398139, lng: -3.345478};
+  var dublinAirport = {lat: 53.426474, lng: -6.250049};
+  var edinburghAirport = {lat: 55.950707, lng: -3.361507};
+  var leedsAirport = {lat: 53.867943, lng: -1.661477 };
+  var bangorAirport = {lat: 53.229635,lng:-4.130064};
+  var southamptonAirport = {lat: 50.951510, lng:-1.357670};
+  var stansteadAirport = {lat: 51.886005, lng: 0.238812};
+  var exeterAirport = {lat: 50.734437, lng: -3.420336};
+  
+  var map = new google.maps.Map(document.getElementById('gmapFlight'), {
+    center: middleGround,
+    zoom: 5,
+    disableDefaultUI: false,
+    zoomControl: true,
+    });
+    // Declare flight paths
+    var toDublin = [cardiffAirport,dublinAirport];
+    var toEdinburgh = [cardiffAirport,edinburghAirport];
+    var toLeeds = [cardiffAirport,leedsAirport];
+    var toBangor = [cardiffAirport,bangorAirport];
+    var toSouthampton = [cardiffAirport,southamptonAirport];
+    var toStanstead = [cardiffAirport,stansteadAirport];
+    var toExeter = [cardiffAirport,exeterAirport];
+    // Declare PolyLines (Flight Paths)
+    var dubLine = new google.maps.Polyline({path: toDublin,strokeColor: '#0E9C62',strokeOpacity: 0.8,strokeWeight: 12});
+    var edLine = new google.maps.Polyline({path: toEdinburgh,strokeColor: '#EB0029',strokeOpacity: 0.8,strokeWeight: 12});
+    var leedLine = new google.maps.Polyline({path: toLeeds,strokeColor: '#AC944D',strokeOpacity: 0.8,strokeWeight: 12});
+    var bangLine = new google.maps.Polyline({path: toBangor,strokeColor: '#8CD663',strokeOpacity: 0.8,strokeWeight: 12});
+    var southLine = new google.maps.Polyline({path: toSouthampton,strokeColor: '#002E3B',strokeOpacity: 0.8,strokeWeight: 12});
+    var stanLine = new google.maps.Polyline({path: toStanstead,strokeColor: '#0D8EAD',strokeOpacity: 0.8,strokeWeight: 12});
+    var exeLine = new google.maps.Polyline({path: toExeter,strokeColor: '#4B4E51',strokeOpacity: 0.8,strokeWeight: 12});
+    // Set the PolyLines ontop of the Map
+    dubLine.setMap(map);
+    edLine.setMap(map);
+    leedLine.setMap(map);
+    bangLine.setMap(map);
+    southLine.setMap(map);
+    stanLine.setMap(map);
+    exeLine.setMap(map);
+    // Create an alert on click.
+    dubLine.addListener('click', function () {alert('Cardiff Airport to Dublin Airport');});
 }
 
 
@@ -227,43 +272,4 @@ function initMapDark() {
       }
     ]
   });
-}
-
-function initMapFlight(){
-  // Create where you want the center of the map
-  var middleGround = {lat:54.231486,lng:-4.541848};
-  // Create a variable for cardiff airport
-  var cardiffAirport = {lat:51.398139, lng: -3.345478}
-  var dublinAirport = {lat:53.426474, lng: -6.250049}
-  var edinburghAirport = {lat:55.950707,lnt:-3.361507}
-  var leedsAirport = {lat:53.867943, lnt:-1.661477 }
-  var bangorAirport = {lat:44.808194,lnt:-68.816434}
-  var southamptonAirport = {lat:50.951510,lnt:-1.357670}
-  var stansteadAirport = {lat:51.886005,lnt:0.238812}
-  var exeterAirport = {lat:50.734437,lnt:-3.420336}
-  
-  var map = new google.maps.Map(document.getElementById('gmapFlight'), {
-    center: middleGround,
-    zoom: 5,
-    disableDefaultUI: false,
-    // Zoom Control & Position
-    zoomControl: false,
-    zoomControlOptions: {
-    position: google.maps.ControlPosition.LEFT_CENTER
-    }
-    });
-
-    var toDublin = [
-      cardiffAirport,
-      dublinAirport
-    ];						
-    var plotline = new google.maps.Polyline({
-      path: toDublin,
-      strokeColor: '#0000FF',
-      strokeOpacity: 0.7,
-      strokeWeight: 12
-    });
-    plotline.setMap(map);
-    
-
 }
