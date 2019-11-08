@@ -163,14 +163,22 @@ function initMapFlight(){
     var souInfo = new google.maps.InfoWindow({content: souContent,position: southamptonAirport});
     var staInfo = new google.maps.InfoWindow({content: staContent,position: stansteadAirport});
     var exeInfo = new google.maps.InfoWindow({content: exeContent,position: exeterAirport});
-    // Create an alert on click.
-    dubLine.addListener('click', function() {dubInfo.open(map, dubLine);});
-    edLine.addListener('click', function() {ediInfo.open(map, edLine);});
-    leedLine.addListener('click', function() {leeInfo.open(map, leedLine);});
-    bangLine.addListener('click', function() {banInfo.open(map, bangLine);});
-    southLine.addListener('click', function() {souInfo.open(map, southLine);});
-    stanLine.addListener('click', function() {staInfo.open(map, stanLine);});
-    exeLine.addListener('click', function() {exeInfo.open(map, exeLine);});
+    // Creare open alert on click
+    dubLine.addListener('click', function()   {dubInfo.close(map,dubLine);dubInfo.open(map,dubLine);});
+    edLine.addListener('click', function()    {ediInfo.close(map, edLine);ediInfo.open(map, edLine);});
+    leedLine.addListener('click', function()  {leeInfo.close(map, leedLine);leeInfo.open(map, leedLine);});
+    bangLine.addListener('click', function()  {banInfo.close(map, bangLine);banInfo.open(map, bangLine);});
+    southLine.addListener('click', function() {souInfo.close(map, southLine);souInfo.open(map, southLine);});
+    stanLine.addListener('click', function()  {staInfo.close(map, stanLine);staInfo.open(map, stanLine);});
+    exeLine.addListener('click', function()   {exeInfo.close(map, exeLine);exeInfo.open(map, exeLine);});
+    // Create close alert when mouse moves
+    dubLine.addListener('mouseout', function() {dubInfo.close(map,dubLine);});
+    edLine.addListener('mouseout', function() {ediInfo.close(map,edLine);});
+    leedLine.addListener('mouseout', function() {leeInfo.close(map,leedLine);});
+    bangLine.addListener('mouseout', function() {banInfo.close(map,bangLine);});
+    southLine.addListener('mouseout', function() {souInfo.close(map,southLine);});
+    stanLine.addListener('mouseout', function() {staInfo.close(map,stanLine);});
+    exeLine.addListener('mouseout', function() {exeInfo.close(map,exeLine);});
 }
 
 function initMapWind() {
