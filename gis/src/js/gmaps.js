@@ -146,10 +146,78 @@ function initMapFlight(){
     southLine.setMap(map);
     stanLine.setMap(map);
     exeLine.setMap(map);
+
+    // Create content
+    var dubContent = 'This is Cardiff To Dublin.';
+    var ediContent = 'This is Cardiff To Edinburgh.';
+    var leeContent = 'This is Cardiff To Leeds.';
+    var banContent = 'This is Cardiff To Bangor.';
+    var souContent = 'This is Cardiff To Southampton.';
+    var staContent = 'This is Cardiff To Stanstead.';
+    var exeContent = 'This is Cardiff To Exeter.';
+    // Create info Window
+    var dubInfo = new google.maps.InfoWindow({content: dubContent,position: dublinAirport});
+    var ediInfo = new google.maps.InfoWindow({content: ediContent,position: edinburghAirport});
+    var leeInfo = new google.maps.InfoWindow({content: leeContent,position: leedsAirport});
+    var banInfo = new google.maps.InfoWindow({content: banContent,position: bangorAirport});
+    var souInfo = new google.maps.InfoWindow({content: souContent,position: southamptonAirport});
+    var staInfo = new google.maps.InfoWindow({content: staContent,position: stansteadAirport});
+    var exeInfo = new google.maps.InfoWindow({content: exeContent,position: exeterAirport});
     // Create an alert on click.
-    dubLine.addListener('click', function () {alert('Cardiff Airport to Dublin Airport');});
+    dubLine.addListener('click', function() {dubInfo.open(map, dubLine);});
+    edLine.addListener('click', function() {ediInfo.open(map, edLine);});
+    leedLine.addListener('click', function() {leeInfo.open(map, leedLine);});
+    bangLine.addListener('click', function() {banInfo.open(map, bangLine);});
+    southLine.addListener('click', function() {souInfo.open(map, southLine);});
+    stanLine.addListener('click', function() {staInfo.open(map, stanLine);});
+    exeLine.addListener('click', function() {exeInfo.open(map, exeLine);});
 }
 
+function initMapWind() {
+  // Declare your locations here
+  var area1 = [
+    {lat:51.86,lng: -3.95},
+    {lat:51.93,lng: -3.85},
+    {lat:52.01,lng: -3.72},
+    {lat:51.96,lng: -3.65},					
+    {lat:51.87,lng: -3.60},
+    {lat:51.86,lng: -3.76},
+    {lat:51.84,lng: -3.91},
+    {lat:51.86,lng: -3.95}	
+  ];		
+  
+  var area2 = [
+    {lat:53.10,lng: -3.90},
+    {lat:52.81,lng: -3.59},
+    {lat:52.75,lng: -3.82},
+    {lat:52.83,lng: -4.05},
+    {lat:53.10,lng: -3.90}
+  ];
+  // Where to start the map
+  var middleGround = {lat:52.364816,lng:-3.598322};
+  // Create an instance of your map
+  var map = new google.maps.Map(document.getElementById('gmapWind'), {
+    zoom: 7.7,
+    center: middleGround,
+    disableDefaultUI: true,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  });
+  // Content
+  var areaOneContent = 'Wind Farms In Brecon';
+  var areaTwoContent = 'Wind Farms In Snowdonia';
+  // Info
+  var areaOneInfo = new google.maps.InfoWindow({content: areaOneContent,position: {lat:52.01,lng: -3.72}});
+  var areaTwoInfo = new google.maps.InfoWindow({content: areaTwoContent,position: {lat:53.10,lng: -3.90}});
+  // Place Polylines on Map
+  var polyAreaOne = new google.maps.Polygon({path: area1,strokeColor: '#e5e500',strokeOpacity:0.8, fillColor: '#e5e500',fillPoacity: 0.5,});
+  var polyAreaTwo = new google.maps.Polygon({path: area2,strokeColor: '#e5e500',strokeOpacity:0.8, fillColor: '#e5e500',fillPoacity: 0.5,});
+  // Declare your 'On Click' functions
+  polyAreaOne.addListener('click', function () {areaOneInfo.open(map, polyAreaOne);});
+  polyAreaTwo.addListener('click', function () {areaTwoInfo.open(map, polyAreaTwo);});
+  // Smack them on the map son
+  polyAreaOne.setMap(map);
+  polyAreaTwo.setMap(map);
+}
 
 // Styled Map
 function initMapDark() {
