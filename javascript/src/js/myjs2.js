@@ -19,6 +19,7 @@ function toggleStatus() {
 function checkUserDetails() {
     var elUsername = document.getElementById('username');
     var elPassword = document.getElementById('password');
+    var chkSeePw = document.getElementById('seePassword')
     var userFeedback = document.getElementById('userFeedback');
     var passFeedback = document.getElementById('passFeedback');
 
@@ -29,10 +30,10 @@ function checkUserDetails() {
             elMsg.textContent = '';
         }
     }
-    function checkPassword(minLength){
+    function checkPassword(minLength) {
         if (elPassword.value.length < minLength) {
             passFeedback.textContent = 'Password must be ' + minLength + ' characters or more ';
-        } else { 
+        } else {
             elMsg2.textContent = '';
         }
     }
@@ -44,4 +45,18 @@ function checkUserDetails() {
     elPassword.addEventListener('blur', function () {
         checkPassword(8);
     }, false);
+
+    chkSeePw.addEventListener('change', function (e) {
+        var target = e.target;
+        try {
+            if (target.checked) {
+                elPassword.type = 'text';
+            } else {
+                elPassword.type = 'password';
+            }
+        } catch (error) {
+            alert('This browser cannot switch type');
+        }
+    }, false);
+
 }
