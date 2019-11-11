@@ -51,8 +51,6 @@ function initMap1() {
     icon: markerIcon,
     title: 'Principality Stadium'
   });
-
-  
 }
 
 function initMapClick() {
