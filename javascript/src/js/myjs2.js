@@ -19,29 +19,56 @@ function toggleStatus() {
 function checkUserDetails() {
     var elUsername = document.getElementById('username');
     var elPassword = document.getElementById('password');
+    var chkSeePw = document.getElementById('seePassword')
     var userFeedback = document.getElementById('userFeedback');
     var passFeedback = document.getElementById('passFeedback');
+    var submitForm = document.getElementById('submit');
+    var buttonDis = document.getElementById('subFeedback');
+    var passExpo = document.getElementById('passExpo')
 
     function checkUsername(minLength) {
         if (elUsername.value.length < minLength) {
             userFeedback.textContent = 'Username must be ' + minLength + ' characters or more ';
+            submitForm.disabled = true;
+            buttonDis.textContent = 'Button is disabled because of username length';
         } else {
-            elMsg.textContent = '';
-        }
-    }
-    function checkPassword(minLength){
-        if (elPassword.value.length < minLength) {
-            passFeedback.textContent = 'Password must be ' + minLength + ' characters or more ';
-        } else { 
-            elMsg2.textContent = '';
+            userFeedback.textContent = '';
+            submitForm.disabled = false;
+            buttonDis.textContent = ''
         }
     }
 
-    elUsername.addEventListener('blur', function () {
+    function checkPassword(minLength) {
+        if (elPassword.value.length < minLength) {
+            passFeedback.textContent = 'Password must be ' + minLength + ' characters or more ';
+            submitForm.disabled = true;
+            buttonDis.textContent = 'Button is disabled because of the password length.';
+        } else {
+            passFeedback.textContent = '';
+            submitForm.disabled = false;
+            buttonDis.textContent = '';
+        }
+    }
+
+    elUsername.addEventListener('input', function () {
         checkUsername(5);
     }, false);
 
-    elPassword.addEventListener('blur', function () {
+    elPassword.addEventListener('input', function () {
         checkPassword(8);
+    }, false);
+
+    chkSeePw.addEventListener('change', function (e) {
+        var target = e.target;
+        try {
+            if (target.checked) {
+                elPassword.type = 'text';
+                passExpo.textContent='PASSWORD IS EXPOSED';
+            } else {
+                elPassword.type = 'password';
+            }
+        } catch (error) {
+            alert('This browser cannot switch type');
+        }
     }, false);
 }

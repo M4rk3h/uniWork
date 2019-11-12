@@ -26,18 +26,24 @@
         <h2>Register Account</h2>
         <form action="FormEcho.php" method="post" id="account">
             <label for="username">Create a username: </label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" autocomplete="off">
             <div id="userFeedback"></div>
             <label for="password">Create a password: </label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" autocomplete="off">
             <div id="passFeedback"></div>
-            <input type="submit" id='submit' value="Create">
+            <!-- Here is the checkbox -->
+            <input type="checkbox" id="seePassword" name="seePassword">
+            <label for="seePassword">See Password</label>
+            <div id="passExpo"></div>
+            <!-- Here is the submit button -->
+            <div id="subFeedback"></div>
+            <input type="submit" id='submit' value="Create" >
         </form>
     </div>
     <script>
         checkUserDetails();
     </script>
-    
+
 </body>
 
 </html>

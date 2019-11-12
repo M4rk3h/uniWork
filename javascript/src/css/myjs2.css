@@ -73,13 +73,23 @@ input[type='submit']:hover {
 }
 
 #userFeedback {
-    color: hsl(360, 70%, 70%);
-    padding: 10px 0 0 22px;
+    color: rgb(223, 39, 39);
+    padding: 10px 0 0 10px;
 }
 
 #passFeedback {
-    color: hsl(360, 70%, 70%);
-    padding: 10px 0 0 22px;
+    color: rgb(223, 39, 39);
+    padding: 10px 0 0 10px;
+}
+
+#subFeedback {
+    color: rgb(223, 39, 39);
+    padding: 10px 0 0 10px;
+}
+
+#passExpo{
+    color: red;
+    padding: 10px 0 0 10px;
 }
 
 .header {
