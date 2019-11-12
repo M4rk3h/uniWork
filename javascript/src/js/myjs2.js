@@ -22,27 +22,39 @@ function checkUserDetails() {
     var chkSeePw = document.getElementById('seePassword')
     var userFeedback = document.getElementById('userFeedback');
     var passFeedback = document.getElementById('passFeedback');
+    var submitForm = document.getElementById('submit');
+    var buttonDis = document.getElementById('subFeedback');
+    var passExpo = document.getElementById('passExpo')
 
     function checkUsername(minLength) {
         if (elUsername.value.length < minLength) {
             userFeedback.textContent = 'Username must be ' + minLength + ' characters or more ';
+            submitForm.disabled = true;
+            buttonDis.textContent = 'Button is disabled because of username length';
         } else {
-            elMsg.textContent = '';
+            userFeedback.textContent = '';
+            submitForm.disabled = false;
+            buttonDis.textContent = ''
         }
     }
+
     function checkPassword(minLength) {
         if (elPassword.value.length < minLength) {
             passFeedback.textContent = 'Password must be ' + minLength + ' characters or more ';
+            submitForm.disabled = true;
+            buttonDis.textContent = 'Button is disabled because of the password length.';
         } else {
-            elMsg2.textContent = '';
+            passFeedback.textContent = '';
+            submitForm.disabled = false;
+            buttonDis.textContent = '';
         }
     }
 
-    elUsername.addEventListener('blur', function () {
+    elUsername.addEventListener('input', function () {
         checkUsername(5);
     }, false);
 
-    elPassword.addEventListener('blur', function () {
+    elPassword.addEventListener('input', function () {
         checkPassword(8);
     }, false);
 
@@ -51,6 +63,7 @@ function checkUserDetails() {
         try {
             if (target.checked) {
                 elPassword.type = 'text';
+                passExpo.textContent='PASSWORD IS EXPOSED';
             } else {
                 elPassword.type = 'password';
             }
@@ -58,5 +71,4 @@ function checkUserDetails() {
             alert('This browser cannot switch type');
         }
     }, false);
-
 }
