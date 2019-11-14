@@ -1,21 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-<Document>
 <Placemark>
-  <name>Liberty Stadium</name>
-  <description>Liberty Stadium Location</description>
+  <name>Castell Coch</name>
+  <description>Castell Coch Castle Location</description>
   <Point>
-    <coordinates>-3.934575, 51.642895</coordinates>
+    <coordinates>-3.251874, 51.543765</coordinates>
   </Point>
 </Placemark>
 
 <Placemark>
-  <name>Principality Stadium</name>
-  <description>Principality Stadium</description>
+  <name>Caerphilly Castle</name>
+  <description>Caerphilly Castle Location</description>
   <Point>
-    <coordinates>-3.182, 51.478</coordinates>
+    <coordinates>-3.219495, 51.582942</coordinates>
   </Point>
 </Placemark>
 
-</Document>
+<Placemark>
+  <name>Cardiff Castle</name>
+  <description>Cardiff Castle Location</description>
+  <Point>
+    <coordinates>-3.181159, 51.482365</coordinates>
+  </Point>
+</Placemark>
+
+<Placemark>
+  <name>Ruperra Castle</name>
+  <description>Ruperra Castle Location</description>
+  <Point>
+    <coordinates>-3.125767, 51.575950</coordinates>
+  </Point>
+</Placemark>
+ 
+<Placemark>
+  <name>Hensol Castle</name>
+  <description>Hensol Castle Location</description>
+  <Point>
+    <coordinates>-3.373461, 51.500998</coordinates>
+  </Point>
+</Placemark>
+
+<Placemark>
+  <name>Llantrisant Castle</name>
+  <description>Llantrisant Castle Location</description>
+  <Point>
+    <coordinates>-3.374694, 51.541689</coordinates>
+  </Point>
+</Placemark>
 </kml>

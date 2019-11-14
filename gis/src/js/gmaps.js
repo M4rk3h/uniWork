@@ -55,22 +55,35 @@ function initMap1() {
 
 function initMapClick() {
   // Declare your locations here
+  /*
   var castellCoch = {lat: 51.543765, lng: -3.251874};
   var caerphillyC = {lat: 51.582942, lng: -3.219495};
   var cardiffC = {lat: 51.482365, lng: -3.181159};
   var ruperraC = {lat: 51.575950, lng: -3.125767};
   var hensolC = {lat: 51.500998, lng: -3.373461};
   var llantrisantC =  {lat: 51.541689, lng: -3.374694};
+  */
   // Where to start the map
   var middleGround = {lat: 51.547992,lng: -3.277032};
+  var src = 'kmls/south-wales.kml';
   // Create an instance of your map
   var map = new google.maps.Map(document.getElementById('gmapClick'), {
-    zoom: 11,
+    zoom: 8,
     center: middleGround,
     disableDefaultUI: true,
   });
   // Create an icon
   var markerIcon = 'icons/castleIcon.png';
+  // Add a KML Layer
+  var kmlLayer = new google.maps.KmlLayer(src, {
+    suppressInfoWindows: true,
+    preserveViewport: false,
+    map: map
+  });
+  
+  
+
+  /*
   // Declare your content to appear on click
   var castellContent = 'Castell Coch, located on a prominent wooded hillside overlooking the Taff Valley.';
   var caerphillyContent = 'Caerphilly is the largest medieval castle in Wales and one of the most impressive in Europe.';
@@ -99,6 +112,7 @@ function initMapClick() {
   markerRuperra.addListener('click', function () {ruperraInfo.open(map, markerRuperra);});
   markerHensol.addListener('click', function () {hensolInfo.open(map, markerHensol);});
   markerLlantrisant.addListener('click', function () {llantrisantInfo.open(map, markerLlantrisant);});
+  */
 }
 
 function initMapFlight(){
