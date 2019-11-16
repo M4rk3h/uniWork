@@ -1,16 +1,17 @@
 // Default Map
 function initMap() {
+  // Set locations
   var myLatLng = {lat: 51.590046,lng: -3.328866};
-  
+  // Init Map
   var map = new google.maps.Map(document.getElementById('gmapDefault'), {
     center: myLatLng,
     zoom: 16,
-    disableDefaultUI: false,
+    disableDefaultUI: true,
     // Zoom Control & Position
-    zoomControl: true,
+    /*zoomControl: true,
     zoomControlOptions: {
     position: google.maps.ControlPosition.LEFT_CENTER
-    }
+    }*/
     });
   // Create a marker icon using local file.
   var markerIcon = 'icons/flag2.png';
@@ -116,9 +117,8 @@ function initMapFlight(){
   
   var map = new google.maps.Map(document.getElementById('gmapFlight'), {
     center: middleGround,
-    zoom: 5,
-    disableDefaultUI: false,
-    zoomControl: true,
+    zoom: 5.2,
+    disableDefaultUI: true,
     });
     // Declare flight paths
     var toDublin = [cardiffAirport,dublinAirport];
@@ -144,7 +144,6 @@ function initMapFlight(){
     southLine.setMap(map);
     stanLine.setMap(map);
     exeLine.setMap(map);
-
     // Create content
     var dubContent = 'This is Cardiff To Dublin.';
     var ediContent = 'This is Cardiff To Edinburgh.';
