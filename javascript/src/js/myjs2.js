@@ -63,7 +63,7 @@ function checkUserDetails() {
         try {
             if (target.checked) {
                 elPassword.type = 'text';
-                passExpo.textContent='PASSWORD IS EXPOSED';
+                passExpo.textContent = 'PASSWORD IS EXPOSED';
             } else {
                 elPassword.type = 'password';
             }

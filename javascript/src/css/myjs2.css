@@ -73,22 +73,30 @@ input[type='submit']:hover {
 }
 
 #userFeedback {
-    color: rgb(223, 39, 39);
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
     padding: 10px 0 0 10px;
 }
 
 #passFeedback {
-    color: rgb(223, 39, 39);
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
     padding: 10px 0 0 10px;
 }
 
 #subFeedback {
-    color: rgb(223, 39, 39);
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
     padding: 10px 0 0 10px;
 }
 
 #passExpo{
-    color: red;
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
     padding: 10px 0 0 10px;
 }
 
