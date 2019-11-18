@@ -96,7 +96,7 @@ function manipulateDOM10() {
 
 function manipulateDOM11() {
     var findUL = document.getElementsByTagName('ul'); // Find all UL's (Only 1)
-    console.log(findUL);
+    //console.log(findUL);
     if (findUL.length >= 1) {
 
         var firChi = findUL[0].firstChild;

@@ -37,7 +37,6 @@ function checkUserDetails() {
             buttonDis.textContent = ''
         }
     }
-
     function checkPassword(minLength) {
         if (elPassword.value.length < minLength) {
             passFeedback.textContent = 'Password must be ' + minLength + ' characters or more ';
@@ -49,15 +48,12 @@ function checkUserDetails() {
             buttonDis.textContent = '';
         }
     }
-
     elUsername.addEventListener('input', function () {
         checkUsername(5);
     }, false);
-
     elPassword.addEventListener('input', function () {
         checkPassword(8);
     }, false);
-
     chkSeePw.addEventListener('change', function (e) {
         var target = e.target;
         try {
@@ -66,9 +62,12 @@ function checkUserDetails() {
                 passExpo.textContent = 'PASSWORD IS EXPOSED';
             } else {
                 elPassword.type = 'password';
+                passExpo.textContent = '';
             }
         } catch (error) {
             alert('This browser cannot switch type');
         }
     }, false);
+
 }
+

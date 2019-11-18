@@ -1,10 +1,10 @@
 // Default Map
 function initMap() {
   // Set locations
-  var myLatLng = {lat: 51.590046,lng: -3.328866};
+  var gisLoc = {lat: 51.590046,lng: -3.328866};
   // Init Map
   var map = new google.maps.Map(document.getElementById('gmapDefault'), {
-    center: myLatLng,
+    center: gisLoc,
     zoom: 16,
     disableDefaultUI: true,
     // Zoom Control & Position
@@ -17,13 +17,15 @@ function initMap() {
   var markerIcon = 'icons/flag2.png';
   // Place the marker at my LatLng location
   var marker = new google.maps.Marker({
-    position: myLatLng,
+    position: gisLoc,
     map: map,
     icon: markerIcon,
     title: 'GIS!'
   });
-}
 
+  // Animation
+  // animation:google.maps.Animation.Bounce
+}
 // initMap1 - Tutorial
 function initMap1() {
   var myLatLng = {lat: 51.642895,lng: -3.934575};
