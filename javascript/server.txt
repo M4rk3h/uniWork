@@ -1,5 +1,5 @@
-File Protocol: SFTP
+File Protocol: FTP
 Host Name: ces-web2.southwales.ac.uk
-Port Number: 22
+Port Number: 21
 User Name: 17076749
 Password: 
