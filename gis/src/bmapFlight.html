@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- JavaScript Ref -->
+    <link rel="stylesheet" href="css/mycss.css">
+    <!-- CSS Ref -->
+    <script src="js/bmaps.js"></script>
+    <title>Mark Baber - Welcome!</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Mark Baber</h1>
+    </div>
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="mycode.html">My Code</a>
+        <a href="mycv.html">My CV</a>
+        <a href="gmap.html">Google Maps</a>
+        <a class="active" href="bmap.html">Bing Maps</a>
+    </div>
+    <div class="centered">
+        <h1>Bing Map Click</h1>
+        <div id="map" style="height:400px; width:100%;"> </div>
+        <br>
+        <a href="bmap.html" class="button"> Default Map </a>
+        <a href="bmap1.html" class="button"> Stadium Map </a>
+        <a href="#" class="disabled"> Click Map</a>
+        <a href="bmapStyle.html" class="button"> Styled Map</a>
+        <a href="bmapFlight.html" class="button"> Flight Map</a>
+        <a href="bmapWind.html" class="button"> Wind Map</a>
+    </div>
+    <script src="https://www.bing.com/api/maps/mapcontrol?callback=initMapClick"></script>
+</body>
+
+</html>
