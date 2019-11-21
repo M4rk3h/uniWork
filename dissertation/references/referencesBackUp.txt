@@ -1,0 +1,22 @@
+References
+Amazon.co.uk. ‘Google Pixel 3’ Available at: https://www.amazon.co.uk/Google-Pixel-SIM-Free-Smartphone-Black/dp/B07K3477FP/ref=sr_1_1?keywords=pixel+3&qid=1574241946&sr=8-1#customerReviews (Accessed 20/11/19)
+BCS (2019) ‘BCS, The Chartered Institute For It Code Of Conduct For Bcs Members’. Available at: https://cdn.bcs.org/bcs-org-media/2211/bcs-code-of-conduct.pdf (Accessed 18/11/19).
+Behdenna S., Barigou F., Belalem G. (2016) Sentiment Analysis at Document Level. In: Unal A., Nayak M., Mishra D., Singh D., Joshi A. (eds) Smart Trends in Information Technology and Computer Communications. SmartCom 2016. Communications in Computer and Information Science, vol 628. Springer, Singapore.
+Bibi, M. (2017) ‘Sentiment Analysis at Document Level’. Available at: https://www.researchgate.net/publication/320729882_Sentiment_Analysis_at_Document_Level (Accessed 30/10/2019)
+Butler (2015) ‘SAS Visual Analytics Review’. Available at: https://www.butleranalytics.com/sas-visual-analytics-review/ (Accessed 21/11/19)
+Ding, X., Liu, B., & Yu, P, S. (2008) ‘A Holistic Lexicon-Based Approach to Opinion Mining’. Proceedings of the 2008 International Conference on Web Search and Data Mining., Pages 231-240, Palo Alto, California, USA. February 11 - 12, 2008.
+Feldman, R. (2013) ‘Techniques and Applications for Sentiment Analysis’. Communications of the ACM, vol. 56, no. 4.
+Jindal, N. & Liu, B. (2008) ‘Opinion Spam and Analysis’. Available at: https://www.researchgate.net/publication/200044297_Opinion_Spam_and_Analysis (Accessed 16/11/19)
+Lexalytics (2019) ‘Sentiment Analysis Explained’ Available at: https://www.lexalytics.com/technology/sentiment-analysis (Accessed 18/11/19)
+Lima, A, C, E, S., & de Castro, L, N. (2012) ‘Automatic Sentiment Analysis of Twitter Messages’. Fourth International Conference on Computational Aspects of Social Networks (CASoN). November 2012.
+LyonEye (2016) ‘Lexicon-based Bag of Words Sentiment Analysis’. Available at: https://smartcity.readthedocs.io/en/latest/BOW/ (Accessed 17/11/19)
+Nair, V. (2017) ‘The rise of big data’. Available at: https://www.bcs.org/content-hub/the-rise-of-big-data/ (Accessed 28/10/2019)
+Neri, P. (2019) ‘Finding themes in the “Trafficking in Persons” reports’ Available at: https://blogs.sas.com/content/subconsciousmusings/2019/09/23/tip-reports-text-analytics/ (Accessed 21/11/2019)
+Pang, B. & Lee, L. (2008) ‘Opinion mining and sentiment analysis’. Foundations and Trends in Information Retrieval, 2(1-2), pp. 1-135.
+Sas (2019)‘Analytics Software & Solutions’. Available at: https://www.sas.com/en_gb/home.html (Accessed 17/11/19)
+Silge, J. & Robinson, D. (2017) Text Mining with R. 1st ed. O'Reilly Media.
+Silge, J. ‘tidytext’. Available at: https://github.com/juliasilge/tidytext (Accessed 19/11/19)
+Taboada, M., J. Brooke, M. Tofiloski, K. Voll and M. Stede. (2011) ‘Lexicon-Based Methods for Sentiment Analysis’. Computational Linguistics, 37(2), pp. 267-307.
+Tiara, M. K. Sabariah and V. Effendy, "Sentiment analysis on Twitter using the combination of lexicon-based and support vector machine for assessing the performance of a television program," 2015 3rd International Conference on Information and Communication Technology (ICoICT), Nusa Dua, 2015, pp. 386-390.
+https://ataspinar.com/2016/01/21/sentiment-analysis-with-bag-of-words/
+https://towardsdatascience.com/supervised-vs-unsupervised-learning-14f68e32ea8d
