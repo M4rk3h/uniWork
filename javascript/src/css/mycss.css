@@ -4,6 +4,7 @@ body {
   color: #333;
   padding: 20px 0 28px 0;
   margin: 0;
+  text-align: center;
 }
 
 img {
@@ -15,10 +16,6 @@ img {
   text-align: center;
   font-weight: normal;
   font-size: 2.6rem;
-}
-
-.header {
-  text-align: center;
 }
 
 .animal {
@@ -67,5 +64,3 @@ img {
   text-align: center;
   margin: 0;
 }
-
- 
