@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 6%, 13%);
+    font-family: sans-serif;
+    font-size: 1em;
+    margin: 0;
+    color: hsl(197, 50%, 90%);
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+}
+
+#page {
+    background-color: hsl(290, 5%, 50%);
+    margin: 0 auto 0 auto;
+}
+p {
+    padding-left: 10px;
+}
+h1 {
+    color: hsl(197, 50%, 90%);
+    margin: 0 auto 0 auto;
+    padding: 30px 10px 20px 10px;
+    text-shadow: 2px 2px 1px hsl(290, 5%, 35%);
+}
+
+h2 {
+    color: hsl(176, 50%, 90%);
+    margin: 0 0 10px 0;
+    padding: 0px 10px 10px 10px;
+    text-shadow: 2px 2px 1px hsl(290, 5%, 35%);
+}
+
+ul {
+    background-color: hsl(290, 5%, 50%);
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0px;
+}
+
+li {
+    background-color: hsl(290, 5%, 80%);
+    color: hsl(360, 100%, 100%);
+    border-top: 1px solid hsl(290, 5%, 90%);
+    border-bottom: 1px solid hsl(290, 5%, 70%);
+    list-style-type: none;
+    text-shadow: 2px 2px 1px hsl(290, 5%, 70%);
+    padding-left: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: inherit;
+}
+
+.running {
+    background-color: hsl(155, 60%, 50%);
+    text-shadow: 2px 2px 1px hsl(155, 60%, 40%);
+    border-top: 1px solid hsl(155, 60%, 60%);
+    border-bottom: 1px solid hsl(155, 60%, 40%);
+}
+
+.full {
+    background-color: hsl(12, 60%, 50%);
+    text-shadow: 2px 2px 1px hsl(12, 60%, 40%);
+    border-top: 1px solid hsl(12, 60%, 60%);
+    border-bottom: 1px solid hsl(12, 60%, 40%);
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.topnav {
+    text-align: center;
+    overflow: hidden;
+    background-color: #1f1b1b;
+}
+
+.topnav a {
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #333232;
+    color: white;
+}
+
+.active {
+    background-color: #4f483f
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #333232;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #4f483f
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;} 
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.app-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.6rem;
+}
+
+.animal {
+    max-width: 650px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.animal h4 {
+    margin: 0 0 6px 0;
+}
+
+.pet-photo {
+    float: left;
+    width: 40%;
+    margin-right: 15px;
+}
+
+.pet-name {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+}
+
+.species {
+    font-size: 0.9rem;
+    color: #888;
+    vertical-align: middle;
+}
+
+.foods-list {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 17px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.footer {
+    font-size: 0.7rem;
+    color: #888;
+    text-align: center;
+    margin: 0;
+}
+  
+  
