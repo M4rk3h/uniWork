@@ -43,7 +43,7 @@ window.onclick = function (event) {
   }
 }
 
-function callPets() {
+function callXML() {
   const petsData = [{
       name: "Purrsloud",
       species: "Cat",
@@ -102,4 +102,9 @@ ${pet.favFoods ? foods(pet.favFoods) : ""}
 ${petsData.map(petTemplate).join("")}
 <p class="footer">These ${petsData.length} pets were added recently. Check back soon for updates.</p>
 `;
+}
+
+function callPHP(){
+  //this will be the php code
+  console.log('This will be my PHP')
 }

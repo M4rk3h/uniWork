@@ -106,45 +106,30 @@ function pushpinClicked(e) {
 
 // Map With Flight Paths
 function initMapFlight(){
-    //Set your locations
-    var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
+    //Set your locations  
+    var cardiffAirport = new Microsoft.Maps.Location(51.398139,-3.345478);
+    var dublinAirport = new Microsoft.Maps.Location(53.426474,-6.250049);
+    var edinburghAirport = new Microsoft.Maps.Location(55.950707,-3.361507);
+    var leedsAirport = new Microsoft.Maps.Location(53.867943,-1.661477);
+    var bangorAirport = new Microsoft.Maps.Location(53.229635,-4.130064);
+    var southamptonAirport = new Microsoft.Maps.Location(50.951510,-1.357670);
+    var stansteadAirport = new Microsoft.Maps.Location(51.886005,0.238812);
+    var exeterAirport = new Microsoft.Maps.Location(50.734437,-3.420336);
+    // Set the middle of the map
+    var middleGround = new Microsoft.Maps.Location(54.231486, -4.541848);
     // #map1 is the same as get element by id for bing map
     var map = new Microsoft.Maps.Map('#map', { 
         center: middleGround,
-        zoom: 7,
+        zoom: 5,
     });
-    // Create a GeoJSON
-    // Create where you want the center of the map
-    var middleGround = {lat: 54.231486, lng: -4.541848};
-    // Create a variable for cardiff airport
-    var cardiffAirport = {lat: 51.398139, lng: -3.345478};
-    var dublinAirport = {lat: 53.426474, lng: -6.250049};
-    var edinburghAirport = {lat: 55.950707, lng: -3.361507};
-    var leedsAirport = {lat: 53.867943, lng: -1.661477 };
-    var bangorAirport = {lat: 53.229635,lng:-4.130064};
-    var southamptonAirport = {lat: 50.951510, lng:-1.357670};
-    var stansteadAirport = {lat: 51.886005, lng: 0.238812};
-    var exeterAirport = {lat: 50.734437, lng: -3.420336};
-    
-    var carduffToDublin = {
-            "type": "Polygon",
-            "coordinates": [[
-                    [cardiffAirport],
-                    [dublinAirport]
-            ]]
-        };
+    //Create a polyline
+    var cToDublin = new Microsoft.Maps.Polyline(coords, {
+        strokeColor: 'red',
+        strokeThickness: 3,
+        strokeDashArray: [4, 4]
+    });
     //Load the GeoJson Module.
     Microsoft.Maps.loadModule('Microsoft.Maps.GeoJson', function () {
-
-        //Parse the GeoJson object into a Bing Maps shape.
-    var shape = Microsoft.Maps.GeoJson.read(carduffToDublin, {
-        polygonOptions: {
-            fillColor: 'rgba(255,0,0,0.5)',
-            strokeColor: 'black',
-            strokeThickness: 5
-        }
-    });
-
     //Add the shape to the map.
     map.entities.push(shape);
     });
