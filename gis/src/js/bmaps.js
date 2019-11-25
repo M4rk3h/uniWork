@@ -25,38 +25,20 @@ function initMap() {
 
 // Map with 2 Pins (Stadiums)
 function initMapPin() {
-       //Set your locations
-       var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
-       var libStadium = new Microsoft.Maps.Location(51.642895, -3.934575);
-       var priStadium = new Microsoft.Maps.Location(51.478, -3.182);
-       // #map is the same as get element by id for bing map
-       var map = new Microsoft.Maps.Map('#map', {
-           credentials: "ArD-NZNSRKb6D0I49V9fCN7GKih8YY6tb34gp9BbZrNKe25y6FwzH4_vfXM8eSmq",
-           center: middleGround,
-           zoom: 9,
-       });
-   
-       //Create custom Pushpin
-       var libPin = new Microsoft.Maps.Pushpin(libStadium, {
-           color: 'black',
-           title: 'Liberty',
-           subTitle: 'Stadium',
-           text: 'LS'
-       });
-       var priPin = new Microsoft.Maps.Pushpin(priStadium, {
-        color: 'red',
-        title: 'Principality',
-        subTitle: 'Stadium',
-        text: 'PS',
-        icon: 'icons/castleIcon.png'
-    });
-   
+    //Set your locations
+    var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
+    var libStadium = new Microsoft.Maps.Location(51.642895, -3.934575);
+    var priStadium = new Microsoft.Maps.Location(51.478, -3.182);
+    // #map is the same as get element by id for bing map
+    var map = new Microsoft.Maps.Map('#map', {credentials: "ArD-NZNSRKb6D0I49V9fCN7GKih8YY6tb34gp9BbZrNKe25y6FwzH4_vfXM8eSmq",center: middleGround,zoom: 9,});
+    //Create custom Pushpin
+    var libPin = new Microsoft.Maps.Pushpin(libStadium, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS'});
+    var priPin = new Microsoft.Maps.Pushpin(priStadium, {color: 'red',title: 'Principality',subTitle: 'Stadium',text: 'PS'});
     //Add the pushpin to the map
     map.entities.push(libPin);
     map.entities.push(priPin);
 }
 
-// Map with Clickable Castles
 // Map with Clickable Castles
 function initMapClick(){
     var castellCoch = new Microsoft.Maps.Location(51.543765, -3.251874);
@@ -75,19 +57,37 @@ function initMapClick(){
     });
     
     // Create an info box
-    infobox = new Microsoft.Maps.Infobox(map.getCenter(),{
-        visible: false
-    });
-    //Assign the infobox to a map instance.
+    infobox = new Microsoft.Maps.Infobox(map.getCenter(),{visible: false});
+    //Assign the infobox to a map
     infobox.setMap(map);
     // Create a Marker
+    var markerCoch = new Microsoft.Maps.Pushpin(castellCoch, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
+    var markercaerphilly = new Microsoft.Maps.Pushpin(caerphillyC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
     var markerCardiff = new Microsoft.Maps.Pushpin(cardiffC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
+    var markerRuperra = new Microsoft.Maps.Pushpin(ruperraC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
+    var markerHensol = new Microsoft.Maps.Pushpin(hensolC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
+    var markerLlantrisant = new Microsoft.Maps.Pushpin(llantrisantC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
     // Create the content
+    markerCoch.metadata = { title: 'Castle Coch', description: 'This is Castle Coch'};
+    markercaerphilly.metadata = { title: 'Caerphilly Castle', description: 'This is Caerphilly Castle'};
     markerCardiff.metadata = { title: 'Cardiff Castle', description: 'This is Cardiff Castle'};
+    markerRuperra.metadata = { title: 'Ruperra Castle', description: 'This is Ruperra Castle'};
+    markerHensol.metadata = { title: 'Hensol Castle', description: 'This is Hensol Castle'};
+    markerLlantrisant.metadata = { title: 'Llantrisant Castle', description: 'This is Llantrisant Castle'};
     //Add a click event handler to the pushpin.
+    Microsoft.Maps.Events.addHandler(markerCoch, 'click', pushpinClicked);
+    Microsoft.Maps.Events.addHandler(markercaerphilly, 'click', pushpinClicked);
     Microsoft.Maps.Events.addHandler(markerCardiff, 'click', pushpinClicked);
+    Microsoft.Maps.Events.addHandler(markerRuperra, 'click', pushpinClicked);
+    Microsoft.Maps.Events.addHandler(markerHensol, 'click', pushpinClicked);
+    Microsoft.Maps.Events.addHandler(markerLlantrisant, 'click', pushpinClicked);
     //Add pushpin to the map.
+    map.entities.push(markerCoch);
+    map.entities.push(markercaerphilly);
     map.entities.push(markerCardiff);
+    map.entities.push(markerRuperra);
+    map.entities.push(markerHensol);
+    map.entities.push(markerLlantrisant);
 }
   
 function pushpinClicked(e) {

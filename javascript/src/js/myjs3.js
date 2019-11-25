@@ -24,21 +24,22 @@
             all.checked = false;
         }
     }
+
     for (var i = 0; i < options.length; i++) {
         options[i].addEventListener('change', clearAllOptions, false);
     }
-    // Try to click All, 
-    // when all the options are checked
-    try{
-        if (options.length == 3){
-            updateAll();
-            console.log('inside the if statement')
+  
+    // Try to click All, when all the options are checked
+    /*try{
+        if (options[i] > 2){
+            all.checked = true;
         }
-        else {
-        console.log('Jump out of the else')
+        else{
+            all.checked = false;
         }
     }
     catch{
-        console.log('There was an error in the try / catch ')
+    
     }
-} ());
+    */
+}());
