@@ -103,90 +103,49 @@ function pushpinClicked(e) {
     }  
 }
 
-/*
-function initMapClickBack(){
-    var castellCoch = new Microsoft.Maps.Location(51.543765, -3.251874);
-    var caerphillyC = new Microsoft.Maps.Location(51.582942, -3.219495);
-    var cardiffC = new Microsoft.Maps.Location(51.482365, -3.181159);
-    var ruperraC = new Microsoft.Maps.Location(51.575950, -3.125767);
-    var hensolC = new Microsoft.Maps.Location(51.500998, -3.373461);
-    var llantrisantC =  new Microsoft.Maps.Location(51.541689, -3.374694);
-    // Where to start the map
-    var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
-    // Create an instance of your map
-    var map = new Microsoft.Maps.Map('#map', { 
-        credentials: "ArD-NZNSRKb6D0I49V9fCN7GKih8YY6tb34gp9BbZrNKe25y6FwzH4_vfXM8eSmq",
-        center: middleGround,
-        zoom: 10,
-    });
-    
-    // Declare your content to appear on click
-    var castellContent = 'Castell Coch, located on a prominent wooded hillside overlooking the Taff Valley.';
-    var caerphillyContent = 'Caerphilly is the largest medieval castle in Wales and one of the most impressive in Europe.';
-    var cardiffContent = 'Cardiff Castle was established within the walls of a mighty Roman fort by William I of England in about 1081.';
-    var ruperraContent = 'Built c1626 by Sir Thomas Morgan, steward to the Earl of Pembroke, and the latest example of the Elizabethan and Jacobean court taste for castellated mansions.';
-    var hensolContent = 'Hensol Castle (previously Hensol House) is a castellated mansion in the gothic architecture style dating from the late 17th century or early 18th century.';
-    var llantrisantContent = 'Llantrisant Castle is a ruined castle in Llantrisant, Rhondda Cynon Taf, Glamorgan, Wales. The ruins are on a good elevation, commanding extensive views of the surrounding country.';
-    // Create your info windows for each pin
-    /*
-    castellInfo = new google.maps.InfoWindow({content: castellContent});
-    infobox = new Microsoft.Maps.Infobox(map.cardiffC, {visible: false});
-    var caerphillyInfo = new google.maps.InfoWindow({content: caerphillyContent});
-    var cardiffInfo = new google.maps.InfoWindow({content: cardiffContent});
-    var ruperraInfo = new google.maps.InfoWindow({content: ruperraContent});
-    var hensolInfo = new google.maps.InfoWindow({content: hensolContent});
-    var llantrisantInfo = new google.maps.InfoWindow({content: llantrisantContent});
-    // Declare marker locations
- 
-    // Make Marker
-    var markerCardiff = new Microsoft.Maps.Pushpin(cardiffC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
-    // Make Info Box
-    infobox = new Microsoft.Maps.Infobox(map.cardiffC, {visible: false});
-    //Assign the infobox to a map instance.
-    infobox.setMap(map);
-    //Store some metadata with the pushpin.
-    pin.metadata = {title: 'Pin Test',description: 'Discription for pin'};
-    // On Click, display info box
-    function pushpinClicked(e) {//Make sure the infobox has metadata to display.
-        if (e.target.metadata) {
-            //Set the infobox options with the metadata of the pushpin.
-            infobox.setOptions({
-                location: e.target.getLocation(),
-                title: e.target.metadata.title,
-                description: e.target.metadata.description,
-                visible: true
-            });
-        }
-    var cardiffClick = new Microsoft.Maps.Events.addHandler(markerCardiff, 'click', function () { if () });
-    // https://docs.microsoft.com/en-us/bingmaps/v8-web-control/map-control-concepts/infoboxes/multiple-pushpins-and-infoboxes
-    /*
-    var markerCastell = new google.maps.Marker({position: castellCoch,map: map,title: 'Castell Coch', icon: markerIcon});
-    var markerCaerphilly = new google.maps.Marker({position: caerphillyC,map: map,title: 'Caerohilly Castle', icon: markerIcon});
-    //var markerCardiff = new google.maps.Marker({position: cardiffC,map: map,title: 'Cardiff Castle', icon: markerIcon});
-    var markerRuperra = new google.maps.Marker({position: ruperraC,map: map,title: 'Ruperra Castle', icon: markerIcon});
-    var markerHensol = new google.maps.Marker({position: hensolC,map: map,title: 'Hensol Castle', icon: markerIcon});
-    var markerLlantrisant = new google.maps.Marker({position: llantrisantC,map: map,title: 'Llantrisant Castle', icon: markerIcon});
-    // Declare your 'On Click' functions
-    
-    markerCastell.addListener('click', function () {castellInfo.open(map, markerCastell);});
-    markerCaerphilly.addListener('click', function () {caerphillyInfo.open(map, markerCaerphilly);});
-    markerCardiff.addListener('click', function () {cardiffInfo.open(map, markerCardiff);});
-    markerRuperra.addListener('click', function () {ruperraInfo.open(map, markerRuperra);});
-    markerHensol.addListener('click', function () {hensolInfo.open(map, markerHensol);});
-    markerLlantrisant.addListener('click', function () {llantrisantInfo.open(map, markerLlantrisant);});
-    //Add the pushpin to the map
-
-    map.entities.push(markerCardiff);
-    //map.entities.push(priPin);
-}
-*/
 
 // Map With Flight Paths
 function initMapFlight(){
+    //Set your locations
+    var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
+    // #map1 is the same as get element by id for bing map
+    var map = new Microsoft.Maps.Map('#map', { 
+        center: middleGround,
+        zoom: 7,
+    });
+    // Create a GeoJSON
+    // Create where you want the center of the map
+    var middleGround = {lat: 54.231486, lng: -4.541848};
+    // Create a variable for cardiff airport
+    var cardiffAirport = {lat: 51.398139, lng: -3.345478};
+    var dublinAirport = {lat: 53.426474, lng: -6.250049};
+    var edinburghAirport = {lat: 55.950707, lng: -3.361507};
+    var leedsAirport = {lat: 53.867943, lng: -1.661477 };
+    var bangorAirport = {lat: 53.229635,lng:-4.130064};
+    var southamptonAirport = {lat: 50.951510, lng:-1.357670};
+    var stansteadAirport = {lat: 51.886005, lng: 0.238812};
+    var exeterAirport = {lat: 50.734437, lng: -3.420336};
+    
+    var carduffToDublin = {
+            "type": "Polygon",
+            "coordinates": [[
+                    [cardiffAirport],
+                    [dublinAirport]
+            ]]
+        };
+    //Load the GeoJson Module.
+    Microsoft.Maps.loadModule('Microsoft.Maps.GeoJson', function () {
 
-}
+        //Parse the GeoJson object into a Bing Maps shape.
+    var shape = Microsoft.Maps.GeoJson.read(carduffToDublin, {
+        polygonOptions: {
+            fillColor: 'rgba(255,0,0,0.5)',
+            strokeColor: 'black',
+            strokeThickness: 5
+        }
+    });
 
-// Map with Area's (Wind Farms)
-function initMapWind(){
-
+    //Add the shape to the map.
+    map.entities.push(shape);
+    });
 }
