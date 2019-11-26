@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PET>
+  <ANIMAL>
+    <NAME>Ollie</NAME>
+    <BREED>Collie</BREED>
+    <OWNER>Greg Thomas</OWNER>
+  </ANIMAL>
+  <ANIMAL>
+    <NAME>Max</NAME>
+    <BREED>Staffy/Shitzu</BREED>
+    <OWNER>Mark Baber</OWNER>
+  </ANIMAL>
+</PET>
