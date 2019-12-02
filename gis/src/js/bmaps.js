@@ -129,14 +129,14 @@ function initMapFlight(){
     var toStans = [cardiffAirport, new Microsoft.Maps.Location(stansteadAirport.latitude, stansteadAirport.longitude)];
     var toExeter = [cardiffAirport, new Microsoft.Maps.Location(exeterAirport.latitude, exeterAirport.longitude)];
     // Create the Polylines
-    var cToDublin = new Microsoft.Maps.Polyline(toDublin, {strokeColor: '#0E9C62', strokeThickness: 3, strokeDashArray: [4, 4]});
-    var ctoEdin = new Microsoft.Maps.Polyline(toEdin, {strokeColor: '#EB0029', strokeThickness: 3, strokeDashArray: [4, 4]});
-    var ctoLeeds = new Microsoft.Maps.Polyline(toLeeds, {strokeColor: '#AC944D', strokeThickness: 3, strokeDashArray: [4, 4]});
-    var ctoBangor = new Microsoft.Maps.Polyline(toBangor, {strokeColor: '#8CD663', strokeThickness: 3, strokeDashArray: [4, 4]});
-    var ctoSouth = new Microsoft.Maps.Polyline(toSouth, {strokeColor: '#002E3B', strokeThickness: 3, strokeDashArray: [4, 4]});
-    var ctoStans = new Microsoft.Maps.Polyline(toStans, {strokeColor: '#0D8EAD', strokeThickness: 3, strokeDashArray: [4, 4]});
-    var ctoExeter = new Microsoft.Maps.Polyline(toExeter, {strokeColor: '#4B4E51', strokeThickness: 3, strokeDashArray: [4, 4]});
-    //Add the shape to the map.
+    var cToDublin = new Microsoft.Maps.Polyline(toDublin, {strokeColor: '#0E9C62', strokeThickness: 5, strokeDashArray: [3, 3]});
+    var ctoEdin = new Microsoft.Maps.Polyline(toEdin, {strokeColor: '#EB0029', strokeThickness: 5, strokeDashArray: [3, 3]});
+    var ctoLeeds = new Microsoft.Maps.Polyline(toLeeds, {strokeColor: '#AC944D', strokeThickness: 5, strokeDashArray: [3, 3]});
+    var ctoBangor = new Microsoft.Maps.Polyline(toBangor, {strokeColor: '#8CD663', strokeThickness: 5, strokeDashArray: [3, 3]});
+    var ctoSouth = new Microsoft.Maps.Polyline(toSouth, {strokeColor: '#002E3B', strokeThickness: 5, strokeDashArray: [3, 3]});
+    var ctoStans = new Microsoft.Maps.Polyline(toStans, {strokeColor: '#0D8EAD', strokeThickness: 5, strokeDashArray: [3, 3]});
+    var ctoExeter = new Microsoft.Maps.Polyline(toExeter, {strokeColor: '#4B4E51', strokeThickness: 5, strokeDashArray: [3, 3]});
+    // Add the shape to the map.
     map.entities.push(cToDublin);
     map.entities.push(ctoEdin);
     map.entities.push(ctoLeeds);
