@@ -22,8 +22,6 @@ function initMap() {
     icon: markerIcon,
     title: 'GIS!'
   });
-
-    function getLocation(){
     // Create an info window
     infoWindow = new google.maps.InfoWindow;
     // Try HTML5 geolocation in browser
@@ -53,8 +51,7 @@ function initMap() {
         'Error: Your browser doesn\'t support geolocation.');
       infoWindow.open(map);
     }
-  }
-};
+  };
 
 // initMap1 - Tutorial
 function initMap1() {
@@ -152,7 +149,7 @@ function initMapFlight(){
     zoom: 5.2,
     disableDefaultUI: true,
     });
-    // Declare flight paths
+    // Declare flights
     var toDublin = [cardiffAirport,dublinAirport];
     var toEdinburgh = [cardiffAirport,edinburghAirport];
     var toLeeds = [cardiffAirport,leedsAirport];

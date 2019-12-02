@@ -129,13 +129,13 @@ function initMapFlight(){
     var toStans = [cardiffAirport, new Microsoft.Maps.Location(stansteadAirport.latitude, stansteadAirport.longitude)];
     var toExeter = [cardiffAirport, new Microsoft.Maps.Location(exeterAirport.latitude, exeterAirport.longitude)];
     // Create the Polylines
-    var cToDublin = new Microsoft.Maps.Polyline(toDublin, {strokeColor: '#0E9C62', strokeThickness: 5, strokeDashArray: [3, 3]});
-    var ctoEdin = new Microsoft.Maps.Polyline(toEdin, {strokeColor: '#EB0029', strokeThickness: 5, strokeDashArray: [3, 3]});
-    var ctoLeeds = new Microsoft.Maps.Polyline(toLeeds, {strokeColor: '#AC944D', strokeThickness: 5, strokeDashArray: [3, 3]});
-    var ctoBangor = new Microsoft.Maps.Polyline(toBangor, {strokeColor: '#8CD663', strokeThickness: 5, strokeDashArray: [3, 3]});
-    var ctoSouth = new Microsoft.Maps.Polyline(toSouth, {strokeColor: '#002E3B', strokeThickness: 5, strokeDashArray: [3, 3]});
-    var ctoStans = new Microsoft.Maps.Polyline(toStans, {strokeColor: '#0D8EAD', strokeThickness: 5, strokeDashArray: [3, 3]});
-    var ctoExeter = new Microsoft.Maps.Polyline(toExeter, {strokeColor: '#4B4E51', strokeThickness: 5, strokeDashArray: [3, 3]});
+    var cToDublin = new Microsoft.Maps.Polyline(toDublin, {strokeColor: '#0E9C62', strokeThickness: 6, strokeDashArray: [3, 3]});
+    var ctoEdin = new Microsoft.Maps.Polyline(toEdin, {strokeColor: '#EB0029', strokeThickness: 6, strokeDashArray: [3, 3]});
+    var ctoLeeds = new Microsoft.Maps.Polyline(toLeeds, {strokeColor: '#AC944D', strokeThickness: 6, strokeDashArray: [3, 3]});
+    var ctoBangor = new Microsoft.Maps.Polyline(toBangor, {strokeColor: '#8CD663', strokeThickness: 6, strokeDashArray: [3, 3]});
+    var ctoSouth = new Microsoft.Maps.Polyline(toSouth, {strokeColor: '#002E3B', strokeThickness: 6, strokeDashArray: [3, 3]});
+    var ctoStans = new Microsoft.Maps.Polyline(toStans, {strokeColor: '#0D8EAD', strokeThickness: 6, strokeDashArray: [3, 3]});
+    var ctoExeter = new Microsoft.Maps.Polyline(toExeter, {strokeColor: '#4B4E51', strokeThickness: 6, strokeDashArray: [3, 3]});
     // Add the shape to the map.
     map.entities.push(cToDublin);
     map.entities.push(ctoEdin);
@@ -144,4 +144,27 @@ function initMapFlight(){
     map.entities.push(ctoSouth);
     map.entities.push(ctoStans);
     map.entities.push(ctoExeter);
-};
+}
+
+function initMapWind() {
+    // Declare your locations here
+    var pointsOne = [
+        new Microsoft.Maps.Location(51.86, -3.95),
+        new Microsoft.Maps.Location(51.93, -3.85),
+        new Microsoft.Maps.Location(52.01, -3.72),
+        new Microsoft.Maps.Location(55.01, -3.50),
+        new Microsoft.Maps.Location(51.86, -3.95)
+    ];
+    //Set your middle starting area
+    var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
+    // #map is the same as get element by id for bing map
+    var map = new Microsoft.Maps.Map('#map', {center: middleGround,zoom: 9,});
+    // create a polygon
+    var polygon = new Microsoft.Maps.Polygon(pointsOne, {
+        fillColor: 'rgba(0, 255, 0, 0.5)',
+        strokeColor: 'red',
+        strokeThickness: 2
+    });
+    //Add the pushpin to the map
+    map.entities.push(polygon);
+}
