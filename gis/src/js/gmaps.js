@@ -23,9 +23,39 @@ function initMap() {
     title: 'GIS!'
   });
 
-  // Animation
-  // animation:google.maps.Animation.Bounce
+  function getLocation(){
+  // Create an info window
+  infoWindow = new google.maps.InfoWindow;
+   // Try HTML5 geolocation in browser
+   if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      // Get the location
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('You are near here.');
+      infoWindow.open(map);
+      map.setCenter(pos);
+    }, function () {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Display error Browser doesn't support Geolocation
+    console.log('Error in the if statement')
+  }
+
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+      'Error: The Geolocation service failed.' :
+      'Error: Your browser doesn\'t support geolocation.');
+    infoWindow.open(map);
+  }
 }
+}
+
 // initMap1 - Tutorial
 function initMap1() {
   var myLatLng = {lat: 51.642895,lng: -3.934575};
