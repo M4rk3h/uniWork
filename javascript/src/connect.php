@@ -1,30 +1,37 @@
-<?php
+<!DOCTYPE html>
 
-if(!isset($error)){
-  $error = new stdClass();
-}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PDO Database Connect</title>
+  </head>
+<body>
 
-include "dbinfo.info.php";
+<h2>PDO Database Connect</h2>
 
-try {
-  $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8",$username,$password, [PDO:: ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_EMULATE_PREPARES => false]);  
-  echo 'TestingThePDO!';
-} catch (PDOexception $e) {
-  $error->code = "error";
-  $error->message = $e->getMessage();
-  echo json_encode($error);
-  $pdo = null;
-  return;
-}
+<p id="output"></p>
 
-$tables = array();
-$result = $pdo->query("SHOW TABLES");
-while ($row = $result->fetch(PDO::FETCH_NUM)){
-  $tables[] = $row[0];
-}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+                <script>
+      window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')
+    </script>
 
-echo json_encode($tables);
+<script>
+$(function() {
 
-$pdo = null;  
+$.getJSON("getTables.php", function(data){
+  if (data["code"] == "error"){
+    console.log(data["message"]);
+  }
+  else{
+    console.log(data);
+  }
 
-?>
+});
+
+});
+
+</script>
+
+</body>
+</html>
