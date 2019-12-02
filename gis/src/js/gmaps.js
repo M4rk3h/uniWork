@@ -102,7 +102,7 @@ function initMapClick() {
   markerRuperra.addListener('click', function () {ruperraInfo.open(map, markerRuperra);});
   markerHensol.addListener('click', function () {hensolInfo.open(map, markerHensol);});
   markerLlantrisant.addListener('click', function () {llantrisantInfo.open(map, markerLlantrisant);});
-}
+};
 
 function initMapFlight(){
   // Create where you want the center of the map
@@ -111,7 +111,7 @@ function initMapFlight(){
   var cardiffAirport = {lat: 51.398139, lng: -3.345478};
   var dublinAirport = {lat: 53.426474, lng: -6.250049};
   var edinburghAirport = {lat: 55.950707, lng: -3.361507};
-  var leedsAirport = {lat: 53.867943, lng: -1.661477 };
+  var leedsAirport = {lat: 53.867943, lng: -1.661477};
   var bangorAirport = {lat: 53.229635,lng:-4.130064};
   var southamptonAirport = {lat: 50.951510, lng:-1.357670};
   var stansteadAirport = {lat: 51.886005, lng: 0.238812};
@@ -163,13 +163,13 @@ function initMapFlight(){
     var staInfo = new google.maps.InfoWindow({content: staContent,position: stansteadAirport});
     var exeInfo = new google.maps.InfoWindow({content: exeContent,position: exeterAirport});
     // Creare open alert on click
-    dubLine.addListener('click', function()   {dubInfo.close(map,dubLine);dubInfo.open(map,dubLine);});
-    edLine.addListener('click', function()    {ediInfo.close(map, edLine);ediInfo.open(map, edLine);});
-    leedLine.addListener('click', function()  {leeInfo.close(map, leedLine);leeInfo.open(map, leedLine);});
-    bangLine.addListener('click', function()  {banInfo.close(map, bangLine);banInfo.open(map, bangLine);});
+    dubLine.addListener('click', function() {dubInfo.close(map,dubLine);dubInfo.open(map,dubLine);});
+    edLine.addListener('click', function() {ediInfo.close(map, edLine);ediInfo.open(map, edLine);});
+    leedLine.addListener('click', function() {leeInfo.close(map, leedLine);leeInfo.open(map, leedLine);});
+    bangLine.addListener('click', function() {banInfo.close(map, bangLine);banInfo.open(map, bangLine);});
     southLine.addListener('click', function() {souInfo.close(map, southLine);souInfo.open(map, southLine);});
-    stanLine.addListener('click', function()  {staInfo.close(map, stanLine);staInfo.open(map, stanLine);});
-    exeLine.addListener('click', function()   {exeInfo.close(map, exeLine);exeInfo.open(map, exeLine);});
+    stanLine.addListener('click', function() {staInfo.close(map, stanLine);staInfo.open(map, stanLine);});
+    exeLine.addListener('click', function() {exeInfo.close(map, exeLine);exeInfo.open(map, exeLine);});
     // Create close alert when mouse moves
     dubLine.addListener('mouseout', function() {dubInfo.close(map,dubLine);});
     edLine.addListener('mouseout', function() {ediInfo.close(map,edLine);});

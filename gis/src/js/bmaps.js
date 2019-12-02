@@ -103,10 +103,9 @@ function pushpinClicked(e) {
     }  
 }
 
-
 // Map With Flight Paths
 function initMapFlight(){
-    //Set your locations  
+    // Create Locations  
     var cardiffAirport = new Microsoft.Maps.Location(51.398139,-3.345478);
     var dublinAirport = new Microsoft.Maps.Location(53.426474,-6.250049);
     var edinburghAirport = new Microsoft.Maps.Location(55.950707,-3.361507);
@@ -118,19 +117,14 @@ function initMapFlight(){
     // Set the middle of the map
     var middleGround = new Microsoft.Maps.Location(54.231486, -4.541848);
     // #map1 is the same as get element by id for bing map
-    var map = new Microsoft.Maps.Map('#map', { 
-        center: middleGround,
-        zoom: 5,
-    });
-    //Create a polyline
-    var cToDublin = new Microsoft.Maps.Polyline(coords, {
-        strokeColor: 'red',
-        strokeThickness: 3,
-        strokeDashArray: [4, 4]
-    });
-    //Load the GeoJson Module.
-    Microsoft.Maps.loadModule('Microsoft.Maps.GeoJson', function () {
+    var map = new Microsoft.Maps.Map('#map', {
+        center: middleGround, 
+        zoom: 5,});
+    // Create array from Cardiff to Different Airports.
+    var toDublin = [cardiffAirport, new Microsoft.Maps.Location(dublinAirport.latitude, dublinAirport.longitude)];
+    // Create the Polylines
+    var cToDublin = new Microsoft.Maps.Polyline(toDublin, {strokeColor: 'red', strokeThickness: 3, strokeDashArray: [4, 4]});
+    //var cToEdinb = new Microsoft.Maps.Polyline(coords, {strokeColor: 'red', strokeThickness: 3, strokeDashArray: [4, 4]});
     //Add the shape to the map.
-    map.entities.push(shape);
-    });
+    map.entities.push(cToDublin);
 }
