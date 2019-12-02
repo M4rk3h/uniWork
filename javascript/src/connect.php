@@ -6,7 +6,6 @@ if(!isset($error)){
 
 include "dbinfo.info.php";
 
-
 try {
   $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8",$username,$password, [PDO:: ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_EMULATE_PREPARES => false]);  
   echo 'TestingThePDO!';
