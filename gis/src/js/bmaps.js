@@ -122,9 +122,26 @@ function initMapFlight(){
         zoom: 5,});
     // Create array from Cardiff to Different Airports.
     var toDublin = [cardiffAirport, new Microsoft.Maps.Location(dublinAirport.latitude, dublinAirport.longitude)];
+    var toEdin = [cardiffAirport, new Microsoft.Maps.Location(edinburghAirport.latitude, edinburghAirport.longitude)];
+    var toLeeds = [cardiffAirport, new Microsoft.Maps.Location(leedsAirport.latitude, leedsAirport.longitude)];
+    var toBangor = [cardiffAirport, new Microsoft.Maps.Location(bangorAirport.latitude, bangorAirport.longitude)];
+    var toSouth = [cardiffAirport, new Microsoft.Maps.Location(southamptonAirport.latitude, southamptonAirport.longitude)];
+    var toStans = [cardiffAirport, new Microsoft.Maps.Location(stansteadAirport.latitude, stansteadAirport.longitude)];
+    var toExeter = [cardiffAirport, new Microsoft.Maps.Location(exeterAirport.latitude, exeterAirport.longitude)];
     // Create the Polylines
-    var cToDublin = new Microsoft.Maps.Polyline(toDublin, {strokeColor: 'red', strokeThickness: 3, strokeDashArray: [4, 4]});
-    //var cToEdinb = new Microsoft.Maps.Polyline(coords, {strokeColor: 'red', strokeThickness: 3, strokeDashArray: [4, 4]});
+    var cToDublin = new Microsoft.Maps.Polyline(toDublin, {strokeColor: '#0E9C62', strokeThickness: 3, strokeDashArray: [4, 4]});
+    var ctoEdin = new Microsoft.Maps.Polyline(toEdin, {strokeColor: '#EB0029', strokeThickness: 3, strokeDashArray: [4, 4]});
+    var ctoLeeds = new Microsoft.Maps.Polyline(toLeeds, {strokeColor: '#AC944D', strokeThickness: 3, strokeDashArray: [4, 4]});
+    var ctoBangor = new Microsoft.Maps.Polyline(toBangor, {strokeColor: '#8CD663', strokeThickness: 3, strokeDashArray: [4, 4]});
+    var ctoSouth = new Microsoft.Maps.Polyline(toSouth, {strokeColor: '#002E3B', strokeThickness: 3, strokeDashArray: [4, 4]});
+    var ctoStans = new Microsoft.Maps.Polyline(toStans, {strokeColor: '#0D8EAD', strokeThickness: 3, strokeDashArray: [4, 4]});
+    var ctoExeter = new Microsoft.Maps.Polyline(toExeter, {strokeColor: '#4B4E51', strokeThickness: 3, strokeDashArray: [4, 4]});
     //Add the shape to the map.
     map.entities.push(cToDublin);
-}
+    map.entities.push(ctoEdin);
+    map.entities.push(ctoLeeds);
+    map.entities.push(ctoBangor);
+    map.entities.push(ctoSouth);
+    map.entities.push(ctoStans);
+    map.entities.push(ctoExeter);
+};
