@@ -7,5 +7,12 @@ Password:
 
 ## Database
 Username: 17076749
-Password: 5XgK8fHENbIn
+Password: 2LiAgRjD3VQm
 Database: db_17076749
+
+<?PHP
+$host="localhost";
+$username="17076749";
+$password="2LiAgRjD3VQm";
+$database="db_17076749";
+?> 

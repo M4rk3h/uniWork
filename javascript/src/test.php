@@ -1,91 +1,39 @@
-<!DOCTYPE html>
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Retrieving Directory Contents</title>
-  </head>
-<body>
-
-<h1>Retrieving Directory Contents</h1>
-
-<p id="output"></p>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
-	<script>
-      window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')
-    </script>
-
-<script>
-$(function() {
-  $.getJSON("getXmlFilenames.php", function(data){
-    if (data["code"] == "error"){
-      console.log(data["message"]);
-    }
-    else{
-      console.log(data);
-    }
-  });
-});
-</script>
-
 <?php
-<!DOCTYPE html>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Retrieving Directory Contents</title>
-  </head>
-<body>
-
-<h1>Retrieving Directory Contents</h1>
-
-<p id="output"></p>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
-	<script>
-      window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')
-    </script>
-
-<script>
-$(function() {
-  $.getJSON("getXmlFilenames.php", function(data){
-    if (data["code"] == "error"){
-      console.log(data["message"]);
-    }
-    else{
-      console.log(data);
-    }
-  });
-});
-</script>
-
-
-<?php
-$directory = 'xml';
-
-if (!chdir($directory)){
-  $error->code = "error";
-  $error->message = "The directory cannot be found";
-  echo json_encode($error);
-  return;
+if (!isset($error)) {
+	$error = new stdClass();
 }
 
-$files = glob("*.xml");
+include "dbinfo.info.php";
 
-if (empty($files)){
-  $error->code ="error";
-  $error->message = "no files";
-  echo json_encode($error);
-  return;
+try {
+$pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $username, $password, [PDO:: ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_EMULATE_PREPARES => false]);
+} catch (PDOException $e) {
+	$error->code = "error";
+	$error->message = "There was a problem connecting to the database";
+	echo json_encode($error);
+	$pdo = null;
+	return;
 }
 
-$output = array();
-foreach($files as $filename){
-  array_push($output, pathinfo($filename, PATHINFO_FILENAME));
-}
-echo json_encode($output);
+$table = $_GET["pets"];
+
+$stmt = $pdo->prepare("SELECT * FROM {$table}");
+$result = $stmt->execute();
+
+if ($stmt->rowCount() > 0)
+  {
+	  $tableData = array();
+	  $tableData[] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	  echo json_encode($tableData);
+	}
+	else
+	{
+	  $error->code = "error";
+	  $error->message = "The table: ".$table." contains no rows.";
+	  echo json_encode($error);
+	}
+
+	$stmt = null;
+	$pdo = null;
 ?>
-</body>
-</html>
