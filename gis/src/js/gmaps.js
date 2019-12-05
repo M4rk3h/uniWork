@@ -1,5 +1,5 @@
 // Default Map
-function initMap() {
+function defaultMap() {
   // Set locations
   var gisLoc = {lat: 51.590046,lng: -3.328866};
   // Init Map
@@ -54,12 +54,12 @@ function initMap() {
   };
 
 // initMap1 - Tutorial
-function initMap1() {
+function pinMap() {
   var myLatLng = {lat: 51.642895,lng: -3.934575};
   var myLatLng1 = {lat: 51.478,lng: -3.182};
   var middleGround = {lat: 51.527402,lng: -3.583342};
 
-  var map = new google.maps.Map(document.getElementById('gmapTutorial'), {
+  var map = new google.maps.Map(document.getElementById('gmap1'), {
     center: middleGround,
     zoom: 10,
     disableDefaultUI: true
@@ -84,32 +84,6 @@ function initMap1() {
 }
 
 function initMapClick() {
-  // Declare map
-  var map;
-  // Declare src with kml file.
-  var src = 'https://ces-web2.southwales.ac.uk/students/17076749/gis/kmls/castles.kml';
-  // Where to start the map
-  var middleGround = {lat: 51.547992,lng: -3.277032};
-  // Create an instance of your map
-  var map = new google.maps.Map(document.getElementById('gmapClick'), {
-    zoom: 6,
-    center: middleGround,
-    //disableDefaultUI: true,
-  });
-  // create the kml later using the src
-  var kmlLayer = new google.maps.KmlLayer(src, {
-    suppressInfoWindows: true,
-    preserveViewport: false,
-    map: map
-  });
-  kmlLayer.addListener('click', function(event) {
-    var content = event.featureData.infoWindowHtml;
-    var testimonial = document.getElementById('capture');
-    testimonial.innerHTML = content;
-  });
-};
-
-function initMapClick1() {
   // Declare your locations here
   var castellCoch = {lat: 51.543765, lng: -3.251874};
   var caerphillyC = {lat: 51.582942, lng: -3.219495};

@@ -36,16 +36,16 @@ function initMap() {
 }
 
 // Map with 2 Pins (Stadiums)
-function initMapPin() {
+function initMapPin1() {
     //Set your locations
     var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
     var libStadium = new Microsoft.Maps.Location(51.642895, -3.934575);
     var priStadium = new Microsoft.Maps.Location(51.478, -3.182);
     // #map is the same as get element by id for bing map
-    var map = new Microsoft.Maps.Map('#map', {credentials: "ArD-NZNSRKb6D0I49V9fCN7GKih8YY6tb34gp9BbZrNKe25y6FwzH4_vfXM8eSmq",center: middleGround,zoom: 9,});
+    var map = new Microsoft.Maps.Map('#map', {center: middleGround,zoom: 9,});
     //Create custom Pushpin
-    var libPin = new Microsoft.Maps.Pushpin(libStadium, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS'});
-    var priPin = new Microsoft.Maps.Pushpin(priStadium, {color: 'red',title: 'Principality',subTitle: 'Stadium',text: 'PS'});
+    var libPin = new Microsoft.Maps.Pushpin(libStadium, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/stadium.png'});
+    var priPin = new Microsoft.Maps.Pushpin(priStadium, {color: 'red',title: 'Principality',subTitle: 'Stadium',text: 'PS', icon: 'icons/stadium.png'});
     //Add the pushpin to the map
     map.entities.push(libPin);
     map.entities.push(priPin);
@@ -63,7 +63,6 @@ function initMapClick(){
     var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
     // Create an instance of your map
     var map = new Microsoft.Maps.Map('#map', { 
-        credentials: "ArD-NZNSRKb6D0I49V9fCN7GKih8YY6tb34gp9BbZrNKe25y6FwzH4_vfXM8eSmq",
         center: middleGround,
         zoom: 10,
     });
@@ -72,12 +71,12 @@ function initMapClick(){
     //Assign the infobox to a map
     infobox.setMap(map);
     // Create a Marker
-    var markerCoch = new Microsoft.Maps.Pushpin(castellCoch, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
-    var markercaerphilly = new Microsoft.Maps.Pushpin(caerphillyC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
-    var markerCardiff = new Microsoft.Maps.Pushpin(cardiffC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
-    var markerRuperra = new Microsoft.Maps.Pushpin(ruperraC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
-    var markerHensol = new Microsoft.Maps.Pushpin(hensolC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
-    var markerLlantrisant = new Microsoft.Maps.Pushpin(llantrisantC, {color: 'black',title: 'Liberty',subTitle: 'Stadium',text: 'LS', icon: 'icons/castleIcon.png'});
+    var markerCoch = new Microsoft.Maps.Pushpin(castellCoch, {text:'CC', color: 'black',title: 'Castle Coch', icon: 'icons/castleIcon.png'});
+    var markercaerphilly = new Microsoft.Maps.Pushpin(caerphillyC, {text:'CC',color: 'black',title: 'Caerphilly Castle', icon: 'icons/castleIcon.png'});
+    var markerCardiff = new Microsoft.Maps.Pushpin(cardiffC, {text:'CC',color: 'black',title: 'Cardiff Castle', icon: 'icons/castleIcon.png'});
+    var markerRuperra = new Microsoft.Maps.Pushpin(ruperraC, {text:'RC',color: 'black',title: 'Ruperra Castle', icon: 'icons/castleIcon.png'});
+    var markerHensol = new Microsoft.Maps.Pushpin(hensolC, {text:'HC',color: 'black',title: 'Hensol Castle', icon: 'icons/castleIcon.png'});
+    var markerLlantrisant = new Microsoft.Maps.Pushpin(llantrisantC, {text:'LC',textcolor: 'black',title: 'Llantrisant Castle', icon: 'icons/castleIcon.png'});
     // Create the content
     markerCoch.metadata = { title: 'Castle Coch', description: 'This is Castle Coch'};
     markercaerphilly.metadata = { title: 'Caerphilly Castle', description: 'This is Caerphilly Castle'};
@@ -194,27 +193,54 @@ function initMapFlight(){
 
 
 function initMapWind() {
-    // Declare your locations here
     var pointsOne = [
-        new Microsoft.Maps.Location(51.86, -3.95),
-        new Microsoft.Maps.Location(51.93, -3.85),
-        new Microsoft.Maps.Location(52.01, -3.72),
-        new Microsoft.Maps.Location(55.01, -3.50),
-        new Microsoft.Maps.Location(51.86, -3.95)
+        new Microsoft.Maps.Location(51.86,-3.95),new Microsoft.Maps.Location(51.93,-3.85),
+        new Microsoft.Maps.Location(52.01,-3.72),new Microsoft.Maps.Location(51.96,-3.65),
+        new Microsoft.Maps.Location(51.87,-3.60),new Microsoft.Maps.Location(51.86,-3.76),
+        new Microsoft.Maps.Location(51.84,-3.91),new Microsoft.Maps.Location(51.86,-3.95)
+    ];
+    var pointsTwo = [
+        new Microsoft.Maps.Location(53.10, -3.90),
+        new Microsoft.Maps.Location(52.81, -3.59),
+        new Microsoft.Maps.Location(52.75, -3.82),
+        new Microsoft.Maps.Location(52.83, -4.05),
+        new Microsoft.Maps.Location(53.10, -3.90)
     ];
     //Set your middle starting area
     var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
     // #map is the same as get element by id for bing map
     var map = new Microsoft.Maps.Map('#map', {center: middleGround,zoom: 9,});
     // create a polygon
-    var polygon = new Microsoft.Maps.Polygon(pointsOne, {
+    var polyOne = new Microsoft.Maps.Polygon(pointsOne, {
         fillColor: 'rgba(0, 255, 0, 0.5)',
         strokeColor: 'red',
         strokeThickness: 2
     });
+    var polyTwo = new Microsoft.Maps.Polygon(pointsTwo, {
+        fillColor: 'rgba(0, 255, 0, 0.5)',
+        strokeColor: 'Green',
+        strokeThickness: 2
+    });
     //Add the pushpin to the map
-    map.entities.push(polygon);
+    map.entities.push(polyOne);
+    map.entities.push(polyTwo);
 }
+
+function bigBeauty(){
+    //Set your middle starting area
+    var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
+    // Create Map
+    var map = new Microsoft.Maps.Map('#map', {center: middleGround,zoom: 9,});
+    //Load GeoJSON module.
+    Microsoft.Maps.loadModule('Microsoft.Maps.GeoJson', function () {
+        //Read the GeoJSON file that is hosted on the same domain.
+        Microsoft.Maps.GeoJson.readFromUrl('json/test.json',
+            function (shapes) {
+                //Add the shape(s) to the map.
+                map.entities.push(shapes);
+            });
+    });
+};
 
 function initMapStyle(){
     // Set your middle starting area
@@ -242,6 +268,5 @@ function initMapStyle(){
         zoom: 9,
         customMapStyle: myStyle,
     });
-    
-
+   
 }
