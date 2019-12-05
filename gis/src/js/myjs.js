@@ -14,7 +14,9 @@ function getVal() {
         document.getElementById('myImage').src = 'img/thumbsUp.png';
     } else if (number == 69){
         document.getElementById('myImage').src = 'img/gotEm.png';
-    } else if (number > 69){
+    } else if (number == 70){
         document.getElementById('myImage').src = 'img/goldThumb.png';
+    } else if (number == 9000){
+        document.getElementById('myImage').src = 'img/superSayian.png';
     };
 }
