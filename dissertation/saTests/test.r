@@ -3,48 +3,48 @@
 install.packages("tidyverse")
 install.packages("tidytext")
 install.packages("textdata")
+install.packages("tibble")
 
 # Load packages
 library(tidyverse)
 library(tidytext)
 library(textdata)
 library(tm)
+library(dplyr)
+library(janeaustenr)
+
+get_sentiments("afinn")
+
+test <- tibble(txt = prideprejudice)
+head(test)
+
+test %>%
+  unnest_tokens(word, txt)
 
 # Import csv's you want 
 # which will be a Data Frame
-# testSpread <- read.csv("newOnes.txt")
+spread2018 <- read.csv("testSheet.csv", stringsAsFactors = FALSE)
+spread2018
 
+# Create a Tibble with the ID and Before
+beforeTib <- tibble(ID = spread2018[,2],
+                    Before = spread2018[,4])
+# Checking beforeTib
+head(beforeTib)
 
-# Create a Tibble with an ID
-tokenTibOne <- tibOne %>% 
-  unnest_tokens() %>%
+# Tokenize the words, using the Before column
+# Whilst connecting with Afinn
+beforeToken <- beforeTib %>% 
+  unnest_tokens(word, Before) %>%
   inner_join(get_sentiments("afinn"))
 
-
-# Create custom stop words
-customStop <- tribble(~word, ~lexicon,
-                          "crisis", "CUSTOM",
-                          "simulate", "CUSTOM",
-                          "simulation", "CUSTOM",
-                          "simulating", "CUSTOM",
-                          "feel", "CUSTOM",
-                          "feels", "CUSTOM",
-                          "feeling", "CUSTOM",
-                          "feelings", "CUSTOM")
-
-# Bind the custom stop words we created,
-# to the stop words dictionary
-customStopWords <- stop_words %>%
-  bind_rows(customStop)
-
-# Remove stop words
-beforeNoStop <- beforeToken %>%
-  anti_join(customStopWords)
-
-
-# Gives us a table with the value of each word,
-# Total score per person and the percentage
-# of the word contribution to the score
-scoreBefore <- beforeNoStop %>%
+# Group by ID
+scoreBefore <- beforeToken %>%
   group_by(ID) %>% 
   mutate(total = sum(value), percent = value / total)
+# Export it
+save(scoreBefore, file="exportedScore.csv")
+
+# THIS WORKS
+testingScript <- tidytext::unnest_tokens(read.csv("testSheet.csv", stringsAsFactors = FALSE), word, Before)
+head(testingScript)
