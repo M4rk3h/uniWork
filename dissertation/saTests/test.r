@@ -8,10 +8,12 @@ install.packages("tibble")
 # Load packages
 library(tidyverse)
 library(tidytext)
+library(tidyr)
 library(textdata)
 library(tm)
 library(dplyr)
 library(janeaustenr)
+library(ggplot2)
 
 get_sentiments("afinn")
 
@@ -39,12 +41,31 @@ beforeToken <- beforeTib %>%
   inner_join(get_sentiments("afinn"))
 
 # Group by ID
-scoreBefore <- beforeToken %>%
-  group_by(ID) %>% 
+scoreID <- beforeToken %>%
+  group_by(ID)
+
+# Get the percentage?
+scorePercent <- scoreID %>%
   mutate(total = sum(value), percent = value / total)
+
+# Order the word by the number of words
+orderedCount <- scoreID %>%
+  count(word, sort = TRUE)
+
+# Try to map song & sentiment on graph
+ggplot(scorePercent, aes(fill = ID)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~ID, ncol = 2, scales = "free_x")
+
 # Export it
-save(scoreBefore, file="exportedScore.csv")
+write.csv(beforeToken, file = "exportedscores2.csv")
 
 # THIS WORKS
 testingScript <- tidytext::unnest_tokens(read.csv("testSheet.csv", stringsAsFactors = FALSE), word, Before)
 head(testingScript)
+
+jane_austen_sentiment <- tidy_books %>%
+  inner_join(get_sentiments("bing")) %>%
+  count(book, index = linenumber %/% 80, sentiment) %>%
+  spread(sentiment, n, fill = 0) %>%
+  mutate(sentiment = positive - negative)
