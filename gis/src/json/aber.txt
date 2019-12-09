@@ -1,0 +1,61 @@
+Abbeycwmhir - 52.33109 , Long -3.38924
+Abenbury - 53.04513 , Long -2.92459
+Aber - 52.11319 , Long -4.22703
+Aber Banc - 52.04953 , Long -4.39994
+Aber Clydach - 51.85805 , Long -3.31555
+Aber Valley - Lat 51.60291 , Long -3.27255
+Aberaeron - Lat 52.2422 , Long -4.25926
+Aberaman - Lat 51.7031 , Long -3.42705
+Aberangell - Lat 52.67465 , Long -3.711
+Aberarth - Lat 52.25124 , Long -4.22849
+Aberavon - Lat 51.59648 , Long -3.79646
+Aberbargoed - Lat 51.69256 , Long -3.22088
+Aberbeeg - Lat 51.711 , Long -3.14471
+Abercanaid - Lat 51.72341 , Long -3.36315
+Abercarn - Lat 51.64753 , Long -3.13398
+Abercastle - Lat 51.95855 , Long -5.12564
+Abercraf - Lat 51.80018 , Long -3.71209
+Abercregan - Lat 51.65648 , Long -3.66549
+Abercwmboi - Lat 51.68959 , Long -3.411
+Abercych - Lat 52.04114 , Long -4.55751
+Abercynon - Lat 51.64684 , Long -3.32989
+Aberdare - Lat 51.71363 , Long -3.44481
+Aberdaron - Lat 52.80849 , Long -4.70927
+Aberdulais - Lat 51.68142 , Long -3.7738
+Aberdyfi - Lat 52.5441 , Long -4.04366
+Aberedw - Lat 52.11684 , Long -3.34268
+Abereiddy - Lat 51.93463 , Long -5.20589
+Abererch - Lat 52.90292 , Long -4.38642
+Aberfan - Lat 51.69283 , Long -3.34499
+Aberffraw - Lat 53.1938 , Long -4.46332
+Aberffrwd - Lat 52.39184 , Long -3.93087
+Abergarwed - Lat 51.70544 , Long -3.71767
+Abergavenny - Lat 51.8248 , Long -3.0206
+Abergele - Lat 53.28636 , Long -3.58225
+Aberglaslyn Pass - Lat 52.99658 , Long -4.0949
+Abergorlech - Lat 51.98335 , Long -4.06383
+Abergwesyn - Lat 52.16091 , Long -3.67629
+Abergwili - Lat 51.86595 , Long -4.27068
+Abergwynfi - Lat 51.65286 , Long -3.60171
+Abergwyngregyn - Lat 53.23453 , Long -4.01829
+Abergynolwyn - Lat 52.64509 , Long -3.95319
+Aberhafesp - Lat 52.52164 , Long -3.37332
+Aberhosan - Lat 52.56217 , Long -3.76134
+Aberkenfig - Lat 51.54025 , Long -3.59922
+Aberllefenni - Lat 52.67385 , Long -3.81976
+Abermagwr - Lat 52.3452 , Long -3.95954
+Abermaw - Lat 52.72267 , Long -4.05408
+Abermeurig - Lat 52.18477 , Long -4.10477
+Abermule - Lat 52.54293 , Long -3.23577
+Abernant (Carmarthenshire) - Lat 51.88126 , Long -4.41526
+Abernant (Rhondda Cynon Taf) - Lat 51.71958 , Long -3.43271
+Aberporth - Lat 52.1302 , Long -4.53886
+Abersoch - Lat 52.82388 , Long -4.50624
+Abersychan - Lat 51.72397 , Long -3.05798
+Aberthin - Lat 51.46625 , Long -3.42756
+Abertillery - Lat 51.73043 , Long -3.13329
+Abertridwr - Lat 51.59587 , Long -3.26757
+Abertysswg - Lat 51.74218 , Long -3.26045
+Aberwheeler - Lat 53.21305 , Long -3.35422
+Aberyscir - Lat 51.95863 , Long -3.45649
+Aberystwyth - Lat 52.41594 , Long -4.08372
