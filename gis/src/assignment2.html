@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- JavaScript Ref -->
+    <link rel="stylesheet" href="css/mycss.css">
+    <!-- CSS Ref -->
+    <script src="js/custom.js"></script>
+    <title>Mark Baber - Welcome!</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Mark Baber</h1>
+    </div>
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="gmap.html">Google Maps</a>
+        <a href="bmap.html">Bing Maps</a>
+        <a class="active" href="assignment.html">Custom Maps</a>
+    </div>
+    <div class="centered">
+        <h1>Custom Maps</h1>
+        <p>All Places In Wales Beginning With 'Aber'</p>
+        <div id="gmapCustom" style="height:400px; width:100%;">
+            Google Map
+        </div>
+        <br>
+        
+        <a href="assignment1.html" class="disabled"> Course Work 1</a>
+        <a href="assignment2.html"> Course Work 2 </a>
+    
+    </div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4b19Rf62isIVy20C-moot42kxl0xxY8Q&callback=customMap">
+    </script>
+</body>
+
+</html>

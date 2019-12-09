@@ -5,7 +5,7 @@
           "type": "Feature",
           "geometry": {
               "type": "Point",
-              "coordinates": [51.642895, -3.934575]
+              "coordinates": [-3.934575, 51.642895]
           },
           "properties": {
               "name": "Liberty Stadium",
@@ -15,7 +15,7 @@
           "type": "Feature",
           "geometry": {
               "type": "Point",
-              "coordinates": [51.478, -3.182]
+              "coordinates": [-3.182, 51.478]
           },
           "properties": {
             "name": "Principallity Stadium",
