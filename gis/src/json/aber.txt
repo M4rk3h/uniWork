@@ -59,5 +59,3 @@ Abertysswg - Lat 51.74218 , Long -3.26045
 Aberwheeler - Lat 53.21305 , Long -3.35422
 Aberyscir - Lat 51.95863 , Long -3.45649
 Aberystwyth - Lat 52.41594 , Long -4.08372
-
-save as array & import*
