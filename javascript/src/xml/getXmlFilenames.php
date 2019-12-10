@@ -1,4 +1,5 @@
 <?php
+
 $directory = 'xml';
 
 if (!chdir($directory)){
@@ -24,4 +25,3 @@ foreach($files as $filename){
 
 echo json_encode($output);
 ?>
-

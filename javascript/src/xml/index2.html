@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Inserting into XML File</title>
+  </head>
+<body>
+
+<h1>Inserting into XML File</h1>
+
+<p id="output"></p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+	<script>
+      window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')
+    </script>
+
+<script>
+$(function() {
+
+  var formData;
+
+  formData = new Object();
+
+  formData.NAME = 'Rex';
+  formData.OWNER = 'Princess Margaret';
+
+  var jsonFormData = JSON.stringify(formData);
+  var sourceFile = 'pets';
+
+  $.getJSON("insertXml.php", {sourceName:sourceFile, sourceData:jsonFormData}, function(data){
+    console.log(data); 
+  });
+});
+
+</script>
+
+</body>
+</html>
