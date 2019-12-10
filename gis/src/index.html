@@ -2,49 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <!-- JavaScript Ref -->
-    <link rel="stylesheet" href="css/mycss.css">
-    <!-- CSS Ref -->
-    <script src="js/myjs.js"></script>
-    <!-- Font Awesome Ref-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-   
-    <title>Mark Baber - Welcome!</title>
+  <title>Mark James Baber</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Font Awesome Ref-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <!-- Google Fonts (Ubuntu) -->
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+  <!-- My Css Files -->
+  <link rel="stylesheet" href="/src/css/mycss.css">
+  <!-- Scripts Go Here! -->
+  <script src="/src/js/toTop.js" type="text/javascript"></script>
+  <!-- Added a Favicon.png-->
+  <link rel="shortcut icon" type="image/png" href="favicon.icon" />
 </head>
 
 <body>
-    <div class="header">
-        <h1>Mark Baber</h1>
+  <nav class="navbar-inverse nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#Hello!">MjB</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="programming.html">Programming</a></li>
+          <li><a href="/opensource.html">Open Source</a></li>
+          <li><a href="/linux.html">Linux</a></li>
+          <li><a href="/features.html">Features</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="gmap.html">Google Maps</a>
-        <a href="bmap.html">Bing Maps</a>
-        <a href="assignment1.html">Custom Maps</a>
+  </nav>
+  <div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="container-fluid">
+      <h1>Mark James Baber</h1>
     </div>
-    <div class="centered">
-        <div class="left">
-            <h2>Who am i</h2>
-            <img class="imgPort" src="img/portrait.jpg" alt="portrait photo of Mark Baber">
-            <p>My name is Mark and I like computers.</p>
-        </div>
-        <div class="right">
-            <h2>See my previous work On GitHub</h2>
-            <h1><a href="https://github.com/M4rk3h" target="_blank"><i class="fab fa-github"></i></a></h1>
-        </div>
-        <h2>Input a number</h2>
-        <!-- Clear input on click - To clean number on click add onclick="this.value = ''" -->
-        <input type="number" id="number" name="number" class="number">
-        <button onclick="getVal();">Get Value</button>
+  </div>
+  <div class="container-fluid sec-1 text-center">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div id="captioned-gallery">
+          <figure>
+            <img src="/src/img/portrait.jpg" class="imgPort" alt="Picture of me"/>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid sec-3 text-center">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h2>Things I Have Learnt:</h3>
+        <p>Whilst making this website, I have gained a better knowledge of BootStrap,
+          with customer CSS and JavaScript files for Canvas and other features.</p>
         <br>
-        <img id="myImage" src="" style="width:150px">
-        <br>
-        <script>
-            inputText();
-            getVal();
-        </script>
+        <p>This website will include multiple pages demonstrating the things I
+          have learnt, with a couple of pages dedicated to opensource projects I find interesting
+         and Linux operating systems.</p>
     </div>
+  </div>
+  <div class="container-fluid sec-2 text-center">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="embed-responsive embed-responsive-16by9">
+        <video class="video-fluid" autoplay loop muted>
+          <source src="/src/video/codeVideo2.mp4" type="video/mp4" />
+          <source src="/src/video/codeVideo2.ogg" type="video/ogg" />
+          <p>Sorry, your browser does not support mp4 or ogg files.</p>
+        </video>
+      </div>
+    </div>
+  </div>
 </body>
+
+<footer class="text-center sec-1">
+  <div class="footer-above">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-md-12">
+          <h3>Social Media Buttons </h3>
+          <ul class="list-inline">
+            <li>
+              <a href="https://github.com/M4rk3h" class="btn-social btn-outline"><i class="fab fa-github"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/M4rk3h11" class="btn-social btn-outline"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="/contact.html" class="btn-social btn-outline"> <i class="fas fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
 
 </html>
