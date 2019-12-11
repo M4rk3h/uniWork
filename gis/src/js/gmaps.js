@@ -22,7 +22,7 @@ function defaultMap() {
     icon: markerIcon,
     title: 'GIS!'
   });
-    // Create an info window
+  // Create an info window
     infoWindow = new google.maps.InfoWindow;
     // Try HTML5 geolocation in browser
     if (navigator.geolocation) {
