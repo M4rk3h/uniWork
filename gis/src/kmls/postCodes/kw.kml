@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Kirkwall postcode area (KW)</name>
+    <Placemark id="KW">
+      <visibility>1</visibility>
+      <name>KW</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>KW</strong><br>
+            This is a rough outline of the Kirkwall postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -4.309253,58.535326,30
+ -2.972932,59.336065,30
+ -2.888863,59.351097,30
+ -2.410114,59.380790,30
+ -2.575077,59.038054,30
+ -3.055176,58.449399,30
+ -3.120889,58.377875,30
+ -3.163315,58.346786,30
+ -3.205674,58.322924,30
+ -3.846456,58.008937,30
+ -4.018494,57.935375,30
+ -4.297820,58.241038,30
+ -4.309253,58.535326,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

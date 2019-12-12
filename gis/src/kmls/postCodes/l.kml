@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Liverpool postcode area (L)</name>
+    <Placemark id="L">
+      <visibility>1</visibility>
+      <name>L</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>L</strong><br>
+            This is a rough outline of the Liverpool postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -3.093309,53.568734,30
+ -3.030164,53.581959,30
+ -2.986079,53.606870,30
+ -2.868137,53.646893,30
+ -2.824225,53.650241,30
+ -2.750619,53.643274,30
+ -2.743719,53.642248,30
+ -2.737914,53.623408,30
+ -2.777244,53.602234,30
+ -2.805864,53.586252,30
+ -2.832869,53.551443,30
+ -2.822877,53.539018,30
+ -2.823639,53.498213,30
+ -2.826838,53.486739,30
+ -2.737524,53.410039,30
+ -2.741802,53.401716,30
+ -2.794338,53.322483,30
+ -2.844906,53.329524,30
+ -2.874367,53.336907,30
+ -2.902228,53.346291,30
+ -2.970378,53.376597,30
+ -2.976095,53.380084,30
+ -2.979500,53.382375,30
+ -2.985647,53.387493,30
+ -2.985956,53.387850,30
+ -2.998607,53.404797,30
+ -3.094395,53.542359,30
+ -3.093309,53.568734,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

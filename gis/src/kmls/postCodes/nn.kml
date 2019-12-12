@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Northampton postcode area (NN)</name>
+    <Placemark id="NN">
+      <visibility>1</visibility>
+      <name>NN</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>NN</strong><br>
+            This is a rough outline of the Northampton postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -1.302786,52.268759,30
+ -1.157643,52.307740,30
+ -1.145445,52.327279,30
+ -1.137314,52.405059,30
+ -1.094643,52.421480,30
+ -0.948984,52.410556,30
+ -0.889362,52.421942,30
+ -0.771589,52.472607,30
+ -0.649044,52.566598,30
+ -0.633376,52.567965,30
+ -0.553233,52.573684,30
+ -0.585702,52.492783,30
+ -0.437888,52.410905,30
+ -0.436890,52.408761,30
+ -0.465691,52.323122,30
+ -0.506109,52.315045,30
+ -0.885700,52.060560,30
+ -1.036015,52.060438,30
+ -1.139218,51.975067,30
+ -1.148264,51.974819,30
+ -1.222328,51.996289,30
+ -1.180722,52.127542,30
+ -1.235902,52.156242,30
+ -1.310653,52.155399,30
+ -1.321093,52.176345,30
+ -1.267347,52.213910,30
+ -1.302786,52.268759,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

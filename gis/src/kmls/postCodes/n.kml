@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The London N postcode area (N)</name>
+    <Placemark id="N">
+      <visibility>1</visibility>
+      <name>N</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>N</strong><br>
+            This is a rough outline of the London N postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -0.132450,51.660560,30
+ -0.075254,51.630133,30
+ -0.054821,51.642664,30
+ -0.038246,51.637901,30
+ -0.034630,51.632625,30
+ -0.032630,51.626099,30
+ -0.036051,51.609772,30
+ -0.077693,51.575148,30
+ -0.080326,51.533205,30
+ -0.078274,51.528180,30
+ -0.078927,51.527732,30
+ -0.080960,51.527028,30
+ -0.084032,51.526665,30
+ -0.084851,51.526732,30
+ -0.110396,51.534754,30
+ -0.123521,51.530792,30
+ -0.126134,51.531428,30
+ -0.125345,51.551675,30
+ -0.136052,51.565694,30
+ -0.210425,51.590825,30
+ -0.212191,51.593649,30
+ -0.197389,51.611974,30
+ -0.230394,51.630856,30
+ -0.152601,51.627266,30
+ -0.132450,51.660560,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

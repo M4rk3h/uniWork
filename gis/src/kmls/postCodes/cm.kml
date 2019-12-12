@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Chelmsford postcode area (CM)</name>
+    <Placemark id="CM">
+      <visibility>1</visibility>
+      <name>CM</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>CM</strong><br>
+            This is a rough outline of the Chelmsford postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ 0.120294,51.952066,30
+ 0.204605,51.938233,30
+ 0.419359,51.972251,30
+ 0.445372,52.016776,30
+ 0.460151,52.016774,30
+ 0.546306,51.930050,30
+ 0.709018,51.791633,30
+ 0.916407,51.740585,30
+ 0.925280,51.733286,30
+ 0.927666,51.710373,30
+ 0.908584,51.651686,30
+ 0.903541,51.636818,30
+ 0.901103,51.632129,30
+ 0.592177,51.648479,30
+ 0.506714,51.646954,30
+ 0.395382,51.585077,30
+ 0.361740,51.562674,30
+ 0.337597,51.560621,30
+ 0.143066,51.618571,30
+ 0.045638,51.626155,30
+ 0.112288,51.647321,30
+ 0.233605,51.664554,30
+ 0.186284,51.680364,30
+ 0.087805,51.665322,30
+ 0.069079,51.744949,30
+ 0.017582,51.748551,30
+ 0.015117,51.764771,30
+ 0.069137,51.784254,30
+ 0.119222,51.854267,30
+ 0.120294,51.952066,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

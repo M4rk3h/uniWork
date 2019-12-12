@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Dumfries postcode area (DG)</name>
+    <Placemark id="DG">
+      <visibility>1</visibility>
+      <name>DG</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>DG</strong><br>
+            This is a rough outline of the Dumfries postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -5.165137,54.980242,30
+ -5.146409,55.001011,30
+ -4.664315,55.055062,30
+ -3.969813,55.437201,30
+ -3.855039,55.449438,30
+ -3.758567,55.374383,30
+ -3.640329,55.371354,30
+ -3.326112,55.391073,30
+ -2.949834,55.261069,30
+ -2.854368,55.112846,30
+ -3.045585,55.046975,30
+ -3.048337,54.989958,30
+ -4.404582,54.681063,30
+ -4.889108,54.648067,30
+ -4.901871,54.651601,30
+ -4.914938,54.655872,30
+ -4.958051,54.672798,30
+ -5.122833,54.844082,30
+ -5.157872,54.897679,30
+ -5.171520,54.934734,30
+ -5.165137,54.980242,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

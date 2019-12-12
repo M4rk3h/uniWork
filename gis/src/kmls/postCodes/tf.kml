@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Telford postcode area (TF)</name>
+    <Placemark id="TF">
+      <visibility>1</visibility>
+      <name>TF</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>TF</strong><br>
+            This is a rough outline of the Telford postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.699807,52.548328,30
+ -2.546623,52.636787,30
+ -2.546367,52.657761,30
+ -2.652830,52.739344,30
+ -2.596571,52.900347,30
+ -2.570762,52.948890,30
+ -2.556557,52.954154,30
+ -2.514648,52.965984,30
+ -2.405977,52.961524,30
+ -2.360157,52.976171,30
+ -2.334666,52.934347,30
+ -2.385299,52.859384,30
+ -2.382037,52.834727,30
+ -2.255618,52.694111,30
+ -2.265649,52.674563,30
+ -2.299772,52.653500,30
+ -2.317932,52.625962,30
+ -2.343877,52.609474,30
+ -2.568336,52.551766,30
+ -2.625184,52.500416,30
+ -2.649191,52.500089,30
+ -2.670413,52.500707,30
+ -2.698974,52.516284,30
+ -2.700050,52.536694,30
+ -2.699807,52.548328,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

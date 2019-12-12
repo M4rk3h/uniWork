@@ -1,551 +1,538 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <kml xmlns='http://www.opengis.net/kml/2.2'>
 	<Document>
-	<name>aber</name>
-		<Style id="myStyle">
-			<IconStyle>
-				<Icon>
-					<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-				</Icon>
-			</IconStyle>
-			<BalloonStyle>
-				<text>TEST TEXT IN BALLOON STYLE</text>
-			</BalloonStyle>
-		</Style>
-		<description>aberplaces</description>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abenbury - 53.04513 , Long -2.92459 </address>
-			<Point>
-				<coordinates>-2.9379618,53.0365663,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aber Banc - 52.04953 , Long -4.39994 </address>
-			<Point>
-				<coordinates>-4.398661,52.049721,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aber Clydach - 51.85805 , Long -3.31555 </address>
-			<Point>
-				<coordinates>-3.304045,51.88442,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aber Valley - Lat 51.60291 , Long -3.27255 </address>
-			<Point>
-				<coordinates>-3.2714587,51.6063381,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberaeron - Lat 52.2422 , Long -4.25926 </address>
-			<Point>
-				<coordinates>-4.2581619,52.242793,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberaman - Lat 51.7031 , Long -3.42705 </address>
-			<Point>
-				<coordinates>-3.424978,51.7022229,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberangell - Lat 52.67465 , Long -3.711 </address>
-			<Point>
-				<coordinates>-3.711135,52.674057,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberarth - Lat 52.25124 , Long -4.22849 </address>
-			<Point>
-				<coordinates>-4.228173,52.251399,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberavon - Lat 51.59648 , Long -3.79646 </address>
-			<Point>
-				<coordinates>-3.784097,51.5946799,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberbargoed - Lat 51.69256 , Long -3.22088 </address>
-			<Point>
-				<coordinates>-3.220952,51.694914,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberbeeg - Lat 51.711 , Long -3.14471 </address>
-			<Point>
-				<coordinates>-3.143984,51.709953,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abercanaid - Lat 51.72341 , Long -3.36315 </address>
-			<Point>
-				<coordinates>-3.367402,51.725747,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abercarn - Lat 51.64753 , Long -3.13398 </address>
-			<Point>
-				<coordinates>-3.135657,51.646985,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abercastle - Lat 51.95855 , Long -5.12564 </address>
-			<Point>
-				<coordinates>-5.125257,51.958919,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abercraf - Lat 51.80018 , Long -3.71209 </address>
-			<Point>
-				<coordinates>-3.705678,51.801738,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abercregan - Lat 51.65648 , Long -3.66549 </address>
-			<Point>
-				<coordinates>-3.665335,51.656663,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abercwmboi - Lat 51.68959 , Long -3.411 </address>
-			<Point>
-				<coordinates>-3.416712,51.691895,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abercych - Lat 52.04114 , Long -4.55751 </address>
-			<Point>
-				<coordinates>-4.557244,52.0403499,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abercynon - Lat 51.64684 , Long -3.32989 </address>
-			<Point>
-				<coordinates>-3.3293529,51.647512,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberdare - Lat 51.71363 , Long -3.44481 </address>
-			<Point>
-				<coordinates>-3.451816,51.716154,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberdaron - Lat 52.80849 , Long -4.70927 </address>
-			<Point>
-				<coordinates>-4.711515,52.804729,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberdulais - Lat 51.68142 , Long -3.7738 </address>
-			<Point>
-				<coordinates>-3.775361,51.681848,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberdyfi - Lat 52.5441 , Long -4.04366 </address>
-			<Point>
-				<coordinates>-4.046093,52.543963,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberedw - Lat 52.11684 , Long -3.34268 </address>
-			<Point>
-				<coordinates>-3.345416,52.1168539,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abereiddy - Lat 51.93463 , Long -5.20589 </address>
-			<Point>
-				<coordinates>-5.2026574,51.935016,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abererch - Lat 52.90292 , Long -4.38642 </address>
-			<Point>
-				<coordinates>-4.381498,52.903768,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberfan - Lat 51.69283 , Long -3.34499 </address>
-			<Point>
-				<coordinates>-3.345293,51.694515,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberffraw - Lat 53.1938 , Long -4.46332 </address>
-			<Point>
-				<coordinates>-4.463753,53.19196,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberffrwd - Lat 52.39184 , Long -3.93087 </address>
-			<Point>
-				<coordinates>-3.938282,52.392098,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abergarwed - Lat 51.70544 , Long -3.71767 </address>
-			<Point>
-				<coordinates>-3.7145503,51.7072298,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abergavenny - Lat 51.8248 , Long -3.0206 </address>
-			<Point>
-				<coordinates>-3.019423,51.825366,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abergele - Lat 53.28636 , Long -3.58225 </address>
-			<Point>
-				<coordinates>-3.581405,53.284355,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberglaslyn Pass - Lat 52.99658 , Long -4.0949 </address>
-			<Point>
-				<coordinates>-4.1,53,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abergorlech - Lat 51.98335 , Long -4.06383 </address>
-			<Point>
-				<coordinates>-4.062631,51.983143,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abergwesyn - Lat 52.16091 , Long -3.67629 </address>
-			<Point>
-				<coordinates>-3.676972,52.159072,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abergwili - Lat 51.86595 , Long -4.27068 </address>
-			<Point>
-				<coordinates>-4.273844,51.865863,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abergwynfi - Lat 51.65286 , Long -3.60171 </address>
-			<Point>
-				<coordinates>-3.600475,51.653032,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abergwyngregyn - Lat 53.23453 , Long -4.01829 </address>
-			<Point>
-				<coordinates>-4.014381,53.233669,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abergynolwyn - Lat 52.64509 , Long -3.95319 </address>
-			<Point>
-				<coordinates>-3.950379,52.64435,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberhafesp - Lat 52.52164 , Long -3.37332 </address>
-			<Point>
-				<coordinates>-3.373044,52.521916,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberhosan - Lat 52.56217 , Long -3.76134 </address>
-			<Point>
-				<coordinates>-3.761393,52.561962,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberkenfig - Lat 51.54025 , Long -3.59922 </address>
-			<Point>
-				<coordinates>-3.597806,51.540786,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberllefenni - Lat 52.67385 , Long -3.81976 </address>
-			<Point>
-				<coordinates>-3.817865,52.67318,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abermagwr - Lat 52.3452 , Long -3.95954 </address>
-			<Point>
-				<coordinates>-3.963231,52.346888,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abermaw - Lat 52.72267 , Long -4.05408 </address>
-			<Point>
-				<coordinates>-4.0560919,52.722873,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abermeurig - Lat 52.18477 , Long -4.10477 </address>
-			<Point>
-				<coordinates>-4.100155,52.186779,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abermule - Lat 52.54293 , Long -3.23577 </address>
-			<Point>
-				<coordinates>-3.235731,52.544478,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abernant (Carmarthenshire) - Lat 51.88126 , Long -4.41526 </address>
-			<Point>
-				<coordinates>-4.4162991,51.881176,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abernant (Rhondda Cynon Taf) - Lat 51.71958 , Long -3.43271 </address>
-			<Point>
-				<coordinates>-3.4281446,51.7202122,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberporth - Lat 52.1302 , Long -4.53886 </address>
-			<Point>
-				<coordinates>-4.544851,52.1325069,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abersoch - Lat 52.82388 , Long -4.50624 </address>
-			<Point>
-				<coordinates>-4.5053599,52.824497,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abersychan - Lat 51.72397 , Long -3.05798 </address>
-			<Point>
-				<coordinates>-3.0629,51.724084,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberthin - Lat 51.46625 , Long -3.42756 </address>
-			<Point>
-				<coordinates>-3.4273121,51.4672657,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abertillery - Lat 51.73043 , Long -3.13329 </address>
-			<Point>
-				<coordinates>-3.135369,51.732161,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abertridwr - Lat 51.59587 , Long -3.26757 </address>
-			<Point>
-				<coordinates>-3.268331,51.595824,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Abertysswg - Lat 51.74218 , Long -3.26045 </address>
-			<Point>
-				<coordinates>-3.260347,51.742213,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberwheeler - Lat 53.21305 , Long -3.35422 </address>
-			<Point>
-				<coordinates>-3.3416013,53.2197954,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberyscir - Lat 51.95863 , Long -3.45649 </address>
-			<Point>
-				<coordinates>-3.458868,51.958369,0</coordinates>
-			</Point>
-		</Placemark>
-		<Placemark>
-			<styleUrl>myStyle</styleUrl>
-			<ExtendedData>
-			</ExtendedData>
-			<address>Aberystwyth - Lat 52.41594 , Long -4.08372 </address>
-			<Point>
-				<coordinates>-4.08292,52.415303,0</coordinates>
-			</Point>
-		</Placemark>
-		<Style id="0">
-			<IconStyle><scale>1</scale><Icon><href>https: //batchgeo.com/images/icons/red_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle>
-		</Style>
-	</Document>
+		<name>aber</name>
+		<description>aberplaces | Created with https://batchgeo.com</description>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abenbury - 53.04513 , Long -2.92459 </address>
+				<Point>
+					<coordinates>-2.9379618,53.0365663,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aber Banc - 52.04953 , Long -4.39994 </address>
+				<Point>
+					<coordinates>-4.398661,52.049721,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aber Clydach - 51.85805 , Long -3.31555 </address>
+				<Point>
+					<coordinates>-3.304045,51.88442,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aber Valley - Lat 51.60291 , Long -3.27255 </address>
+				<Point>
+					<coordinates>-3.2714587,51.6063381,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberaeron - Lat 52.2422 , Long -4.25926 </address>
+				<Point>
+					<coordinates>-4.2581619,52.242793,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberaman - Lat 51.7031 , Long -3.42705 </address>
+				<Point>
+					<coordinates>-3.424978,51.7022229,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberangell - Lat 52.67465 , Long -3.711 </address>
+				<Point>
+					<coordinates>-3.711135,52.674057,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberarth - Lat 52.25124 , Long -4.22849 </address>
+				<Point>
+					<coordinates>-4.228173,52.251399,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberavon - Lat 51.59648 , Long -3.79646 </address>
+				<Point>
+					<coordinates>-3.784097,51.5946799,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberbargoed - Lat 51.69256 , Long -3.22088 </address>
+				<Point>
+					<coordinates>-3.220952,51.694914,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberbeeg - Lat 51.711 , Long -3.14471 </address>
+				<Point>
+					<coordinates>-3.143984,51.709953,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abercanaid - Lat 51.72341 , Long -3.36315 </address>
+				<Point>
+					<coordinates>-3.367402,51.725747,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abercarn - Lat 51.64753 , Long -3.13398 </address>
+				<Point>
+					<coordinates>-3.135657,51.646985,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abercastle - Lat 51.95855 , Long -5.12564 </address>
+				<Point>
+					<coordinates>-5.125257,51.958919,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abercraf - Lat 51.80018 , Long -3.71209 </address>
+				<Point>
+					<coordinates>-3.705678,51.801738,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abercregan - Lat 51.65648 , Long -3.66549 </address>
+				<Point>
+					<coordinates>-3.665335,51.656663,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abercwmboi - Lat 51.68959 , Long -3.411 </address>
+				<Point>
+					<coordinates>-3.416712,51.691895,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abercych - Lat 52.04114 , Long -4.55751 </address>
+				<Point>
+					<coordinates>-4.557244,52.0403499,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abercynon - Lat 51.64684 , Long -3.32989 </address>
+				<Point>
+					<coordinates>-3.3293529,51.647512,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberdare - Lat 51.71363 , Long -3.44481 </address>
+				<Point>
+					<coordinates>-3.451816,51.716154,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberdaron - Lat 52.80849 , Long -4.70927 </address>
+				<Point>
+					<coordinates>-4.711515,52.804729,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberdulais - Lat 51.68142 , Long -3.7738 </address>
+				<Point>
+					<coordinates>-3.775361,51.681848,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberdyfi - Lat 52.5441 , Long -4.04366 </address>
+				<Point>
+					<coordinates>-4.046093,52.543963,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberedw - Lat 52.11684 , Long -3.34268 </address>
+				<Point>
+					<coordinates>-3.345416,52.1168539,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abereiddy - Lat 51.93463 , Long -5.20589 </address>
+				<Point>
+					<coordinates>-5.2026574,51.935016,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abererch - Lat 52.90292 , Long -4.38642 </address>
+				<Point>
+					<coordinates>-4.381498,52.903768,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberfan - Lat 51.69283 , Long -3.34499 </address>
+				<Point>
+					<coordinates>-3.345293,51.694515,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberffraw - Lat 53.1938 , Long -4.46332 </address>
+				<Point>
+					<coordinates>-4.463753,53.19196,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberffrwd - Lat 52.39184 , Long -3.93087 </address>
+				<Point>
+					<coordinates>-3.938282,52.392098,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abergarwed - Lat 51.70544 , Long -3.71767 </address>
+				<Point>
+					<coordinates>-3.7145503,51.7072298,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abergavenny - Lat 51.8248 , Long -3.0206 </address>
+				<Point>
+					<coordinates>-3.019423,51.825366,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abergele - Lat 53.28636 , Long -3.58225 </address>
+				<Point>
+					<coordinates>-3.581405,53.284355,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberglaslyn Pass - Lat 52.99658 , Long -4.0949 </address>
+				<Point>
+					<coordinates>-4.1,53,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abergorlech - Lat 51.98335 , Long -4.06383 </address>
+				<Point>
+					<coordinates>-4.062631,51.983143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abergwesyn - Lat 52.16091 , Long -3.67629 </address>
+				<Point>
+					<coordinates>-3.676972,52.159072,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abergwili - Lat 51.86595 , Long -4.27068 </address>
+				<Point>
+					<coordinates>-4.273844,51.865863,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abergwynfi - Lat 51.65286 , Long -3.60171 </address>
+				<Point>
+					<coordinates>-3.600475,51.653032,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abergwyngregyn - Lat 53.23453 , Long -4.01829 </address>
+				<Point>
+					<coordinates>-4.014381,53.233669,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abergynolwyn - Lat 52.64509 , Long -3.95319 </address>
+				<Point>
+					<coordinates>-3.950379,52.64435,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberhafesp - Lat 52.52164 , Long -3.37332 </address>
+				<Point>
+					<coordinates>-3.373044,52.521916,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberhosan - Lat 52.56217 , Long -3.76134 </address>
+				<Point>
+					<coordinates>-3.761393,52.561962,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberkenfig - Lat 51.54025 , Long -3.59922 </address>
+				<Point>
+					<coordinates>-3.597806,51.540786,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberllefenni - Lat 52.67385 , Long -3.81976 </address>
+				<Point>
+					<coordinates>-3.817865,52.67318,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abermagwr - Lat 52.3452 , Long -3.95954 </address>
+				<Point>
+					<coordinates>-3.963231,52.346888,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abermaw - Lat 52.72267 , Long -4.05408 </address>
+				<Point>
+					<coordinates>-4.0560919,52.722873,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abermeurig - Lat 52.18477 , Long -4.10477 </address>
+				<Point>
+					<coordinates>-4.100155,52.186779,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abermule - Lat 52.54293 , Long -3.23577 </address>
+				<Point>
+					<coordinates>-3.235731,52.544478,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abernant (Carmarthenshire) - Lat 51.88126 , Long -4.41526 </address>
+				<Point>
+					<coordinates>-4.4162991,51.881176,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abernant (Rhondda Cynon Taf) - Lat 51.71958 , Long -3.43271 </address>
+				<Point>
+					<coordinates>-3.4281446,51.7202122,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberporth - Lat 52.1302 , Long -4.53886 </address>
+				<Point>
+					<coordinates>-4.544851,52.1325069,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abersoch - Lat 52.82388 , Long -4.50624 </address>
+				<Point>
+					<coordinates>-4.5053599,52.824497,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abersychan - Lat 51.72397 , Long -3.05798 </address>
+				<Point>
+					<coordinates>-3.0629,51.724084,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberthin - Lat 51.46625 , Long -3.42756 </address>
+				<Point>
+					<coordinates>-3.4273121,51.4672657,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abertillery - Lat 51.73043 , Long -3.13329 </address>
+				<Point>
+					<coordinates>-3.135369,51.732161,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abertridwr - Lat 51.59587 , Long -3.26757 </address>
+				<Point>
+					<coordinates>-3.268331,51.595824,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Abertysswg - Lat 51.74218 , Long -3.26045 </address>
+				<Point>
+					<coordinates>-3.260347,51.742213,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberwheeler - Lat 53.21305 , Long -3.35422 </address>
+				<Point>
+					<coordinates>-3.3416013,53.2197954,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberyscir - Lat 51.95863 , Long -3.45649 </address>
+				<Point>
+					<coordinates>-3.458868,51.958369,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Aberystwyth - Lat 52.41594 , Long -4.08372 </address>
+				<Point>
+					<coordinates>-4.08292,52.415303,0</coordinates>
+				</Point>
+			</Placemark>
+		<Style id="0"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/red_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style>	</Document>
 </kml>

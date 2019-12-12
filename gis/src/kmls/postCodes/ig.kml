@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Ilford postcode area (IG)</name>
+    <Placemark id="IG">
+      <visibility>1</visibility>
+      <name>IG</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>IG</strong><br>
+            This is a rough outline of the Ilford postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ 0.022612,51.662299,30
+ 0.031603,51.667414,30
+ 0.076908,51.664840,30
+ 0.080998,51.663824,30
+ 0.084698,51.662544,30
+ 0.105712,51.645470,30
+ 0.136959,51.616192,30
+ 0.141512,51.608564,30
+ 0.135029,51.530391,30
+ 0.133752,51.529596,30
+ 0.106664,51.537765,30
+ 0.102614,51.515599,30
+ 0.079909,51.525635,30
+ 0.073095,51.531142,30
+ 0.066247,51.559797,30
+ 0.000307,51.601352,30
+ 0.000257,51.601848,30
+ 0.050591,51.622885,30
+ 0.022612,51.662299,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

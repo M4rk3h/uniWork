@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Birmingham postcode area (B)</name>
+    <Placemark id="B">
+      <visibility>1</visibility>
+      <name>B</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>B</strong><br>
+            This is a rough outline of the Birmingham postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.102270,52.465642,30
+ -2.101213,52.466883,30
+ -2.059753,52.513911,30
+ -2.022565,52.523202,30
+ -2.022678,52.541757,30
+ -1.906432,52.562039,30
+ -1.785741,52.627265,30
+ -1.737008,52.658631,30
+ -1.720614,52.707156,30
+ -1.684546,52.719373,30
+ -1.665542,52.720534,30
+ -1.561536,52.677800,30
+ -1.659620,52.583415,30
+ -1.675273,52.548308,30
+ -1.611705,52.495706,30
+ -1.721828,52.256060,30
+ -1.822599,52.165262,30
+ -1.841517,52.136654,30
+ -1.864294,52.146572,30
+ -1.944395,52.227227,30
+ -2.036524,52.224313,30
+ -2.098755,52.283226,30
+ -2.138077,52.323049,30
+ -2.057961,52.395604,30
+ -2.102270,52.465642,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

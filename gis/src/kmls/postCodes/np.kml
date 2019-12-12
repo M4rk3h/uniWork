@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Newport postcode area (NP)</name>
+    <Placemark id="NP">
+      <visibility>1</visibility>
+      <name>NP</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>NP</strong><br>
+            This is a rough outline of the Newport postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -3.302027,51.775186,30
+ -3.268480,51.855532,30
+ -3.223280,51.886078,30
+ -3.190926,51.922501,30
+ -3.091356,51.979904,30
+ -2.969854,51.901801,30
+ -2.883598,51.932583,30
+ -2.733397,51.871046,30
+ -2.681606,51.848287,30
+ -2.688065,51.731058,30
+ -2.640963,51.693220,30
+ -2.606213,51.685744,30
+ -2.648417,51.613425,30
+ -2.652285,51.611255,30
+ -2.713652,51.582988,30
+ -2.901571,51.538068,30
+ -3.013951,51.528356,30
+ -3.036842,51.528327,30
+ -3.127235,51.571211,30
+ -3.176581,51.612457,30
+ -3.184380,51.619662,30
+ -3.224089,51.656678,30
+ -3.209298,51.698975,30
+ -3.302448,51.770686,30
+ -3.302027,51.775186,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

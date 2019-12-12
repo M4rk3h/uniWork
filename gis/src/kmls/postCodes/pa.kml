@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Paisley postcode area (PA)</name>
+    <Placemark id="PA">
+      <visibility>1</visibility>
+      <name>PA</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>PA</strong><br>
+            This is a rough outline of the Paisley postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -6.962591,56.500168,30
+ -6.950789,56.514550,30
+ -6.537626,56.659680,30
+ -5.237532,56.677919,30
+ -4.735632,56.560584,30
+ -4.816857,56.434876,30
+ -4.883318,56.046062,30
+ -4.857442,55.989549,30
+ -4.367120,55.871789,30
+ -4.369604,55.844068,30
+ -4.371143,55.841279,30
+ -4.385037,55.829767,30
+ -4.394237,55.823557,30
+ -4.829352,55.858115,30
+ -5.329382,55.698784,30
+ -5.383807,55.653077,30
+ -5.584529,55.284887,30
+ -5.689156,55.314229,30
+ -6.505537,55.676513,30
+ -6.510066,55.680314,30
+ -6.970070,56.482900,30
+ -6.962591,56.500168,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

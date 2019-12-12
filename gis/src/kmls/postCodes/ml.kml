@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Motherwell postcode area (ML)</name>
+    <Placemark id="ML">
+      <visibility>1</visibility>
+      <name>ML</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>ML</strong><br>
+            This is a rough outline of the Motherwell postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -4.060939,55.894311,30
+ -4.059830,55.895705,30
+ -4.040053,55.911096,30
+ -3.981539,55.921731,30
+ -3.943701,55.926144,30
+ -3.878422,55.916113,30
+ -3.870511,55.913987,30
+ -3.799647,55.878845,30
+ -3.757052,55.873377,30
+ -3.744648,55.804205,30
+ -3.475486,55.718183,30
+ -3.373118,55.593655,30
+ -3.418802,55.469483,30
+ -3.634407,55.374309,30
+ -3.753107,55.377616,30
+ -3.972937,55.543758,30
+ -4.198743,55.621368,30
+ -4.211862,55.637436,30
+ -4.039524,55.801913,30
+ -4.060939,55.894311,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

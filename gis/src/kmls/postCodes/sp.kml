@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Salisbury postcode area (SP)</name>
+    <Placemark id="SP">
+      <visibility>1</visibility>
+      <name>SP</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>SP</strong><br>
+            This is a rough outline of the Salisbury postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.372289,51.010063,30
+ -2.340831,51.072313,30
+ -1.979602,51.123938,30
+ -1.963045,51.137656,30
+ -1.956826,51.231512,30
+ -1.793138,51.247469,30
+ -1.672938,51.267103,30
+ -1.538327,51.302114,30
+ -1.525197,51.329019,30
+ -1.440480,51.322548,30
+ -1.374158,51.270348,30
+ -1.370153,51.262422,30
+ -1.394857,51.213537,30
+ -1.357605,51.213555,30
+ -1.357993,51.205194,30
+ -1.362708,51.199582,30
+ -1.605251,51.162066,30
+ -1.620117,51.150704,30
+ -1.607682,50.974605,30
+ -1.630321,50.959347,30
+ -1.638916,50.954545,30
+ -1.758531,50.897473,30
+ -1.771221,50.893200,30
+ -1.920498,50.959662,30
+ -2.231499,50.946204,30
+ -2.252835,50.948741,30
+ -2.273562,50.985158,30
+ -2.372403,50.997689,30
+ -2.372919,50.998029,30
+ -2.372289,51.010063,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

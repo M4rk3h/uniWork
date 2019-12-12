@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Manchester postcode area (M)</name>
+    <Placemark id="M">
+      <visibility>1</visibility>
+      <name>M</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>M</strong><br>
+            This is a rough outline of the Manchester postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.517958,53.527065,30
+ -2.504979,53.534195,30
+ -2.344023,53.585694,30
+ -2.350922,53.526917,30
+ -2.349369,53.526922,30
+ -2.282474,53.548320,30
+ -2.162058,53.581298,30
+ -2.155342,53.578628,30
+ -2.132208,53.478175,30
+ -2.091716,53.447491,30
+ -2.092445,53.443562,30
+ -2.093915,53.441053,30
+ -2.100313,53.434864,30
+ -2.166696,53.454960,30
+ -2.197784,53.436791,30
+ -2.247092,53.399604,30
+ -2.244268,53.360869,30
+ -2.244988,53.360588,30
+ -2.281838,53.357100,30
+ -2.283221,53.357214,30
+ -2.279901,53.375586,30
+ -2.306040,53.402784,30
+ -2.318471,53.411776,30
+ -2.449193,53.415077,30
+ -2.471125,53.505857,30
+ -2.519607,53.522483,30
+ -2.517958,53.527065,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

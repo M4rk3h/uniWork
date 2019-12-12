@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Cleveland postcode area (TS)</name>
+    <Placemark id="TS">
+      <visibility>1</visibility>
+      <name>TS</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>TS</strong><br>
+            This is a rough outline of the Cleveland postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -1.510027,54.648463,30
+ -1.429417,54.723213,30
+ -1.429939,54.734718,30
+ -1.327468,54.745184,30
+ -1.299320,54.755081,30
+ -0.792015,54.559795,30
+ -0.770890,54.549040,30
+ -0.749830,54.533959,30
+ -0.746278,54.514177,30
+ -0.745865,54.499424,30
+ -1.076725,54.495545,30
+ -1.118543,54.334273,30
+ -1.127126,54.333473,30
+ -1.221993,54.401365,30
+ -1.431883,54.457562,30
+ -1.514512,54.598505,30
+ -1.510027,54.648463,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

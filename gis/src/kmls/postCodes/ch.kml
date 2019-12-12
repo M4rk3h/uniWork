@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Chester postcode area (CH)</name>
+    <Placemark id="CH">
+      <visibility>1</visibility>
+      <name>CH</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>CH</strong><br>
+            This is a rough outline of the Chester postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -3.345929,53.347414,30
+ -3.067929,53.435110,30
+ -3.040759,53.442532,30
+ -2.971449,53.372157,30
+ -2.810012,53.241629,30
+ -2.718174,53.232797,30
+ -2.717589,53.231875,30
+ -2.716033,53.229314,30
+ -2.751762,53.179744,30
+ -2.708996,53.097971,30
+ -2.756484,53.073938,30
+ -2.840622,53.053138,30
+ -2.843122,53.085689,30
+ -2.894490,53.104722,30
+ -3.212495,53.087945,30
+ -3.240955,53.093145,30
+ -3.368523,53.321627,30
+ -3.345929,53.347414,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

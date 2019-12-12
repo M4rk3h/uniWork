@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Stoke-on-Trent postcode area (ST)</name>
+    <Placemark id="ST">
+      <visibility>1</visibility>
+      <name>ST</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>ST</strong><br>
+            This is a rough outline of the Stoke-on-Trent postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.339119,53.102207,30
+ -2.275642,53.130084,30
+ -2.151813,53.149552,30
+ -2.099763,53.135962,30
+ -2.023728,53.166645,30
+ -1.983040,53.171051,30
+ -1.963819,53.169581,30
+ -1.925840,53.115953,30
+ -1.865435,53.116197,30
+ -1.863533,53.098810,30
+ -1.843309,53.083019,30
+ -1.782272,52.870759,30
+ -1.790811,52.856023,30
+ -1.969380,52.834233,30
+ -2.097119,52.685789,30
+ -2.125117,52.689017,30
+ -2.161794,52.661572,30
+ -2.175580,52.659377,30
+ -2.213334,52.673545,30
+ -2.243053,52.674962,30
+ -2.254931,52.680232,30
+ -2.253231,52.698359,30
+ -2.377854,52.838435,30
+ -2.381665,52.863297,30
+ -2.327259,52.934655,30
+ -2.321459,52.971149,30
+ -2.339119,53.102207,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

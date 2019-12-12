@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Dorchester postcode area (DT)</name>
+    <Placemark id="DT">
+      <visibility>1</visibility>
+      <name>DT</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>DT</strong><br>
+            This is a rough outline of the Dorchester postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.975757,50.751898,30
+ -2.886521,50.796145,30
+ -2.834534,50.850359,30
+ -2.633168,50.863667,30
+ -2.529676,51.009644,30
+ -2.524882,51.011779,30
+ -2.499661,51.020585,30
+ -2.376220,50.993900,30
+ -2.280263,50.983649,30
+ -2.258829,50.946327,30
+ -2.070246,50.942465,30
+ -2.035380,50.929595,30
+ -2.057305,50.812747,30
+ -2.234208,50.774443,30
+ -2.245381,50.765823,30
+ -2.265591,50.643720,30
+ -2.454638,50.517666,30
+ -3.009716,50.708776,30
+ -3.013298,50.721866,30
+ -2.983185,50.734282,30
+ -2.975757,50.751898,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

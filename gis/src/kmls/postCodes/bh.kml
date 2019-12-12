@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Bournemouth postcode area (BH)</name>
+    <Placemark id="BH">
+      <visibility>1</visibility>
+      <name>BH</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>BH</strong><br>
+            This is a rough outline of the Bournemouth postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.251675,50.717878,30
+ -2.238723,50.764281,30
+ -2.227437,50.773125,30
+ -2.053979,50.808783,30
+ -2.033979,50.920666,30
+ -1.923581,50.955617,30
+ -1.776298,50.890054,30
+ -1.702989,50.899737,30
+ -1.627946,50.801855,30
+ -1.647295,50.778219,30
+ -1.627388,50.747097,30
+ -1.630135,50.743823,30
+ -1.960151,50.591993,30
+ -2.047176,50.593375,30
+ -2.254994,50.619535,30
+ -2.268380,50.629361,30
+ -2.259621,50.646117,30
+ -2.251675,50.717878,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

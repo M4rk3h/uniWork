@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Southend-on-Sea postcode area (SS)</name>
+    <Placemark id="SS">
+      <visibility>1</visibility>
+      <name>SS</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>SS</strong><br>
+            This is a rough outline of the Southend-on-Sea postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ 0.392937,51.580855,30
+ 0.507233,51.642473,30
+ 0.595771,51.644586,30
+ 0.796236,51.621733,30
+ 0.921987,51.606959,30
+ 0.927004,51.603668,30
+ 0.928550,51.602334,30
+ 0.796238,51.527973,30
+ 0.794453,51.527080,30
+ 0.776322,51.522933,30
+ 0.410599,51.482503,30
+ 0.405100,51.487752,30
+ 0.402124,51.492534,30
+ 0.389786,51.517194,30
+ 0.389445,51.526644,30
+ 0.407325,51.549381,30
+ 0.392937,51.580855,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

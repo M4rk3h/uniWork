@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Cardiff postcode area (CF)</name>
+    <Placemark id="CF">
+      <visibility>1</visibility>
+      <name>CF</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>CF</strong><br>
+            This is a rough outline of the Cardiff postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -3.580596,51.817799,30
+ -3.381956,51.833240,30
+ -3.216476,51.698442,30
+ -3.228943,51.653354,30
+ -3.182805,51.610191,30
+ -3.134221,51.570109,30
+ -3.060784,51.533175,30
+ -3.054173,51.515988,30
+ -3.176034,51.406054,30
+ -3.195181,51.400393,30
+ -3.266887,51.389515,30
+ -3.339874,51.383280,30
+ -3.365809,51.384617,30
+ -3.406609,51.387471,30
+ -3.556283,51.401162,30
+ -3.709746,51.476924,30
+ -3.715837,51.480009,30
+ -3.726316,51.491681,30
+ -3.737136,51.504596,30
+ -3.592989,51.652351,30
+ -3.566233,51.787671,30
+ -3.580596,51.817799,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

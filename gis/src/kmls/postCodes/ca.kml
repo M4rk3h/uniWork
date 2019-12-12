@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Carlisle postcode area (CA)</name>
+    <Placemark id="CA">
+      <visibility>1</visibility>
+      <name>CA</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>CA</strong><br>
+            This is a rough outline of the Carlisle postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -3.570489,54.647734,30
+ -3.397298,54.865284,30
+ -3.393540,54.869731,30
+ -3.372966,54.886089,30
+ -3.369075,54.889045,30
+ -3.365680,54.891006,30
+ -3.048892,54.985478,30
+ -3.037784,55.047312,30
+ -2.856706,55.108561,30
+ -2.816465,55.128374,30
+ -2.767216,55.091347,30
+ -2.527787,55.087480,30
+ -2.547642,54.942228,30
+ -2.342060,54.795244,30
+ -2.337666,54.786764,30
+ -2.312088,54.645671,30
+ -2.225860,54.518421,30
+ -2.234259,54.506893,30
+ -2.343263,54.361824,30
+ -2.709643,54.433795,30
+ -3.033431,54.481357,30
+ -3.363257,54.338280,30
+ -3.402211,54.349338,30
+ -3.456011,54.375333,30
+ -3.482623,54.392643,30
+ -3.562549,54.452305,30
+ -3.636508,54.513685,30
+ -3.570489,54.647734,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

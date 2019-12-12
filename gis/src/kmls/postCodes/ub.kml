@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Southall postcode area (UB)</name>
+    <Placemark id="UB">
+      <visibility>1</visibility>
+      <name>UB</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>UB</strong><br>
+            This is a rough outline of the Southall postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -0.526667,51.585815,30
+ -0.525157,51.587424,30
+ -0.499960,51.597769,30
+ -0.496898,51.614428,30
+ -0.485122,51.615841,30
+ -0.458793,51.612810,30
+ -0.442433,51.577237,30
+ -0.441945,51.576296,30
+ -0.435102,51.565441,30
+ -0.416952,51.545900,30
+ -0.318324,51.551686,30
+ -0.314213,51.549721,30
+ -0.308307,51.541741,30
+ -0.306541,51.539197,30
+ -0.306721,51.537464,30
+ -0.308323,51.531993,30
+ -0.352607,51.526194,30
+ -0.346119,51.498352,30
+ -0.368848,51.491648,30
+ -0.415639,51.496075,30
+ -0.419151,51.481609,30
+ -0.422275,51.481210,30
+ -0.425364,51.481009,30
+ -0.491834,51.479464,30
+ -0.492417,51.479669,30
+ -0.482969,51.511380,30
+ -0.487253,51.542584,30
+ -0.529079,51.572807,30
+ -0.526667,51.585815,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

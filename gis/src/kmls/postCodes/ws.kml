@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Walsall postcode area (WS)</name>
+    <Placemark id="WS">
+      <visibility>1</visibility>
+      <name>WS</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>WS</strong><br>
+            This is a rough outline of the Walsall postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -1.964752,52.830726,30
+ -1.961009,52.833269,30
+ -1.903058,52.841281,30
+ -1.847422,52.843506,30
+ -1.829141,52.829575,30
+ -1.845217,52.741185,30
+ -1.799422,52.721079,30
+ -1.702150,52.719148,30
+ -1.705702,52.712712,30
+ -1.727579,52.705653,30
+ -1.733938,52.662715,30
+ -1.783165,52.631468,30
+ -1.826324,52.608543,30
+ -1.906821,52.566525,30
+ -1.915459,52.562540,30
+ -2.017680,52.543403,30
+ -2.024492,52.542287,30
+ -2.035598,52.545403,30
+ -2.037412,52.546185,30
+ -2.039433,52.547056,30
+ -2.035073,52.553728,30
+ -2.048391,52.553301,30
+ -2.055922,52.560606,30
+ -2.056574,52.562503,30
+ -2.026776,52.587568,30
+ -2.019519,52.599966,30
+ -2.022939,52.645616,30
+ -2.048192,52.667255,30
+ -2.092011,52.683833,30
+ -1.964752,52.830726,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

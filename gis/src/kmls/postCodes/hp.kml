@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Hemel Hempstead postcode area (HP)</name>
+    <Placemark id="HP">
+      <visibility>1</visibility>
+      <name>HP</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>HP</strong><br>
+            This is a rough outline of the Hemel Hempstead postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -1.103478,51.820918,30
+ -1.092791,51.843737,30
+ -1.057693,51.872835,30
+ -1.012454,51.901002,30
+ -0.891601,51.886143,30
+ -0.848010,51.900398,30
+ -0.823649,51.898781,30
+ -0.645846,51.821090,30
+ -0.558980,51.839713,30
+ -0.522894,51.820653,30
+ -0.463066,51.803764,30
+ -0.427901,51.777699,30
+ -0.418028,51.759511,30
+ -0.410919,51.742834,30
+ -0.416467,51.729565,30
+ -0.419591,51.726766,30
+ -0.463510,51.727097,30
+ -0.486241,51.725413,30
+ -0.516495,51.716340,30
+ -0.543647,51.679067,30
+ -0.534511,51.632726,30
+ -0.559835,51.630180,30
+ -0.597346,51.595394,30
+ -0.673798,51.573830,30
+ -0.686147,51.573439,30
+ -0.797556,51.616894,30
+ -0.889395,51.617232,30
+ -0.909745,51.623942,30
+ -0.876000,51.691124,30
+ -0.882768,51.706492,30
+ -1.108497,51.783436,30
+ -1.103478,51.820918,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

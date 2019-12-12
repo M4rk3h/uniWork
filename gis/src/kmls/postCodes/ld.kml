@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Llandrindod Wells postcode area (LD)</name>
+    <Placemark id="LD">
+      <visibility>1</visibility>
+      <name>LD</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>LD</strong><br>
+            This is a rough outline of the Llandrindod Wells postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -3.632012,52.316573,30
+ -3.519635,52.389461,30
+ -3.365373,52.420159,30
+ -3.260788,52.438124,30
+ -3.204441,52.442308,30
+ -2.962302,52.346810,30
+ -2.924682,52.266852,30
+ -2.928975,52.258439,30
+ -3.201870,52.173341,30
+ -3.258509,52.083235,30
+ -3.179709,51.941730,30
+ -3.227807,51.889583,30
+ -3.244149,51.874665,30
+ -3.303912,51.858148,30
+ -3.614897,51.881938,30
+ -3.671391,51.918069,30
+ -3.680823,51.928815,30
+ -3.660259,52.045800,30
+ -3.704254,52.186293,30
+ -3.632012,52.316573,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

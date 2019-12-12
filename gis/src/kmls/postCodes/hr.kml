@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Hereford postcode area (HR)</name>
+    <Placemark id="HR">
+      <visibility>1</visibility>
+      <name>HR</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>HR</strong><br>
+            This is a rough outline of the Hereford postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -3.194665,52.174061,30
+ -2.925116,52.254630,30
+ -2.880975,52.317353,30
+ -2.863750,52.317301,30
+ -2.809921,52.311479,30
+ -2.628555,52.245821,30
+ -2.469414,52.255066,30
+ -2.444748,52.227624,30
+ -2.511309,52.119630,30
+ -2.344099,52.038692,30
+ -2.337804,52.025584,30
+ -2.344239,52.003808,30
+ -2.346347,52.001464,30
+ -2.454503,52.008441,30
+ -2.480525,52.000498,30
+ -2.480307,51.886216,30
+ -2.523796,51.866430,30
+ -2.655796,51.828437,30
+ -2.682951,51.852703,30
+ -2.880229,51.936564,30
+ -2.969092,51.906267,30
+ -3.084867,51.981933,30
+ -3.217628,52.038601,30
+ -3.246154,52.068270,30
+ -3.253917,52.079751,30
+ -3.194665,52.174061,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

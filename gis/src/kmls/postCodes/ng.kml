@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Nottingham postcode area (NG)</name>
+    <Placemark id="NG">
+      <visibility>1</visibility>
+      <name>NG</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>NG</strong><br>
+            This is a rough outline of the Nottingham postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -1.354118,53.064561,30
+ -1.303511,53.109158,30
+ -1.313296,53.153244,30
+ -1.311585,53.155499,30
+ -1.237815,53.244060,30
+ -0.993777,53.237001,30
+ -0.896504,53.271999,30
+ -0.841815,53.254796,30
+ -0.787775,53.264444,30
+ -0.699985,53.058647,30
+ -0.718442,53.102941,30
+ -0.750998,53.185101,30
+ -0.678618,53.249575,30
+ -0.295329,53.048440,30
+ -0.237766,52.999934,30
+ -0.235115,52.989655,30
+ -0.257123,52.905551,30
+ -0.306950,52.858281,30
+ -0.468753,52.847577,30
+ -0.482520,52.743142,30
+ -0.539536,52.745872,30
+ -0.729140,52.846433,30
+ -0.878908,52.888342,30
+ -1.165157,52.857688,30
+ -1.255428,52.839392,30
+ -1.306646,52.871975,30
+ -1.310718,52.883163,30
+ -1.361430,53.036275,30
+ -1.354118,53.064561,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

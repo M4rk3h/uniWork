@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Falkirk postcode area (FK)</name>
+    <Placemark id="FK">
+      <visibility>1</visibility>
+      <name>FK</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>FK</strong><br>
+            This is a rough outline of the Falkirk postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -4.489823,56.496345,30
+ -4.146228,56.501008,30
+ -3.834024,56.238186,30
+ -3.594893,56.245499,30
+ -3.606550,56.193204,30
+ -3.563014,56.155807,30
+ -3.639466,56.129503,30
+ -3.683902,55.947018,30
+ -3.760438,55.905455,30
+ -3.831006,55.895017,30
+ -3.914340,55.961733,30
+ -3.951386,55.987609,30
+ -4.425914,56.125850,30
+ -4.601023,56.201127,30
+ -4.668792,56.249161,30
+ -4.715007,56.330415,30
+ -4.810439,56.437610,30
+ -4.489823,56.496345,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

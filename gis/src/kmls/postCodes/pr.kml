@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Preston postcode area (PR)</name>
+    <Placemark id="PR">
+      <visibility>1</visibility>
+      <name>PR</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>PR</strong><br>
+            This is a rough outline of the Preston postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.942505,53.933220,30
+ -2.937917,53.938469,30
+ -2.820140,53.933399,30
+ -2.778791,53.962229,30
+ -2.727157,53.960773,30
+ -2.541788,53.906208,30
+ -2.497349,53.815819,30
+ -2.593938,53.790438,30
+ -2.565667,53.719946,30
+ -2.516032,53.673719,30
+ -2.571013,53.634711,30
+ -2.576742,53.611251,30
+ -2.582118,53.606497,30
+ -2.607446,53.611594,30
+ -2.618462,53.598998,30
+ -2.636245,53.610950,30
+ -2.752195,53.647669,30
+ -2.822813,53.654646,30
+ -2.865165,53.651022,30
+ -2.981415,53.610396,30
+ -3.034484,53.585634,30
+ -3.042111,53.587438,30
+ -3.056945,53.592215,30
+ -3.063041,53.605752,30
+ -2.919729,53.745102,30
+ -2.913992,53.847478,30
+ -2.919625,53.896357,30
+ -2.942505,53.933220,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

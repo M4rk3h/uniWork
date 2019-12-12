@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Bromley postcode area (BR)</name>
+    <Placemark id="BR">
+      <visibility>1</visibility>
+      <name>BR</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>BR</strong><br>
+            This is a rough outline of the Bromley postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -0.056555,51.406008,30
+ -0.041641,51.421919,30
+ -0.039702,51.422858,30
+ -0.010606,51.429769,30
+ 0.006510,51.433290,30
+ 0.011179,51.434127,30
+ 0.016151,51.434321,30
+ 0.063757,51.423105,30
+ 0.076552,51.431504,30
+ 0.096141,51.413781,30
+ 0.213415,51.413378,30
+ 0.198078,51.384169,30
+ 0.154578,51.354868,30
+ 0.115965,51.332595,30
+ 0.104391,51.326266,30
+ 0.077333,51.343710,30
+ 0.058143,51.322411,30
+ 0.052210,51.322938,30
+ 0.025165,51.336494,30
+ 0.004297,51.338301,30
+ -0.030902,51.388646,30
+ -0.052997,51.395005,30
+ -0.056877,51.405213,30
+ -0.056555,51.406008,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

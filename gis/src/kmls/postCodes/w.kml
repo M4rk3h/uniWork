@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The London W postcode area (W)</name>
+    <Placemark id="W">
+      <visibility>1</visibility>
+      <name>W</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>W</strong><br>
+            This is a rough outline of the London W postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -0.346361,51.523903,30
+ -0.345829,51.524678,30
+ -0.341745,51.527183,30
+ -0.298719,51.530487,30
+ -0.295753,51.534617,30
+ -0.286962,51.529516,30
+ -0.285898,51.528287,30
+ -0.284575,51.527809,30
+ -0.255915,51.519518,30
+ -0.188957,51.535292,30
+ -0.188155,51.535154,30
+ -0.173895,51.517496,30
+ -0.138541,51.524512,30
+ -0.137203,51.524104,30
+ -0.143467,51.522486,30
+ -0.134972,51.522261,30
+ -0.131205,51.517777,30
+ -0.129328,51.512945,30
+ -0.129910,51.512100,30
+ -0.131798,51.509999,30
+ -0.140141,51.510015,30
+ -0.149193,51.503917,30
+ -0.191743,51.502458,30
+ -0.200905,51.486413,30
+ -0.209967,51.483395,30
+ -0.240234,51.492927,30
+ -0.256372,51.473573,30
+ -0.266556,51.474615,30
+ -0.270485,51.475059,30
+ -0.291624,51.499325,30
+ -0.326284,51.495499,30
+ -0.338234,51.500048,30
+ -0.340504,51.501016,30
+ -0.344519,51.503950,30
+ -0.347077,51.514075,30
+ -0.348020,51.520680,30
+ -0.346361,51.523903,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

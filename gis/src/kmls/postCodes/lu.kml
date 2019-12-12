@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Luton postcode area (LU)</name>
+    <Placemark id="LU">
+      <visibility>1</visibility>
+      <name>LU</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>LU</strong><br>
+            This is a rough outline of the Luton postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -0.780959,51.940219,30
+ -0.750933,51.945983,30
+ -0.669304,51.959484,30
+ -0.530409,51.970339,30
+ -0.492559,51.968180,30
+ -0.482071,51.966669,30
+ -0.408964,51.944978,30
+ -0.362138,51.929968,30
+ -0.324506,51.874220,30
+ -0.322452,51.862645,30
+ -0.349973,51.840815,30
+ -0.356079,51.838572,30
+ -0.465736,51.853280,30
+ -0.516387,51.822621,30
+ -0.558706,51.844196,30
+ -0.641059,51.824451,30
+ -0.645659,51.824909,30
+ -0.784869,51.890799,30
+ -0.790256,51.931009,30
+ -0.780959,51.940219,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

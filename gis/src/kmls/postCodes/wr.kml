@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Worcester postcode area (WR)</name>
+    <Placemark id="WR">
+      <visibility>1</visibility>
+      <name>WR</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>WR</strong><br>
+            This is a rough outline of the Worcester postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.623800,52.327569,30
+ -2.603700,52.333184,30
+ -2.555798,52.340099,30
+ -2.437651,52.226536,30
+ -2.462629,52.253385,30
+ -2.333179,52.298854,30
+ -2.225693,52.284508,30
+ -2.155889,52.339821,30
+ -2.148976,52.339695,30
+ -2.140749,52.318866,30
+ -2.043579,52.223123,30
+ -1.945367,52.222777,30
+ -1.871437,52.147506,30
+ -1.837143,52.126157,30
+ -1.821162,52.104367,30
+ -1.814373,52.093640,30
+ -1.820455,52.040353,30
+ -1.846106,52.004508,30
+ -1.860885,52.002135,30
+ -2.200926,52.052851,30
+ -2.344376,51.998907,30
+ -2.334934,52.029710,30
+ -2.340893,52.042720,30
+ -2.504192,52.120632,30
+ -2.625390,52.249865,30
+ -2.636112,52.301053,30
+ -2.623800,52.327569,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Wigan postcode area (WN)</name>
+    <Placemark id="WN">
+      <visibility>1</visibility>
+      <name>WN</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>WN</strong><br>
+            This is a rough outline of the Wigan postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.802374,53.590230,30
+ -2.773400,53.606097,30
+ -2.725514,53.617974,30
+ -2.712431,53.619383,30
+ -2.701276,53.619539,30
+ -2.632184,53.607169,30
+ -2.616766,53.593596,30
+ -2.586854,53.582898,30
+ -2.566389,53.541272,30
+ -2.526920,53.523547,30
+ -2.478228,53.507339,30
+ -2.478097,53.505030,30
+ -2.479137,53.491651,30
+ -2.480830,53.486754,30
+ -2.501135,53.480801,30
+ -2.508407,53.479009,30
+ -2.522153,53.475633,30
+ -2.534316,53.473628,30
+ -2.693290,53.479005,30
+ -2.719267,53.483426,30
+ -2.780746,53.529107,30
+ -2.818359,53.542608,30
+ -2.829233,53.555378,30
+ -2.802374,53.590230,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Ipswich postcode area (IP)</name>
+    <Placemark id="IP">
+      <visibility>1</visibility>
+      <name>IP</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>IP</strong><br>
+            This is a rough outline of the Ipswich postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ 0.439037,52.512906,30
+ 0.479913,52.532630,30
+ 0.492611,52.538406,30
+ 0.866847,52.425153,30
+ 0.830595,52.448698,30
+ 0.772338,52.638635,30
+ 0.841279,52.653197,30
+ 0.860938,52.655116,30
+ 0.932502,52.649696,30
+ 1.590312,52.330752,30
+ 1.688314,52.344181,30
+ 1.685153,52.330724,30
+ 1.618282,52.181816,30
+ 1.598598,52.141384,30
+ 1.541509,52.092186,30
+ 1.369606,51.964994,30
+ 1.318982,51.936284,30
+ 1.284124,51.951690,30
+ 1.102929,51.955610,30
+ 0.924370,52.006410,30
+ 0.847145,52.132888,30
+ 0.644414,52.119085,30
+ 0.622979,52.131956,30
+ 0.609909,52.153838,30
+ 0.585247,52.166486,30
+ 0.529814,52.274241,30
+ 0.437978,52.321297,30
+ 0.386819,52.390988,30
+ 0.453229,52.462338,30
+ 0.439037,52.512906,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Llandudno postcode area (LL)</name>
+    <Placemark id="LL">
+      <visibility>1</visibility>
+      <name>LL</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>LL</strong><br>
+            This is a rough outline of the Llandudno postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -4.683411,53.304662,30
+ -4.560604,53.397284,30
+ -4.483020,53.414721,30
+ -4.476470,53.415954,30
+ -4.434620,53.422830,30
+ -4.370680,53.422822,30
+ -3.350789,53.349544,30
+ -3.373322,53.318183,30
+ -3.248070,53.091812,30
+ -3.219673,53.086730,30
+ -2.891002,53.100756,30
+ -2.880117,53.081870,30
+ -2.879388,53.079817,30
+ -2.879115,53.078857,30
+ -2.861501,53.010127,30
+ -2.853261,52.976971,30
+ -2.856054,52.949488,30
+ -3.545053,52.810522,30
+ -3.866998,52.673448,30
+ -3.973552,52.558145,30
+ -4.018077,52.547585,30
+ -4.033749,52.545212,30
+ -4.040503,52.544251,30
+ -4.045244,52.543764,30
+ -4.046249,52.543819,30
+ -4.056024,52.544369,30
+ -4.063235,52.545304,30
+ -4.789783,52.762264,30
+ -4.683411,53.304662,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

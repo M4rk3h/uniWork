@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Dudley postcode area (DY)</name>
+    <Placemark id="DY">
+      <visibility>1</visibility>
+      <name>DY</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>DY</strong><br>
+            This is a rough outline of the Dudley postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.534268,52.439999,30
+ -2.358126,52.435359,30
+ -2.303699,52.443513,30
+ -2.266341,52.535337,30
+ -2.125960,52.555194,30
+ -2.123083,52.555215,30
+ -2.082969,52.533819,30
+ -2.049450,52.550783,30
+ -2.038831,52.549861,30
+ -2.041685,52.542884,30
+ -2.031629,52.542438,30
+ -2.029399,52.537197,30
+ -2.028349,52.532945,30
+ -2.027800,52.526356,30
+ -2.066307,52.511876,30
+ -2.109525,52.464934,30
+ -2.064483,52.393541,30
+ -2.107361,52.362332,30
+ -2.159719,52.343646,30
+ -2.225921,52.288994,30
+ -2.337182,52.302618,30
+ -2.509829,52.338994,30
+ -2.541298,52.348644,30
+ -2.572844,52.379053,30
+ -2.584313,52.391008,30
+ -2.585372,52.414386,30
+ -2.534268,52.439999,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

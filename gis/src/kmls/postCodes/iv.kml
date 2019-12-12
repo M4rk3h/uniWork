@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Inverness postcode area (IV)</name>
+    <Placemark id="IV">
+      <visibility>1</visibility>
+      <name>IV</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>IV</strong><br>
+            This is a rough outline of the Inverness postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -6.640346,57.552950,30
+ -5.105329,58.490087,30
+ -4.824339,58.570961,30
+ -4.765209,58.575636,30
+ -4.441774,58.542542,30
+ -4.374733,58.516073,30
+ -4.302589,58.237331,30
+ -4.026676,57.934283,30
+ -3.035780,57.649758,30
+ -3.129987,57.558905,30
+ -3.148551,57.552908,30
+ -3.249401,57.552372,30
+ -3.726598,57.448352,30
+ -4.087341,57.265319,30
+ -4.537943,57.183522,30
+ -6.018084,57.020419,30
+ -6.206410,57.148868,30
+ -6.788186,57.423376,30
+ -6.640346,57.552950,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Southampton postcode area (SO)</name>
+    <Placemark id="SO">
+      <visibility>1</visibility>
+      <name>SO</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>SO</strong><br>
+            This is a rough outline of the Southampton postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -1.613752,51.152734,30
+ -1.598997,51.164239,30
+ -1.273438,51.203414,30
+ -1.205885,51.192976,30
+ -1.132738,51.160490,30
+ -1.099844,51.173891,30
+ -1.093767,51.171551,30
+ -1.091810,51.169261,30
+ -1.098558,51.125377,30
+ -1.036487,51.077763,30
+ -1.037359,51.065351,30
+ -1.105082,51.027267,30
+ -1.100379,50.951181,30
+ -1.119328,50.917235,30
+ -1.268616,50.891611,30
+ -1.362428,50.785122,30
+ -1.567640,50.721442,30
+ -1.570026,50.720722,30
+ -1.585736,50.720806,30
+ -1.588312,50.720950,30
+ -1.595311,50.722512,30
+ -1.607625,50.725513,30
+ -1.613051,50.727284,30
+ -1.619153,50.729580,30
+ -1.628652,50.734232,30
+ -1.623248,50.750744,30
+ -1.640270,50.778791,30
+ -1.622883,50.804995,30
+ -1.671117,50.924633,30
+ -1.600929,50.973189,30
+ -1.613752,51.152734,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

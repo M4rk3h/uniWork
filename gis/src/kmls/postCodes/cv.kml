@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Coventry postcode area (CV)</name>
+    <Placemark id="CV">
+      <visibility>1</visibility>
+      <name>CV</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>CV</strong><br>
+            This is a rough outline of the Coventry postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -1.821448,52.160828,30
+ -1.715674,52.258490,30
+ -1.608958,52.491543,30
+ -1.669383,52.551007,30
+ -1.654268,52.586492,30
+ -1.569651,52.658709,30
+ -1.559769,52.663689,30
+ -1.429734,52.672268,30
+ -1.394138,52.672245,30
+ -1.376883,52.670923,30
+ -1.349753,52.657473,30
+ -1.415533,52.532721,30
+ -1.383607,52.472263,30
+ -1.201151,52.397065,30
+ -1.160602,52.386275,30
+ -1.152388,52.328704,30
+ -1.164860,52.308484,30
+ -1.309156,52.270964,30
+ -1.274236,52.212397,30
+ -1.288811,52.200609,30
+ -1.367312,52.172709,30
+ -1.470230,52.121879,30
+ -1.539036,52.085235,30
+ -1.558173,52.064072,30
+ -1.530924,52.009825,30
+ -1.578121,51.982680,30
+ -1.589290,51.977784,30
+ -1.646010,52.005794,30
+ -1.650747,52.054133,30
+ -1.734037,52.100409,30
+ -1.824417,52.119315,30
+ -1.825992,52.146333,30
+ -1.821448,52.160828,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

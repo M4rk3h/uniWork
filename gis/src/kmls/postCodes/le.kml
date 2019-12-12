@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Leicester postcode area (LE)</name>
+    <Placemark id="LE">
+      <visibility>1</visibility>
+      <name>LE</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>LE</strong><br>
+            This is a rough outline of the Leicester postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -1.503964,52.746281,30
+ -1.491688,52.766258,30
+ -1.485675,52.773424,30
+ -1.470240,52.789681,30
+ -1.448666,52.795408,30
+ -1.268342,52.820046,30
+ -1.170621,52.854652,30
+ -0.879231,52.883859,30
+ -0.851997,52.877971,30
+ -0.725918,52.842389,30
+ -0.540175,52.729859,30
+ -0.591364,52.683180,30
+ -0.590693,52.586327,30
+ -0.656117,52.567848,30
+ -0.768034,52.476535,30
+ -0.887708,52.426313,30
+ -0.892255,52.424432,30
+ -0.949259,52.415045,30
+ -1.095419,52.425945,30
+ -1.185664,52.397715,30
+ -1.194118,52.398357,30
+ -1.379917,52.476145,30
+ -1.413441,52.537026,30
+ -1.342379,52.657288,30
+ -1.506603,52.731675,30
+ -1.503964,52.746281,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

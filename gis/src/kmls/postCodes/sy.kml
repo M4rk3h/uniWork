@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Shrewsbury postcode area (SY)</name>
+    <Placemark id="SY">
+      <visibility>1</visibility>
+      <name>SY</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>SY</strong><br>
+            This is a rough outline of the Shrewsbury postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -4.053222,52.518792,30
+ -3.966245,52.558698,30
+ -3.867354,52.668965,30
+ -3.838648,52.683044,30
+ -3.694246,52.745416,30
+ -3.539663,52.807445,30
+ -2.860492,52.945887,30
+ -2.857492,52.973281,30
+ -2.844410,53.049273,30
+ -2.838959,53.081961,30
+ -2.760658,53.070217,30
+ -2.703129,53.089888,30
+ -2.665579,53.072665,30
+ -2.659455,53.031349,30
+ -2.622134,53.006650,30
+ -2.562938,52.985874,30
+ -2.554206,52.967019,30
+ -2.576589,52.946103,30
+ -2.602645,52.897763,30
+ -2.659829,52.737894,30
+ -2.548012,52.653384,30
+ -2.547794,52.632349,30
+ -2.707061,52.549112,30
+ -2.706081,52.517455,30
+ -2.557651,52.359015,30
+ -2.568973,52.338535,30
+ -2.629751,52.330189,30
+ -2.674746,52.277365,30
+ -3.206179,52.446668,30
+ -3.261048,52.442608,30
+ -3.515485,52.393155,30
+ -3.627625,52.320167,30
+ -3.844081,52.147558,30
+ -3.992850,52.170251,30
+ -4.059755,52.185772,30
+ -4.067834,52.221464,30
+ -4.213920,52.242326,30
+ -4.053222,52.518792,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

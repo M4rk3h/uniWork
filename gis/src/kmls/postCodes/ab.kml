@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Aberdeen postcode area (AB)</name>
+    <Placemark id="AB">
+      <visibility>1</visibility>
+      <name>AB</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>AB</strong><br>
+            This is a rough outline of the Aberdeen postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -3.459414,57.267873,30
+ -3.405091,57.396656,30
+ -3.394694,57.457169,30
+ -3.363624,57.480849,30
+ -3.241482,57.550950,30
+ -3.141247,57.550737,30
+ -3.122797,57.556634,30
+ -3.029909,57.646564,30
+ -3.023785,57.663510,30
+ -2.900242,57.700911,30
+ -2.859833,57.704883,30
+ -2.116117,57.699308,30
+ -2.007553,57.697412,30
+ -2.004298,57.697205,30
+ -1.939873,57.679784,30
+ -1.929047,57.676652,30
+ -1.907884,57.658504,30
+ -1.855254,57.610228,30
+ -1.770105,57.506193,30
+ -1.769674,57.502950,30
+ -1.777545,57.470977,30
+ -1.779801,57.467334,30
+ -2.200044,56.910252,30
+ -2.214728,56.896528,30
+ -2.216824,56.895482,30
+ -2.479089,56.773671,30
+ -2.490895,56.773113,30
+ -2.589195,56.775059,30
+ -2.839914,56.918765,30
+ -3.414284,56.886631,30
+ -3.490541,56.986758,30
+ -3.459414,57.267873,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>

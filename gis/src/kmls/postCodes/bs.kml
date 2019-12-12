@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <!-- This KML was derived from postcode data provided by Ordnance Survey and
+       Royal Mail.  ©Crown copyright and database right 2010 and 
+       ©Royal Mail copyright and database right 2010.
+       The KML was created using some PHP code provided by others:
+          http://westhoffswelt.de/blog/0040_quickhull_introduction_and_php_implementation.html
+          http://www.assemblysys.com/dataServices/php_pointinpolygon.php
+          http://coding.pressbin.com/65/PHP-Find-shortest-distance-from-point-to-line-segment
+       Thanks.  There are more details about how the KML was created at:
+          http://www.northeastraces.com/runningstatic/pcas/
+  -->
+  <Folder>
+    <open>1</open>
+    <name>The Bristol postcode area (BS)</name>
+    <Placemark id="BS">
+      <visibility>1</visibility>
+      <name>BS</name>
+      <Style>
+        <LineStyle>
+          <color>7fff00ff</color>
+          <width>4</width>
+        </LineStyle>
+        <BalloonStyle>
+          <text>
+          <![CDATA[
+            <strong>BS</strong><br>
+            This is a rough outline of the Bristol postcode area.
+          ]]>
+          </text>
+        </BalloonStyle>
+      </Style>
+      <LineString>
+        <coordinates>
+ -2.993224,51.356744,30
+ -2.961412,51.386215,30
+ -2.557438,51.665854,30
+ -2.536138,51.660783,30
+ -2.492373,51.580430,30
+ -2.335002,51.573387,30
+ -2.324495,51.554841,30
+ -2.325678,51.544884,30
+ -2.334248,51.519810,30
+ -2.411964,51.486752,30
+ -2.416870,51.478328,30
+ -2.380045,51.451595,30
+ -2.489155,51.297747,30
+ -2.500313,51.292412,30
+ -2.501870,51.291821,30
+ -2.726085,51.284980,30
+ -2.804063,51.192302,30
+ -2.820718,51.194596,30
+ -2.972808,51.277723,30
+ -2.982093,51.288202,30
+ -2.993439,51.354746,30
+ -2.993224,51.356744,30
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Folder>
+</kml>
