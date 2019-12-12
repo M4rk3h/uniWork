@@ -191,7 +191,6 @@ function initMapFlight(){
     }
 }
 
-
 function initMapWind() {
     var pointsOne = [
         new Microsoft.Maps.Location(51.86,-3.95),new Microsoft.Maps.Location(51.93,-3.85),
@@ -207,40 +206,50 @@ function initMapWind() {
         new Microsoft.Maps.Location(53.10, -3.90)
     ];
     //Set your middle starting area
-    var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
+    var middleGround = new Microsoft.Maps.Location(52.401302, -3.475913);
     // #map is the same as get element by id for bing map
-    var map = new Microsoft.Maps.Map('#map', {center: middleGround,zoom: 9,});
+    var map = new Microsoft.Maps.Map('#map', {center: middleGround,zoom: 7,});
+    // Create an info box
+    infobox = new Microsoft.Maps.Infobox(map.getCenter(),{visible: false});
+    //Assign the infobox to a map
+    infobox.setMap(map);
     // create a polygon
     var polyOne = new Microsoft.Maps.Polygon(pointsOne, {
         fillColor: 'rgba(0, 255, 0, 0.5)',
-        strokeColor: 'red',
+        strokeColor: 'Blue',
         strokeThickness: 2
     });
     var polyTwo = new Microsoft.Maps.Polygon(pointsTwo, {
         fillColor: 'rgba(0, 255, 0, 0.5)',
-        strokeColor: 'Green',
+        strokeColor: 'Blue',
         strokeThickness: 2
     });
+      // Content
+    polyOne.metadata = {title: 'Brecon', description: 'Wind Farms In Brecon', loclong: new Microsoft.Maps.Location(52.01,-3.72)};
+    polyTwo.metadata = {title: 'Snowdonia', description: 'Wind Farms In Snowdonia', loclong: new Microsoft.Maps.Location(53.10, -3.90)};
+    // Create event handler (CLICK)
+    Microsoft.Maps.Events.addHandler(polyOne, "click", areaClicked);
+    Microsoft.Maps.Events.addHandler(polyTwo, "click", areaClicked);
     //Add the pushpin to the map
     map.entities.push(polyOne);
     map.entities.push(polyTwo);
+    // Function to check if clicked
+    function areaClicked(e){
+        if (e.target.metadata) {
+            //Set the infobox options with the metadata of the pushpin.
+            infobox.setOptions({
+                title: e.target.metadata.title,
+                description: e.target.metadata.description,
+                visible: true,
+                location: e.target.metadata.loclong
+            });
+        }
+        else {
+            console.log('error with areaClicked.')
+        }  
+    }
 }
 
-function bigBeauty(){
-    //Set your middle starting area
-    var middleGround = new Microsoft.Maps.Location(51.58959, -3.3279);
-    // Create Map
-    var map = new Microsoft.Maps.Map('#map', {center: middleGround,zoom: 9,});
-    //Load GeoJSON module.
-    Microsoft.Maps.loadModule('Microsoft.Maps.GeoJson', function () {
-        //Read the GeoJSON file that is hosted on the same domain.
-        Microsoft.Maps.GeoJson.readFromUrl('json/test.json',
-            function (shapes) {
-                //Add the shape(s) to the map.
-                map.entities.push(shapes);
-            });
-    });
-};
 
 function initMapStyle(){
     // Set your middle starting area
