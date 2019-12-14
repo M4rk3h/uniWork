@@ -1,9 +1,9 @@
 <?php
   $sData = $_GET["sourceData"];
   $filename = $_GET["sourceName"];
-
+  
   $fullPath = "xml/".$filename.".xml";
-
+  
   $xml = simplexml_load_file($fullPath);
 
   $json_array = json_decode($sData, true);
