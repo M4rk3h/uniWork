@@ -31,44 +31,55 @@
     
 </head>
 
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
 <body>
-    <script>window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')</script>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active " href="index.html">Home</a>
-            </li>
-        </ul>
-    </nav>
 
-    <div class="jumbotron jumbotron-fluid text-center p-2"
-        style="background-color: #343a40; border-top: solid 2px #fff;">
-        <div class="container">
-            <h1 style="color:#fff">Mark James Baber</h1>
-            <button class="btn btn-danger" onclick="testJQ()">Test JQuery</button>
-        </div>
-    </div>
-    <div class="container">
-        <div class="dropdown">
-            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"
-                onclick="dropDown();">Select Below:
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" onclick="getXMLS()">XML</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" onclick="console.log('getPHP Files')">PHP</a></li>
-            </ul>
-        </div>
-    </div>
-    <br><br>
-    <div class="container text-center">
-      <table id="demo"></table>
-    </div>
-    <script>
-      //getXMLS();    
-    </script>
-    
-    
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadXML()">Get my CD collection</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function loadXML() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "pets.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table='<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
+  var x = xmlDoc.getElementsByTagName("ANIMAL");
+  for (i = 0; i <x.length; i++) { 
+    table += '<tr><th>' +
+    x[i].getElementsByTagName("PETNO")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+	x[i].getElementsByTagName("PETNAME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+	x[i].getElementsByTagName("PETTYPE")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+	x[i].getElementsByTagName("PETBREED")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("PETOWNER")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
 </body>
-
 </html>
