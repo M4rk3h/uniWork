@@ -19,7 +19,6 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <title>Catalogue</title>
-
     <link rel="stylesheet" href="css.css">
 </head>
 
@@ -33,12 +32,30 @@
             <li id="three" class="full">BSc Informatics</li>
             <li id="four">BSc Mechatronics</li>
             <li id="five" class="new"><em>new</em> BSc Big Data</li>
+            <li id="six"></li>
         </ul>
     </div>
     <br>
     <div id="bottom">
             <button class="btn btn-light" onclick="toFull();">To Full</button>
-            <button class="btn btn-light" onclick="test();">To Console</button>
+            <button class="btn btn-light" onclick="testAll();">To Console</button>
+            <button class="btn btn-light" onclick="getHTML();">countHtmlId=5</button>
+            <button class="btn btn-light" onclick="getText();">countTextId=5</button>
+            <button class="btn btn-light" onclick="doHtml();">replaceHtml</button>
+            <button class="btn btn-light" onclick="doText();">replaceText</button>
+            <br>
+            <button class="btn btn-warning" onclick="replaceMe();">replaceMe</button>
+            <button class="btn btn-warning" onclick="removeMe();">removeMe</button>
+            <button class="btn btn-warning" onclick="insertInto();">insertInto</button>
+            <button class="btn btn-warning" onclick="getO();">getObject</button>
+            <br>
+            <button class="btn btn-info" onclick="test1();">getNew</button>
+            <button class="btn btn-info" onclick="test2();">notFour</button>
+            <button class="btn btn-info" onclick="test3();">firstNew</button>
+            <button class="btn btn-info" onclick="test4();">containsAt</button>
+            <button class="btn btn-info" onclick="test5();">notEm</button>
+            <button class="btn btn-info" onclick="test6();">notEmpty</button>
+            <button class="btn btn-info" onclick="test7();">lastNotAt</button>
     </div>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
