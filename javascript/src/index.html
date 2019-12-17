@@ -28,11 +28,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <title>Mark James Baber</title>
-    
+
 </head>
 
 <body>
-    <script>window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')</script>
+    <script>
+        window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')
+    </script>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -59,16 +61,37 @@
                 <li><a class="dropdown-item" onclick="console.log('getPHP Files')">PHP</a></li>
             </ul>
         </div>
-    </div>
-    <br><br>
-    <div class="container text-center">
-      <table id="demo"></table>
+        <br><br>
+        <table id="xmlTable"></table>
+        <form>
+            <div class="form-group">
+                <label for="petName">Pet Name</label>
+                <input type="text" class="form-control" id="petName" aria-describedby="petName"
+                    placeholder="Insert your pets name here">
+            </div>
+            <div class="form-group">
+                <label for="petType">Pet Type</label>
+                <input type="text" class="form-control" id="petType" aria-describedby="petType"
+                    placeholder="Insert your pets type here">
+            </div>
+            <div class="form-group">
+                <label for="petBreed">Pet Breed</label>
+                <input type="text" class="form-control" id="petBreed" aria-describedby="petBreed"
+                    placeholder="Insert your pets breed here">
+            </div>
+            <div class="form-group">
+                <label for="petOwner">Pet Owner</label>
+                <input type="text" class="form-control" id="petOwner" aria-describedby="petOwner"
+                    placeholder="Insert the pets owner here">
+            </div>
+            <button type="submit" class="btn btn-dark" onclick="saveToXML()">Submit</button>
+        </form>
     </div>
     <script>
-      //getXMLS();    
+        //getXMLS();    
     </script>
-    
-    
+
+
 </body>
 
 </html>

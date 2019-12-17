@@ -57,16 +57,33 @@ function displayXML(xml) {
       x[i].getElementsByTagName("PETOWNER")[0].childNodes[0].nodeValue +
       "</td></tr>";
   }
-  document.getElementById("demo").innerHTML = table;
+  document.getElementById("xmlTable").innerHTML = table;
 }
 
-function demo(){
-  $('#demo')
-  .hide()
-  .delay(100)
-  .fadeIn(300)
+function saveToXML(){
+  $(function () {
+    var formData;
+    formData = new Object();
+    formData.PETNAME = 'Susan Strong';
+    formData.PETTYPE = 'Dog';
+    formData.PETBREED = 'Samiesamoyed';
+    formData.PETOWNER = 'Dr Thomas';
+    var jsonFormData = JSON.stringify(formData);
+    var sourceFile = 'pets';
+    $.getJSON("../insertXml.php", {
+      sourceName: sourceFile,
+      sourceData: jsonFormData
+    }, function (data) {
+      console.log(data);
+    });
+  });
+}
+
+function hideXML() {
+  $('xmlTable')
+    .hide()
 }
 
 function getPHP() {
-  //code
+  hideXML();
 }
