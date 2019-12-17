@@ -8,26 +8,25 @@ function testJQ() {
     alert("JQuery isn't loaded correctly!");
   }
 }
-
-// Hide tables until clicked
-function hideTables() {
-  $('#tableXML').hide();
-}
-
 // Dropdown JQuery Effects
 function dropDown() {
   $('.dropdown-menu')
     .hide()
     .delay(100)
-    .slideDown(1000);
+    .slideDown(200);
 }
-
-function getXMLS() {
+// Get the xml table with data
+function getXML() {
+  hidePHP();
+  showXMLForm();
   loadXML();
   displayXML();
-  demo();
 }
-
+// Show XML Form
+function showXMLForm(){
+  $('form#xmlForm').show();
+}
+// Get the xml data and load it
 function loadXML() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -38,7 +37,7 @@ function loadXML() {
   xhttp.open("GET", "pets.xml", true);
   xhttp.send();
 }
-
+// Load the above xml data into a table
 function displayXML(xml) {
   var i;
   var xmlDoc = xml.responseXML;
@@ -59,31 +58,62 @@ function displayXML(xml) {
   }
   document.getElementById("xmlTable").innerHTML = table;
 }
-
+// Try to save the xml data to an xml file
 function saveToXML(){
   $(function () {
     var formData;
     formData = new Object();
+    formData.PETNO = '5';
     formData.PETNAME = 'Susan Strong';
     formData.PETTYPE = 'Dog';
-    formData.PETBREED = 'Samiesamoyed';
+    formData.PETBREED = 'Samoyed';
     formData.PETOWNER = 'Dr Thomas';
+    // Data For The XML using the XML Tags
     var jsonFormData = JSON.stringify(formData);
+    // Convert JSON to String
     var sourceFile = 'pets';
-    $.getJSON("../insertXml.php", {
+    // the sourcefile to save to is called pets
+    $.getJSON("xml-insert.php", {
       sourceName: sourceFile,
       sourceData: jsonFormData
     }, function (data) {
       console.log(data);
     });
   });
+};
+
+function xmlToHTTP(){
+  // Create xml to http request
+  const xhr = new XMLHttpRequest();
+  // On load do this function
+  xhr.onload = function(){
+    const serverResponse = $("serverResponse");
+  };
+  xhr.open("POST", "xmlInsert.php");
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhr.send("PETNAME=");
 }
 
 function hideXML() {
-  $('xmlTable')
-    .hide()
-}
+  $('#xmlTable').hide();
+  $('form#xmlForm').hide();
+};
 
 function getPHP() {
   hideXML();
+  showPHPForm();
+};
+// Show PHP Form
+function showPHPForm(){
+  $('form#phpForm').show();
+}
+
+function hidePHP() {
+  $('#phpTable').hide();
+  $('form#phpForm').hide();
+};
+
+function clearTables(){
+  hideXML();
+  hidePHP();
 }

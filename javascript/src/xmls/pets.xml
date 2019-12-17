@@ -28,16 +28,4 @@
     <NAME>Another</NAME>
     <OWNER>Test</OWNER>
   </ANIMAL>
-  <ANIMAL>
-    <PETNAME>Susan Strong</PETNAME>
-    <PETTYPE>Dog</PETTYPE>
-    <PETBREED>Samiesamoyed</PETBREED>
-    <PETOWNER>Dr Thomas</PETOWNER>
-  </ANIMAL>
-  <ANIMAL>
-    <PETNAME>Susan Strong</PETNAME>
-    <PETTYPE>Dog</PETTYPE>
-    <PETBREED>Samiesamoyed</PETBREED>
-    <PETOWNER>Dr Thomas</PETOWNER>
-  </ANIMAL>
 </PET>

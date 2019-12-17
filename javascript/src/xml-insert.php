@@ -2,7 +2,7 @@
   $sData = $_GET["sourceData"];
   $filename = $_GET["sourceName"];
   
-  $fullPath = .$filename.".xml";
+  $fullPath = $filename.".xml";
   
   $xml = simplexml_load_file($fullPath);
 
@@ -19,7 +19,7 @@
   $dom->formatOutput = true;
   $dom->loadXML($xml->asXML());
   $xml = new SimpleXMLElement($dom->saveXML());
-  $xml->saveXML(.$filename.".xml");
+  $xml->saveXML($filename.".xml");
 
   echo json_encode($xml);
   return;

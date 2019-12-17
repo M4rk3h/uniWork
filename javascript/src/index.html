@@ -48,6 +48,7 @@
         <div class="container">
             <h1 style="color:#fff">Mark James Baber</h1>
             <button class="btn btn-danger" onclick="testJQ()">Test JQuery</button>
+            <button class="btn btn-warning" onclick="clearTables()">Clear Tables</button>
         </div>
     </div>
     <div class="container">
@@ -56,42 +57,74 @@
                 onclick="dropDown();">Select Below:
                 <span class="caret"></span></button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" onclick="getXMLS()">XML</a></li>
+                <li><a class="dropdown-item" onclick="getXML();">XML</a></li>
                 <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" onclick="console.log('getPHP Files')">PHP</a></li>
+                <li><a class="dropdown-item" onclick="getPHP();">PHP</a></li>
             </ul>
         </div>
-        <br><br>
+        <br>
+    </div>
+    <br>
+    <div class="container">
         <table id="xmlTable"></table>
-        <form>
+        <br>
+        <form action="xml-insert.php" method="POST" id="xmlForm">
             <div class="form-group">
-                <label for="petName">Pet Name</label>
-                <input type="text" class="form-control" id="petName" aria-describedby="petName"
+                <label for="petNameXML">Pet Name</label>
+                <input type="text" class="form-control" id="petNameXML" aria-describedby="petNameXML"
                     placeholder="Insert your pets name here">
             </div>
             <div class="form-group">
-                <label for="petType">Pet Type</label>
-                <input type="text" class="form-control" id="petType" aria-describedby="petType"
+                <label for="petTypeXML">Pet Type</label>
+                <input type="text" class="form-control" id="petTypeXML" aria-describedby="petTypeXML"
                     placeholder="Insert your pets type here">
             </div>
             <div class="form-group">
-                <label for="petBreed">Pet Breed</label>
-                <input type="text" class="form-control" id="petBreed" aria-describedby="petBreed"
+                <label for="petBreedXML">Pet Breed</label>
+                <input type="text" class="form-control" id="petBreedXML" aria-describedby="petBreedXML"
                     placeholder="Insert your pets breed here">
             </div>
             <div class="form-group">
-                <label for="petOwner">Pet Owner</label>
-                <input type="text" class="form-control" id="petOwner" aria-describedby="petOwner"
+                <label for="petOwnerXML">Pet Owner</label>
+                <input type="text" class="form-control" id="petOwnerXML" aria-describedby="petOwnerXML"
+                    placeholder="Insert the pets owner here">
+            </div>
+            <button type="submit" class="btn btn-dark" onclick="saveToXML()">Submit</button>
+        </form>
+        <script>
+            
+        </script>
+
+        <table id="phpTable"></table>
+        <br>
+        <form action="insertphp.php" method="POST" id="phpForm">
+            <div class="form-group">
+                <label for="petNamePHP">Pet Name</label>
+                <input type="text" class="form-control" id="petNamePHP" aria-describedby="petNamePHP"
+                    placeholder="Insert your pets name here">
+            </div>
+            <div class="form-group">
+                <label for="petTypePHP">Pet Type</label>
+                <input type="text" class="form-control" id="petTypePHP" aria-describedby="petTypePHP"
+                    placeholder="Insert your pets type here">
+            </div>
+            <div class="form-group">
+                <label for="petBreedPHP">Pet Breed</label>
+                <input type="text" class="form-control" id="petBreedPHP" aria-describedby="petBreedPHP"
+                    placeholder="Insert your pets breed here">
+            </div>
+            <div class="form-group">
+                <label for="petOwnerPHP">Pet Owner</label>
+                <input type="text" class="form-control" id="petOwnerPHP" aria-describedby="petOwnerPHP"
                     placeholder="Insert the pets owner here">
             </div>
             <button type="submit" class="btn btn-dark" onclick="saveToXML()">Submit</button>
         </form>
     </div>
     <script>
-        //getXMLS();    
+        $('form#xmlForm').hide();
+        $('form#phpForm').hide();
     </script>
-
-
 </body>
 
 </html>
