@@ -18,15 +18,31 @@ function dropDown() {
 // Get the xml table with data
 function getXML() {
   hidePHP();
-  showXMLForm();
-  loadXML();
-  displayXML();
+  goGetXML();
+  //showXMLForm();
+  //loadXML();
+  //displayXML();
 }
 // Show XML Form
 function showXMLForm(){
   $('form#xmlForm').show();
 }
+
 // Get the xml data and load it
+function goGetXML(){
+$(function() {
+  $.getJSON("xml-insert.php", function(data){
+    if (data["code"] == "error"){
+      console.log(data["message"]);
+    }
+    else{
+      document.getElementById("output").innerHTML = (data);
+      console.log(data);
+    }
+  });
+});
+}
+
 function loadXML() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
