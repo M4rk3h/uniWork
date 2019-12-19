@@ -19,63 +19,52 @@ function dropDown() {
 function getXML() {
   hidePHP();
   goGetXML();
-  //showXMLForm();
+  showXMLForm();
   //loadXML();
   //displayXML();
 }
 // Show XML Form
-function showXMLForm(){
+function showXMLForm() {
   $('form#xmlForm').show();
 }
 
 // Get the xml data and load it
-function goGetXML(){
-$(function() {
-  $.getJSON("xml-insert.php", function(data){
-    if (data["code"] == "error"){
-      console.log(data["message"]);
-    }
-    else{
-      document.getElementById("output").innerHTML = (data);
-      console.log(data);
-    }
+function goGetXML() {
+  $(function () {
+    $.getJSON("xml-get.php", {
+      sourceName: "pets"
+    }, function (data) {
+      if (data["code"] == "error") {
+        console.log(data["message"]);
+      } else {
+        $.each(data, function (index, element) {
+          // Set variables for Loop
+          var i;
+          var table = '<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
+          for (i = 0; i < element.length; i++) {
+            // Begin building the table structure
+            table += '<tr><th>' +
+              // Add table data
+              Object.values(element[i]) + "</td><td>" +
+              Object.values(element[i]) + "</td><td>" +
+              Object.values(element[i]) + "</td><td>" +
+              Object.values(element[i]) + "</td><td>" +
+              Object.values(element[i]);
+          } // End loop
+          // Print table in the div xmlTable
+          document.getElementById("xmlTable").innerHTML = table;
+          // THIS DOESN'T WORK FOR SOME REASON?!
+          //$(".xmlTable").innerHTML = table;
+          
+        });
+      } //end else
+    }); //end getJSON
   });
-});
 }
 
-function loadXML() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      displayXML(this);
-    }
-  };
-  xhttp.open("GET", "pets.xml", true);
-  xhttp.send();
-}
-// Load the above xml data into a table
-function displayXML(xml) {
-  var i;
-  var xmlDoc = xml.responseXML;
-  var table = '<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
-  var x = xmlDoc.getElementsByTagName("ANIMAL");
-  for (i = 0; i < x.length; i++) {
-    table += '<tr><th>' +
-      x[i].getElementsByTagName("PETNO")[0].childNodes[0].nodeValue +
-      "</td><td>" +
-      x[i].getElementsByTagName("PETNAME")[0].childNodes[0].nodeValue +
-      "</td><td>" +
-      x[i].getElementsByTagName("PETTYPE")[0].childNodes[0].nodeValue +
-      "</td><td>" +
-      x[i].getElementsByTagName("PETBREED")[0].childNodes[0].nodeValue +
-      "</td><td>" +
-      x[i].getElementsByTagName("PETOWNER")[0].childNodes[0].nodeValue +
-      "</td></tr>";
-  }
-  document.getElementById("xmlTable").innerHTML = table;
-}
+
 // Try to save the xml data to an xml file
-function saveToXML(){
+function saveToXML() {
   $(function () {
     var formData;
     formData = new Object();
@@ -98,18 +87,6 @@ function saveToXML(){
   });
 };
 
-function xmlToHTTP(){
-  // Create xml to http request
-  const xhr = new XMLHttpRequest();
-  // On load do this function
-  xhr.onload = function(){
-    const serverResponse = $("serverResponse");
-  };
-  xhr.open("POST", "xmlInsert.php");
-  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhr.send("PETNAME=");
-}
-
 function hideXML() {
   $('#xmlTable').hide();
   $('form#xmlForm').hide();
@@ -120,7 +97,7 @@ function getPHP() {
   showPHPForm();
 };
 // Show PHP Form
-function showPHPForm(){
+function showPHPForm() {
   $('form#phpForm').show();
 }
 
@@ -129,7 +106,7 @@ function hidePHP() {
   $('form#phpForm').hide();
 };
 
-function clearTables(){
+function clearTables() {
   hideXML();
   hidePHP();
 }
