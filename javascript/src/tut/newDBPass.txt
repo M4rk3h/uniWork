@@ -1,5 +1,0 @@
-Username: 17076749
-
-Password: 2LiAgRjD3VQm
-
-Database: db_17076749
