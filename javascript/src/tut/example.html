@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/domcss.css">
+    <script src="js/javaScriptExamples.js"></script>
+    <title>JS External Procedure Example</title>
+</head>
+
+<body>
+    <h1 class="header">Mark Baber Assignment</h1>
+    <br>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="dom1.html">Dom Trees</a>
+        <a class="active" href="example.html">Example</a>
+        <a href="myjs1.html">JavaScripts</a>
+    </div>
+
+    <br>
+    <h2>Say Hello</h2>
+    <!-- Say Hello Script -->
+    <p>
+        <script>
+            sayHelloWorld();
+        </script>
+    </p>
+    <h2>Wave Goodbye</h2>
+    <!-- Wave Goodbye Script  -->
+    <p>
+        <script>
+            sayGoodbyeWorld();
+        </script>
+    </p>
+    <h2>Calculate Module</h2>
+    <!-- Calculate Module Percent -->
+    <p>
+
+        <h2>Your Mark</h2>
+        <p id="score">Unable to display score</p>
+        <p id="percent">Unable to display score</p>
+        <p id="message">Unable to display message</p>
+
+        <script>
+            calculateModulePercent();
+        </script>
+
+
+
+        <h2>Your Year</h2>
+        <p id="courseLevel">Unable to display course level</p>
+        <p id="courseYears">Unable to display course years</p>
+        <script>
+            switchCourse();
+        </script>
+
+        <h2>Your Modules</h2>
+        <p id="modulesMessage">Unable to display modules</p>
+        <script>
+            showModules();
+        </script>
+
+        <h2>All Modules In One Array</h2>
+        <p id="modulesMessageAll">Unable to display modules</p>
+        <script>
+            showModulesAll();
+        </script>
+
+        <h2>While Modules</h2>
+        <p id="whileExample">Unable to display module marks</p>
+        <script>
+            whileExample();
+        </script>
+
+        <h2>Students</h2>
+        <p class="bold">Student: </p>
+        <p id="fullName"></p>
+        <p class="bold">Course: </p>
+        <p id="course"></p>
+        <p class="bold">Results: </p>
+        <p id="results"></p>
+
+        <script>
+            student();
+        </script>
+
+        <h2>Students Using Constructors</h2>
+        <!-- Student One -->
+        <p class="bold">Student: </p>
+        <p id="studentOneName"></p>
+        <p class="bold">Course: </p>
+        <p id="studentOneCourse"></p>
+        <p class="bold">Results: </p>
+        <p id="studentOneModules"></p>
+        <!-- Student Two -->
+        <p class="bold">Student: </p>
+        <p id="studentTwoName"></p>
+        <p class="bold">Course: </p>
+        <p id="studentTwoCourse"></p>
+        <p class="bold">Results: </p>
+        <p id="studentTwoModules"></p>
+        <!-- Student Three -->
+        <p class="bold">Student: </p>
+        <p id="studentThreeName"></p>
+        <p class="bold">Course: </p>
+        <p id="studentThreeCourse"></p>
+        <p class="bold">Results: </p>
+        <p id="studentThreeModules">No modules set.</p>
+
+        <script>
+            Students();
+            placeStudents();
+            //placeStudentsB()
+        </script>
+
+</body>
+
+</html>

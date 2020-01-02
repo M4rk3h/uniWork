@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PET>
+  <ANIMAL>
+    <NAME>Jac-do</NAME>
+    <OWNER>Sali Mali</OWNER>
+  </ANIMAL>
+  <ANIMAL>
+    <NAME>Jess</NAME>
+    <OWNER>Postman Pat</OWNER>
+  </ANIMAL>
+  <ANIMAL>
+    <NAME>Test Dog</NAME>
+    <OWNER>Test Owner</OWNER>
+  </ANIMAL>
+  <ANIMAL>
+    <NAME>Test Dog</NAME>
+    <OWNER>Test Owner</OWNER>
+  </ANIMAL>
+  <ANIMAL>
+    <NAME>Test Dog</NAME>
+    <OWNER>Test Owner</OWNER>
+  </ANIMAL>
+  <ANIMAL>
+    <NAME>Rex</NAME>
+    <OWNER>Princess Margaret</OWNER>
+  </ANIMAL>
+  <ANIMAL>
+    <NAME>Another</NAME>
+    <OWNER>Test</OWNER>
+  </ANIMAL>
+  <ANIMAL>
+    <PETNAME>Susan Strong</PETNAME>
+    <PETTYPE>Dog</PETTYPE>
+    <PETBREED>Samiesamoyed</PETBREED>
+    <PETOWNER>Dr Thomas</PETOWNER>
+  </ANIMAL>
+  <ANIMAL>
+    <PETNAME>Susan Strong</PETNAME>
+    <PETTYPE>Dog</PETTYPE>
+    <PETBREED>Samiesamoyed</PETBREED>
+    <PETOWNER>Dr Thomas</PETOWNER>
+  </ANIMAL>
+</PET>

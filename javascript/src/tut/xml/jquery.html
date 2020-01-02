@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Catalogue</title>
+
+  <link rel="stylesheet" href="css/jQcss.css">
+  <script src="js/testJQ.js"></script>
+  <script src="js/jq1.js"></script>
+
+</head>
+
+<body>
+  <div id="page">
+    <h1 id="header">Course Catalogue</h1>
+    <h2>Course Status</h2>
+    <ul>
+      <li id="one" class="running new"><em>new</em> BSc Computer Networking</li>
+      <li id="two" class="running">BSc Computing</li>
+      <li id="three" class="full">BSc Informatics</li>
+      <li id="four">BSc Mechatronics</li>
+      <li id="five" class="new"><em>new</em> BSc Big Data</li>
+    </ul>
+  </div>
+  <!-- Add JQuery Script -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.js"><\/script>')
+  </script>
+  <script>
+    //testJQ();
+    // When read, run function ex1
+    //ex1();
+    $(document).ready(function (ex1) {
+      // our code here
+      $('li')
+        .attr('class', 'full')
+        .hide()
+        .delay(500)
+        .slideDown(1000);
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/myjs2.css">
+    <script src="js/myjs2.js"></script>
+</head>
+
+<body>
+    <h1 class="header">Mark Baber Assignment</h1>
+    <br>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="dom1.html">Dom Trees</a>
+        <a href="example.html">Example</a>
+        <a class="active" href="myjs1.html">JavaScripts</a>
+    </div>
+
+    <div id="page">
+        <h1>Course Catalogue - JS2</h1>
+        <h2>Register Account</h2>
+        <form action="FormEcho.php" method="post" id="account">
+            <label for="username">Create a username: </label>
+            <input type="text" id="username" name="username" autocomplete="off">
+            <div id="userFeedback"></div>
+            <label for="password">Create a password: </label>
+            <input type="password" id="password" name="password" autocomplete="off">
+            <div id="passExpo"></div>
+            <div id="passFeedback"></div>
+            <!-- Here is the checkbox -->
+            <input type="checkbox" id="seePassword" name="seePassword">
+            <label for="seePassword">See Password</label>
+            <!-- Here is the submit button -->
+            <div id="subFeedback"></div>
+            <input type="submit" id='submit' disabled value="Create">
+            <br>
+            <a class="buttonLink" href="myjs1.html">JS1</a>
+            <a class="buttonLink" href="myjs2.html">JS2</a>
+            <a class="buttonLink" href="myjs3.html">JS3</a>
+            <a class="buttonLink" href="myjs4.html">JS4</a>
+            <br>
+            <p>Click the buttons to navigate the Doms</p>
+        </form>
+    </div>
+    <script>
+        checkUserDetails();
+    </script>
+
+</body>
+
+</html>

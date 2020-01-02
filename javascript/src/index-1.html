@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- JavaScript Ref -->
+    <script src="js/myjs.js"></script>
+    <!-- CSS Ref -->
+    <link rel="stylesheet" href="css/mycss.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <!-- Added a Favicon.png-->
+    <link rel="shortcut icon" type="image/png" href="favicon.icon" />
+    <!-- JQuery From Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>Mark James Baber</title>
+
+</head>
+
+<body>
+    <script>
+        window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')
+    </script>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active " href="index-1.html">Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center p-2"
+        style="background-color: #343a40; border-top: solid 2px #fff;">
+        <div class="container">
+            <h1 style="color:#fff">Mark James Baber</h1>
+            <button class="btn btn-danger" onclick="testJQ()">Test JQuery</button>
+        </div>
+    </div>
+    <div class="container">
+        <button class="btn btn-primary" onclick="getPHP();">Task 1</button>
+        <button class="btn btn-primary" onclick="">Task 2</button>
+        <button class="btn btn-primary" onclick="">Task 3</button>
+        <br>
+    </div>
+    <br>
+    <div class="container">
+        <table id="xmlTable"></table>
+        <br>
+        <form action="xml-insert.php" method="POST" id="xmlForm">
+            <div class="form-group">
+                <label for="petNameXML">Pet Name</label>
+                <input type="text" class="form-control" id="petNameXML" aria-describedby="petNameXML"
+                    placeholder="Insert your pets name here">
+            </div>
+            <div class="form-group">
+                <label for="petTypeXML">Pet Type</label>
+                <input type="text" class="form-control" id="petTypeXML" aria-describedby="petTypeXML"
+                    placeholder="Insert your pets type here">
+            </div>
+            <div class="form-group">
+                <label for="petBreedXML">Pet Breed</label>
+                <input type="text" class="form-control" id="petBreedXML" aria-describedby="petBreedXML"
+                    placeholder="Insert your pets breed here">
+            </div>
+            <div class="form-group">
+                <label for="petOwnerXML">Pet Owner</label>
+                <input type="text" class="form-control" id="petOwnerXML" aria-describedby="petOwnerXML"
+                    placeholder="Insert the pets owner here">
+            </div>
+            <button type="submit" class="btn btn-dark" onclick="saveToXML()">Submit</button>
+        </form>
+        <script>
+                        
+        </script>
+
+        <table id="phpTable"></table>
+        <br>
+        <form action="insertphp.php" method="POST" id="phpForm">
+            <div class="form-group">
+                <label for="petNamePHP">Pet Name</label>
+                <input type="text" class="form-control" id="petNamePHP" aria-describedby="petNamePHP"
+                    placeholder="Insert your pets name here">
+            </div>
+            <div class="form-group">
+                <label for="petTypePHP">Pet Type</label>
+                <input type="text" class="form-control" id="petTypePHP" aria-describedby="petTypePHP"
+                    placeholder="Insert your pets type here">
+            </div>
+            <div class="form-group">
+                <label for="petBreedPHP">Pet Breed</label>
+                <input type="text" class="form-control" id="petBreedPHP" aria-describedby="petBreedPHP"
+                    placeholder="Insert your pets breed here">
+            </div>
+            <div class="form-group">
+                <label for="petOwnerPHP">Pet Owner</label>
+                <input type="text" class="form-control" id="petOwnerPHP" aria-describedby="petOwnerPHP"
+                    placeholder="Insert the pets owner here">
+            </div>
+            <button type="submit" class="btn btn-dark" onclick="saveToXML()">Submit</button>
+        </form>
+    </div>
+    <script>
+        $('form#xmlForm').hide();
+        $('form#phpForm').hide();
+    </script>
+</body>
+
+</html>
