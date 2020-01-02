@@ -20,8 +20,6 @@ function getXML() {
   hidePHP();
   goGetXML();
   showXMLForm();
-  //loadXML();
-  //displayXML();
 }
 // Show XML Form
 function showXMLForm() {
@@ -38,6 +36,7 @@ function goGetXML() {
         console.log(data["message"]);
       } else {
         $.each(data, function (index, element) {
+          
           // Set variables for Loop
           var i;
           var table = '<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
@@ -45,17 +44,29 @@ function goGetXML() {
             // Begin building the table structure
             table += '<tr><th>' +
               // Add table data
-              Object.values(element[i]) + "</td><td>" +
-              Object.values(element[i]) + "</td><td>" +
-              Object.values(element[i]) + "</td><td>" +
-              Object.values(element[i]) + "</td><td>" +
+              //x[i].getElementsByTagName("PETNO")[0].childNodes[0].nodeValue +
+              //$console.log((this).find("pet").children().each(function());
+              $(console.log(Object.values(element[i])));
+              $(console.log(Object.values(element.values[i])));
+              //  LOOK AT JQUERY GET A PROPERTY??
+              /*Object.values(element[i]) + 
+              "</td><td>" +
+              Object.values(element[i]) + 
+              "</td><td>" +
+              Object.values(element[i]) + 
+              "</td><td>" +
+              Object.values(element[i]) + 
+              "</td><td>" +
               Object.values(element[i]);
+              console.log(element[i]);
+              console.log('Elements i Above');
+              console.log(Object.keys(element[i]));
+              console.log('Object.keys above');*/
           } // End loop
           // Print table in the div xmlTable
           document.getElementById("xmlTable").innerHTML = table;
           // THIS DOESN'T WORK FOR SOME REASON?!
-          //$(".xmlTable").innerHTML = table;
-          
+          $(".xmlTable").innerHTML = table;
         });
       } //end else
     }); //end getJSON
