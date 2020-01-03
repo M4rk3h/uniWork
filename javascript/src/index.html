@@ -66,6 +66,7 @@
     </div>
     <br>
     <div class="container">
+
         <table id="xmlTable"></table>
         <br>
         <form action="xml-insert.php" method="POST" id="xmlForm">
@@ -92,7 +93,7 @@
             <button type="submit" class="btn btn-dark" onclick="saveToXML()">Submit</button>
         </form>
         <script>
-                        
+
         </script>
 
         <table id="phpTable"></table>
@@ -126,5 +127,13 @@
         $('form#phpForm').hide();
     </script>
 </body>
+
+<footer class="footer">
+    <div class="container">
+        <button class="btn btn-warning" onclick="testArrays()">Console Test</button>
+        <button class="btn btn-dark" onclick="testMe()">Console Test</button>
+        <p> This is a footer for my test buttons</p>
+    </div>
+</footer>
 
 </html>

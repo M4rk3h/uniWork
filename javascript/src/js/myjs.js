@@ -114,6 +114,7 @@ function goGetPHP() {
         $.each(data, function (index, element) {
           // Set variables for Loop
           var i;
+          var j;
           var table = '<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
           for (i = 0; i < element.length; i++) {
             // Begin building the table structure
@@ -126,6 +127,11 @@ function goGetPHP() {
               Object.values(element[i]) + "</td><td>" +
               Object.values(element[i]);
           } // End loop
+          for (i = 0; i < element.length; i++) {
+            for (j = 0; j < element[i].length; j++) {
+              console.log(element[i][j]);
+            }
+          }
           // Print table in the div xmlTable
           document.getElementById("phpTable").innerHTML = table;
           // THIS DOESN'T WORK FOR SOME REASON?!
@@ -134,7 +140,7 @@ function goGetPHP() {
       } //end else
     }); //end getJSON
   });
-}
+};
 
 // Show PHP Form
 function showPHPForm() {
@@ -150,3 +156,80 @@ function clearTables() {
   hideXML();
   hidePHP();
 }
+
+// ###############################################################################################################################################
+// ###############################################################################################################################################
+function testArrays() {
+  /* First we will create an array of arrays, similar to what you are getting back from AJAX */
+  var outerArray = [];
+
+  var innerArrayOne = [1, "Ollie", "Border Collie", "Greg Thomas", "Dog"];
+  var innerArrayTwo = [2, "Bob", "Cat"];
+  var innerArrayThree = [3, "Sue", "Cat"];
+
+  outerArray[0] = innerArrayOne;
+  outerArray[1] = innerArrayTwo;
+  outerArray[2] = innerArrayThree;
+
+  /* This will give us [[1, "Tom", "Dog"], [2, "Bob", "Cat"], [3, "Sue", "Cat"]] */
+  // Array in an array
+  //console.log(outerArray);
+
+  var i, j;
+
+  /* This loop will pick out each of the innerArrays in turn */
+  // Shows each array
+  for (i = 0; i < outerArray.length; i++) {
+    //console.log(outerArray[i]);
+  }
+
+  /* This will pick out each of the individual data items in each of the innerArrays */
+  // Displays all contents of each array
+  for (i = 0; i < outerArray.length; i++) {
+    for (j = 0; j < outerArray[i].length; j++) {
+      console.log(outerArray[i][j]);
+    }
+  }
+};
+
+function testMe() {
+  $(function () {
+    $.getJSON("xml-get.php", {
+      sourceName: "pets",
+    }, function (data) {
+      if (data["code"] == "error") {
+        console.log(data["message"]);
+      } else {
+        $.each(data, function (index, element) {
+          // Set variables for Loop
+          var i, j;
+          // varaible is an element
+          var outerArray = data;
+          var innerArray = Object.entries(outerArray);
+
+          console.log(outerArray);
+
+          for (const [values,key] of Object.entries(outerArray)) {
+            console.log(`${values}: ${key}`);
+          }
+          // Below is closest so far.
+          Object.entries(outerArray).forEach(([key,values]) => console.log(`${key}: ${values}`));
+          console.log(Object.keys(outerArray));
+          console.log(Object.values(outerArray));
+          console.log(Object.entries(outerArray));
+
+          for (i = 0; i < outerArray.length; i++) {
+            //console.log(outerArray[i]);
+          }
+
+          for (i = 0; i < outerArray.length; i++) {
+            for (j = 0; j < outerArray[i].length; j++) {
+              // Thinks these are objects
+              //console.log(outerArray[i][j]);
+            } // End Loop 1
+          } // End Loop 2
+        })
+      }
+    })
+  })
+};
