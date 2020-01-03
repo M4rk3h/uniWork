@@ -8,6 +8,7 @@ function testJQ() {
     alert("JQuery isn't loaded correctly!");
   }
 }
+
 // Dropdown JQuery Effects
 function dropDown() {
   $('.dropdown-menu')
@@ -15,13 +16,14 @@ function dropDown() {
     .delay(100)
     .slideDown(200);
 }
+
+// ###############################################################################################################################################
+// ###############################################################################################################################################
 // Get the xml table with data
 function getXML() {
   hidePHP();
   goGetXML();
-  showXMLForm();
-  //loadXML();
-  //displayXML();
+  //showXMLForm();
 }
 // Show XML Form
 function showXMLForm() {
@@ -38,6 +40,7 @@ function goGetXML() {
         console.log(data["message"]);
       } else {
         $.each(data, function (index, element) {
+
           // Set variables for Loop
           var i;
           var table = '<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
@@ -45,6 +48,7 @@ function goGetXML() {
             // Begin building the table structure
             table += '<tr><th>' +
               // Add table data
+              // LOOK AT JQUERY GET A PROPERTY??
               Object.values(element[i]) + "</td><td>" +
               Object.values(element[i]) + "</td><td>" +
               Object.values(element[i]) + "</td><td>" +
@@ -55,13 +59,11 @@ function goGetXML() {
           document.getElementById("xmlTable").innerHTML = table;
           // THIS DOESN'T WORK FOR SOME REASON?!
           //$(".xmlTable").innerHTML = table;
-          
         });
       } //end else
     }); //end getJSON
   });
 }
-
 
 // Try to save the xml data to an xml file
 function saveToXML() {
@@ -92,10 +94,48 @@ function hideXML() {
   $('form#xmlForm').hide();
 };
 
+// ###############################################################################################################################################
+// ###############################################################################################################################################
 function getPHP() {
   hideXML();
-  showPHPForm();
+  goGetPHP();
+  //showPHPForm();
 };
+
+// Get data from a database
+function goGetPHP() {
+  $(function () {
+    $.getJSON("php-get.php", {
+      tableName: "pets"
+    }, function (data) {
+      if (data["code"] == "error") {
+        console.log(data["message"]);
+      } else {
+        $.each(data, function (index, element) {
+          // Set variables for Loop
+          var i;
+          var table = '<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
+          for (i = 0; i < element.length; i++) {
+            // Begin building the table structure
+            table += '<tr><th>' +
+              // Add table data
+              // LOOK AT JQUERY GET A PROPERTY??
+              Object.values(element[i]) + "</td><td>" +
+              Object.values(element[i]) + "</td><td>" +
+              Object.values(element[i]) + "</td><td>" +
+              Object.values(element[i]) + "</td><td>" +
+              Object.values(element[i]);
+          } // End loop
+          // Print table in the div xmlTable
+          document.getElementById("phpTable").innerHTML = table;
+          // THIS DOESN'T WORK FOR SOME REASON?!
+          //$(".phpTable").innerHTML = table;
+        });
+      } //end else
+    }); //end getJSON
+  });
+}
+
 // Show PHP Form
 function showPHPForm() {
   $('form#phpForm').show();
