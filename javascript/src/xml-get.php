@@ -22,11 +22,8 @@ if (!file_exists("xml/".$filename.".xml")){
   return;
 }
 
-
 $xmlFile = simplexml_load_file("xml/".$filename.".xml");
-
 $errors = libxml_get_errors();
-
 
 if (empty($xmlFile)){
   $error->code ="error";

@@ -207,16 +207,20 @@ function testMe() {
           var outerArray = data;
           var innerArray = Object.entries(outerArray);
 
-          console.log(outerArray);
+          console.log(outerArray.ANIMAL.PETNO);
+          console.log(innerArray.PETNO);
 
-          for (const [values,key] of Object.entries(outerArray)) {
-            console.log(`${values}: ${key}`);
+          for (const [key,values] of Object.entries(outerArray)) {
+            console.log(`${key}: ${values}`);
           }
           // Below is closest so far.
-          Object.entries(outerArray).forEach(([key,values]) => console.log(`${key}: ${values}`));
-          console.log(Object.keys(outerArray));
-          console.log(Object.values(outerArray));
-          console.log(Object.entries(outerArray));
+          //Object.entries(outerArray).forEach(([key,values]) => console.log(`${key}: ${values}`));
+          //console.log(Object.keys(outerArray));
+          //console.log(Object.values(outerArray));
+          //console.log(Object.entries(outerArray));
+
+          //console.log(outerArray.PETNO);
+          //console.log(innerArray.PETNO);
 
           for (i = 0; i < outerArray.length; i++) {
             //console.log(outerArray[i]);
