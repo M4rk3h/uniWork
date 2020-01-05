@@ -203,35 +203,21 @@ function testMe() {
         $.each(data, function (index, element) {
           // Set variables for Loop
           var i, j;
-          // varaible is an element
-          var outerArray = data;
-          var innerArray = Object.entries(outerArray);
-
-          console.log(outerArray.ANIMAL.PETNO);
-          console.log(innerArray.PETNO);
-
-          for (const [key,values] of Object.entries(outerArray)) {
-            console.log(`${key}: ${values}`);
+          
+          // THIS BELOW
+          for (const [key,values] of Object.entries(data)) {
+            console.log(`${key}: ${values[1].PETNO}`);
+            console.log(`${key}: ${values[1].PETNAME}`);
+            console.log(`${key}: ${values[1].PETTYPE}`);
+            console.log(`${key}: ${values[1].PETBREED}`);
+            console.log(`${key}: ${values[1].PETOWNER }`);
           }
-          // Below is closest so far.
-          //Object.entries(outerArray).forEach(([key,values]) => console.log(`${key}: ${values}`));
-          //console.log(Object.keys(outerArray));
-          //console.log(Object.values(outerArray));
-          //console.log(Object.entries(outerArray));
-
-          //console.log(outerArray.PETNO);
-          //console.log(innerArray.PETNO);
-
-          for (i = 0; i < outerArray.length; i++) {
-            //console.log(outerArray[i]);
+          
+          for (i = 0; i < data.length; i++) {
+            for (const [values] of Object.entries(data)) {
+              console.log(`${values[0].PETNAME}`);
+            }
           }
-
-          for (i = 0; i < outerArray.length; i++) {
-            for (j = 0; j < outerArray[i].length; j++) {
-              // Thinks these are objects
-              //console.log(outerArray[i][j]);
-            } // End Loop 1
-          } // End Loop 2
         })
       }
     })
