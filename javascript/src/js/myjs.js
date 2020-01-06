@@ -61,23 +61,20 @@ function goGetXML() {
               table += '<tr><th>' +
               (value[j].PETNO) + "</td><td>" +
               (value[j].PETNAME) + "</td><td>" +
+              (value[j].PETTYPE) + "</td><td>" +
               (value[j].PETBREED) + "</td><td>" +
-              (value[j].PETOWNER) + "</td><td>" +
-              (value[j].PETTYPE);
-              
+              (value[j].PETOWNER);
             } // Nested Loop Stop
           }; // Traditional Loop Stop
           // Put it into the table
-          document.getElementById("xmlTable").innerHTML = table;
-          $(".xmlTable").innerHTML = table;
-          
-          console.log('Push to table');
-          console.log($(".xmlTable").innerHTML = table);
+          //document.getElementById("xmlTable").innerHTML = table;
+          $('#xmlTable').html(table);
         });
       } //end else
     }); //end getJSON
   });
 }
+
 
 // Try to save the xml data to an xml file
 function saveToXML() {
