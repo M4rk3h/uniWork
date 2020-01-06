@@ -44,21 +44,35 @@ function goGetXML() {
           // Set variables for Loop
           var i;
           var table = '<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
-          for (i = 0; i < element.length; i++) {
-            // Begin building the table structure
-            table += '<tr><th>' +
-              // Add table data
-              // LOOK AT JQUERY GET A PROPERTY??
-              Object.values(element[i]) + "</td><td>" +
-              Object.values(element[i]) + "</td><td>" +
-              Object.values(element[i]) + "</td><td>" +
-              Object.values(element[i]) + "</td><td>" +
-              Object.values(element[i]);
-          } // End loop
-          // Print table in the div xmlTable
-          document.getElementById("xmlTable").innerHTML = table;
-          // THIS DOESN'T WORK FOR SOME REASON?!
-          //$(".xmlTable").innerHTML = table;
+
+          // set forEach
+          Object.entries(data).forEach(entry => {
+            let key = entry[0]; // Gets Animal
+            let value = entry[1] // Gets array of petNo, petName etc
+          });
+          
+          // Traditional Loop Start
+          let entries = Object.entries(data);
+          for (let i = 0; i < entries.length; i++) {
+            let key = entries[i][0]; // Gets Animal
+            let value = entries[i][1]; // Gets array of petNo, petName etc
+            // Nested Loop Start
+            for (let j = 0; j < value.length; j++) {
+              table += '<tr><th>' +
+              (value[j].PETNO) + "</td><td>" +
+              (value[j].PETNAME) + "</td><td>" +
+              (value[j].PETBREED) + "</td><td>" +
+              (value[j].PETOWNER) + "</td><td>" +
+              (value[j].PETTYPE);
+              
+            } // Nested Loop Stop
+          }; // Traditional Loop Stop
+          // Put it into the table
+          //document.getElementById("xmlTable").innerHTML = table;
+          $(".xmlTable").innerHTML = table;
+          
+          console.log('Push to table');
+          console.log($(".xmlTable").innerHTML = table);
         });
       } //end else
     }); //end getJSON
@@ -155,71 +169,4 @@ function hidePHP() {
 function clearTables() {
   hideXML();
   hidePHP();
-}
-
-// ###############################################################################################################################################
-// ###############################################################################################################################################
-function testArrays() {
-  /* First we will create an array of arrays, similar to what you are getting back from AJAX */
-  var outerArray = [];
-
-  var innerArrayOne = [1, "Ollie", "Border Collie", "Greg Thomas", "Dog"];
-  var innerArrayTwo = [2, "Bob", "Cat"];
-  var innerArrayThree = [3, "Sue", "Cat"];
-
-  outerArray[0] = innerArrayOne;
-  outerArray[1] = innerArrayTwo;
-  outerArray[2] = innerArrayThree;
-
-  /* This will give us [[1, "Tom", "Dog"], [2, "Bob", "Cat"], [3, "Sue", "Cat"]] */
-  // Array in an array
-  //console.log(outerArray);
-
-  var i, j;
-
-  /* This loop will pick out each of the innerArrays in turn */
-  // Shows each array
-  for (i = 0; i < outerArray.length; i++) {
-    //console.log(outerArray[i]);
-  }
-
-  /* This will pick out each of the individual data items in each of the innerArrays */
-  // Displays all contents of each array
-  for (i = 0; i < outerArray.length; i++) {
-    for (j = 0; j < outerArray[i].length; j++) {
-      console.log(outerArray[i][j]);
-    }
-  }
-};
-
-function testMe() {
-  $(function () {
-    $.getJSON("xml-get.php", {
-      sourceName: "pets",
-    }, function (data) {
-      if (data["code"] == "error") {
-        console.log(data["message"]);
-      } else {
-        $.each(data, function (index, element) {
-          // Set variables for Loop
-          var i, j;
-          
-          // THIS BELOW
-          for (const [key,values] of Object.entries(data)) {
-            console.log(`${key}: ${values[1].PETNO}`);
-            console.log(`${key}: ${values[1].PETNAME}`);
-            console.log(`${key}: ${values[1].PETTYPE}`);
-            console.log(`${key}: ${values[1].PETBREED}`);
-            console.log(`${key}: ${values[1].PETOWNER }`);
-          }
-          
-          for (i = 0; i < data.length; i++) {
-            for (const [values] of Object.entries(data)) {
-              console.log(`${values[0].PETNAME}`);
-            }
-          }
-        })
-      }
-    })
-  })
 };
