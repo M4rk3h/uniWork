@@ -68,7 +68,7 @@ function goGetXML() {
             } // Nested Loop Stop
           }; // Traditional Loop Stop
           // Put it into the table
-          //document.getElementById("xmlTable").innerHTML = table;
+          document.getElementById("xmlTable").innerHTML = table;
           $(".xmlTable").innerHTML = table;
           
           console.log('Push to table');
