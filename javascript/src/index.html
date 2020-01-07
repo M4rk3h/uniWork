@@ -54,19 +54,31 @@
     <div class="container">
         <div class="dropdown">
             <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"
-                onclick="dropDown();">Select Below:
+                onclick="dropDownXML();">XML:
                 <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" onclick="getXML();">XML</a></li>
+            <ul class="dropdown-menu" id="dropdown-xml">
+                <li><a class="dropdown-item" onclick="xmlPets();">Pets</a></li>
                 <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" onclick="getPHP();">PHP</a></li>
+                <li><a class="dropdown-item" onclick="xmlGuitars();">Guitars</a></li>
             </ul>
         </div>
-        <br>
     </div>
     <br>
     <div class="container">
-
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"
+                onclick="dropDownPHP();">PHP:
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu" id="dropdown-php">
+                <li><a class="dropdown-item" onclick="phpPets();">Pets</a></li>
+                <div class="dropdown-divider"></div>
+                <li><a class="dropdown-item" onclick="phpGuitars();">Guitars</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
         <table id="xmlTable"></table>
         <br>
         <form action="xml-insert.php" method="POST" id="xmlForm">
@@ -92,10 +104,6 @@
             </div>
             <button type="submit" class="btn btn-dark" onclick="saveToXML()">Submit</button>
         </form>
-        <script>
-            //goGetXML();
-        </script>
-
         <table id="phpTable"></table>
         <br>
         <form action="insertphp.php" method="POST" id="phpForm">
@@ -127,13 +135,5 @@
         $('form#phpForm').hide();
     </script>
 </body>
-
-<footer class="footer">
-    <div class="container">
-        <button class="btn btn-warning" onclick="testArrays()">Console Test</button>
-        <button class="btn btn-dark" onclick="testMe()">Console Test</button>
-        <p> This is a footer for my test buttons</p>
-    </div>
-</footer>
 
 </html>
