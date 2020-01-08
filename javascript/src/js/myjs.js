@@ -1,5 +1,5 @@
 // Test if JQuery is enabled
-function testJQ() {
+	{
   if (window.jQuery) {
     // jQuery is loaded  
     alert("jQuery loaded correctly!");
