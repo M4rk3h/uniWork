@@ -20,7 +20,7 @@ function dropDownPHP() {
 }
 // ###############################################################################################################################################
 // ###############################################################################################################################################
-// Get the xml data and load it
+// GET PETS XML
 function xmlPets() {
   $(function () {
     $.getJSON("xml-get.php", {
@@ -61,7 +61,7 @@ function xmlPets() {
     }); //end getJSON
   });
 };
-
+// GET GUITARS XML
 function xmlGuitars() {
   $(function () {
     $.getJSON("xml-get.php", {
@@ -103,7 +103,7 @@ function xmlGuitars() {
 };
 // ###############################################################################################################################################
 // ###############################################################################################################################################
-// Get data from a database
+// GET Pets PHP
 function phpPets() {
   $(function () {
     $.getJSON("php-get.php", {
@@ -144,8 +144,7 @@ function phpPets() {
     })
   })
 };
-
-// Get data from a database
+// GET Guitars PHP
 function phpGuitars() {
   $(function () {
     $.getJSON("php-get.php", {
@@ -177,15 +176,13 @@ function phpGuitars() {
                 (value[j].guitarType);
             } // Nested Loop Stop
           }; // Traditional Loop Stop
-          // Put it into the table
-          //$('#phpTable').html(table);
           $('#dataTable').html(table);
         });
       }
     })
   })
 };
-
+// INSERT GUITARS PHP
 function phpGuitarsInsert() {
   // Create the data which will be added into the database
   var addData = new Object();
@@ -201,66 +198,12 @@ function phpGuitarsInsert() {
     },
     function (data) {
       if (data > 0) {
-        $('.success').show(3000).html("phpGuitarsInserted correctly?!").delay(2000).fadeOut(1000);
-        console.log(data);
+        $('.success').show(2000).html("Record inserted correctly").delay(1000).fadeOut(1000);
       } else {
-        $('.success').show(3000).html("Error with inserting gutiars into php?!").delay(2000).fadeOut(1000);
+        $('.success').show(2000).html("Error with inserting gutiars into php.").delay(1000).fadeOut(1000);
       }
     });
-};
+}; 
 
-function xmlPetsInsert() {
-  $(function () {
-    var formData;
-    formData = new Object();
-    formData.PETNAME = $('#petName').val();
-    formData.PETTYPE = $('#petType').val();
-    formData.PETBREED = $('#petBreed').val();
-    formData.PETOWNER = $('#petOwner').val();
-    var jsonFormData = JSON.stringify(formData);
-    var sourceFile = 'pets';
-    $.getJSON("insertXml.php", {
-      sourceName: sourceFile,
-      sourceData: jsonFormData
-    }, function (data) {
-      console.log(data);
-    });
-  });
-};
+// On Load Hide Forms
 
-function xmlGuitarsInsert() {
-  $(function () {
-    console.log('start xmlGuitarsInsert');
-    var formData;
-    formData = new Object();
-    formData.GUITARBRAND = $('#guitarBrand').val();
-    formData.GUITARMODEL = $('#guitarModel').val();
-    formData.GUITARTYPE = $('#guitarType').val();
-    var jsonFormData = JSON.stringify(formData);
-    console.log(formData); // show the array of data
-    var sourceFile = 'guitars';
-    $.getJSON("../xml-insert.php", {
-      sourceName: sourceFile,
-      sourceData: jsonFormData
-    }, function (data) {
-      // Do stuff
-      console.log('Success');
-    });
-  });
-}
-function insertTest900(){
-  $(function () {
-    var formData;
-    formData = new Object();
-    formData.PETNAME = 'Another';
-    formData.PETOWNER = 'Test';
-    var jsonFormData = JSON.stringify(formData);
-    var sourceFile = 'pets';
-    $.getJSON("../xml-insert.php", {
-      sourceName: sourceFile,
-      sourceData: jsonFormData
-    }, function (data) {
-      console.log(data);
-    });
-  });
-}

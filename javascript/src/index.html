@@ -63,31 +63,79 @@
         </div>
     </div>
     <br>
+
     <div class="container">
         <div class="dropdown">
             <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"
                 onclick="dropDownPHP();">PHP:
                 <span class="caret"></span></button>
             <ul class="dropdown-menu" id="dropdown-php">
-                <li><a class="dropdown-item" onclick="phpPets();">Pets</a></li>
+                <li><a class="dropdown-item" id="php-btn-pets" onclick="phpPets();">Pets</a></li>
                 <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" onclick="phpGuitars();">Guitars</a></li>
+                <li><a class="dropdown-item" id="php-btn-guitar" onclick="phpGuitars();">Guitars</a></li>
             </ul>
         </div>
     </div>
     <br>
     <br>
     <div class="container">
+
         <table id="dataTable"></table>
-        <table id="xmlTable"></table>
-        <table id="phpTable"></table>
         <br>
-        <button class="btn btn-warning" onclick="phpGuitarsInsert()">phpGuitarsInsert!</button>
         <div class="success"></div>
+        <br>
+        <form id="insertForm">
+            <table id="phpPets">
+                <tr>
+                    <td colspan="4" style="text-align: center">
+                        <input type="hidden" id='petNo' value='' />
+                        <input type='text' class="form-control" id='petName' placeholder='petName'
+                            required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='petType' placeholder='petType'
+                            required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='petBreed' placeholder='petBreed'
+                            required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='petOwner' placeholder='petOwner'
+                            required />&nbsp;&nbsp;
+                        <input type='button' class="btn btn-success" id='saverecords' value='Add Records'
+                            onclick="phpPetsInsert()" /></td>
+                </tr>
+            </table>
+            <table id="phpGuitars">
+                <tr>
+                    <td colspan="4" style="text-align: center">
+                        <input type="hidden" id='guitarNo' value='' />
+                        <input type='text' class="form-control" id='guitarBrand' placeholder='guitarBrand'
+                            required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='guitarModel' placeholder='guitarModel'
+                            required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='guitarType' placeholder='guitarType'
+                            required />&nbsp;&nbsp;
+                        <br>
+                        <input type='button' class="btn btn-success" id='phpGuitarsBtn' value='Add Guitar'
+                            onclick="phpGuitarsInsert()" /></td>
+                </tr>
+            </table>
+            
+            <script>
+                // Toggle btn
+                $("#php-btn-pets").click(function () {
+                    $("table#phpPets").toggle();
+                });
+
+                $("#php-btn-guitar").click(function () {
+                    $("table#phpGuitars").toggle();
+                });
+
+                $("table#phpPets").hide();
+                $("table#phpGuitars").toggle();
+            </script>
+
+        </form>
+        <br>
+        
     </div>
 
-    <script>
-    </script>
 </body>
 
 </html>
