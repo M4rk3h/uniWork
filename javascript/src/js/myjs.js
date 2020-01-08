@@ -1,5 +1,5 @@
 // Test if JQuery is enabled
-	{
+function testJQ() {
   if (window.jQuery) {
     // jQuery is loaded  
     alert("jQuery loaded correctly!");
@@ -54,7 +54,8 @@ function xmlPets() {
             } // Nested Loop Stop
           }; // Traditional Loop Stop
           // Put it into the table
-          $('#xmlTable').html(table);
+          //$('#xmlTable').html(table);
+          $('#dataTable').html(table);
         });
       } //end else
     }); //end getJSON
@@ -93,7 +94,8 @@ function xmlGuitars() {
             } // Nested Loop Stop
           }; // Traditional Loop Stop
           // Put it into the table
-          $('#xmlTable').html(table);
+          //$('#xmlTable').html(table);
+          $('#dataTable').html(table);
         });
       } //end else
     }); //end getJSON
@@ -135,7 +137,8 @@ function phpPets() {
             } // Nested Loop Stop
           }; // Traditional Loop Stop
           // Put it into the table
-          $('#phpTable').html(table);
+          //$('#phpTable').html(table);
+          $('#dataTable').html(table);
         });
       }
     })
@@ -175,9 +178,52 @@ function phpGuitars() {
             } // Nested Loop Stop
           }; // Traditional Loop Stop
           // Put it into the table
-          $('#phpTable').html(table);
+          //$('#phpTable').html(table);
+          $('#dataTable').html(table);
         });
       }
     })
   })
 };
+
+function phpGuitarsInsert() {
+  // Create the data which will be added into the database
+  var addData = new Object();
+  addData.guitarBrand = $('#guitarBrand').val();
+  addData.guitarModel = $('#guitarModel').val();
+  addData.guitarType = $('#guitarType').val();
+  // Add to JSON
+  var jsonAddData = JSON.stringify(addData);
+  // Get the json we want to save to
+  $.getJSON("php-insert.php", {
+      tableName: "guitars",
+      appendData: jsonAddData
+    },
+    function (data) {
+      if (data > 0) {
+        $('.success').show(3000).html("phpGuitarsInserted correctly?!").delay(2000).fadeOut(1000);
+        console.log(data);
+      } else {
+        $('.success').show(3000).html("Error with inserting gutiars into php?!").delay(2000).fadeOut(1000);
+      }
+    });
+};
+
+function xmlPetsInsert() {
+  $(function () {
+    var formData;
+    formData = new Object();
+    formData.PETNAME = $('#petName').val();
+    formData.PETTYPE = $('#petType').val();
+    formData.PETBREED = $('#petBreed').val();
+    formData.PETOWNER = $('#petOwner').val();
+    var jsonFormData = JSON.stringify(formData);
+    var sourceFile = 'pets';
+    $.getJSON("insertXml.php", {
+      sourceName: sourceFile,
+      sourceData: jsonFormData
+    }, function (data) {
+      console.log(data);
+    });
+  });
+}
