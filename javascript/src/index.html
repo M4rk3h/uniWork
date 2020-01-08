@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- JavaScript Ref -->
-    <script src="js/myjs.js"></script>
+    <script src="myjs.js"></script>
     <!-- CSS Ref -->
     <link rel="stylesheet" href="css/mycss.css">
     <!-- Bootstrap CSS -->
@@ -35,19 +35,12 @@
     <script>
         window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')
     </script>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active " href="index.html">Home</a>
-            </li>
-        </ul>
-    </nav>
-
     <div class="jumbotron jumbotron-fluid text-center p-2"
         style="background-color: #343a40; border-top: solid 2px #fff;">
         <div class="container">
             <h1 style="color:#fff">Mark James Baber</h1>
             <button class="btn btn-danger" onclick="testJQ()">Test JQuery</button>
+            <button class="btn btn-danger" onclick="testCount()">XML count</button>
         </div>
     </div>
     <div class="container ">
@@ -56,9 +49,9 @@
                 onclick="dropDownXML();">XML:
                 <span class="caret"></span></button>
             <ul class="dropdown-menu" id="dropdown-xml">
-                <li><a class="dropdown-item" onclick="xmlPets();">Pets</a></li>
+                <li><a class="dropdown-item" id="xml-btn-pets" onclick="xmlPets();">Pets</a></li>
                 <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" onclick="xmlGuitars();">Guitars</a></li>
+                <li><a class="dropdown-item" id="xml-btn-guitars" onclick="xmlGuitars();">Guitars</a></li>
             </ul>
         </div>
     </div>
@@ -72,32 +65,65 @@
             <ul class="dropdown-menu" id="dropdown-php">
                 <li><a class="dropdown-item" id="php-btn-pets" onclick="phpPets();">Pets</a></li>
                 <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" id="php-btn-guitar" onclick="phpGuitars();">Guitars</a></li>
+                <li><a class="dropdown-item" id="php-btn-guitars" onclick="phpGuitars();">Guitars</a></li>
             </ul>
         </div>
     </div>
     <br>
     <br>
     <div class="container">
-
         <table id="dataTable"></table>
         <br>
         <div class="success"></div>
         <br>
         <form id="insertForm">
+            <!-- XML PETS Form -->
+            <table id="xmlPets">
+                <tr>
+                    <td colspan="4" style="text-align: center">
+                        <input type="hidden" id='petNo' value='' />
+                        <input type='text' class="form-control" id='xmlPetName' placeholder='Pet Name'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='xmlPetType' placeholder='Pet Type'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='xmlPetBreed' placeholder='Pet Breed'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='xmlPetOwner' placeholder='Pet Owner'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <br>
+                        <input type='button' class="btn btn-success" id='xmlPetsBtn' value='Add a new pet'
+                            onclick="xmlPetsInsert()" /></td>
+                </tr>
+            </table>
+            <table id="xmlGuitars">
+                <tr>
+                    <td colspan="4" style="text-align: center">
+                        <input type="hidden" id='guitarNo' value='' />
+                        <input type='text' class="form-control" id='xmlGuitarBrand' placeholder='Guitar Brand'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='xmlGuitarModel' placeholder='Guitar Model'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='xmlGuitarType' placeholder='Guitar Type'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <br>
+                        <input type='button' class="btn btn-success" id='xmlGuitarsBtn' value='Add a new guitar'
+                            onclick="xmlGuitarsInsert()" /></td>
+                </tr>
+            </table>
             <table id="phpPets">
                 <tr>
                     <td colspan="4" style="text-align: center">
                         <input type="hidden" id='petNo' value='' />
-                        <input type='text' class="form-control" id='petName' placeholder='petName'
-                            required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='petType' placeholder='petType'
-                            required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='petBreed' placeholder='petBreed'
-                            required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='petOwner' placeholder='petOwner'
-                            required />&nbsp;&nbsp;
-                        <input type='button' class="btn btn-success" id='saverecords' value='Add Records'
+                        <input type='text' class="form-control" id='phpPetName' placeholder='Pet Name'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='phpPetType' placeholder='Pet Type'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='phpPetBreed' placeholder='Pet Breed'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='phpPetOwner' placeholder='Pet Owner'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <br>
+                        <input type='button' class="btn btn-success" id='phpPetsBtn' value='Add a new pet'
                             onclick="phpPetsInsert()" /></td>
                 </tr>
             </table>
@@ -105,35 +131,61 @@
                 <tr>
                     <td colspan="4" style="text-align: center">
                         <input type="hidden" id='guitarNo' value='' />
-                        <input type='text' class="form-control" id='guitarBrand' placeholder='guitarBrand'
-                            required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='guitarModel' placeholder='guitarModel'
-                            required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='guitarType' placeholder='guitarType'
-                            required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='phpGuitarBrand' placeholder='Guitar Brand'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='phpGuitarModel' placeholder='Guitar Model'
+                            autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control" id='phpGuitarType' placeholder='Guitar Type'
+                            autocomplete="off" required />&nbsp;&nbsp;
                         <br>
-                        <input type='button' class="btn btn-success" id='phpGuitarsBtn' value='Add Guitar'
+                        <input type='button' class="btn btn-success" id='phpGuitarsBtn' value='Add a new guitar'
                             onclick="phpGuitarsInsert()" /></td>
                 </tr>
             </table>
-            
             <script>
-                // Toggle btn
-                $("#php-btn-pets").click(function () {
-                    $("table#phpPets").toggle();
-                });
-
-                $("#php-btn-guitar").click(function () {
-                    $("table#phpGuitars").toggle();
-                });
-
+                // Start by hiding the forms
+                $("table#xmlPets").hide();
+                $("table#xmlGuitars").hide();
                 $("table#phpPets").hide();
-                $("table#phpGuitars").toggle();
-            </script>
+                $("table#phpGuitars").hide();
 
+                // Function to show XML Pets Form
+                $("#xml-btn-pets").click(function () {
+                    $("table#xmlPets").show();
+                    $("table#xmlGuitars").hide();
+                    $("table#phpPets").hide();
+                    $("table#phpGuitars").hide();
+                    console.log('Show xml pets && hide everything else');
+                });
+                // Function to show XML Guitar Form
+                $("#xml-btn-guitars").click(function () {
+                    $("table#xmlPets").hide();
+                    $("table#xmlGuitars").show();
+                    $("table#phpPets").hide();
+                    $("table#phpGuitars").hide();
+                    console.log('Show xml guitars && hide everything else');
+                });
+                // Function to show php Pets Form
+                $("#php-btn-pets").click(function () {
+                    $("table#xmlPets").hide();
+                    $("table#xmlGuitars").hide();
+                    $("table#phpPets").show();
+                    $("table#phpGuitars").hide();
+                    console.log('Show php pets && hide everything else');
+                });
+                // Function to show php Guitar Form
+                $("#php-btn-guitar").click(function () {
+                    $("table#xmlPets").hide();
+                    $("table#xmlGuitars").hide();
+                    $("table#phpPets").hide();
+                    $("table#phpGuitars").show();
+                    console.log('Show php guitars && hide everything else');
+                });
+                
+            </script>
         </form>
         <br>
-        
+
     </div>
 
 </body>

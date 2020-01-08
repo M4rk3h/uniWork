@@ -1,0 +1,3 @@
+capatalize all entries in table
+
+delete count button

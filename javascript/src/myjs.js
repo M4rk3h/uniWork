@@ -1,7 +1,7 @@
 // Test if JQuery is enabled
 function testJQ() {
   if (window.jQuery) {
-    // jQuery is loaded  
+    // jQuery is loaded
     alert("jQuery loaded correctly!");
   } else {
     // jQuery is not loaded
@@ -32,7 +32,7 @@ function xmlPets() {
         $.each(data, function (index, element) {
           // Set variables for Loop
           var i;
-          var table = '<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
+          var table = '<thead><tr><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
           // set forEach
           Object.entries(data).forEach(entry => {
             let key = entry[0]; // Gets Animal
@@ -46,7 +46,6 @@ function xmlPets() {
             // Nested Loop Start
             for (let j = 0; j < value.length; j++) {
               table += '<tr><th>' +
-                (value[j].PETNO) + "</td><td>" +
                 (value[j].PETNAME) + "</td><td>" +
                 (value[j].PETTYPE) + "</td><td>" +
                 (value[j].PETBREED) + "</td><td>" +
@@ -73,7 +72,7 @@ function xmlGuitars() {
         $.each(data, function (index, element) {
           // Set variables for Loop
           var i;
-          var table = '<thead><tr><th scope="col">Guitar No</th><th scope="col">Guitar Brand</th><th scope="col">Guitar Model</th><th scope="col">Guitar Type</th></thead><tbody>';
+          var table = '<thead><tr><th scope="col">Guitar Brand</th><th scope="col">Guitar Model</th><th scope="col">Guitar Type</th></thead><tbody>';
           // set forEach
           Object.entries(data).forEach(entry => {
             let key = entry[0]; // Gets INSTRUMENTS
@@ -87,7 +86,6 @@ function xmlGuitars() {
             // Nested Loop Start
             for (let j = 0; j < value.length; j++) {
               table += '<tr><th>' +
-                (value[j].GUITARNO) + "</td><td>" +
                 (value[j].GUITARBRAND) + "</td><td>" +
                 (value[j].GUITARMODEL) + "</td><td>" +
                 (value[j].GUITARTYPE);
@@ -182,28 +180,95 @@ function phpGuitars() {
     })
   })
 };
+// INSERT PETS XML
+function xmlPetsInsert() {
+  // Create the data which will be added into the database
+  var formData = new Object();
+  formData.PETNAME = $('#xmlPetName').val();
+  formData.PETTYPE = $('#xmlPetType').val();
+  formData.PETBREED = $('#xmlPetBreed').val();
+  formData.PETOWNER = $('#xmlPetOwner').val();
+  // Add to JSON
+  console.log(formData);
+  var jsonFormData = JSON.stringify(formData);
+  console.log(jsonFormData);
+  var sourceFile = 'pets';
+  // Get the json we want to save to
+  $.getJSON("xml-insert.php", {
+      sourceName: sourceFile,
+      sourceData: jsonFormData,
+      success: function () {
+        $('.success').show(2000).html("Record inserted correctly").delay(1000).fadeOut(1000);
+      }
+    },
+    function (data) {
+      console.log(data);
+    });
+};
+// INSERT GUITARS XML
+function xmlGuitarsInsert() {
+    // Create the data which will be added into the database
+    var formData = new Object();
+    formData.GUITARBRAND = $('#xmlGuitarBrand').val();
+    formData.GUITARMODEL = $('#xmlGuitarModel').val();
+    formData.GUITARTYPE = $('#xmlGuitarType').val();
+    // Add to JSON
+    console.log(formData);
+    var jsonFormData = JSON.stringify(formData);
+    console.log(jsonFormData);
+    var sourceFile = 'guitars';
+    // Get the json we want to save to
+    $.getJSON("xml-insert.php", {
+        sourceName: sourceFile,
+        sourceData: jsonFormData,
+        success: function () {
+          $('.success').show(2000).html("Record inserted correctly").delay(1000).fadeOut(1000);
+        }
+      },
+      function (data) {
+        console.log(data);
+      });
+  };
+// INSERT PETS PHP
+function phpPetsInsert() {
+  // Create the data which will be added into the database
+  var addData = new Object();
+  addData.petName = $('#phpPetName').val();
+  addData.petType = $('#phpPetType').val();
+  addData.petBreed = $('#phpPetBreed').val();
+  addData.petOwner = $('#phpPetOwner').val();
+  // Add to JSON
+  var jsonAddData = JSON.stringify(addData);
+  // Get the json we want to save to
+  $.getJSON("php-insert.php", {
+      tableName: "pets",
+      appendData: jsonAddData,
+      success: function () {
+        $('.success').show(2000).html("Record inserted correctly").delay(1000).fadeOut(1000);
+      }
+    },
+    function (data) {
+      console.log(data);
+    });
+};
 // INSERT GUITARS PHP
 function phpGuitarsInsert() {
   // Create the data which will be added into the database
   var addData = new Object();
-  addData.guitarBrand = $('#guitarBrand').val();
-  addData.guitarModel = $('#guitarModel').val();
-  addData.guitarType = $('#guitarType').val();
+  addData.guitarBrand = $('#phpGuitarBrand').val();
+  addData.guitarModel = $('#phpGuitarModel').val();
+  addData.guitarType = $('#phpGguitarType').val();
   // Add to JSON
   var jsonAddData = JSON.stringify(addData);
   // Get the json we want to save to
   $.getJSON("php-insert.php", {
       tableName: "guitars",
-      appendData: jsonAddData
+      appendData: jsonAddData,
+      success: function () {
+        $('.success').show(2000).html("Record inserted correctly").delay(1000).fadeOut(1000);
+      }
     },
     function (data) {
-      if (data > 0) {
-        $('.success').show(2000).html("Record inserted correctly").delay(1000).fadeOut(1000);
-      } else {
-        $('.success').show(2000).html("Error with inserting gutiars into php.").delay(1000).fadeOut(1000);
-      }
+      console.log(data);
     });
-}; 
-
-// On Load Hide Forms
-
+};
