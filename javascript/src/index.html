@@ -82,15 +82,15 @@
                 <tr>
                     <td colspan="4" class="text-center">
                         <input type='text' class="form-control text-center" id='xmlPetName' placeholder='Pet Name'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='xmlPetType' placeholder='Pet Type'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='xmlPetBreed' placeholder='Pet Breed'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='xmlPetOwner' placeholder='Pet Owner'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <br>
-                        <input type='button' class="btn btn-success" id='xmlPetsBtn' value='Add a new pet'
+                        <input type='button' class="btn btn-dark" id='xmlPetsBtn' value='Add a new pet'
                             disabled onclick="xmlPetsInsert()" /></td>
                 </tr>
             </table>
@@ -98,13 +98,13 @@
                 <tr>
                     <td colspan="4" class="text-center">
                         <input type='text' class="form-control text-center" id='xmlGuitarBrand'
-                            placeholder='Guitar Brand' autocomplete="off" required />&nbsp;&nbsp;
+                            placeholder='Guitar Brand' autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='xmlGuitarModel'
-                            placeholder='Guitar Model' autocomplete="off" required />&nbsp;&nbsp;
+                            placeholder='Guitar Model' autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='xmlGuitarType' placeholder='Guitar Type'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <br>
-                        <input type='button' class="btn btn-success" id='xmlGuitarsBtn' value='Add a new guitar'
+                        <input type='button' class="btn btn-dark" id='xmlGuitarsBtn' value='Add a new guitar'
                             disabled onclick="xmlGuitarsInsert()" /></td>
                 </tr>
             </table>
@@ -112,15 +112,15 @@
                 <tr>
                     <td colspan="4" class="text-center">
                         <input type='text' class="form-control text-center" id='phpPetName' placeholder='Pet Name'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='phpPetType' placeholder='Pet Type'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='phpPetBreed' placeholder='Pet Breed'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='phpPetOwner' placeholder='Pet Owner'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <br>
-                        <input type='button' class="btn btn-success" id='phpPetsBtn' value='Add a new pet'
+                        <input type='button' class="btn btn-dark" id='phpPetsBtn' value='Add a new pet'
                             disabled onclick="phpPetsInsert()" /></td>
                 </tr>
             </table>
@@ -128,13 +128,13 @@
                 <tr>
                     <td colspan="4" class="text-center">
                         <input type='text' class="form-control text-center" id='phpGuitarBrand'
-                            placeholder='Guitar Brand' autocomplete="off" required />&nbsp;&nbsp;
+                            placeholder='Guitar Brand' autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='phpGuitarModel'
-                            placeholder='Guitar Model' autocomplete="off" required />&nbsp;&nbsp;
+                            placeholder='Guitar Model' autocomplete="off" required />&nbsp;
                         <input type='text' class="form-control text-center" id='phpGuitarType' placeholder='Guitar Type'
-                            autocomplete="off" required />&nbsp;&nbsp;
+                            autocomplete="off" required />&nbsp;
                         <br>
-                        <input type='button' class="btn btn-success" id='phpGuitarsBtn' value='Add a new guitar'
+                        <input type='button' class="btn btn-dark" id='phpGuitarsBtn' value='Add a new guitar'
                             disabled onclick="phpGuitarsInsert()" /></td>
                 </tr>
             </table>
@@ -189,7 +189,7 @@
 
                     $('#dataTable').find('tr').each(function () {
                         if (!($(this).find('td').text().search(patt) >= 0)) {
-                            $(this).not('.thead').hide();
+                            $(this).not('td').hide();
                         }
                         if (($(this).find('td').text().search(patt) >= 0)) {
                             $(this).show();

@@ -1,12 +1,6 @@
  * {
    text-transform: capitalize;
  }
-/* Center the table */
- table.center {
-  margin-left:auto; 
-  margin-right:auto;
-}
-
  /* Dropdown Button */
  .dropbtn {
    background-color: #3498DB;
@@ -16,8 +10,7 @@
    border: none;
    cursor: pointer;
  }
-
- /* Dropdown button on hover & focus */
+/* Dropdown button on hover & focus */
  .dropbtn:hover,
  .dropbtn:focus {
    background-color: #2980B9;
@@ -56,7 +49,11 @@
  .show {
    display: block;
  }
-
+ /* Center the table */
+ table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
  table,
  th,
  td {
@@ -66,14 +63,21 @@
 
  th,
  td {
-   padding: 5px;
+   padding: 1em;
  }
+ 
+#search_field{
+	max-width: 50%;
+	padding: 1em;
+	margin-left:auto; 
+	margin-right:auto;
+}
 
- .success,
- .error {
-   border: 1px solid;
-   margin: 10px 0px;
-   padding: 5px;
+.success{
+	max-width: 50%;
+	padding: 1em;
+	margin-left:auto; 
+	margin-right:auto;
  }
 
  .success {

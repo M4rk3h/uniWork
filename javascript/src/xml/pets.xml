@@ -27,7 +27,7 @@
   <ANIMAL>
     <PETNAME>Susan Strong</PETNAME>
     <PETTYPE>Dog</PETTYPE>
-    <PETBREED>Samiesamoyed</PETBREED>
+    <PETBREED>Samoyed</PETBREED>
     <PETOWNER>Dr Thomas</PETOWNER>
   </ANIMAL>
 </PET>

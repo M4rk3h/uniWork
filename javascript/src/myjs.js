@@ -45,7 +45,7 @@ function xmlPets() {
             let value = entries[i][1]; // Gets array of petNo, petName etc
             // Nested Loop Start
             for (let j = 0; j < value.length; j++) {
-              table += '<tr><th>' +
+              table += '<tr><td>' +
                 (value[j].PETNAME) + "</td><td>" +
                 (value[j].PETTYPE) + "</td><td>" +
                 (value[j].PETBREED) + "</td><td>" +
@@ -85,7 +85,7 @@ function xmlGuitars() {
             let value = entries[i][1]; // Gets array of guitarNo etc
             // Nested Loop Start
             for (let j = 0; j < value.length; j++) {
-              table += '<tr><th>' +
+              table += '<tr><td>' +
                 (value[j].GUITARBRAND) + "</td><td>" +
                 (value[j].GUITARMODEL) + "</td><td>" +
                 (value[j].GUITARTYPE);
@@ -113,7 +113,7 @@ function phpPets() {
         $.each(data, function (index, element) {
           // Set variables for Loop
           var i;
-          var table = '<thead><tr><th scope="col">Pet No</th><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
+          var table = '<thead><tr><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
           // set forEach
           Object.entries(data).forEach(entry => {
             let key = entry[0]; // Gets INSTRUMENTS
@@ -126,8 +126,7 @@ function phpPets() {
             let value = entries[i][1]; // Gets array of guitarNo etc
             // Nested Loop Start
             for (let j = 0; j < value.length; j++) {
-              table += '<tr><th>' +
-                (value[j].petNo) + "</td><td>" +
+              table += '<tr><td>' +
                 (value[j].petName) + "</td><td>" +
                 (value[j].petType) + "</td><td>" +
                 (value[j].petBreed) + "</td><td>" +
@@ -154,7 +153,7 @@ function phpGuitars() {
         $.each(data, function (index, element) {
           // Set variables for Loop
           var i;
-          var table = '<thead><tr><th scope="col">Guitar No</th><th scope="col">Guitar Brand</th><th scope="col">Guitar Model</th><th scope="col">Guitar Type</th></thead><tbody>';
+          var table = '<thead><tr><th scope="col">Guitar Brand</th><th scope="col">Guitar Model</th><th scope="col">Guitar Type</th></thead><tbody>';
           // set forEach
           Object.entries(data).forEach(entry => {
             let key = entry[0]; // Gets INSTRUMENTS
@@ -167,8 +166,7 @@ function phpGuitars() {
             let value = entries[i][1]; // Gets array of guitarNo etc
             // Nested Loop Start
             for (let j = 0; j < value.length; j++) {
-              table += '<tr><th>' +
-                (value[j].guitarNo) + "</td><td>" +
+              table += '<tr><td>' +
                 (value[j].guitarBrand) + "</td><td>" +
                 (value[j].guitarModel) + "</td><td>" +
                 (value[j].guitarType);
