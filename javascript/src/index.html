@@ -22,8 +22,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <!-- Added a Favicon.png-->
-    <link rel="shortcut icon" type="image/png" href="favicon.icon" />
     <!-- JQuery From Google -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -35,15 +33,14 @@
     <script>
         window.jQuery || document.write('<script src="jquery-3.3.1.min.js "><\/script>')
     </script>
-    <div class="jumbotron jumbotron-fluid text-center p-2"
+    <div class="jumbotron jumbotron-fluid text-center p-1"
         style="background-color: #343a40; border-top: solid 2px #fff;">
         <div class="container">
             <h1 style="color:#fff">Mark James Baber</h1>
             <button class="btn btn-danger" onclick="testJQ()">Test JQuery</button>
-            <button class="btn btn-danger" onclick="testCount()">XML count</button>
         </div>
     </div>
-    <div class="container ">
+    <div class="container text-center">
         <div class="dropdown">
             <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"
                 onclick="dropDownXML();">XML:
@@ -57,7 +54,7 @@
     </div>
     <br>
 
-    <div class="container">
+    <div class="container text-center">
         <div class="dropdown">
             <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"
                 onclick="dropDownPHP();">PHP:
@@ -71,75 +68,74 @@
     </div>
     <br>
     <br>
-    <div class="container">
-        <table id="dataTable"></table>
+    <div class="container text-center">
+        <table class="center" id="dataTable"></table>
         <br>
-        <div class="success"></div>
+        <div class="success text-center"></div>
         <br>
-        <form id="insertForm">
+        <input type="text" placeholder="Search..." id="search_field" class="form-control text-center">
+        <br>
+        <form class="text-center" id="insertForm">
+            <br>
             <!-- XML PETS Form -->
-            <table id="xmlPets">
+            <table class="center" id="xmlPets">
                 <tr>
-                    <td colspan="4" style="text-align: center">
-                        <input type="hidden" id='petNo' value='' />
-                        <input type='text' class="form-control" id='xmlPetName' placeholder='Pet Name'
+                    <td colspan="4" class="text-center">
+                        <input type='text' class="form-control text-center" id='xmlPetName' placeholder='Pet Name'
                             autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='xmlPetType' placeholder='Pet Type'
+                        <input type='text' class="form-control text-center" id='xmlPetType' placeholder='Pet Type'
                             autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='xmlPetBreed' placeholder='Pet Breed'
+                        <input type='text' class="form-control text-center" id='xmlPetBreed' placeholder='Pet Breed'
                             autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='xmlPetOwner' placeholder='Pet Owner'
+                        <input type='text' class="form-control text-center" id='xmlPetOwner' placeholder='Pet Owner'
                             autocomplete="off" required />&nbsp;&nbsp;
                         <br>
                         <input type='button' class="btn btn-success" id='xmlPetsBtn' value='Add a new pet'
-                            onclick="xmlPetsInsert()" /></td>
+                            disabled onclick="xmlPetsInsert()" /></td>
                 </tr>
             </table>
-            <table id="xmlGuitars">
+            <table class="center" id="xmlGuitars">
                 <tr>
-                    <td colspan="4" style="text-align: center">
-                        <input type="hidden" id='guitarNo' value='' />
-                        <input type='text' class="form-control" id='xmlGuitarBrand' placeholder='Guitar Brand'
-                            autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='xmlGuitarModel' placeholder='Guitar Model'
-                            autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='xmlGuitarType' placeholder='Guitar Type'
+                    <td colspan="4" class="text-center">
+                        <input type='text' class="form-control text-center" id='xmlGuitarBrand'
+                            placeholder='Guitar Brand' autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control text-center" id='xmlGuitarModel'
+                            placeholder='Guitar Model' autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control text-center" id='xmlGuitarType' placeholder='Guitar Type'
                             autocomplete="off" required />&nbsp;&nbsp;
                         <br>
                         <input type='button' class="btn btn-success" id='xmlGuitarsBtn' value='Add a new guitar'
-                            onclick="xmlGuitarsInsert()" /></td>
+                            disabled onclick="xmlGuitarsInsert()" /></td>
                 </tr>
             </table>
-            <table id="phpPets">
+            <table class="center" id="phpPets">
                 <tr>
-                    <td colspan="4" style="text-align: center">
-                        <input type="hidden" id='petNo' value='' />
-                        <input type='text' class="form-control" id='phpPetName' placeholder='Pet Name'
+                    <td colspan="4" class="text-center">
+                        <input type='text' class="form-control text-center" id='phpPetName' placeholder='Pet Name'
                             autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='phpPetType' placeholder='Pet Type'
+                        <input type='text' class="form-control text-center" id='phpPetType' placeholder='Pet Type'
                             autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='phpPetBreed' placeholder='Pet Breed'
+                        <input type='text' class="form-control text-center" id='phpPetBreed' placeholder='Pet Breed'
                             autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='phpPetOwner' placeholder='Pet Owner'
+                        <input type='text' class="form-control text-center" id='phpPetOwner' placeholder='Pet Owner'
                             autocomplete="off" required />&nbsp;&nbsp;
                         <br>
                         <input type='button' class="btn btn-success" id='phpPetsBtn' value='Add a new pet'
-                            onclick="phpPetsInsert()" /></td>
+                            disabled onclick="phpPetsInsert()" /></td>
                 </tr>
             </table>
-            <table id="phpGuitars">
+            <table class="center" id="phpGuitars">
                 <tr>
-                    <td colspan="4" style="text-align: center">
-                        <input type="hidden" id='guitarNo' value='' />
-                        <input type='text' class="form-control" id='phpGuitarBrand' placeholder='Guitar Brand'
-                            autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='phpGuitarModel' placeholder='Guitar Model'
-                            autocomplete="off" required />&nbsp;&nbsp;
-                        <input type='text' class="form-control" id='phpGuitarType' placeholder='Guitar Type'
+                    <td colspan="4" class="text-center">
+                        <input type='text' class="form-control text-center" id='phpGuitarBrand'
+                            placeholder='Guitar Brand' autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control text-center" id='phpGuitarModel'
+                            placeholder='Guitar Model' autocomplete="off" required />&nbsp;&nbsp;
+                        <input type='text' class="form-control text-center" id='phpGuitarType' placeholder='Guitar Type'
                             autocomplete="off" required />&nbsp;&nbsp;
                         <br>
                         <input type='button' class="btn btn-success" id='phpGuitarsBtn' value='Add a new guitar'
-                            onclick="phpGuitarsInsert()" /></td>
+                            disabled onclick="phpGuitarsInsert()" /></td>
                 </tr>
             </table>
             <script>
@@ -148,13 +144,15 @@
                 $("table#xmlGuitars").hide();
                 $("table#phpPets").hide();
                 $("table#phpGuitars").hide();
-
+                // Hide Search
+                $("#search_field").hide();
                 // Function to show XML Pets Form
                 $("#xml-btn-pets").click(function () {
                     $("table#xmlPets").show();
                     $("table#xmlGuitars").hide();
                     $("table#phpPets").hide();
                     $("table#phpGuitars").hide();
+                    $("#search_field").show();
                     console.log('Show xml pets && hide everything else');
                 });
                 // Function to show XML Guitar Form
@@ -163,6 +161,7 @@
                     $("table#xmlGuitars").show();
                     $("table#phpPets").hide();
                     $("table#phpGuitars").hide();
+                    $("#search_field").show();
                     console.log('Show xml guitars && hide everything else');
                 });
                 // Function to show php Pets Form
@@ -171,17 +170,103 @@
                     $("table#xmlGuitars").hide();
                     $("table#phpPets").show();
                     $("table#phpGuitars").hide();
+                    $("#search_field").show();
                     console.log('Show php pets && hide everything else');
                 });
                 // Function to show php Guitar Form
-                $("#php-btn-guitar").click(function () {
+                $("#php-btn-guitars").click(function () {
                     $("table#xmlPets").hide();
                     $("table#xmlGuitars").hide();
                     $("table#phpPets").hide();
                     $("table#phpGuitars").show();
+                    $("#search_field").show();
                     console.log('Show php guitars && hide everything else');
                 });
-                
+                // SEARCH FORM JQUERY
+                $('#search_field').on('keyup', function () {
+                    var value = $(this).val();
+                    var patt = new RegExp(value, "i");
+
+                    $('#dataTable').find('tr').each(function () {
+                        if (!($(this).find('td').text().search(patt) >= 0)) {
+                            $(this).not('.thead').hide();
+                        }
+                        if (($(this).find('td').text().search(patt) >= 0)) {
+                            $(this).show();
+                        }
+                    });
+                });
+                // ENABLE BUTTONS WHEN ALL FIELDS ARE FILLED IN 
+                // XML Pets
+                $('#xmlPetName, #xmlPetType, #xmlPetBreed, #xmlPetOwner').bind('keyup', function () {
+                    if (xmlPetsFilled()) {
+                        $('#xmlPetsBtn').removeAttr('disabled');
+                        console.log('Button enabled');
+                    } else {
+                        console.log('Please fill out all fields');
+                    }
+                });
+                // xmlPetsFilled
+                function xmlPetsFilled() {
+                    var filled = true;
+                    $('#xmlPets input').each(function () {
+                        if ($(this).val() == '') filled = false;
+                    });
+                    return filled;
+                };
+                // XML Guitars
+                $('#xmlGuitarBrand, #xmlGuitarModel, #xmlGuitarType').bind('keyup', function () {
+                    if (xmlGuitarsFilled()) {
+                        $('#xmlGuitarsBtn').removeAttr('disabled');
+                        console.log('Button enabled');
+                    } else {
+                        console.log('Please fill out all fields');
+                    }
+                    
+                });
+                // xmlGuitarsFilled
+                function xmlGuitarsFilled() {
+                    var filled = true;
+                    $('#xmlGuitars input').each(function () {
+                        if ($(this).val() == '') filled = false;
+                    });
+                    return filled;
+                };
+                // PHP Pets
+                $('#phpPetName, #phpPetType, #phpPetBreed, #phpPetOwner').bind('keyup', function () {
+                    if (phpPetsFilled()) {
+                        $('#phpPetsBtn').removeAttr('disabled');
+                        console.log('Button enabled');
+                    } else {
+                        console.log('Please fill out all fields');
+                    }
+                });
+                // phpPetsFilled
+                function phpPetsFilled() {
+                    var filled = true;
+                    $('#phpPets input').each(function () {
+                        if ($(this).val() == '') filled = false;
+                    });
+                    return filled;
+                };
+                // PHP Guitars
+                $('#phpGuitarBrand, #phpGuitarModel, #phpGuitarType').bind('keyup', function () {
+                    if (phpGuitarsFilled()) {
+                        $('#phpGuitarsBtn').removeAttr('disabled');
+                        console.log('Button enabled');
+                    } else {
+                        console.log('Please fill out all fields');
+                    }
+                    
+                });
+                // phpGuitarsFilled
+                function phpGuitarsFilled() {
+                    var filled = true;
+                    $('#phpGuitars input').each(function () {
+                        if ($(this).val() == '') filled = false;
+                    });
+                    return filled;
+                };
             </script>
         </form>
         <br>
