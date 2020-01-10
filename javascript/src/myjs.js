@@ -31,7 +31,6 @@ function xmlPets() {
       } else {
         $.each(data, function (index, element) {
           // Set variables for Loop
-          var i;
           var table = '<thead><tr><th scope="col">Pet Name</th><th scope="col">Pet Type</th><th scope="col">Pet Breed</th><th scope="col">Pet Owner</th></tr></thead><tbody>';
           // set forEach
           Object.entries(data).forEach(entry => {
@@ -53,7 +52,6 @@ function xmlPets() {
             } // Nested Loop Stop
           }; // Traditional Loop Stop
           // Put it into the table
-          //$('#xmlTable').html(table);
           $('#dataTable').html(table);
         });
       } //end else
