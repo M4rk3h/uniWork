@@ -3,7 +3,7 @@
 if (!isset($error)) {
 	$error = new stdClass();
 }
-
+// Get details from dbinfo
 include "dbinfo.info.php";
 
 try {
@@ -17,7 +17,6 @@ $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $username, $pas
 }
 
 $table = $_GET["tableName"];
-
 $stmt = $pdo->prepare("SELECT * FROM {$table}");
 $result = $stmt->execute();
 

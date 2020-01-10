@@ -51,7 +51,6 @@ function xmlPets() {
                 (value[j].PETOWNER);
             } // Nested Loop Stop
           }; // Traditional Loop Stop
-          // Put it into the table
           $('#dataTable').html(table);
         });
       } //end else
@@ -89,8 +88,6 @@ function xmlGuitars() {
                 (value[j].GUITARTYPE);
             } // Nested Loop Stop
           }; // Traditional Loop Stop
-          // Put it into the table
-          //$('#xmlTable').html(table);
           $('#dataTable').html(table);
         });
       } //end else
@@ -131,8 +128,6 @@ function phpPets() {
                 (value[j].petOwner);
             } // Nested Loop Stop
           }; // Traditional Loop Stop
-          // Put it into the table
-          //$('#phpTable').html(table);
           $('#dataTable').html(table);
         });
       }

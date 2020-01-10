@@ -1,3 +1,0 @@
-https://www.jqueryscript.net/table/Live-Search-Through-Table-Rows-Using-jQuery.html
-
-17 - https://stackoverflow.com/questions/5614399/disabling-submit-button-until-all-fields-have-values#5614593 - https://jsfiddle.net/tKQFN/
