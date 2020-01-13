@@ -31,56 +31,31 @@
 </head>
 
 <body>
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-md bg-dark p-2 navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">MjB</a>
-        <!-- Toggler/collapsibe btn btn-dark -->
-        <btn btn-dark class="navbar-toggler" type="btn btn-dark" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </btn btn-dark>
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="gmap.html">Google Maps</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="bmap.html">Bing Maps</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="leaflet.html">Leaflet Maps</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <?php include 'php/nav.php';?>
     <div class="jumbotron jumbotron-fluid text-center p-4" style="background-color: #343a40; border-top: solid 2px #fff;">
         <div class="container">
             <h1>Mark James Baber</h1>
-            <p style="color: #fff;"> Wind Farms </p>
+            <p style="color: #fff;"> Default With Flag </p>
         </div>
     </div>
     <div class="centered">
-        <p>Created polygons which outline 2 places where wind farms are located.</p>
-        <div id="gmapWind" style="height:400px; width:100%;">
+        <p>Created a default Google Map with a flag, can also get users location.</p>
+        <div id="gmapDefault" style="height:400px; width:100%;">
             Google Map
         </div>
         <br>
         Please use the buttons below, to see other maps
         <br>
-        <a href="gmap.html" class="btn btn-dark" aria-pressed="true"> Default Map</a>
+        <a href="gmap.html" class="btn btn-dark disabled" aria-pressed="true"> Default Map</a>
         <a href="gmap1.html" class="btn btn-dark" aria-pressed="true"> Stadium Map</a>
         <a href="gmapClick.html" class="btn btn-dark" aria-pressed="true"> Click Map</a>
         <a href="gmapStyle.html" class="btn btn-dark" aria-pressed="true"> Styled Map</a>
         <a href="gmapFlight.html" class="btn btn-dark" aria-pressed="true"> Flight Map</a>
-        <a href="gmapWind.html" class="btn btn-dark disabled" aria-pressed="true" > Wind Map</a>
+        <a href="gmapWind.html" class="btn btn-dark" aria-pressed="true" > Wind Map</a>
         <a href="gmapPins.html" class="btn btn-dark" aria-pressed="true" > KML Pins</a>
     </div>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4b19Rf62isIVy20C-moot42kxl0xxY8Q&callback=initMapWind">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4b19Rf62isIVy20C-moot42kxl0xxY8Q&callback=defaultMap">
     </script>
 </body>
 
