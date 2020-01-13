@@ -38,14 +38,14 @@ data(package="rpart")
 getwd()
 
 ## Get the weather1 data
-weather1 <- read.csv("C:\\Users\\MarkBaber\\Documents\\GitHub\\uniWork\\databases\\Alex\\tutorial-1\\weather1.csv", sep=",", header=TRUE)
+weather1 <- read.csv("weather1.csv", sep=",", header=TRUE)
 
 ## View and Remove the data
 ## view(weather1)
 ## rm(weather1)
 
 ## Get the weather2 data
-weather2 <- read.csv("C:\\Users\\MarkBaber\\Documents\\GitHub\\uniWork\\databases\\Alex\\tutorial-1\\weather2.csv", sep=",", header=TRUE)
+weather2 <- read.csv("weather2.csv", sep=",", header=TRUE)
 
 ## Give column headings to the first few columns:
 names(weather2) <- c("Date","MinTemp","MaxTemp")
