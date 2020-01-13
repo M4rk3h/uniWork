@@ -77,4 +77,4 @@ ggplot(songSentiment, aes(index, sentiment, fill = ID)) +
 
 
 # Export it
-write.csv(beforeToken, file = "exportedscores2.csv")
+# write.csv(beforeToken, file = "exportedscores2.csv")
