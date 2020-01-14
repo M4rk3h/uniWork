@@ -14,11 +14,14 @@ library(tm)
 library(dplyr)
 library(janeaustenr)
 library(ggplot2)
+## If TidyText doesn't install
+# install from github
+library(remotes)
+install_github("juliasilge/tidytext")
+
+
 
 # Import csv's you want 
-# which will be a Data Frame
-spread2018 <- read.csv("testSheet.csv", stringsAsFactors = FALSE)
-spread2019 <- read.csv("testSheet2.csv", stringsAsFactors = FALSE)
 ## Try with simple csv's
 happyWords <- read.csv("happy.csv", sep=",", header=TRUE)
 
@@ -55,10 +58,10 @@ orderedCount <- scoreID %>%
 tidySongs <- scoreID %>%
   group_by(ID) %>% 
   mutate(linenumber = row_number()) %>%
-## Losing 2 songs here ^
-
-# Find the negative score, positive score & sentiment
-songSentiment <- tidySongs %>%
+  ## Losing 2 songs here ^
+  
+  # Find the negative score, positive score & sentiment
+  songSentiment <- tidySongs %>%
   inner_join(get_sentiments("bing")) %>%
   # Error Here below
   count(ID, index = linenumber %/% 1, sentiment) %>%
