@@ -1,6 +1,6 @@
 //
-//  iosApp1UITests.swift
-//  iosApp1UITests
+//  iosAppWowUITests.swift
+//  iosAppWowUITests
 //
 //  Created by Baber M (FCES) on 14/01/2020.
 //  Copyright © 2020 Baber M (FCES). All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class iosApp1UITests: XCTestCase {
+class iosAppWowUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

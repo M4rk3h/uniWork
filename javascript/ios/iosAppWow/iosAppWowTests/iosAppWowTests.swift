@@ -1,15 +1,15 @@
 //
-//  iosApp1Tests.swift
-//  iosApp1Tests
+//  iosAppWowTests.swift
+//  iosAppWowTests
 //
 //  Created by Baber M (FCES) on 14/01/2020.
 //  Copyright © 2020 Baber M (FCES). All rights reserved.
 //
 
 import XCTest
-@testable import iosApp1
+@testable import iosAppWow
 
-class iosApp1Tests: XCTestCase {
+class iosAppWowTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
