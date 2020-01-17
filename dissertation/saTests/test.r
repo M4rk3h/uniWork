@@ -12,7 +12,6 @@ library(tidyr)
 library(textdata)
 library(tm)
 library(dplyr)
-library(janeaustenr)
 library(ggplot2)
 
 ## Try with simple csv's
@@ -25,13 +24,35 @@ happyAffin <- happyTib %>% unnest_tokens(word, Words) %>% inner_join(get_sentime
 ## Use Bing (Happy = Positive)
 happyBing <- happyTib %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("bing"))
 
+## QPlot version (x, y & dataset)
+qplot(word, value, data = happyAffin)
+
+## QPlot version (x, y & dataset)
+qplot(word, sentiment, data = happyBing)
+
 ## HAPPY AFFIN
 # Plot it onto a graph
 ggPlotNo <- ggplot(data = happyAffin) + 
   geom_bar(mapping = aes(x = No))
 # See how it works for no and value
 noAndValue <- ggplot(data = happyAffin) + 
-  geom_bar(mapping = aes(x = No, y=value),stat="identity", fill="#FF9999", colour="black")
+  geom_bar(mapping = aes(x = No, y=value),stat="identity", fill="#FF9999", colour=No)
 # See how it works for word and value
 wordAndValue <- ggplot(data = happyAffin) + 
   geom_bar(mapping = aes(x = word, y=value),stat="identity", fill="#FF9999", colour="black")
+
+## Example Dataset
+str(mpg)
+## Display it on a qplot
+qplot(displ, hwy, data = mpg)
+## Same but with colour (color)
+qplot(displ, hwy, data = mpg, color = drv)
+## Smooth line
+qplot(displ, hwy, data = mpg, geom=c("point","smooth"))
+# Histograms
+qplot(hwy, data = mpg, fill = drv)
+# Facets
+# 1 (Plot chart)
+qplot(displ, hwy, data = mpg, facets = drv ~ .,)
+# 2 (Bar chart-ish)
+qplot(hwy, data = mpg, facets = drv ~ ., binwidth = 2)

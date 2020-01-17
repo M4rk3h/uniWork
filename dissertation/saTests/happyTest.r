@@ -12,7 +12,6 @@ library(tidyr)
 library(textdata)
 library(tm)
 library(dplyr)
-library(janeaustenr)
 library(ggplot2)
 ## If TidyText doesn't install
 # install from github
