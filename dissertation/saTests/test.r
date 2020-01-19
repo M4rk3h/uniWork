@@ -34,25 +34,13 @@ qplot(word, sentiment, data = happyBing)
 # Plot it onto a graph
 ggPlotNo <- ggplot(data = happyAffin) + 
   geom_bar(mapping = aes(x = No))
+
+# Plot
+ggPlotNo2 <- ggplot(data = happyAffin) + 
+  geom_bar(mapping = aes(x = word))
 # See how it works for no and value
 noAndValue <- ggplot(data = happyAffin) + 
   geom_bar(mapping = aes(x = No, y=value),stat="identity", fill="#FF9999", colour=No)
 # See how it works for word and value
 wordAndValue <- ggplot(data = happyAffin) + 
   geom_bar(mapping = aes(x = word, y=value),stat="identity", fill="#FF9999", colour="black")
-
-## Example Dataset
-str(mpg)
-## Display it on a qplot
-qplot(displ, hwy, data = mpg)
-## Same but with colour (color)
-qplot(displ, hwy, data = mpg, color = drv)
-## Smooth line
-qplot(displ, hwy, data = mpg, geom=c("point","smooth"))
-# Histograms
-qplot(hwy, data = mpg, fill = drv)
-# Facets
-# 1 (Plot chart)
-qplot(displ, hwy, data = mpg, facets = drv ~ .,)
-# 2 (Bar chart-ish)
-qplot(hwy, data = mpg, facets = drv ~ ., binwidth = 2)

@@ -1,15 +1,34 @@
-#install.packages("twitteR")
-library(twitteR)
+#installs TwitteR
+install.packages("twitteR")
+#loads TwitteR 
+library(twitteR) 
 
 # Change the next four lines based on your own consumer_key, consume_secret, access_token, and access_secret. 
-consumer_key <- "RZyKt9rsw0btvU3HpfDKsZg7X"
-consumer_secret <- "eQeXrgylP7xRY2s28VfiHj6mNw0LkBjKcjXTEEBpYFR7USnFBL"
-access_token <- "755358007-0i1lZzq2D7PqGaYOEXcltvVdFoj4NVZumSEpiEy7"
-access_secret <- "hhSfTxkNzXIHvpKaGCsiIqqMEEFryObljd8wllohz6Cen"
-
-
-tw = twitteR::searchTwitter('#twinpeaks', n = 1e4, since = '2006-01-01', retryOnRateLimit = 1e3)
+myKey <- "JDqXGuZJo30VpV1BNeeUK98Nd"
+mySecret <- "tzPKQvUaCeGHpLVKHFPA8xC8dXhybwQbErtpHOhVpC7oOOmkmx"
+myAccessToken <- "755358007-C5LoiSufkyre0gBrKSuVJTdA2Pgz3fU8oHNqZW9q"
+MyAccessSecret <- "KOStBWtiLthtTfy6qHXkfPw0VMfO2U86mODSW7jYQeke0"
+# Set auth
+setup_twitter_oauth(myKey,mySecret,myAccessToken,MyAccessSecret)
+# 
+tw = twitteR::searchTwitter('#simpsons', n=3000, lang="en")
+#
 d = twitteR::twListToDF(tw)
-
 # Export the file
-write.csv(d, file = "C:/Users/MarkBaber/Documents/GitHub/uniWork/dissertation/twitter/twitterData.csv")
+write.csv(d, file = "simpsonsTest.csv")
+# Read the simpsonsTest
+simpsonsTest <- read.csv("simpsonsTest.csv", stringsAsFactors = FALSE)
+# Create a tibble
+simpsonsTib <- tibble(No = simpsonsTest[,1], Words =simpsonsTest[,2])
+# Unnest and join with Affin
+simpsonsAffin <- simpsonsTib %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
+
+# Most popular word
+simpsonsAffinCounted <- simpsonsTib %>% 
+  unnest_tokens(word, Words) %>% 
+  inner_join(get_sentiments("afinn")) %>%
+  count(word, sort = TRUE)
+
+
+
+

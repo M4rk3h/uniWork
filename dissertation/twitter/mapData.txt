@@ -1,0 +1,10 @@
+# Test Leaflet
+install.packages("leaflet") 
+install.packages("maps") 
+library(leaflet) 
+library(maps) 
+# Read the simpsonsTest
+mymap <- read.csv("simpsonsTest.csv", stringsAsFactors = FALSE)
+
+m <- leaflet(mymap) %>% addTiles()
+m %>% addCircles(lng = ~longitude, lat = ~latitude, popup = mymap$type, weight = 8, radius = 40, color = "#fb3004", stroke = TRUE, fillOpacity = 0.8)
