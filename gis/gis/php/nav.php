@@ -20,7 +20,7 @@ echo
                 <a class="nav-link" href="bmap.php">Bing Maps</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="leaflet.php">Leaflet Maps</a>
+                <a class="nav-link" href="leafletOne.php">Leaflet Maps</a>
             </li>
         </ul>
     </div>
