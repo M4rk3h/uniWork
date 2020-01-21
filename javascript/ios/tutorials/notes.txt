@@ -62,23 +62,25 @@ print("Undefined")
 
 
 
+import UIKit
+
 var grade: Character
 grade = "A"
 
 switch grade {
       case "A":
-        print("Excellent! ", terminator:"")
+        print("Excellent! Well done ", terminator:"")
       fallthrough
       case "B":
         print("Well done! ", terminator:"")
       fallthrough
       case "C":
-        print("Good! ", terminator:"")
+        print("Passed lower ", terminator:"")
       fallthrough
-case "D":
+    case "D":
       print("You have passed")
-case "F":
+    case "F":
       print("Failed")
-default:
+    default:
     print("Undefined")
-}
+};
