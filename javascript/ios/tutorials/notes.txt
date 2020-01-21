@@ -84,3 +84,76 @@ switch grade {
     default:
     print("Undefined")
 };
+
+var i = 1
+while i < 10 {
+print(i)
+    i = i + 2 // we need to update the counter ourselves
+}
+
+
+var i = 1
+repeat {
+    print(i)
+    i = i + 2 // we need to update the counter ourselves
+} while i < 10
+
+
+var i = 0
+while i > 0 {
+    print("Executed while loop")
+}
+repeat {
+    print("Executed repeat loop")
+} while i > 0
+
+
+var c: Character
+var found = false
+var index = 0
+
+for c in "This is a string" {
+if c != "g" && !found {
+    index+=1
+} else {
+    found = true
+    }
+}
+print("Position of 'g' is \(index)")
+
+
+var c: Character
+var found = false
+var index = 0
+
+for c in "This is a string" {
+if c != "a" && !found {
+index+=1
+} else {
+found = true
+    }
+}
+print("Position of 'a' is \(index)")
+
+
+let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+let coloursOfRainbow = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"];
+
+var i = 0;
+
+while (i < daysOfWeek.count){
+    print(daysOfWeek);
+    i+=1;
+};
+
+import UIKit
+
+let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+let coloursOfRainbow = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"];
+
+
+for index in 0...6 {
+    print(daysOfWeek[index])
+    print(coloursOfRainbow[index])
+}
+
