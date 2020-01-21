@@ -2,6 +2,9 @@
 install.packages("twitteR")
 #loads TwitteR 
 library(twitteR) 
+library(dplyr)
+library(tidytext)
+library(ggplot2)
 
 # Change the next four lines based on your own consumer_key, consume_secret, access_token, and access_secret. 
 myKey <- "JDqXGuZJo30VpV1BNeeUK98Nd"
@@ -28,6 +31,18 @@ simpsonsAffinCounted <- simpsonsTib %>%
   unnest_tokens(word, Words) %>% 
   inner_join(get_sentiments("afinn")) %>%
   count(word, sort = TRUE)
+
+simpsonsTopTen <- simpsonsAffinCounted %>%
+  str(head)
+                         
+  
+
+## scatter
+qplot(word, n, data = simpsonsAffinCounted)
+
+## Ggplot
+ggplot(simpsonsAffinCounted, aes(word, n)) +
+  geom_col(show.legend = TRUE);
 
 
 
