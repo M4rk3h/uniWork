@@ -19,7 +19,7 @@
     </div>
 
     <script>
-        leafMapOne();
+        leafMapThree();
     </script>
 </body>
 </html>
