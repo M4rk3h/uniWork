@@ -1,0 +1,84 @@
+import UIKit
+
+// Declare a variable
+var helloOne = "Hello, One"
+// Print the string
+print(helloOne);
+
+var myAge = 69;
+if myAge == 69 {
+    print("TeeHee")
+} else {
+    print("Heck")
+};
+
+// Case Switching
+var day = 2
+var dayOfWeek: String
+
+switch day {
+      case 1:
+      dayOfWeek = "Monday"
+case 2:
+      dayOfWeek = "Tuesday"
+case 3:
+      dayOfWeek = "Wednesday"
+case 4:
+      dayOfWeek = "Thursday"
+case 5:
+      dayOfWeek = "Friday"
+case 6:
+      dayOfWeek = "Saturday"
+case 7:
+      dayOfWeek = "Sunday"
+default:
+dayOfWeek = "Unknown"
+}
+print(dayOfWeek)
+
+// Print date
+print(Date())
+
+// Print a character
+var grade: Character
+grade = "A"
+
+switch grade {
+case "A":
+    print("Well done, you got an A")
+case "B":
+    print ("You got a B")
+case "C":
+      print("You got a C")
+case "D":
+    print("You got a D")
+case "E":
+    print("Failed")
+case "F":
+      print("Super Failed")
+default:
+print("Undefined")
+}
+
+
+
+var grade: Character
+grade = "A"
+
+switch grade {
+      case "A":
+        print("Excellent! ", terminator:"")
+      fallthrough
+      case "B":
+        print("Well done! ", terminator:"")
+      fallthrough
+      case "C":
+        print("Good! ", terminator:"")
+      fallthrough
+case "D":
+      print("You have passed")
+case "F":
+      print("Failed")
+default:
+    print("Undefined")
+}
