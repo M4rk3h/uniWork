@@ -353,7 +353,7 @@ function aberPins() {
   // Declare map starting position
   var middleGround = {lat: 51.527402,lng: -3.583342};
   // Create src
-  var src = "https://ces-web2.southwales.ac.uk/students/17076749/gis/kmls/aberExport.kml";
+  var src = "https://ces-web2.southwales.ac.uk/students/17076749/gis/data/aberExport.kml";
   // Create a map with the middle, zoom & UI
   var map = new google.maps.Map(document.getElementById('gmapCustom'), {
     center: middleGround,
@@ -366,14 +366,6 @@ function aberPins() {
       preserveViewport: false,
       map: map
     });
-  // Add A Click Function
-  /*
-  kmlLayer.addListener('click', function(event) {
-      var content = event.featureData.infoWindowHtml;
-      var testimonial = document.getElementById('capture');
-      testimonial.innerHTML = content;
-    });
-    */
 };
 
 // Create a map
@@ -381,7 +373,7 @@ function areaKML() {
 // Declare map starting position
 var middleGround = {lat: 51.527402,lng: -3.583342};
 // Create src
-var src = "https://ces-web2.southwales.ac.uk/students/17076749/gis/kmls/lads.kml";
+var src = "https://ces-web2.southwales.ac.uk/students/17076749/gis/data/lads.kml";
 // Create a map with the middle, zoom & UI
 var map = new google.maps.Map(document.getElementById('gmapCustom'), {
   center: middleGround, 
@@ -394,5 +386,4 @@ var kmlLayer = new google.maps.KmlLayer(src, {
     preserveViewport: false,
     map: map
   });
-// Add A Click Function
 };
