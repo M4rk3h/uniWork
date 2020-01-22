@@ -12,7 +12,7 @@ function leafMapOne() {
 
 function leafMapTwo(){
     // Create the map
-    var map = L.map('lmap').setView([51.543765, -3.251874], 13);
+    var map = L.map('lmap').setView([51.543765, -3.251874], 7);
     // create a tileLayer which shows the map details
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
