@@ -18,27 +18,25 @@ library(ggplot2)
 library(remotes)
 install_github("juliasilge/tidytext")
 
-
-
 # Import csv's you want 
 ## Try with simple csv's
-happyWords <- read.csv("happy.csv", sep=",", header=TRUE)
+happyWords <- read.csv("happy.csv", sep=",", header=TRUE, stringsAsFactors = FALSE)
 
 # Create a Tibble with the ID and Before
-beforeTib <- tibble(ID = spread2019[,2],
-                    Before = spread2019[,4])
+happyTib <- tibble(ID = happyWords[,1],
+                    Words = happyWords[,2])
 # Checking beforeTib
-head(beforeTib)
+head(happyTib)
 
 # Tokenize the words, using the Before column
 # Whilst connecting with Afinn
 ## ERROR HERE
-beforeAfinn <- beforeTib %>% 
-  unnest_tokens(word, Before) %>%
+happyAfinn <- happyTib %>% 
+  unnest_tokens(word, Words) %>%
   inner_join(get_sentiments("afinn"))
 
-beforeBing <- beforeTib %>% 
-  unnest_tokens(word, Before) %>%
+happyBing <- happyTib %>% 
+  unnest_tokens(word, Words) %>%
   inner_join(get_sentiments("bing"))
 
 # Group by ID

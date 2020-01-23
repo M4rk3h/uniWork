@@ -40,3 +40,6 @@ qplot(sentiment, word, data = happyBing, color = sentiment)
 qplot(word, data = happyBing, fill = sentiment)
 # Facets
 qplot(word, sentiment, data = happyBing, facets = No ~ .,)
+
+
+#facet_wrap(~book, ncol = 2, scales = "free_y")
