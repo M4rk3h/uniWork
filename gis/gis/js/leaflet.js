@@ -10,9 +10,9 @@ function leafMapOne() {
     L.marker([51.589611, -3.327511]).addTo(map).bindPopup('USW Library - Leaflet.').togglePopup();
 };
 
-function leafMapTwo(){
+function leafMapTwo() {
     // Create the map
-    var map = L.map('lmap').setView([51.543765, -3.251874], 7);
+    var map = L.map('lmap').setView([52.5, -3.9], 6.5);
     // create a tileLayer which shows the map details
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
@@ -40,7 +40,7 @@ function leafMapTwo(){
 				fillColor: "red",
 				color: "#000",
 				weight: 1,
-				opacity: 1,
+				opacity: 0.5,
 				fillOpacity: 0.8
 			});
 		}
@@ -49,7 +49,6 @@ function leafMapTwo(){
 
 function leafMapThree() {
     // Src = https://leafletjs.com/examples/layers-control/
-    
     // LayerGroups
     // CASTLES
     var castles = L.layerGroup();
@@ -96,8 +95,8 @@ function leafMapThree() {
     var streets = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',attribution: mbAttr});
     // Create a map with settings
     var map = L.map('lmap', {
-        center: [51.543765, -3.251874],
-        zoom: 6,
+        center: [52.5, -3.9],
+        zoom: 6.5,
         layers: [streets]
     });
     // Add the baseLayers
@@ -116,3 +115,47 @@ function leafMapThree() {
     console.log("Leaflet Version" + " - " + L.version);
 };
 
+function leafMapFour(){
+    // Create a map instance with view, zoom
+    //var map = L.map('lmap').setView([52.5, -3.9], 6.5);
+    var map = L.map('lmap', {
+        center: [52.5, -3.9],
+        zoom: 6.5,
+        gestureHandling: true
+    })
+    // Add a tileLayer (OpenStreetMaps)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar',attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
+    // Create consts for usw locations
+    const theNorth = L.latLng(53.435109, -4.437037);
+    const theSouth = L.latLng(51.377982, -3.121844);
+    // Leaflet Plugin - Leaflet Routing Machine
+    // http://www.liedman.net/leaflet-routing-machine/
+    L.Routing.control({
+        waypoints: [
+          theNorth,
+          theSouth
+        ]
+      }).addTo(map);
+};
+
+function leafMapFive(){
+    // Create a layer group
+    var unis = L.layerGroup();
+    // Create a variable
+    var trefToCar = ([[51.589930, -3.330830],[51.479758, -3.169233]]);
+    // Create the line between cardiff to the rest
+    L.polyline(trefToCar, {color: 'Green', weight: 8}).bindPopup('USW Trefforest & USW Cardiff').addTo(unis);
+    // Att the layer group to the map
+    var map = L.map('lmap', {
+        center: [51.538041, -3.263105],
+        zoom: 11,
+        layers: [unis]
+    })
+    // Add an animation
+    var line = L.polyline([[51.589930, -3.330830],[51.479758, -3.169233]]),
+        animatedMarker = L.animatedMarker(line.getLatLngs());
+    // Add it to the map
+    map.addLayer(animatedMarker);
+    // Add a tileLayer (OpenStreetMaps)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar',attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
+};

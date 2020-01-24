@@ -10,7 +10,7 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Testing geoJSON Features in Leaflet.</p>
+        <p>Places in Wales beginning with 'Aber'</p>
         <!-- Reference the geoJSON data -->
         <script src="data/aba.js" type="text/javascript"></script>
 
