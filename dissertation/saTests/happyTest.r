@@ -57,8 +57,8 @@ tidySongs <- scoreID %>%
   mutate(linenumber = row_number()) %>%
   ## Losing 2 songs here ^
   
-  # Find the negative score, positive score & sentiment
-  songSentiment <- tidySongs %>%
+# Find the negative score, positive score & sentiment
+songSentiment <- tidySongs %>%
   inner_join(get_sentiments("bing")) %>%
   # Error Here below
   count(ID, index = linenumber %/% 1, sentiment) %>%
@@ -73,7 +73,7 @@ songSentimentAfin <- tidySongs %>%
 
 # Plot it onto a graph
 ## Deleting 2 songs ## ERROR
-ggplot(songSentiment, aes(index, sentiment, fill = ID)) +
+plotOne <- ggplot(songSentiment, aes(index, sentiment, fill = ID)) +
   geom_col(show.legend = TRUE) +
   facet_wrap(~ID, ncol = 2, scales = "free_x")
 

@@ -27,6 +27,7 @@ simpsonsTib <- tibble(No = simpsonsTest[,1], Words =simpsonsTest[,2])
 simpsonsAffin <- simpsonsTib %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 
 # Most popular word
+# Try with bing
 simpsonsAffinCounted <- simpsonsTib %>% 
   unnest_tokens(word, Words) %>% 
   inner_join(get_sentiments("afinn")) %>%
@@ -35,15 +36,10 @@ simpsonsAffinCounted <- simpsonsTib %>%
 simpsonsTopTen <- simpsonsAffinCounted %>%
   str(head)
                          
-  
-
 ## scatter
-qplot(word, n, data = simpsonsAffinCounted)
+# limit top 5 words
+plotOne <- qplot(word, n, data = simpsonsAffinCounted)
 
 ## Ggplot
-ggplot(simpsonsAffinCounted, aes(word, n)) +
+plotTwo <- ggplot(simpsonsAffinCounted, aes(word, n)) +
   geom_col(show.legend = TRUE);
-
-
-
-

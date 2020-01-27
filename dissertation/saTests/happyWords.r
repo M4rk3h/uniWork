@@ -25,22 +25,21 @@ happyAffin <- happyTib %>% unnest_tokens(word, Words) %>% inner_join(get_sentime
 happyBing <- happyTib %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("bing"))
 
 ## QPlot version (x, y & dataset)
-qplot(word, value, data = happyAffin)
+defaultAffin <- qplot(word, value, data = happyAffin)
 
 ## QPlot version (x, y & dataset)
-qplot(word, sentiment, data = happyBing)
+defaultBing <- qplot(word, sentiment, data = happyBing)
 
 ## HAPPY AFFIN
 # Plot it onto a graph
 ggPlotNo <- ggplot(data = happyAffin) + 
   geom_bar(mapping = aes(x = No))
-
 # Plot
 ggPlotNo2 <- ggplot(data = happyAffin) + 
   geom_bar(mapping = aes(x = word))
 # See how it works for no and value
 noAndValue <- ggplot(data = happyAffin) + 
-  geom_bar(mapping = aes(x = No, y=value),stat="identity", fill="#FF9999", colour=No)
+  geom_bar(mapping = aes(x = No, y=value),stat="identity", fill="#FF9999")
 # See how it works for word and value
 wordAndValue <- ggplot(data = happyAffin) + 
   geom_bar(mapping = aes(x = word, y=value),stat="identity", fill="#FF9999", colour="black")
