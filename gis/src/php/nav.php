@@ -14,13 +14,16 @@ echo
                 <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="gmap.php">Google Maps</a>
+                <a class="nav-link" href="gmap.php">Google</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="bmap.php">Bing Maps</a>
+                <a class="nav-link" href="bmap.php">Bing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="leafletOne.php">Leaflet Maps</a>
+                <a class="nav-link" href="leafletOne.php">Leaflet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="openOne.php">OpenLayers</a>
             </li>
         </ul>
     </div>
