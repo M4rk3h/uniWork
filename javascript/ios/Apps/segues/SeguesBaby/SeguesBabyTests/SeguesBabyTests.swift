@@ -1,15 +1,15 @@
 //
-//  seguesTests.swift
-//  seguesTests
+//  SeguesBabyTests.swift
+//  SeguesBabyTests
 //
-//  Created by Baber M (FCES) on 22/01/2020.
+//  Created by Baber M (FCES) on 28/01/2020.
 //  Copyright © 2020 Baber M (FCES). All rights reserved.
 //
 
 import XCTest
-@testable import segues
+@testable import SeguesBaby
 
-class seguesTests: XCTestCase {
+class SeguesBabyTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -30,6 +30,5 @@ class seguesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    @IBOutlet weak var scene1Label: UILabel!
-    
+
 }

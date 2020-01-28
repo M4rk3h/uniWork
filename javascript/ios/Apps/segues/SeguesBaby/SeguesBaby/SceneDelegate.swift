@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  segues
+//  SeguesBaby
 //
-//  Created by Baber M (FCES) on 22/01/2020.
+//  Created by Baber M (FCES) on 28/01/2020.
 //  Copyright © 2020 Baber M (FCES). All rights reserved.
 //
 

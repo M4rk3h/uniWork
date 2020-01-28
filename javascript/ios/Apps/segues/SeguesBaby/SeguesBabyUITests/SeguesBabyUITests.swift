@@ -1,14 +1,14 @@
 //
-//  seguesUITests.swift
-//  seguesUITests
+//  SeguesBabyUITests.swift
+//  SeguesBabyUITests
 //
-//  Created by Baber M (FCES) on 22/01/2020.
+//  Created by Baber M (FCES) on 28/01/2020.
 //  Copyright © 2020 Baber M (FCES). All rights reserved.
 //
 
 import XCTest
 
-class seguesUITests: XCTestCase {
+class SeguesBabyUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
