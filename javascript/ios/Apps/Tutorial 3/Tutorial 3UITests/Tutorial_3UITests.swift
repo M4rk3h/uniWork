@@ -1,14 +1,14 @@
 //
-//  seguesUITests.swift
-//  seguesUITests
+//  Tutorial_3UITests.swift
+//  Tutorial 3UITests
 //
-//  Created by Baber M (FCES) on 22/01/2020.
-//  Copyright © 2020 Baber M (FCES). All rights reserved.
+//  Created by Rossaye K (FCES) on 28/01/2020.
+//  Copyright © 2020 Rossaye K (FCES). All rights reserved.
 //
 
 import XCTest
 
-class seguesUITests: XCTestCase {
+class Tutorial_3UITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

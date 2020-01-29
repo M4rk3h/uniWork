@@ -1,15 +1,15 @@
 //
-//  seguesTests.swift
-//  seguesTests
+//  Tutorial_3Tests.swift
+//  Tutorial 3Tests
 //
-//  Created by Baber M (FCES) on 22/01/2020.
-//  Copyright © 2020 Baber M (FCES). All rights reserved.
+//  Created by Rossaye K (FCES) on 28/01/2020.
+//  Copyright © 2020 Rossaye K (FCES). All rights reserved.
 //
 
 import XCTest
-@testable import segues
+@testable import Tutorial_3
 
-class seguesTests: XCTestCase {
+class Tutorial_3Tests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -30,6 +30,5 @@ class seguesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    @IBOutlet weak var scene1Label: UILabel!
-    
+
 }
