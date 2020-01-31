@@ -16,7 +16,7 @@ qplot(displ, hwy, data = mpg, facets = drv ~ .,)
 qplot(hwy, data = mpg, facets = drv ~ ., binwidth = 2)
 
 
-str(happyAffin)
+head(happyAffin)
 ## Display it on a qplot
 qplot(word, value, data = happyAffin)
 ## Same but with colour (color)
