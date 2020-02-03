@@ -28,14 +28,12 @@ hello varchar2(20):= 'Hello, World'
 BEGIN
     dbms_output.put_line(hello);
 END;
-
 -- 	EX 2
 /* 	
 	Write PLSQL code that queries the customers table for the 
 	name, address, and salary of the customer with the id value 1, 
 	assigns the output to variables, and prints them to the console. 
 */
-
 DECLARE
 v_id CUSTOMERS.ID%TYPE;
 v_name CUSTOMERS.NAME%TYPE;
@@ -50,14 +48,12 @@ begin
 	-- Print Variables 
     dbms_output.put_line(v_name || ' ' || v_address || v_salary);
 end;
-
 -- 	EX 3
 /* 	
 	Following on from last week’s tutorial, write a procedure to insert a new record 
 	into the customers table. Also write a block of code to execute the procedure. 
 	Verify the update.
 */
-
 CREATE OR REPLACE PROCEDURE addCustomer(
     v_id in CUSTOMERS.ID%TYPE,
     v_name in CUSTOMERS.NAME%TYPE,
@@ -70,11 +66,10 @@ BEGIN
     INSERT INTO CUSTOMERS (id, name, age, address, salary)
     VALUES (v_id, v_name, v_age, v_address, v_salary);
 END addCustomer;
-
+-- Insert into customers
 BEGIN
     addCustomer (7, 'Mark', 27, 'Cilfynydd', 2000.00);
 END;
-
 -- 	EX 4
 /*	
 	Create a program that accepts two numbers from substitution variables, 
@@ -95,7 +90,6 @@ BEGIN
 		DBMS_OUTPUT.put_line('first is same as second'); 
 	END IF; 
 END;
-
 --	EX 5
 /* 
 	Create a program that accepts a single number. 
@@ -132,10 +126,25 @@ END;
 -- Insert a new record, and the trigger will run
 INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY) 
 VALUES (8, 'Kriti', 22, 'HP', 7500.00 ); 
-
-
+-- UPDATE
+BEGIN
+	UPDATE CUSTOMERS
+	SET SALARY = 4000.00
+	WHERE ID = 7;
+END;
 --	EX 7
 /*	
-	Write and test a procedure that retrieves a count of the number of records 
-	in the customers table. Test the procedure.
+	Write and test a Function that retrieves a count of the number of records 
+	in the customers table. Test the Function.
 */
+CREATE OR REPLACE FUNCTION countRecords
+IS
+	CURSOR countAll IS
+		SELECT COUNT (*) "Total Customers" 
+		FROM CUSTOMERS;
+BEGIN
+	FOR i IN countAll
+	LOOP
+		INSERT INTO totalCustomers
+	END LOOP;
+END;
