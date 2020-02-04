@@ -21,22 +21,25 @@ CREATE TABLE book_copies(
 	-Put a new record in the "books" table
 	-Put a corresponding new record in the "book_copies" table
 	
-	CREATE OR REPLACE PROCEDURE addBooks(
-    v_id in CUSTOMERS.ID%TYPE,
-    v_name in CUSTOMERS.NAME%TYPE,
-    v_age in CUSTOMERS.AGE%TYPE,
-    v_address in CUSTOMERS.ADDRESS%TYPE,
-    v_salary in CUSTOMERS.SALARY%TYPE
+CREATE OR REPLACE PROCEDURE addBooks(
+    v_isbn books.isbn%TYPE,
+    v_title books.title%TYPE,
+    v_summary books.summary%TYPE,
+    v_author books.author%TYPE,
+    v_date_published books.date_published%TYPE,
+    v_page_count books.page_count%TYPE
     )
 AS
 BEGIN
-    INSERT INTO CUSTOMERS (id, name, age, address, salary)
-    VALUES (v_id, v_name, v_age, v_address, v_salary);
-END addCustomer;
--- Insert into customers
+    INSERT INTO books (isbn, title, summary, author, date_published, page_count)
+    VALUES (v_isbn, v_title, v_summary, v_author, v_date_published, v_page_count);
+END addBooks;
+-- Insert into books
 BEGIN
-    addCustomer (7, 'Mark', 27, 'Cilfynydd', 2000.00);
+    --addBooks (ID, 'Title', 'Summary', 'Author', Date, Pages)
+    addBooks (1, 'Oracle PL/SQL Programming: Covers Versions Through Oracle Database 12c', 'Considered the best Oracle PL/SQL programming guide by the Oracle community, this definitive guide is precisely what you need to make the most of Oracle’s powerful procedural language. The sixth edition describes the features and capabilities of PL/SQL up through Oracle Database 12c Release 1.', 'Author', 16/02/2014, 1392);
 END;
+
 
 2.	Write a procedure that retrieves a book count.
 	

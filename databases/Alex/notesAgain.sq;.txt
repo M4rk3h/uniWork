@@ -1,0 +1,47 @@
+--Declare variables with the same type as is, in the table.
+DECLARE 
+v_isbn books.isbn%TYPE
+v_title books.title%TYPE
+v_summary books.summary%TYPE
+v_author books.author%TYPE
+v_date_published books.date_published%TYPE
+v_page_count books.page_count%TYPE
+-- Begin SQL
+begin 
+    -- (:= &x) will prompt user input
+    v_isbn := &x;
+    v_title := &x;
+    v_summary := &x;
+    v_author := &x;
+    v_date_published := &x;
+    v_page_count := &x;
+
+    SELECT isbn title summary author date_published page_count
+    INTO v_isbn v_title v_summary v_author v_date_published v_page_count
+    INNER 
+    FROM books
+	-- Print Variables 
+    dbms_output.put_line(v_name || ' ' || v_address || v_salary);
+end;
+
+CREATE OR REPLACE PROCEDURE addBooks(
+    v_isbn books.isbn%TYPE,
+    v_title books.title%TYPE,
+    v_summary books.summary%TYPE,
+    v_author books.author%TYPE,
+    v_date_published books.date_published%TYPE,
+    v_page_count books.page_count%TYPE
+    )
+AS
+BEGIN
+    INSERT INTO books (isbn title summary author date_published page_count)
+    VALUES (v_isbn v_title v_summary v_author v_date_published v_page_count);
+END addBooks;
+-- Insert into books
+BEGIN	
+	addBooks 
+	(1, 'Oracle PL/SQL Programming: Covers Versions Through Oracle Database 12c', 'Considered the best Oracle PL/SQL programming guide by the Oracle community, this definitive guide is precisely what you need to make the most of Oracle’s powerful procedural language. The sixth edition describes the features and capabilities of PL/SQL up through Oracle Database 12c Release 1.', 'Steven Feuerstein', 02/16/2014, 1392);
+END;
+
+barcode_id -- v_barcode_id book_copies.barcode_id%TYPE;
+isbn -- v_isbn_fk book_copies.isbn%TYPE;
