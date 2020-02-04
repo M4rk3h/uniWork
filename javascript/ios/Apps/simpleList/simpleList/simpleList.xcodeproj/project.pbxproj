@@ -16,6 +16,11 @@
 		00A7FEF923E9ADEA009A835C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00A7FEF723E9ADEA009A835C /* LaunchScreen.storyboard */; };
 		00A7FF0423E9ADEA009A835C /* simpleListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A7FF0323E9ADEA009A835C /* simpleListTests.swift */; };
 		00A7FF0F23E9ADEA009A835C /* simpleListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A7FF0E23E9ADEA009A835C /* simpleListUITests.swift */; };
+		00A7FF2823E9AFEC009A835C /* collie.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00A7FF2423E9AFEC009A835C /* collie.jpeg */; };
+		00A7FF2A23E9AFEC009A835C /* pom.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00A7FF2623E9AFEC009A835C /* pom.jpeg */; };
+		00A7FF2B23E9AFEC009A835C /* frenchie.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00A7FF2723E9AFEC009A835C /* frenchie.jpeg */; };
+		00A7FF2F23E9B430009A835C /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A7FF2E23E9B430009A835C /* ViewControllerTableViewCell.swift */; };
+		00A7FF3123E9B669009A835C /* bulldog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00A7FF3023E9B669009A835C /* bulldog.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		00A7FF0A23E9ADEA009A835C /* simpleListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A7FF0E23E9ADEA009A835C /* simpleListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleListUITests.swift; sourceTree = "<group>"; };
 		00A7FF1023E9ADEA009A835C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00A7FF2423E9AFEC009A835C /* collie.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = collie.jpeg; path = ../../../../../../../../../Downloads/collie.jpeg; sourceTree = "<group>"; };
+		00A7FF2623E9AFEC009A835C /* pom.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pom.jpeg; path = ../../../../../../../../../Downloads/pom.jpeg; sourceTree = "<group>"; };
+		00A7FF2723E9AFEC009A835C /* frenchie.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = frenchie.jpeg; path = ../../../../../../../../../Downloads/frenchie.jpeg; sourceTree = "<group>"; };
+		00A7FF2E23E9B430009A835C /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		00A7FF3023E9B669009A835C /* bulldog.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bulldog.jpeg; path = ../../../../../../../../../Downloads/bulldog.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,7 @@
 		00A7FEDD23E9ADEA009A835C = {
 			isa = PBXGroup;
 			children = (
+				00A7FF2E23E9B430009A835C /* ViewControllerTableViewCell.swift */,
 				00A7FEE823E9ADEA009A835C /* simpleList */,
 				00A7FF0223E9ADEA009A835C /* simpleListTests */,
 				00A7FF0D23E9ADEA009A835C /* simpleListUITests */,
@@ -101,6 +112,10 @@
 		00A7FEE823E9ADEA009A835C /* simpleList */ = {
 			isa = PBXGroup;
 			children = (
+				00A7FF3023E9B669009A835C /* bulldog.jpeg */,
+				00A7FF2423E9AFEC009A835C /* collie.jpeg */,
+				00A7FF2723E9AFEC009A835C /* frenchie.jpeg */,
+				00A7FF2623E9AFEC009A835C /* pom.jpeg */,
 				00A7FEE923E9ADEA009A835C /* AppDelegate.swift */,
 				00A7FEEB23E9ADEA009A835C /* SceneDelegate.swift */,
 				00A7FEED23E9ADEA009A835C /* ViewController.swift */,
@@ -235,9 +250,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A7FF2B23E9AFEC009A835C /* frenchie.jpeg in Resources */,
 				00A7FEF923E9ADEA009A835C /* LaunchScreen.storyboard in Resources */,
 				00A7FEF623E9ADEA009A835C /* Assets.xcassets in Resources */,
+				00A7FF2A23E9AFEC009A835C /* pom.jpeg in Resources */,
+				00A7FF3123E9B669009A835C /* bulldog.jpeg in Resources */,
 				00A7FEF123E9ADEA009A835C /* Main.storyboard in Resources */,
+				00A7FF2823E9AFEC009A835C /* collie.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +283,7 @@
 			files = (
 				00A7FEEE23E9ADEA009A835C /* ViewController.swift in Sources */,
 				00A7FEF423E9ADEA009A835C /* simpleList.xcdatamodeld in Sources */,
+				00A7FF2F23E9B430009A835C /* ViewControllerTableViewCell.swift in Sources */,
 				00A7FEEA23E9ADEA009A835C /* AppDelegate.swift in Sources */,
 				00A7FEEC23E9ADEA009A835C /* SceneDelegate.swift in Sources */,
 			);
