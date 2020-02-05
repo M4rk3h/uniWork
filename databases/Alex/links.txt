@@ -1,0 +1,7 @@
+References
+
+Random String Generator
+https://www.random.org/strings/
+
+Random Number Generator
+https://www.random.org/
