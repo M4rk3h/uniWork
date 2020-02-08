@@ -94,14 +94,16 @@ CREATE TABLE book_copies(
 
 2.	Write a procedure that retrieves a book count.
 	
+	SELECT COUNT(isbn)
+	FROM books
 
-3.	Write a procedure getBookDetails which accepts a isbn number and returns the 
+3.	Write a procedure getBookDetails which accepts an isbn number and returns the 
 	books title, author, date_published, and  the number of copies. 
-	The main block should call the procedure with a isbn number and output the book’s details
+	The main block should call the procedure with an isbn number and output the book’s details
 -- Create procedure to get details
 -- the isbn should be user input.
 	CREATE OR REPLACE PROCEDURE getBookDetails(
-		v_isbn books.isbn%TYPE,
+		v_isbn books.isbn%TYPE := 1;
 		v_title books.title%TYPE,
 		v_summary books.summary%TYPE,
 		v_author books.author%TYPE,
@@ -110,14 +112,26 @@ CREATE TABLE book_copies(
 		)
 	AS
 	BEGIN
-	    v_isbn := &x;
 		SELECT isbn, title, summary, author, date_published, page_count
 		INTO v_isbn, v_title, v_summary, v_author, v_date_published, v_page_count
 		FROM books WHERE isbn = v_isbn;
 		-- Print Variables
 		dbms_output.put_line( v_title || ' ' || v_author || v_date_published );
 	end;
-	/
+	
+DECLARE 
+v_id customers.id%type := 1; 
+v_name customers.name%type; 
+v_addr customers.address%type; 
+v_sal customers.salary%type; 
+BEGIN 
+SELECT name, address, salary INTO v_name, v_addr, v_sal 
+FROM customers 
+WHERE id = v_id; 
+dbms_output.put_line 
+('Customer ' ||v_name || ' from ' || v_addr || ' earns ' || v_sal); 
+END; 
+
 
 
 DECLARE
@@ -135,7 +149,12 @@ dbms_output.put_line( v_title || ' ' || v_author || v_date_published );
 end;
 /
 
-
+-- GET ALL BOOKS AND BOOK COPIES
+SELECT * 
+FROM books
+INNER JOIN book_copies
+on books.isbn = book_copies.isbn
+order by books.isbn asc;
 
 
 4.	Write a PL/SQL block which utilises the getBookdetails 

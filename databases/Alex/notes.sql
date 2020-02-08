@@ -34,20 +34,19 @@ END;
 	name, address, and salary of the customer with the id value 1, 
 	assigns the output to variables, and prints them to the console. 
 */
-DECLARE
-v_id CUSTOMERS.ID%TYPE;
-v_name CUSTOMERS.NAME%TYPE;
-v_address CUSTOMERS.ADDRESS%TYPE;
-v_salary CUSTOMERS.SALARY%TYPE;
-begin
-    -- v_id := &x; will prompt user input
-    v_id := &x;
-    SELECT ID, NAME, ADDRESS, SALARY
-    INTO v_id, v_name, v_age, v_address, v_salary
-    FROM CUSTOMERS WHERE ID = v_id;
-	-- Print Variables 
-    dbms_output.put_line(v_name || ' ' || v_address || v_salary);
-end;
+DECLARE 
+v_id customers.id%type := 1; 
+v_name customers.name%type; 
+v_addr customers.address%type; 
+v_sal customers.salary%type; 
+BEGIN 
+SELECT name, address, salary INTO v_name, v_addr, v_sal 
+FROM customers 
+WHERE id = v_id; 
+dbms_output.put_line 
+('Customer ' ||v_name || ' from ' || v_addr || ' earns ' || v_sal); 
+END; 
+
 -- 	EX 3
 /* 	
 	Following on from last week’s tutorial, write a procedure to insert a new record 
