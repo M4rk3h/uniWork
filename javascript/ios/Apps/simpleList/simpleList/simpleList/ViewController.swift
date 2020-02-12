@@ -18,20 +18,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewControllerTableViewCell
-        
         tableView.rowHeight = 100
-        
-        //cell.myImage.image = UIImage(named: (list[indexPath.row] + ".jpg"))
-        
-        //cell.myLabel.text = list[indexPath.row]
-        print(indexPath.row)
-        return(cell)
-    }
-
-    // let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-    // cell.textLabel?.text = list[indexPath.row]
-    // return(cell)
-    
+        cell.myImage.image = UIImage(named: (list[indexPath.row] + ".jpeg"))
+        cell.myLabel.text = list[indexPath.row]
+        return(cell)    
+    }   
     
     override func viewDidLoad() {
         super.viewDidLoad()
