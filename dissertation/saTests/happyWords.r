@@ -7,6 +7,7 @@ install.packages("tibble")
 
 # Load packages
 library(tidyverse)
+require(stringr)
 library(tidytext)
 library(tidyr)
 library(textdata)
@@ -151,3 +152,36 @@ affinCountFour <- qplot(Episode, freq, data = affinCountTP, fill = freq)
 # See how it works for word and value
 affinCountFive <- ggplot(data = affinCountTP) + 
   geom_bar(mapping = aes(x = Episode, y=freq),stat="identity", fill="#FF9999", colour="black")
+
+
+
+## Get sentiment score for each episode of TwinPeaks
+season1 <- read.csv("../twinPeaksScripts/tps1.csv", sep=",", header=TRUE, stringsAsFactors = FALSE)
+## happyTib
+tibSeason1 <- tibble(Episode = wordsTP[,1], Words = text[,2])
+## Use Inner_Join with Affin
+affinSeason1 <- tibSeason1 %>% unnest_tokens(word, Words) %>%
+  inner_join(get_sentiments("afinn"))
+
+## Get sentiment score for each episode of TwinPeaks
+s1e1 <- read.csv("../twinPeaksScripts/S1e1.txt", sep=",", header=TRUE, stringsAsFactors = FALSE)
+## happyTib
+tibSeason1 <- tibble(Episode = "seasonOne", Words = seasonOne[,1])
+## Use Inner_Join with Affin
+affinSeason1 <- tibSeason1 %>% unnest_tokens(word, Words) %>%
+  inner_join(get_sentiments("afinn"))
+
+## Count
+affinCounSeason1 <- count(affinSeason1, vars = "Episode")
+affinCountTP <- count(affinTPIJ, vars = "Episode")
+
+## Save to csv
+write.csv(seasonOne, file = "testMeSeasonOne.csv")
+library(readr)
+S1e1 <- read_delim("~/GitHub/uniWork/dissertation/twinPeaksScripts/S1e1.txt", ";", escape_double = FALSE, col_names = FALSE,trim_ws = TRUE)
+S1e2 <- read_delim("~/GitHub/uniWork/dissertation/twinPeaksScripts/S1e2.txt", ";", escape_double = FALSE, col_names = FALSE,trim_ws = TRUE)
+head(S1e2)
+
+temp = list.files(pattern="S1*.txt")
+
+head(s1e1)
