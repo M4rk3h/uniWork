@@ -1,15 +1,15 @@
 //
-//  anothertestTests.swift
-//  anothertestTests
+//  GameBaseTests.swift
+//  GameBaseTests
 //
-//  Created by Daniel Cunliffe on 11/02/2020.
-//  Copyright © 2020 Daniel Cunliffe. All rights reserved.
+//  Created by Baber M (FCES) on 18/02/2020.
+//  Copyright © 2020 Baber M (FCES). All rights reserved.
 //
 
 import XCTest
-@testable import anothertest
+@testable import GameBase
 
-class anothertestTests: XCTestCase {
+class GameBaseTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
