@@ -19,6 +19,22 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var output: UILabel!
+    // Input Text
+    @IBOutlet weak var input: UITextField!
+    // Save function
+    @IBAction func save(_ sender: Any) {
+        output.text = input.text
+        UserDefaults.standard.set(input.text, forKey: "myName")
+        input.text=""
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let x = UserDefaults.standard.object(forKey: "myName") as? String{
+            output.text = x
+        }
+    }
+    
     // Create var for activePlayer
     var activePlayer = 1
     // Create array for gameStates
@@ -45,9 +61,9 @@ class ViewController: UIViewController {
                 {
                     gameActive = false
                     if (gameState[combination[0]] == 1){
-                        // Crosses Win
+                        output.text = "X wins"
                     } else {
-                        // Circles Win
+                        output.text = "O wins"
                         }
                     }
                 }
