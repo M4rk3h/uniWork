@@ -44,16 +44,27 @@ class ViewController: UIViewController {
     // Var for gameActive
     var gameActive = true
     
+    // Reset Game Btn
+    @IBAction func reset(_ sender: UIButton) {
+        output.text = "Game Reset"
+        viewDidLoad()
+        activePlayer = 1
+        gameState = [0,0,0,0,0,0,0,0,0]
+        gameActive = true
+    }
+    
     // Function to alternate players & images
     @IBAction func action(_ sender: UIButton){
         if (gameActive){
         if (gameState[sender.tag-1] == 0) {
             gameState[sender.tag-1] = activePlayer
             if (activePlayer == 1){
+                output.text = "Circles turn"
                 sender.setImage(UIImage(named: "cross.png"), for: UIControl.State())
                 activePlayer = 2
         } else {
-           sender.setImage(UIImage(named: "circle.png"), for: UIControl.State())
+            output.text = "Cross' turn"
+            sender.setImage(UIImage(named: "circle.png"), for: UIControl.State())
             activePlayer = 1
             }
             for combination in winningCombinations {
@@ -61,9 +72,9 @@ class ViewController: UIViewController {
                 {
                     gameActive = false
                     if (gameState[combination[0]] == 1){
-                        output.text = "X wins"
+                        output.text = "Cross' wins"
                     } else {
-                        output.text = "O wins"
+                        output.text = "Circles wins"
                         }
                     }
                 }

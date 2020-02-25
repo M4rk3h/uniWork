@@ -157,3 +157,11 @@ for index in 0...6 {
     print(coloursOfRainbow[index])
 }
 
+
+@IBAction func resetGame(_ sender: UIButton) {
+        //viewDidLoad()
+        //activePlayer = 1
+        //gameState = [0,0,0,0,0,0,0,0,0]
+        //gameActive = true
+        output.text = "Shit son"
+    }
