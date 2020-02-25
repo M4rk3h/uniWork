@@ -1,0 +1,18 @@
+Sentiment analysis is very popular for business who want to analyse their customers data, to discovery if there are any patterns which can be found.
+Sentiment analysis can be used in multiple ways from Document-level sentiment analysis, Sentence-level sentiment analysis, Aspect-based sentiment analysis, Comparative sentiment analysis and Sentiment lexicon acquisition.
+There are already a few companies offering a commercial version which does sentiment analysis. (SAS, SPSS, Google Cloud Natural Language, Watson Tone Analyzer & Amazon Comprehend as well as others).
+How this can be implemented with open source tools such as R & R-Studio. with some packages like BagOfWords and Tidytext to do sentiment analysis yourself with a script. Whilst being a free option, it also leaves more room for user error.
+3.1 - How they could be applied to the design of the final deliverable
+From discovering these different types of sentiment analysis, there is a low barrier of entry for someone who is willing to learn the free and open source approach as declared above. By doing so allows the user to explore the different ways of doing sentiment analysis by coding it themselves and seeing the differences. Whilst doing the user can test different types of sentiment analysis on different types of datasets and see the differences.
+This will allow this project to be fully explored down the free route, especially for the scope of this project.
+3.2 - Methodologies
+When researching different types of methodologies and different ways to do sentiment analysis, there have been different ways users have broken down the words and then analysed them. For example, if we look at Silge’s book on the package tidytext (Silge, J. & Robinson, D. 2017) she put the following:
+ 
+(Figure 2 – Flowchart of sentiment analysis with tidytext, Silge, J. & Robinson, D. 2017)
+With these steps, you can clearly see what must be done at each step of the process of cleaning the data and analysing it. Whilst being an easy flow chart to follow, if you were to look at a bigger project such as that of Tiara et al. (2015), We can see that from figure 2, the flowchart starts to become a bit more complex.
+ 
+(Figure 3 – Flowchart of sentiment analysis of twitter data, Tiara et al. 2015)
+From both diagrams shown, this can be compact into a simple set of rules to follow whilst attempted to perform sentiment analysis. It would be as follows:
+ 
+(Figure 4 – Sentiment Analysis Model, Bibi (2017))
+ 
