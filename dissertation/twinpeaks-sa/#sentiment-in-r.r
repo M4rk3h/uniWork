@@ -440,3 +440,5 @@ countNs3e15 <- count(negatives3e15, vars = "Episode")
 countNs3e16 <- count(negatives3e16, vars = "Episode")
 countNs3e17 <- count(negatives3e17, vars = "Episode")
 countNs3e18 <- count(negatives3e18, vars = "Episode")
+
+## Look up loughlin dictionary
