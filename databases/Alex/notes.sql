@@ -136,14 +136,21 @@ END;
 	Write and test a Function that retrieves a count of the number of records 
 	in the customers table. Test the Function.
 */
-CREATE OR REPLACE FUNCTION countRecords
-IS
-	CURSOR countAll IS
-		SELECT COUNT (*) "Total Customers" 
-		FROM CUSTOMERS;
-BEGIN
-	FOR i IN countAll
-	LOOP
-		INSERT INTO totalCustomers
-	END LOOP;
-END;
+CREATE OR REPLACE FUNCTION totalCustomers 
+RETURN number IS 
+   total number(2) := 0; 
+BEGIN 
+   SELECT count(*) into total 
+   FROM customers; 
+    
+   RETURN total; 
+END; 
+/
+
+DECLARE 
+   c number(2); 
+BEGIN 
+   c := totalCustomers(); 
+   dbms_output.put_line('Total no. of Customers: ' || c); 
+END; 
+/

@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>A map with 2 custom pins on the stadiums in south wales.</p>
+        <p>A map with 2 custom pins on the stadiums in south wales.
+        References: <a target="_blank" href="https://docs.microsoft.com/en-us/bingmaps/getting-started/"> Bing Docs </a></p>
         <div id="map" style="height:400px; width:100%;"> </div>
         <!-- Include the bing buttons -->
         <?php include 'php/bbuttons.php';?>

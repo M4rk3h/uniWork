@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Attempt 2 at making a lovely styled map.</p>
+        <p>Attempt 2 at making a lovely styled map.
+        References: <a target="_blank" href="https://docs.microsoft.com/en-us/bingmaps/getting-started/"> Bing Docs </a></p>
         <div id="map" style="height:400px; width:100%;"> </div>
         <!-- Include the bing buttons -->
         <?php include 'php/bbuttons.php';?>

@@ -23,7 +23,9 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Leaflet Routing Machine - North Wales to South Wales + Leaflet.GestureHandling</p>
+        <p>Leaflet Routing Machine - North Wales to South Wales + Leaflet.GestureHandling. <br>
+        References: <a target="_blank" href=http://www.liedman.net/leaflet-routing-machine/>Routing Machine</a> - 
+        <a target="_blank" href="https://github.com/elmarquis/Leaflet.GestureHandling/">Gesture Handling (Like Google)</a></p>
         <div id="lmap" style="height:400px; width:100%;">
             Leaflet Map
         </div>

@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Created polygons which outline 2 places where wind farms are located.</p>
+        <p>Created polygons which outline 2 places where wind farms are located.
+        References: <a target="_blank" href="https://docs.microsoft.com/en-us/bingmaps/getting-started/"> Bing Docs </a></p>
         <div id="map" style="height:400px; width:100%;"> </div>
         <!-- Include the bing buttons -->
         <?php include 'php/bbuttons.php';?>

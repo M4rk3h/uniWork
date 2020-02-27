@@ -10,8 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Added flight paths, on click information is shown, when the mouse hovers off the line, the info window
-            closes.</p>
+        <p>Added flight paths, on click information is shown, when the mouse hovers off the line, the info window closes.
+            References: <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Doc</a></p>
         <div id="gmapFlight" style="height:400px; width:100%;">
             <!-- Google Map-->
         </div>

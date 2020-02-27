@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Created a default Leaflet Map with a toggled pin.</p>
+        <p>Created a default Leaflet Map with a toggled pin.
+        References: <a target="_blank" href="https://leafletjs.com/">Leaflet Docs</a>
         <div id="lmap" style="height:400px; width:100%;">
             Leaflet Map
         </div>

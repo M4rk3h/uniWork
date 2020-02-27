@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Added flight paths, on click information is shown, by default the info window would appear in the middle.<br> Managed to change it so it would go on the destination airport.</p>
+        <p>Added flight paths, on click information is shown, by default the info window would appear in the middle.<br> Managed to change it so it would go on the destination airport.
+        References: <a target="_blank" href="https://docs.microsoft.com/en-us/bingmaps/getting-started/"> Bing Docs </a></p>
         <div id="map" style="height:400px; width:100%;"> </div>
         <!-- Include the bing buttons -->
         <?php include 'php/bbuttons.php';?>
