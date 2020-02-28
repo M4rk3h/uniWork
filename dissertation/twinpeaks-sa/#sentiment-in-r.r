@@ -442,3 +442,38 @@ countNs3e17 <- count(negatives3e17, vars = "Episode")
 countNs3e18 <- count(negatives3e18, vars = "Episode")
 
 ## Look up loughlin dictionary
+
+
+
+season1 <- bind_rows(s1e1,s1e2,s1e3,s1e4,s1e5,s1e6,s1e7,s1e8)
+season2 <- bind_rows()
+
+## Src = https://www.youtube.com/watch?v=BqNTcewq0k0
+#Word Cloud
+library(wordcloud)
+library(reshape2)
+
+cloudS1 <- affins3e1 %>% with(affins3e1, !(word =="word"))
+
+#Basic Wordcloud
+cloudS1T2 <- affins1e1 %>% with(affins1e1, !(word =="value")) %>% count(word) %>% with (wordcloud(word, n, max.words = 100))
+
+
+
+#Wordcloud group +-
+affins1e1 %>%
+  count(word, value, sort=TRUE) %>%
+  acast(word ~ value, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("#F8766D","#00BFC4"),
+                   max.words = 100)
+
+
+#aggregate(CareTibCount$n, by=list(Category=CareTibCount$crmReasonOne,Sentiment=CareTibCount$sentiment), FUN=sum,
+#         negative.rm=TRUE)
+
+
+
+
+
+
+
