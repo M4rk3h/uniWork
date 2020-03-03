@@ -64,10 +64,9 @@ CREATE TABLE book_copies(
 	-- Insert into books
 	BEGIN
 		--addBooks (ID, 'Title', 'Summary', 'Author', Date, Pages)
-		addBooks (5, 'Oracle PL/SQL Programming: Covers Versions Through Oracle Database 12c', 'Considered the best Oracle PL/SQL programming guide by the Oracle community, this definitive guide is precisely what you need to make the most of Oracle’s powerful procedural language. The sixth edition describes the features and capabilities of PL/SQL up through Oracle Database 12c Release 1.', 'Steven Feuerstein ', TO_DATE('16-02-14', 'dd/mm/yy'), 1392);
-		addBooks (6, 'GDPR For Dummies', 'Dont be afraid of the GDPR wolf! How can your business easily comply with the new data protection and privacy laws and avoid fines of up to $27M? GDPR For Dummies sets out in simple steps how small business owners can comply with the complex General Data Protection Regulations (GDPR)', 'Learning Made Easy', TO_DATE('23-01-20', 'dd/mm/yy'), 464);
-		addBooks (7, 'Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems', 'Data is at the center of many challenges in system design today. Difficult issues need to be figured out, such as scalability, consistency, reliability, efficiency, and maintainability. In addition, we have an overwhelming variety of tools, including relational databases, NoSQL datastores, stream or batch processors, and message brokers. What are the right choices for your application? How do you make sense of all these buzzwords?', 'Martin Kleppmann', TO_DATE('25-01-16', 'dd/mm/yy'), 400);
-		addBooks (8, 'The Hundred-Page Machine Learning Book', 'Karolis Urbonas, Head of Data Science at Amazon: A great introduction to machine learning from a world-class practitioner. ', 'Andriy Burkov ', TO_DATE('13-01-19', 'dd/mm/yy'), 160;
+		addBooks (1, 'Oracle PL/SQL Programming: Covers Versions Through Oracle Database 12c', 'Considered the best Oracle PL/SQL programming guide by the Oracle community, this definitive guide is precisely what you need to make the most of Oracle’s powerful procedural language. The sixth edition describes the features and capabilities of PL/SQL up through Oracle Database 12c Release 1.', 'Steven Feuerstein ', TO_DATE('16-02-14', 'dd/mm/yy'), 1392);
+		addBooks (2, 'GDPR For Dummies', 'Dont be afraid of the GDPR wolf! How can your business easily comply with the new data protection and privacy laws and avoid fines of up to $27M? GDPR For Dummies sets out in simple steps how small business owners can comply with the complex General Data Protection Regulations (GDPR)', 'Learning Made Easy', TO_DATE('23-01-20', 'dd/mm/yy'), 464);
+		addBooks (3, 'Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems', 'Data is at the center of many challenges in system design today. Difficult issues need to be figured out, such as scalability, consistency, reliability, efficiency, and maintainability. In addition, we have an overwhelming variety of tools, including relational databases, NoSQL datastores, stream or batch processors, and message brokers. What are the right choices for your application? How do you make sense of all these buzzwords?', 'Martin Kleppmann', TO_DATE('25-01-16', 'dd/mm/yy'), 400);
 	END;
 	/
 -- Procedures to addBookCopies
@@ -86,16 +85,31 @@ CREATE TABLE book_copies(
 	BEGIN
 		--addBookCopies (barcode_id, isbn);
 		addBookCopies (129167337463, 1);
-		addBookCopies (849421534208, 10);
-		addBookCopies (868023917703, 11);
-		addBookCopies (787362785168, 12);
+		addBookCopies (849421534208, 2);
+		addBookCopies (868023917703, 3);
 	END;
 	/
 
 2.	Write a procedure that retrieves a book count.
-	
-	SELECT COUNT(isbn)
-	FROM books
+	-- Create the procedure
+	CREATE OR REPLACE FUNCTION bookCount 
+	RETURN number IS 
+	   total number(2) := 0; 
+	BEGIN 
+	   SELECT count(*) into total 
+	   FROM book_copies
+	   WHERE isbn := x;
+		
+	   RETURN total; 
+	END; 
+	/
+	-- Now run it to see
+	DECLARE 
+	   c number(2); 
+	BEGIN 
+	   c := bookCount(); 
+	   dbms_output.put_line('Total no. of Books: ' || c); 
+	END;
 
 3.	Write a procedure getBookDetails which accepts an isbn number and returns the 
 	books title, author, date_published, and  the number of copies. 

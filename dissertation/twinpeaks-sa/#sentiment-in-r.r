@@ -4,8 +4,6 @@ library(tidyverse)
 library(tidyr)
 library(stringr)
 library(readr)
-
-
 ## Season 1
 ## Import Datasets
 s1e1 <- read.csv("s1e1-mod.txt", sep=",", header=TRUE, stringsAsFactors = FALSE)
@@ -26,6 +24,7 @@ tibs1e5 <- tibble(Episode = s1e5[,1], Words = s1e5[,2])
 tibs1e6 <- tibble(Episode = s1e6[,1], Words = s1e6[,2])
 tibs1e7 <- tibble(Episode = s1e7[,1], Words = s1e7[,2])
 tibs1e8 <- tibble(Episode = s1e8[,1], Words = s1e8[,2])
+## season1 is a bound tibble
 
 ## Use Inner_Join with Affin
 affins1e1 <- tibs1e1 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
@@ -36,6 +35,8 @@ affins1e5 <- tibs1e5 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiment
 affins1e6 <- tibs1e6 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 affins1e7 <- tibs1e7 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 affins1e8 <- tibs1e8 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
+
+affins1 <- season1 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 
 ## Count
 counts1e1 <- count(affins1e1, vars = "Episode")
@@ -66,6 +67,13 @@ countPs1e5 <- count(positives1e5, vars = "Episode")
 countPs1e6 <- count(positives1e6, vars = "Episode")
 countPs1e7 <- count(positives1e7, vars = "Episode")
 countPs1e8 <- count(positives1e8, vars = "Episode")
+## Find top 10 words
+countPosWord <- count(affins1e1, var = 'word')
+
+countPosWord <- affins1e1 %>% group_by('word') %>% 
+  mutate(total = sum('word'))
+
+affins1e1 %>% 
 
 ## Filter Negative
 negatives1e1 <- affins1e1 %>% filter(value <= 0)
@@ -361,6 +369,8 @@ counts3e16 <- count(affins3e16, vars = "Episode")
 counts3e17 <- count(affins3e17, vars = "Episode")
 counts3e18 <- count(affins3e18, vars = "Episode")
 
+
+
 ## Filter Positive
 positives3e1 <- affins3e1 %>% filter(value >= 0)
 positives3e2 <- affins3e2 %>% filter(value >= 0)
@@ -442,38 +452,19 @@ countNs3e17 <- count(negatives3e17, vars = "Episode")
 countNs3e18 <- count(negatives3e18, vars = "Episode")
 
 ## Look up loughlin dictionary
-
-
-
 season1 <- bind_rows(s1e1,s1e2,s1e3,s1e4,s1e5,s1e6,s1e7,s1e8)
 season2 <- bind_rows()
+
+
 
 ## Src = https://www.youtube.com/watch?v=BqNTcewq0k0
 #Word Cloud
 library(wordcloud)
 library(reshape2)
-
 cloudS1 <- affins3e1 %>% with(affins3e1, !(word =="word"))
 
 #Basic Wordcloud
 cloudS1T2 <- affins1e1 %>% with(affins1e1, !(word =="value")) %>% count(word) %>% with (wordcloud(word, n, max.words = 100))
 
-
-
 #Wordcloud group +-
-affins1e1 %>%
-  count(word, value, sort=TRUE) %>%
-  acast(word ~ value, value.var = "n", fill = 0) %>%
-  comparison.cloud(colors = c("#F8766D","#00BFC4"),
-                   max.words = 100)
-
-
-#aggregate(CareTibCount$n, by=list(Category=CareTibCount$crmReasonOne,Sentiment=CareTibCount$sentiment), FUN=sum,
-#         negative.rm=TRUE)
-
-
-
-
-
-
-
+affins1e1 %>% count(word, value, sort=TRUE) %>% acast(word ~ value, value.var = "n", fill = 0) %>% comparison.cloud(colors = c("#F8766D","#00BFC4"), max.words = 100)
