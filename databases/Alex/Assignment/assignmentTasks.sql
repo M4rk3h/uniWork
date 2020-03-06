@@ -70,7 +70,7 @@ addBookCopies (966025947302, 3);
 END;
 
 -- 2
---Write a procedure that retrieves a book count.
+-- Write a procedure that retrieves a book count.
 -- Count Books
 CREATE OR REPLACE FUNCTION bookCount
 RETURN number IS
@@ -158,12 +158,17 @@ v_title books.title%TYPE;
 v_author books.author%TYPE;
 v_date_published books.date_published%TYPE;
 v_numberOfCopies INT;
+v_i NUMBER := 0;
+v_myIndex NUMBER := 0;
 BEGIN
--- I hard coded loop as i only have 3 books;
---1..3
-FOR i IN 1..4
+SELECT COUNT(*) INTO v_myIndex FROM books;
+WHILE v_i < v_myIndex
 LOOP
-v_isbn := i;
+-- Increment
+v_i := v_i + 1;
+-- ID = dynamic variable
+v_isbn := v_i;
+-- Use the getBookDetails to get the info we want
 getBookDetails (v_isbn, v_title, v_author, v_date_published, v_numberOfCopies);
 -- Print to Dbms Output
 dbms_output.put_line('Book ' || v_isbn || '. Titled ' || v_title || ' Written by ' || v_author || '. Published: ' || v_date_published || '. With ' || v_numberofcopies || ' Copies Available.');
