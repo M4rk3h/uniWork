@@ -33,29 +33,32 @@ write.csv(gGirlz, file = "gGirls-tweets.csv")
 
 # Create a tibble
 
-tibbleGOT <- tibble(Text = gotTweets[,2])
-tibbleGG  <- tibble(Text = gilmore[,2])
-
-colnames(tibbleGG)[colnames(tibbleGG) == "Text"] <- "Text"
+tibbleGOT <- tibble(Text = gotCsv[,1])
+tibbleGG  <- tibble(Text = gGirlz[,1])
 
 # Unnest and join with Affin
 affinGOT <- tibbleGOT %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn"))
 
-affinGG <- tibbleGG %>% unnest_tokens(word, Text$text) %>% inner_join(get_sentiments("afinn"))
-
-
+affinGG <- tibbleGG %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn"))
 
 # Most popular word
 # Try with bing
 countGot <- tibbleGOT %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn")) %>% count(word, sort = TRUE)
 countGG  <- tibbleGG  %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn")) %>% count(word, sort = TRUE)
 
-simpsonsTopTen <- simpsonsAffinCounted %>%
-  str(head)
-                         
-## scatter
-# limit top 5 words
-plotOne <- qplot(word, n, data = simpsonsAffinCounted)
+## Positives
+gotPositives <- affinGOT %>% filter(value >= 0) 
+gotPosCount <- gotPositives %>% count(word, sort = TRUE)
+ggPositives <- affinGG %>% filter(value >= 0) 
+ggPosCount <- ggPositives %>% count(word, sort = TRUE)
+## Negatives
+gotNegatives <- affinGOT %>% filter(value <= 0) %>% count(word, sort = TRUE)
+gotNegCount <- gotNegatives %>% count(word, sort = TRUE)
+ggNegatives <- affinGG %>% filter(value <= 0) %>% count(word, sort = TRUE) 
+ggNegCount <- ggNegatives 
 
-## Ggplot
-plotTwo <- ggplot(simpsonsAffinCounted, aes(word, n)) + geom_col(show.legend = TRUE);
+library(wordcloud)
+library(reshape2)
+
+gotCloud <- countGot %>% with(countGot, !(word =="word")) %>% with (wordcloud(word, n, max.words = 100))
+ggCloud <- countGG %>% with(countGG, !(word =="word")) %>% with (wordcloud(word, n, max.words = 100))
