@@ -14,51 +14,26 @@ MyAccessSecret <- "KOStBWtiLthtTfy6qHXkfPw0VMfO2U86mODSW7jYQeke0"
 
 # Set auth
 setup_twitter_oauth(myKey,mySecret,myAccessToken,MyAccessSecret)
-
-# Get tweets for GoT
-gotTweets = twitteR::searchTwitter('#GameOfThrones', n=3000, lang="en")
-
-# Put the tweets into variable got 
-gotCsv = twitteR::twListToDF(gotTweets)
-
 # Get tweets for GilmoreGirls
-gGirl = twitteR::searchTwitter('#GilmoreGirls', n=3000, lang="en")
-
+sixNations = twitteR::searchTwitter('#SixNations2020', n=3000, lang="en")
 # Put the tweets into variable Ggirls
-gGirlz = twitteR::twListToDF(gGirl)
-
-# Export the file
-write.csv(gotCsv, file = "GoT-tweets.csv")
-write.csv(gGirlz, file = "gGirls-tweets.csv")
-
+sixNationsTweets = twitteR::twListToDF(sixNations)
 # Create a tibble
-
-tibbleGOT <- tibble(Text = gotCsv[,1])
-tibbleGG  <- tibble(Text = gGirlz[,1])
-
+tibbleSN <- tibble(Text = sixNationsTweets[,1])
 # Unnest and join with Affin
-affinGOT <- tibbleGOT %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn"))
-
-affinGG <- tibbleGG %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn"))
-
+affinSN <- tibbleSN %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn"))
 # Most popular word
 # Try with bing
-countGot <- tibbleGOT %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn")) %>% count(word, sort = TRUE)
-countGG  <- tibbleGG  %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn")) %>% count(word, sort = TRUE)
-
+countSN <- tibbleSN %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn")) %>% count(word, sort = TRUE)
 ## Positives
-gotPositives <- affinGOT %>% filter(value >= 0) 
-gotPosCount <- gotPositives %>% count(word, sort = TRUE)
-ggPositives <- affinGG %>% filter(value >= 0) 
-ggPosCount <- ggPositives %>% count(word, sort = TRUE)
+snPositives <- affinSN %>% filter(value >= 0) 
 ## Negatives
-gotNegatives <- affinGOT %>% filter(value <= 0) %>% count(word, sort = TRUE)
-gotNegCount <- gotNegatives %>% count(word, sort = TRUE)
-ggNegatives <- affinGG %>% filter(value <= 0) %>% count(word, sort = TRUE) 
-ggNegCount <- ggNegatives 
-
+snNegatives <- affinSN %>% filter(value <= 0) %>% count(word, sort = TRUE)
+## WordCloud
 library(wordcloud)
 library(reshape2)
+## Create WordCloud
+snCloud <- countSN %>% with(countSN, !(word =="word")) %>% with (wordcloud(word, n, max.words = 500))
 
-gotCloud <- countGot %>% with(countGot, !(word =="word")) %>% with (wordcloud(word, n, max.words = 100))
-ggCloud <- countGG %>% with(countGG, !(word =="word")) %>% with (wordcloud(word, n, max.words = 100))
+# Export the file
+write.csv(tibbleSN, file = "six-nations.csv")
