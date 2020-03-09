@@ -13,6 +13,7 @@ page_count NUMBER
 CREATE TABLE book_copies(
 barcode_id VARCHAR2(100) NOT NULL PRIMARY KEY,
 isbn VARCHAR2(13) REFERENCES books (isbn)
+ON DELETE CASCADE
 );
 /
 
@@ -43,7 +44,8 @@ END addBooks;
 BEGIN
 addBooks (1,'Oracle PL/SQL Programming.','Considered the best Oracle PL/SQL programming guide by the Oracle','Steven Feuerstein',TO_DATE('16-02-14', 'dd/mm/yy'), 1392);
 addBooks (2,'GDPR For Dummies.','Dont be afraid of the GDPR wolf','Learning Made Easy', TO_DATE('23-01-20', 'dd/mm/yy'), 464);
-addBooks (3,'Designing Data-Intensive Applications.','Data is at the center of many challenges in system design today.','Martin Kleppmann',TO_DATE('25-01-16', 'dd/mm/yy'), 400);
+addBooks (3,'Designing Data-Intensive Applications.','Data is at the center of many challenges in system design today','Martin Kleppmann',TO_DATE('25-01-16', 'dd/mm/yy'), 400);
+addBooks (4,'Oracle PL/SQL for Dummies.','Find tips for creating efficient PL/SQL code If you know a bit about SQL, this book will make PL/SQL programming painless','Michael Rosenblum',TO_DATE('26-05-06', 'dd/mm/yy'), 464);
 END;
 
 -- Procedures to addBookCopies
@@ -67,6 +69,9 @@ addBookCopies (868023917703, 3);
 addBookCopies (828324957607, 1);
 addBookCopies (162033145736, 2);
 addBookCopies (966025947302, 3);
+addBookCopies (162033145775, 4);
+addBookCopies (162123145775, 4);
+addBookCopies (966025947321, 4);
 END;
 
 -- 2
@@ -141,8 +146,9 @@ v_author books.author%TYPE;
 v_date_published books.date_published%TYPE;
 v_numberOfCopies INT;
 BEGIN
--- Select from 1 - 3
+-- := &x will ask for user input
 v_isbn := &x; 
+-- Call the getBookDetails procedure
 getBookDetails (v_isbn, v_title, v_author, v_date_published, v_numberOfCopies);
 -- Print to Dbms Output
 dbms_output.put_line( 'Book ' || v_isbn || '. Titled ' || v_title || ' Written by ' || v_author || '. Published: ' || v_date_published || '. With ' || v_numberofcopies || ' Copies Available.');
@@ -161,7 +167,9 @@ v_numberOfCopies INT;
 v_i NUMBER := 0;
 v_myIndex NUMBER := 0;
 BEGIN
+-- Get the number of books, Save into v_myIndex
 SELECT COUNT(*) INTO v_myIndex FROM books;
+-- Loop when v_i is less than the number of books
 WHILE v_i < v_myIndex
 LOOP
 -- Increment
@@ -187,6 +195,9 @@ BEGIN
 	WHERE book_copies.isbn = 1;
 END;
 
+
+
+
 -- 6
 -- Write a trigger that reports how many book copies are present after any insert/update/delete operation.
 CREATE OR REPLACE TRIGGER bookTrigger
@@ -205,3 +216,13 @@ END;
 -- Insert a new record, and the trigger will run
 INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (8, 'Kriti', 22, 'HP', 7500.00 );
+
+-- Insert Multiple If Table Is Indexed.
+START TRANSACTION 
+BEGIN
+addBooks (1,'Oracle PL/SQL Programming.','Considered the best Oracle PL/SQL programming guide by the Oracle','Steven Feuerstein',TO_DATE('16-02-14', 'dd/mm/yy'), 1392);
+addBooks (2,'GDPR For Dummies.','Dont be afraid of the GDPR wolf','Learning Made Easy', TO_DATE('23-01-20', 'dd/mm/yy'), 464);
+addBooks (3,'Designing Data-Intensive Applications.','Data is at the center of many challenges in system design today','Martin Kleppmann',TO_DATE('25-01-16', 'dd/mm/yy'), 400);
+addBooks (4,'Oracle PL/SQL for Dummies.','Find tips for creating efficient PL/SQL code If you know a bit about SQL, this book will make PL/SQL programming painless','Michael Rosenblum',TO_DATE('26-05-06', 'dd/mm/yy'), 464);
+END;
+COMMIT;
