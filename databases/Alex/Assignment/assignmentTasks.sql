@@ -41,11 +41,15 @@ VALUES (v_isbn, v_title, v_summary, v_author, v_date_published, v_page_count);
 END addBooks;
 
 -- Insert into books
+START TRANSACTION
+-- Have transaction to ensure table is only indexed 
+-- after all inserts
 BEGIN
 addBooks (1,'Oracle PL/SQL Programming.','Considered the best Oracle PL/SQL programming guide by the Oracle','Steven Feuerstein',TO_DATE('16-02-14', 'dd/mm/yy'), 1392);
 addBooks (2,'GDPR For Dummies.','Dont be afraid of the GDPR wolf','Learning Made Easy', TO_DATE('23-01-20', 'dd/mm/yy'), 464);
 addBooks (3,'Designing Data-Intensive Applications.','Data is at the center of many challenges in system design today','Martin Kleppmann',TO_DATE('25-01-16', 'dd/mm/yy'), 400);
 addBooks (4,'Oracle PL/SQL for Dummies.','Find tips for creating efficient PL/SQL code If you know a bit about SQL, this book will make PL/SQL programming painless','Michael Rosenblum',TO_DATE('26-05-06', 'dd/mm/yy'), 464);
+COMMIT;
 END;
 
 -- Procedures to addBookCopies
@@ -61,6 +65,9 @@ VALUES (v_barcode, v_isbn);
 END addBookCopies;
 
 -- Insert into book_copies
+START TRANSACTION
+-- Have transaction to ensure table is only indexed 
+-- after all inserts
 BEGIN
 --addBookCopies (barcode_id, isbn);
 addBookCopies (129167337463, 1);
@@ -72,6 +79,7 @@ addBookCopies (966025947302, 3);
 addBookCopies (162033145775, 4);
 addBookCopies (162123145775, 4);
 addBookCopies (966025947321, 4);
+COMMIT;
 END;
 
 -- 2
@@ -138,18 +146,32 @@ FROM book_copies
 WHERE isbn = v_isbn;
 END;
 
+-- Create procedure to get details
+CREATE OR REPLACE PROCEDURE getBookDetails1(
+v_isbn IN books.isbn%TYPE,
+v_title OUT books.title%TYPE,
+v_author OUT books.author%TYPE,
+v_date_published OUT books.date_published%TYPE,
+v_numberOfCopies OUT NUMBER)
+IS BEGIN
+SELECT title, author, date_published 
+INTO v_title, v_author, v_date_published
+v_numberOfCopies := bookCopiesC();
+FROM books WHERE isbn = v_isbn;
+END;
+
 -- Test the getBookDetails procedure
 DECLARE
 v_isbn books.isbn%TYPE;
 v_title books.title%TYPE;
 v_author books.author%TYPE;
 v_date_published books.date_published%TYPE;
-v_numberOfCopies INT;
+v_numberOfCopies NUMBER;
 BEGIN
 -- := &x will ask for user input
 v_isbn := &x; 
 -- Call the getBookDetails procedure
-getBookDetails (v_isbn, v_title, v_author, v_date_published, v_numberOfCopies);
+getBookDetails1 (v_isbn, v_title, v_author, v_date_published, v_numberOfCopies);
 -- Print to Dbms Output
 dbms_output.put_line( 'Book ' || v_isbn || '. Titled ' || v_title || ' Written by ' || v_author || '. Published: ' || v_date_published || '. With ' || v_numberofcopies || ' Copies Available.');
 END;
@@ -185,44 +207,36 @@ END;
 
 -- 5
 -- Write a procedure that deletes a book and all copies from the database.
-CREATE OR REPLACE PROCEDURE bookDelete
-FOR EACH ROW
--- Before row is deleted,
--- delete all rows from emp table whose DEPTNO is same as
--- DEPTNO being deleted from dept table:
-BEGIN
-  DELETE FROM book_copies
-	WHERE book_copies.isbn = 1;
+
+-- Create the Procedures
+CREATE OR REPLACE PROCEDURE bookDelete(
+v_isbn IN books.isbn%TYPE
+)
+IS BEGIN
+DELETE FROM books
+WHERE isbn = v_isbn;
+COMMIT;
 END;
 
-
-
+-- Delete a book
+BEGIN
+bookDelete(&x);
+END;
 
 -- 6
 -- Write a trigger that reports how many book copies are present after any insert/update/delete operation.
 CREATE OR REPLACE TRIGGER bookTrigger
-BEFORE INSERT OR UPDATE OR DELETE ON books
+BEFORE DELETE OR INSERT OR UPDATE ON book_copies
 FOR EACH ROW
-WHEN (NEW.ID > 0)
+WHEN (NEW.barcode_id > 0)
 DECLARE
-   book_diff number;
+   ent_diff number;
 BEGIN
-
-   sal_diff := :NEW.salary  - :OLD.salary;
-   dbms_output.put_line('Old salary: ' || :OLD.salary);
-   dbms_output.put_line('New salary: ' || :NEW.salary);
-   dbms_output.put_line('Salary difference: ' || sal_diff);
+   ent_diff := :NEW.barcode_id  - :OLD.barcode_id;
+   dbms_output.put_line('Old barcode_id: ' || :OLD.barcode_id);
+   dbms_output.put_line('New barcode_id: ' || :NEW.barcode_id);
+   dbms_output.put_line('barcode_id difference: ' || ent_diff);
 END;
 -- Insert a new record, and the trigger will run
-INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
-VALUES (8, 'Kriti', 22, 'HP', 7500.00 );
-
--- Insert Multiple If Table Is Indexed.
-START TRANSACTION 
-BEGIN
-addBooks (1,'Oracle PL/SQL Programming.','Considered the best Oracle PL/SQL programming guide by the Oracle','Steven Feuerstein',TO_DATE('16-02-14', 'dd/mm/yy'), 1392);
-addBooks (2,'GDPR For Dummies.','Dont be afraid of the GDPR wolf','Learning Made Easy', TO_DATE('23-01-20', 'dd/mm/yy'), 464);
-addBooks (3,'Designing Data-Intensive Applications.','Data is at the center of many challenges in system design today','Martin Kleppmann',TO_DATE('25-01-16', 'dd/mm/yy'), 400);
-addBooks (4,'Oracle PL/SQL for Dummies.','Find tips for creating efficient PL/SQL code If you know a bit about SQL, this book will make PL/SQL programming painless','Michael Rosenblum',TO_DATE('26-05-06', 'dd/mm/yy'), 464);
-END;
-COMMIT;
+INSERT INTO book_copies (barcode_id, isbn)
+VALUES (123432123454, 4);
