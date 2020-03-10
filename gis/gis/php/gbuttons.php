@@ -9,6 +9,6 @@ echo ' <br>
         <a href="gmapFlight.php" class="btn btn-dark" aria-pressed="true"> Flight Map</a>
         <a href="gmapWind.php" class="btn btn-dark" aria-pressed="true"> Wind Map</a>
         <a href="gmapPins.php" class="btn btn-dark" aria-pressed="true"> KML Pins</a>
-        <a href="gmapAreas.php" class="btn btn-dark" aria-pressed="true"> Council Outline</a>
+        <a href="gmapAreas.php" class="btn btn-dark" aria-pressed="true"> Welsh Areas</a>
         '
 ?>

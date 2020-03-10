@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>A map with custom icons which are Clickable, when clicked display information about each castle.</p>
+        <p>A map with custom icons which are Clickable, when clicked display information about each castle.
+        References: <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Doc</a></p>
         <div id="gmapClick" style="height:400px; width:100%;">
             Google Map
         </div>

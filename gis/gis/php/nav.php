@@ -25,6 +25,9 @@ echo
             <li class="nav-item">
                 <a class="nav-link" href="openOne.php">OpenLayers</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ssOne.php">Server Side</a>
+            </li>
         </ul>
     </div>
 </nav>

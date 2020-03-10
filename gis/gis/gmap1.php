@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>A map with 2 custom pins on the stadiums in south wales.</p>
+        <p>A map with 2 custom pins on the stadiums in south wales.
+        References: <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Doc</a></p>
         <div id="gmap1" style="height:400px; width:100%;">
             Google Map
         </div>

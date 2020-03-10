@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>I used my artistic eye for this one and created a beautiful and easy to read map. (Jokes, it's hideous.) </p>
+        <p>I used my artistic eye for this one and created a beautiful and easy to read map. (Jokes, it's hideous.) 
+        References: <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Doc</a></p>
         <div id="gmapStyled" style="height:400px; width:100%;">
             Google Map
         </div>

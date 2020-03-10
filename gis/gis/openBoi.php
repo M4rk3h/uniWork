@@ -14,7 +14,8 @@
     <?php include 'php/jumbo.php';?>
 
     <div class="centered">
-        <p>Created a default OpenLayers 6 Map.</p>
+        <p>OpenLayers 6 Default Map (Difficult to understand after "building"). <br>
+        References: <a target="_blank" href="https://openlayers.org/en/latest/doc/quickstart.html">OpenLayers 6</a></p>
         <div id="map" class="map" style="height:400px;width:100%;"> </div>
         <?php include 'php/obuttons.php';?>
     </div>

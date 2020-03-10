@@ -16,3 +16,16 @@ From both diagrams shown, this can be compact into a simple set of rules to foll
  
 (Figure 4 – Sentiment Analysis Model, Bibi (2017))
  
+## -- Notes
+Get Data,
+Clean Data (Remove ["", ;, ']
+MultiLine to SingleLine
+
+Import the data
+Create csv (Add [Episode, Text], [i, twinPeaks]
+
+
+Dictionaries
+BING
+AFFIN
+NRC

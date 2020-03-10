@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Created polygons which outline 2 places where wind farms are located.</p>
+        <p>Created polygons which outline 2 places where wind farms are located.
+        References: <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Doc</a></p>
         <div id="gmapWind" style="height:400px; width:100%;">
             Google Map
         </div>

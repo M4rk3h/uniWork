@@ -10,7 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Created a default OpenLayers 4 Map.</p>
+        <p>Created a default OpenLayers 4 Map.
+        References: <a target="_blank" href="https://openlayers.org/en/v4.6.5/doc/tutorials/concepts.html">Leaflet Default</a></p>
         <div id="map" class="map" style="height:400px; width:100%;">
         </div>
         <!-- Include the nav buttons -->

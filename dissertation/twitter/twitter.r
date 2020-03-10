@@ -11,35 +11,29 @@ myKey <- "JDqXGuZJo30VpV1BNeeUK98Nd"
 mySecret <- "tzPKQvUaCeGHpLVKHFPA8xC8dXhybwQbErtpHOhVpC7oOOmkmx"
 myAccessToken <- "755358007-C5LoiSufkyre0gBrKSuVJTdA2Pgz3fU8oHNqZW9q"
 MyAccessSecret <- "KOStBWtiLthtTfy6qHXkfPw0VMfO2U86mODSW7jYQeke0"
+
 # Set auth
 setup_twitter_oauth(myKey,mySecret,myAccessToken,MyAccessSecret)
-# 
-tw = twitteR::searchTwitter('#simpsons', n=3000, lang="en")
-#
-d = twitteR::twListToDF(tw)
-# Export the file
-write.csv(d, file = "simpsonsTest.csv")
-# Read the simpsonsTest
-simpsonsTest <- read.csv("simpsonsTest.csv", stringsAsFactors = FALSE)
+# Get tweets for GilmoreGirls
+sixNations = twitteR::searchTwitter('#SixNations2020', n=3000, lang="en")
+# Put the tweets into variable Ggirls
+sixNationsTweets = twitteR::twListToDF(sixNations)
 # Create a tibble
-simpsonsTib <- tibble(No = simpsonsTest[,1], Words =simpsonsTest[,2])
+tibbleSN <- tibble(Text = sixNationsTweets[,1])
 # Unnest and join with Affin
-simpsonsAffin <- simpsonsTib %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
-
+affinSN <- tibbleSN %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn"))
 # Most popular word
 # Try with bing
-simpsonsAffinCounted <- simpsonsTib %>% 
-  unnest_tokens(word, Words) %>% 
-  inner_join(get_sentiments("afinn")) %>%
-  count(word, sort = TRUE)
+countSN <- tibbleSN %>% unnest_tokens(word, Text) %>% inner_join(get_sentiments("afinn")) %>% count(word, sort = TRUE)
+## Positives
+snPositives <- affinSN %>% filter(value >= 0) 
+## Negatives
+snNegatives <- affinSN %>% filter(value <= 0) %>% count(word, sort = TRUE)
+## WordCloud
+library(wordcloud)
+library(reshape2)
+## Create WordCloud
+snCloud <- countSN %>% with(countSN, !(word =="word")) %>% with (wordcloud(word, n, max.words = 500))
 
-simpsonsTopTen <- simpsonsAffinCounted %>%
-  str(head)
-                         
-## scatter
-# limit top 5 words
-plotOne <- qplot(word, n, data = simpsonsAffinCounted)
-
-## Ggplot
-plotTwo <- ggplot(simpsonsAffinCounted, aes(word, n)) +
-  geom_col(show.legend = TRUE);
+# Export the file
+write.csv(tibbleSN, file = "six-nations.csv")
