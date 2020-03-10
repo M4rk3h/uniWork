@@ -41,16 +41,22 @@ class ViewController: UIViewController {
     var gameState = [0,0,0,0,0,0,0,0,0]
     // Array of winning bois
     let winningCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
+    // Draw
+    var turnCount:Int = 0;
+       
     // Var for gameActive
-    var gameActive = true
+    var gameActive = true;
+    
     
     // Reset Game Btn
     @IBAction func reset(_ sender: UIButton) {
         output.text = "Game Reset"
         viewDidLoad()
-        activePlayer = 1
-        gameState = [0,0,0,0,0,0,0,0,0]
-        gameActive = true
+        activePlayer = 1;
+        gameState = [0,0,0,0,0,0,0,0,0];
+        gameActive = true;
+        turnCount = 0;
+        output.text = " ";
     }
     
     // Function to alternate players & images
@@ -60,21 +66,27 @@ class ViewController: UIViewController {
             gameState[sender.tag-1] = activePlayer
             if (activePlayer == 1){
                 output.text = "Circles turn"
+                turnCount = turnCount + 1
+                print(turnCount)
                 sender.setImage(UIImage(named: "cross.png"), for: UIControl.State())
                 activePlayer = 2
         } else {
             output.text = "Cross' turn"
             sender.setImage(UIImage(named: "circle.png"), for: UIControl.State())
             activePlayer = 1
+            turnCount = turnCount + 1
+            print(turnCount)
             }
             for combination in winningCombinations {
                 if (gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]])
                 {
                     gameActive = false
                     if (gameState[combination[0]] == 1){
-                        output.text = "Cross' wins"
+                        output.text = "Cross' Wins"
+                        // Button Hidden
+                        // reset.isHidden = false;
                     } else {
-                        output.text = "Circles wins"
+                        output.text = "Circles Wins"
                         }
                     }
                 }
