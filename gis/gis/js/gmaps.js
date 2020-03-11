@@ -54,41 +54,16 @@ function pinMap() {
 
 function initMapClick() {
   // Declare your locations here
-  var castellCoch = {
-    lat: 51.543765,
-    lng: -3.251874
-  };
-  var caerphillyC = {
-    lat: 51.582942,
-    lng: -3.219495
-  };
-  var cardiffC = {
-    lat: 51.482365,
-    lng: -3.181159
-  };
-  var ruperraC = {
-    lat: 51.575950,
-    lng: -3.125767
-  };
-  var hensolC = {
-    lat: 51.500998,
-    lng: -3.373461
-  };
-  var llantrisantC = {
-    lat: 51.541689,
-    lng: -3.374694
-  };
+  var castellCoch = {lat: 51.543765,lng: -3.251874};
+  var caerphillyC = {lat: 51.582942,lng: -3.219495};
+  var cardiffC = {lat: 51.482365,lng: -3.181159};
+  var ruperraC = {lat: 51.575950,lng: -3.125767};
+  var hensolC = {lat: 51.500998,lng: -3.373461};
+  var llantrisantC = {lat: 51.541689,lng: -3.374694};
   // Where to start the map
-  var middleGround = {
-    lat: 51.547992,
-    lng: -3.277032
-  };
+  var middleGround = {lat: 51.547992,lng: -3.277032};
   // Create an instance of your map
-  var map = new google.maps.Map(document.getElementById('gmapClick'), {
-    zoom: 11,
-    center: middleGround,
-    disableDefaultUI: true,
-  });
+  var map = new google.maps.Map(document.getElementById('gmapClick'), {zoom: 11,center: middleGround,disableDefaultUI: true});
   // Create an icon
   var markerIcon = 'icons/castleIcon.png';
   // Declare your content to appear on click
@@ -99,24 +74,12 @@ function initMapClick() {
   var hensolContent = 'Hensol Castle (previously Hensol House) is a castellated mansion in the gothic architecture style dating from the late 17th century or early 18th century.';
   var llantrisantContent = 'Llantrisant Castle is a ruined castle in Llantrisant, Rhondda Cynon Taf, Glamorgan, Wales. The ruins are on a good elevation, commanding extensive views of the surrounding country.';
   // Create your info windows for each pin
-  var castellInfo = new google.maps.InfoWindow({
-    content: castellContent
-  });
-  var caerphillyInfo = new google.maps.InfoWindow({
-    content: caerphillyContent
-  });
-  var cardiffInfo = new google.maps.InfoWindow({
-    content: cardiffContent
-  });
-  var ruperraInfo = new google.maps.InfoWindow({
-    content: ruperraContent
-  });
-  var hensolInfo = new google.maps.InfoWindow({
-    content: hensolContent
-  });
-  var llantrisantInfo = new google.maps.InfoWindow({
-    content: llantrisantContent
-  });
+  var castellInfo = new google.maps.InfoWindow({content: castellContent});
+  var caerphillyInfo = new google.maps.InfoWindow({content: caerphillyContent});
+  var cardiffInfo = new google.maps.InfoWindow({content: cardiffContent});
+  var ruperraInfo = new google.maps.InfoWindow({content: ruperraContent});
+  var hensolInfo = new google.maps.InfoWindow({content: hensolContent});
+  var llantrisantInfo = new google.maps.InfoWindow({content: llantrisantContent});
   // Declare marker locations
   var markerCastell = new google.maps.Marker({
     position: castellCoch,
@@ -127,7 +90,7 @@ function initMapClick() {
   var markerCaerphilly = new google.maps.Marker({
     position: caerphillyC,
     map: map,
-    title: 'Caerohilly Castle',
+    title: 'Caerphilly Castle',
     icon: markerIcon
   });
   var markerCardiff = new google.maps.Marker({

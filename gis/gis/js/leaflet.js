@@ -82,34 +82,24 @@ function leafMapThree() {
     var carToExe = [[51.398139,-3.345478],[50.734437,-3.420336]];
     // Create the line between cardiff to the rest
     L.polyline(carToDub, {color: '#0E9C62', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToEdi, {color: '#EB0029', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToLee, {color: '#AC944D', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToBan, {color: '#8CD663', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToSou, {color: '#002E3B', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToSta, {color: '#0D8EAD', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToExe, {color: '#4B4E51', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
+    L.polyline(carToEdi, {color: '#EB0029', weight: 8}).bindPopup('Cardiff to Edinburgh').addTo(flights);
+    L.polyline(carToLee, {color: '#AC944D', weight: 8}).bindPopup('Cardiff to Leeds').addTo(flights);
+    L.polyline(carToBan, {color: '#8CD663', weight: 8}).bindPopup('Cardiff to Bangor').addTo(flights);
+    L.polyline(carToSou, {color: '#002E3B', weight: 8}).bindPopup('Cardiff to Southampton').addTo(flights);
+    L.polyline(carToSta, {color: '#0D8EAD', weight: 8}).bindPopup('Cardiff to Stanstead').addTo(flights);
+    L.polyline(carToExe, {color: '#4B4E51', weight: 8}).bindPopup('Cardiff to Exeter').addTo(flights);
+
     // MapBox Attributes
     var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
     // Create the 2 Layers
     var grayscale = L.tileLayer(mbUrl, {id: 'mapbox/light-v9',attribution: mbAttr});
     var streets = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',attribution: mbAttr});
     // Create a map with settings
-    var map = L.map('lmap', {
-        center: [52.5, -3.9],
-        zoom: 6.5,
-        layers: [streets]
-    });
+    var map = L.map('lmap', {center: [52.5, -3.9],zoom: 6.5,layers: [streets]});
     // Add the baseLayers
-    var baseLayers = {
-        "GreyS": grayscale,
-        "Street": streets,
-    };
+    var baseLayers = {"GreyS": grayscale,"Street": streets,};
     // Give the overLayers a name
-    var overlays = {
-        "Castles": castles,
-        "Wind-A": windAreas,
-        "Flights": flights
-    };
+    var overlays = {"Castles": castles,"Wind-A": windAreas,"Flights": flights};
     // Add it all to the map
     L.control.layers(baseLayers, overlays).addTo(map);
     console.log("Leaflet Version" + " - " + L.version);
@@ -118,11 +108,7 @@ function leafMapThree() {
 function leafMapFour(){
     // Create a map instance with view, zoom
     //var map = L.map('lmap').setView([52.5, -3.9], 6.5);
-    var map = L.map('lmap', {
-        center: [52.5, -3.9],
-        zoom: 6.5,
-        gestureHandling: true
-    })
+    var map = L.map('lmap', {center: [52.5, -3.9],zoom: 6.5,gestureHandling: true})
     // Add a tileLayer (OpenStreetMaps)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar',attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
     // Create consts for usw locations
@@ -130,12 +116,7 @@ function leafMapFour(){
     const theSouth = L.latLng(51.377982, -3.121844);
     // Leaflet Plugin - Leaflet Routing Machine
     // http://www.liedman.net/leaflet-routing-machine/
-    L.Routing.control({
-        waypoints: [
-          theNorth,
-          theSouth
-        ]
-      }).addTo(map);
+    L.Routing.control({waypoints: [theNorth,theSouth]}).addTo(map);
 };
 
 function leafMapFive(){
@@ -146,14 +127,9 @@ function leafMapFive(){
     // Create the line between cardiff to the rest
     L.polyline(trefToCar, {color: 'Green', weight: 8}).bindPopup('USW Trefforest & USW Cardiff').addTo(unis);
     // Att the layer group to the map
-    var map = L.map('lmap', {
-        center: [51.538041, -3.263105],
-        zoom: 11,
-        layers: [unis]
-    })
+    var map = L.map('lmap', {center: [51.538041, -3.263105],zoom: 11,layers: [unis]})
     // Add an animation
-    var line = L.polyline([[51.589930, -3.330830],[51.479758, -3.169233]]),
-        animatedMarker = L.animatedMarker(line.getLatLngs());
+    var line = L.polyline([[51.589930, -3.330830],[51.479758, -3.169233]]),animatedMarker = L.animatedMarker(line.getLatLngs());
     // Add it to the map
     map.addLayer(animatedMarker);
     // Add a tileLayer (OpenStreetMaps)
