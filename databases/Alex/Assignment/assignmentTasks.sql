@@ -8,14 +8,14 @@ author VARCHAR2(200),
 date_published DATE,
 page_count NUMBER
 );
-/
+
 -- Book_Copies
 CREATE TABLE book_copies(
 barcode_id VARCHAR2(100) NOT NULL PRIMARY KEY,
 isbn VARCHAR2(13) REFERENCES books (isbn)
 ON DELETE CASCADE
 );
-/
+
 
 -- 1
 -- Populate the tables by writing a procedure that inserts a new record into the database.
@@ -41,15 +41,11 @@ VALUES (v_isbn, v_title, v_summary, v_author, v_date_published, v_page_count);
 END addBooks;
 
 -- Insert into books
-START TRANSACTION
--- Have transaction to ensure table is only indexed 
--- after all inserts
 BEGIN
 addBooks (1,'Oracle PL/SQL Programming.','Considered the best Oracle PL/SQL programming guide by the Oracle','Steven Feuerstein',TO_DATE('16-02-14', 'dd/mm/yy'), 1392);
 addBooks (2,'GDPR For Dummies.','Dont be afraid of the GDPR wolf','Learning Made Easy', TO_DATE('23-01-20', 'dd/mm/yy'), 464);
 addBooks (3,'Designing Data-Intensive Applications.','Data is at the center of many challenges in system design today','Martin Kleppmann',TO_DATE('25-01-16', 'dd/mm/yy'), 400);
 addBooks (4,'Oracle PL/SQL for Dummies.','Find tips for creating efficient PL/SQL code If you know a bit about SQL, this book will make PL/SQL programming painless','Michael Rosenblum',TO_DATE('26-05-06', 'dd/mm/yy'), 464);
-COMMIT;
 END;
 
 -- Procedures to addBookCopies
@@ -65,9 +61,6 @@ VALUES (v_barcode, v_isbn);
 END addBookCopies;
 
 -- Insert into book_copies
-START TRANSACTION
--- Have transaction to ensure table is only indexed 
--- after all inserts
 BEGIN
 --addBookCopies (barcode_id, isbn);
 addBookCopies (129167337463, 1);
@@ -79,7 +72,6 @@ addBookCopies (966025947302, 3);
 addBookCopies (162033145775, 4);
 addBookCopies (162123145775, 4);
 addBookCopies (966025947321, 4);
-COMMIT;
 END;
 
 -- 2
@@ -91,6 +83,8 @@ total number(2) := 0;
 BEGIN
 SELECT DISTINCT count(*) into total
 FROM books;
+-- WHERE isbn = &x;
+-- This part isn't changeable.
 RETURN total;
 END;
 
@@ -136,6 +130,7 @@ v_isbn IN books.isbn%TYPE,
 v_title OUT books.title%TYPE,
 v_author OUT books.author%TYPE,
 v_date_published OUT books.date_published%TYPE,
+-- NumberOfCopies should be my count, but can't figure it out.
 v_numberOfCopies OUT INT)
 IS BEGIN
 SELECT title, author, date_published 
@@ -144,20 +139,6 @@ FROM books WHERE isbn = v_isbn;
 SELECT COUNT(*) INTO v_numberOfCopies 
 FROM book_copies
 WHERE isbn = v_isbn;
-END;
-
--- Create procedure to get details
-CREATE OR REPLACE PROCEDURE getBookDetails1(
-v_isbn IN books.isbn%TYPE,
-v_title OUT books.title%TYPE,
-v_author OUT books.author%TYPE,
-v_date_published OUT books.date_published%TYPE,
-v_numberOfCopies OUT NUMBER)
-IS BEGIN
-SELECT title, author, date_published 
-INTO v_title, v_author, v_date_published
-v_numberOfCopies := bookCopiesC();
-FROM books WHERE isbn = v_isbn;
 END;
 
 -- Test the getBookDetails procedure
@@ -220,23 +201,38 @@ END;
 
 -- Delete a book
 BEGIN
+-- Select between 1 - 4 for which book&copies to delete.
 bookDelete(&x);
 END;
 
 -- 6
 -- Write a trigger that reports how many book copies are present after any insert/update/delete operation.
 CREATE OR REPLACE TRIGGER bookTrigger
-BEFORE DELETE OR INSERT OR UPDATE ON book_copies
-FOR EACH ROW
-WHEN (NEW.barcode_id > 0)
+AFTER DELETE OR INSERT OR UPDATE ON book_copies
 DECLARE
-   ent_diff number;
+   total number;
 BEGIN
-   ent_diff := :NEW.barcode_id  - :OLD.barcode_id;
-   dbms_output.put_line('Old barcode_id: ' || :OLD.barcode_id);
-   dbms_output.put_line('New barcode_id: ' || :NEW.barcode_id);
-   dbms_output.put_line('barcode_id difference: ' || ent_diff);
+-- Count function
+SELECT COUNT(*) INTO TOTAL
+FROM book_copies;
+dbms_output.put_line('There are now ' || total || ' copies available.');
+-- print
 END;
--- Insert a new record, and the trigger will run
+
+-- Delete && trigger should run
+BEGIN
+delete from book_copies where barcode_id = 828324957607;
+END;
+
+-- Insert && trigger should run
+BEGIN
 INSERT INTO book_copies (barcode_id, isbn)
-VALUES (123432123454, 4);
+VALUES (123432123454, 1);
+END;
+
+-- Update && trigger should run
+BEGIN
+UPDATE book_copies
+SET isbn = 3
+WHERE barcode_id = 123432123454; 
+END;
