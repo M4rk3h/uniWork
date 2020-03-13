@@ -169,6 +169,15 @@ function leafMapSix() {
         transparent: true
     }).addTo(map);
 
-        // Leaflet TileLayer - {s} can ping each site in parallel.
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar',attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
+	// Leaflet TileLayer - {s} can ping each site in parallel.
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar',attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
+};
+
+function leafMapSeven(){
+    var map = L.map('lmap', {center: [52.5, -3.9],zoom: 6.5,gestureHandling: true})
+    // Add a tileLayer (OpenStreetMaps)
+    var mySource = 'https://tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey=a023e64d34974bcba60d661bcfacfd9b'
+    // Add the layer mySource
+    layer = new L.TileLayer(mySource, { maxZoom: 18 });
+    map.addLayer(layer);
 };
