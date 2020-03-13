@@ -162,7 +162,7 @@ function leafMapFive(){
 
 function leafMapSix() {
     // Make a new map (L.map (getElementByID))
-    var map = L.map('lmap').setView([51.589611, -3.327511], 15);
+    var map = L.map('lmap').setView([51.589611, -3.327511], 5);
 
     var layer = new L.GIBSLayer('VIIRS_CityLights_2012', {
         date: new Date('2015/04/01'),
@@ -170,14 +170,15 @@ function leafMapSix() {
     }).addTo(map);
 
 	// Leaflet TileLayer - {s} can ping each site in parallel.
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar',attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
+	//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar',attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(map);
 };
 
 function leafMapSeven(){
-    var map = L.map('lmap', {center: [52.5, -3.9],zoom: 6.5,gestureHandling: true})
+    var map = L.map('lmap', {center: [52.5, -3.9],zoom: 5,gestureHandling: true})
     // Add a tileLayer (OpenStreetMaps)
     var mySource = 'https://tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey=a023e64d34974bcba60d661bcfacfd9b'
     // Add the layer mySource
     layer = new L.TileLayer(mySource, { maxZoom: 18 });
+    // Add the layer to the map
     map.addLayer(layer);
 };

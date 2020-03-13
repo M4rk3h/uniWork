@@ -1,0 +1,29 @@
+Looked at data from 
+
+thunderforest.com
+
+LLE Welsh Government Lle WMS
+WMS
+http://lle.gov.wales/services/wms/wg
+Source
+http://lle.gov.wales/catalogue/item/WelshGovernmentWMS/?lang=en
+
+LLE Welsh Government Historic Aerial Photography WMTS
+WMS
+http://lle.gov.wales/services/tiles/apu/wmts
+Source
+http://lle.gov.wales/catalogue/item/WelshGovernmentAerialPhotographyUnitWMTS/?lang=en
+
+NASA 
+WMS
+https://neo.sci.gsfc.nasa.gov/wms/wms
+Source
+https://neo.sci.gsfc.nasa.gov/about/wms.php
+
+Mundialis 
+WMS
+http://ows.mundialis.de/services/service?
+Source
+https://www.mundialis.de/en/ows-mundialis/
+
+

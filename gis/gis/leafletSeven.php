@@ -3,9 +3,6 @@
 <head>
     <!-- Include the head info from a PHP file -->
     <?php include 'php/lhead.php';?>
-    <!-- Include Leaflet Plugins Here -->
-    <script src="node_modules/leaflet-GIBS/src/GIBSMetadata.js"></script>
-    <script src="node_modules/leaflet-GIBS/src/GIBSLayer.js"></script>
 </head>
 <body>
     <!-- Include the nav bar from a PHP file -->
@@ -13,8 +10,8 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Leaflet Plugin Animation. 
-        References: <a target="_blank" href="https://github.com/openplans/Leaflet.AnimatedMarker">Animation</a></p>
+        <p>Thunderforest Spinal Map
+        References: <a target="_blank" href="https://www.thunderforest.com/maps/spinal-map/">Spinal Map</a></p>
         <div id="lmap" style="height:400px; width:100%;">
             Leaflet Map
         </div>
@@ -23,7 +20,7 @@
     </div>
 
     <script>
-        leafMapSix();
+        leafMapSeven();
     </script>
 </body>
 </html>
