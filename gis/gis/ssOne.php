@@ -22,55 +22,16 @@
     <script>
     // Create the map
     var map = L.map('lmap').setView([52.5, -3.9], 6.5);
-    // create a tileLayer which shows the map details
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-        maxZoom: 18,
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox/light-v9'
-    }).addTo(map);
-    
-    $(document).ready(function(){
-    console.log("OK Document has finished loading");
-    
-    //define two JS objects:
-    //	"data" will hold GeoJSON data
-    //	"dataLayer" for Leaflet’s rendering into layer objects for the map
-    
-    var data = {};
-    var dataLayer;
-    
-    //GeoJson data are added to the map by this function
-    function addData(){
-    
-        console.log("File load has completed, can now build map using retrieved data...");
-        console.log(" ");
-        console.log(data);
-            
-        //parse GeoJSON to create a layer to be added to the map
-        dataLayer = L.geoJson(data, {
-        
-            //show features as circles rather than use default markers -->
-             pointToLayer: function(feature, latlng){ 
-                 return L.circleMarker(latlng, { 
-                    radius: 4,	color: '#000', fillColor: '#000', 	fillOpacity: 1
-                 }) 
-            } 
-        }).addTo(map);
+    // create a tileLayer with WMS which shows the map details
+	L.tileLayer.wms('http://81.87.34.57:8080/geoserver/s01/wms',{
+				opacity: 1.0,
+				layers: 's01:outline',
+				format: 'image/png',
+				transparent: true,
+				attribution: 'from CES-GIS GeoServer'
+		}).addTo(map);
 
-    };
-
-    //load data asynchronously using AJAX
-    $.when(    
-        //place deferred AJAX requests here
-        $.getJSON('data/aba.js', function(result){
-            data = result;
-        })
-        
-    //the callback function "addData" is called only when finished  
-    ).then(addData);
-    });				
+    
     </script>
 </body>
 </html>

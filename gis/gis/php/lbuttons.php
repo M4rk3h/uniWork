@@ -8,5 +8,6 @@
         <a href="leafletThree.php" class="btn btn-dark" aria-pressed="true"> 3 </a>
         <a href="leafletFour.php" class="btn btn-dark" aria-pressed="true"> 4 </a>
         <a href="leafletFive.php" class="btn btn-dark" aria-pressed="true"> 5 </a>
+        <a href="leafletSix.php" class="btn btn-dark" aria-pressed="true"> 6 </a>
 '
 ?>
