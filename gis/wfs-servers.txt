@@ -20,10 +20,14 @@ https://neo.sci.gsfc.nasa.gov/wms/wms
 Source
 https://neo.sci.gsfc.nasa.gov/about/wms.php
 
-Mundialis 
+
+Japan
 WMS
-http://ows.mundialis.de/services/service?
+https://gbank.gsj.jp/seamless/tilemap/detailed/WMTSCapabilities.xml
 Source
-https://www.mundialis.de/en/ows-mundialis/
+https://freegistutorial.com/how-to-add-wmts-layer-on-qgis/
 
-
+rnd
+https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/WMTS/1.0.0/WMTSCapabilities.xml
+Source
+https://www.northrivergeographic.com/qgis-adding-wmts-layer
