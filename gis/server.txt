@@ -3,3 +3,25 @@ Host Name: ces-web2.southwales.ac.uk
 Port Number: 21
 User Name: 17076749
 Password: 
+
+
+
+GeoServer
+http://ces-gis.usw.southwales.ac.uk:8080/geoserver/web/
+
+s01:aonb
+s01:buildings
+s01:builtupareas
+s01:dentists
+s01:floodwarning
+s01:floodwatch
+s01:motorways
+s01:naturalbeauty
+s01:outline
+s01:primaryschools
+s01:railwaystations
+s01:railwaytrack
+s01:roads
+s01:water_line
+s01:water_poly
+s01:woodland
