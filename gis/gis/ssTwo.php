@@ -10,7 +10,7 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Wales Outline Created With ShapeFile on GeoServer.
+        <p>Wales Outline & Dentists from GeoServer
         References: <a target="_blank" href="http://ces-gis.usw.southwales.ac.uk:8080/geoserver/web/">GeoServer</a>
         <div id="lmap" style="height:400px; width:100%;">
             Leaflet Map
@@ -20,7 +20,7 @@
     </div>
 
     <script>
-    ssOne();
+    ssTwo();
     </script>
 </body>
 </html>
