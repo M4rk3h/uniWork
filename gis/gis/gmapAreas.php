@@ -10,7 +10,7 @@
     <!-- Include the nav bar from a PHP file -->
     <?php include 'php/jumbo.php';?>
     <div class="centered">
-        <p>Welsh Areas from External KML
+        <p>Welsh AONB from External KML
         References: <a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Doc</a></p>
         <div id="gmapCustom" style="height:400px; width:100%;">
             Google Map

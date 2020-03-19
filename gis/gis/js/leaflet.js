@@ -82,12 +82,12 @@ function leafMapThree() {
     var carToExe = [[51.398139,-3.345478],[50.734437,-3.420336]];
     // Create the line between cardiff to the rest
     L.polyline(carToDub, {color: '#0E9C62', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToEdi, {color: '#EB0029', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToLee, {color: '#AC944D', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToBan, {color: '#8CD663', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToSou, {color: '#002E3B', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToSta, {color: '#0D8EAD', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
-    L.polyline(carToExe, {color: '#4B4E51', weight: 8}).bindPopup('Cardiff to Dublin').addTo(flights);
+    L.polyline(carToEdi, {color: '#EB0029', weight: 8}).bindPopup('Cardiff to Edinburgh').addTo(flights);
+    L.polyline(carToLee, {color: '#AC944D', weight: 8}).bindPopup('Cardiff to Leeds').addTo(flights);
+    L.polyline(carToBan, {color: '#8CD663', weight: 8}).bindPopup('Cardiff to Bangor').addTo(flights);
+    L.polyline(carToSou, {color: '#002E3B', weight: 8}).bindPopup('Cardiff to Southampton').addTo(flights);
+    L.polyline(carToSta, {color: '#0D8EAD', weight: 8}).bindPopup('Cardiff to Stanstead').addTo(flights);
+    L.polyline(carToExe, {color: '#4B4E51', weight: 8}).bindPopup('Cardiff to Exeter').addTo(flights);
     // MapBox Attributes
     var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
     // Create the 2 Layers
