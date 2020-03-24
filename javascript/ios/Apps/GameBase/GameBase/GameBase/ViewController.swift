@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+    // When game loads
+    override func   () {
         super.viewDidLoad()
-        // for loop to set images to nothing.
+        // Loop through the board and set the buttons
         for i in 1...9{
             let button = view.viewWithTag(i) as! UIButton
             button.setImage(nil, for : UIControl.State())
@@ -20,15 +20,16 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var output: UILabel!
-    // Input Text
+
     @IBOutlet weak var input: UITextField!
-    // Save function
+
+    // Player input as input.
     @IBAction func save(_ sender: Any) {
         output.text = input.text
         UserDefaults.standard.set(input.text, forKey: "myName")
         input.text=""
     }
-    
+    // Store input as string to variable x
     override func viewDidAppear(_ animated: Bool) {
         if let x = UserDefaults.standard.object(forKey: "myName") as? String{
             output.text = x
@@ -43,10 +44,8 @@ class ViewController: UIViewController {
     let winningCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     // Draw
     var turnCount:Int = 0;
-       
     // Var for gameActive
     var gameActive = true;
-    
     
     // Reset Game Btn
     @IBAction func reset(_ sender: UIButton) {
