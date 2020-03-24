@@ -36,8 +36,6 @@ affins1e6 <- tibs1e6 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiment
 affins1e7 <- tibs1e7 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 affins1e8 <- tibs1e8 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 
-affins1 <- season1 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
-
 ## Count
 counts1e1 <- count(affins1e1, vars = "Episode")
 counts1e2 <- count(affins1e2, vars = "Episode")
@@ -70,10 +68,10 @@ countPs1e8 <- count(positives1e8, vars = "Episode")
 ## Find top 10 words
 countPosWord <- count(affins1e1, var = 'word')
 
-countPosWord <- affins1e1 %>% group_by('word') %>% 
+# countPosWord <- affins1e1 %>% group_by('word') %>% 
   mutate(total = sum('word'))
 
-affins1e1 %>% 
+# affins1e1 %>% 
 
 ## Filter Negative
 negatives1e1 <- affins1e1 %>% filter(value <= 0)
