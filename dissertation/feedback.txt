@@ -26,3 +26,22 @@ I’m not sure what Chapter 3 is meant to be, it appears to belong in the Lit Re
 The LSEPI could also be tidied in places but covers the important parts.
 Overall this has some good content and you are well set for the project to start some 
 experiments, but the document itself can be refined a bit for the final version.
+
+
+Hi Mark
+This looks good.
+A few comments:
+Don't use author initials in citations (you don't usually do this, but I did spot it once at least).
+The software options doesn't list RStudio, would be useful for comparison with paid-for options.
+You add a note "– I Used a website to convert the data from multi line to single line, because the data was too big to fit into a database. By using this website, it sped up the process of me doing it manually." Make sure you discuss challenges like this in your implementation chapter, to show what you had to overcome and how you did so.
+The design chapter could start off by establishing exactly what questions you are intending to tackle. Then the rest of it can be about how you will set things up to answer the questions.
+
+Implementation can contain the results, with the basic conclusions about the actual analysis (ie. what relationships did you detect etc).
+Then the Conclusion chapter can be a bit higher-level, what have you learned about the techniques and the tools used etc?
+
+Let me know progress, if you want me to look at bits that you have updated in this document then point me to the changes so I can focus on them.
+
+Take care
+
+Paul
+
