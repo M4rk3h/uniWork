@@ -15,6 +15,7 @@ s1e5 <- read.csv("s1e5-mod.txt", sep=",", header=TRUE, stringsAsFactors = FALSE)
 s1e6 <- read.csv("s1e6-mod.txt", sep=",", header=TRUE, stringsAsFactors = FALSE)
 s1e7 <- read.csv("s1e7-mod.txt", sep=",", header=TRUE, stringsAsFactors = FALSE)
 s1e8 <- read.csv("s1e8-mod.txt", sep=",", header=TRUE, stringsAsFactors = FALSE)
+
 ## create a tibble with the Episode ([,1]) & Words ([,2])
 tibs1e1 <- tibble(Episode = s1e1[,1], Words = s1e1[,2])
 tibs1e2 <- tibble(Episode = s1e2[,1], Words = s1e2[,2])
@@ -24,6 +25,7 @@ tibs1e5 <- tibble(Episode = s1e5[,1], Words = s1e5[,2])
 tibs1e6 <- tibble(Episode = s1e6[,1], Words = s1e6[,2])
 tibs1e7 <- tibble(Episode = s1e7[,1], Words = s1e7[,2])
 tibs1e8 <- tibble(Episode = s1e8[,1], Words = s1e8[,2])
+
 ## Use Inner_Join with afinn
 afinns1e1 <- tibs1e1 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 afinns1e2 <- tibs1e2 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
@@ -33,6 +35,12 @@ afinns1e5 <- tibs1e5 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiment
 afinns1e6 <- tibs1e6 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 afinns1e7 <- tibs1e7 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 afinns1e8 <- tibs1e8 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
+
+## Look at Loughran example 
+## loughran <- tibs1e1 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("loughran"))
+## Look at nrc example
+## nrc <- tibs1e1 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("nrc"))
+
 ## Use Dictionary bing
 bings1e1 <- tibs1e1 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("bing"))
 bings1e2 <- tibs1e2 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("bing"))

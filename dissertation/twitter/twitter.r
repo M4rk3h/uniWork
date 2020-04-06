@@ -13,7 +13,9 @@ library(stringr)
 library(readr)
 library(textdata)
 
-# Change the next four lines based on your own consumer_key, consume_secret, access_token, and access_secret. 
+# Change the next four lines based on your own 
+# consumer_key, consume_secret, 
+# access_token, and access_secret. 
 myKey <- "L4RX6Eqv2AF8FUkJpifKenFa2"
 mySecret <- "hfvFd3aYrYptmkhKeQxEF6hjg8iQkyeP0hFTnKMc4ntD2zegVp"
 myAccessToken <- "755358007-sWNj4mGBoTZYaNoKxFpo7oyVMxnFRiWYWqpXFifI"
@@ -21,7 +23,7 @@ MyAccessSecret <- "z5jYKRCmr0CNUUQZZOVyuRRPHnXLcdY3DcScIQBr40n7V"
 
 # Set auth
 setup_twitter_oauth(myKey,mySecret,myAccessToken,MyAccessSecret)
-# Get tweets 
+# Get tweets with the #TwinPeaks, get 3000 of them in english.
 tps1 = twitteR::searchTwitter('#TwinPeaks', n=3000, lang="en")
 # Put the tweets into variable 
 tpTweets = twitteR::twListToDF(tps1)
