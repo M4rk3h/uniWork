@@ -1,9 +1,9 @@
 ## FTP
 File Protocol: FTP
 Host Name: ces-web2.southwales.ac.uk
+User Name: student-no
+Password: student-pass
 Port Number: 21
-User Name: 17076749
-Password: 
 
 ## Database
 Username: 17076749
