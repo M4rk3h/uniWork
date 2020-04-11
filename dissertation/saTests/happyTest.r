@@ -1,9 +1,8 @@
 # This is going to be our script
 # Install packages
-install.packages("tidyverse")
-install.packages("tidytext")
-install.packages("textdata")
-install.packages("tibble")
+install.packages(c("tidyverse", "tidytext",
+                   "tidyr", "textdata","tibble",
+                   "tm",))
 
 # Load packages
 library(tidyverse)
@@ -23,8 +22,7 @@ install_github("juliasilge/tidytext")
 happyWords <- read.csv("happy.csv", sep=",", header=TRUE, stringsAsFactors = FALSE)
 
 # Create a Tibble with the ID and Before
-happyTib <- tibble(ID = happyWords[,1],
-                    Words = happyWords[,2])
+happyTib <- tibble(ID = happyWords[,1], Words = happyWords[,2])
 # Checking beforeTib
 head(happyTib)
 
