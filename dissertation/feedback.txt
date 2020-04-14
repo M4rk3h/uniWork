@@ -21,8 +21,6 @@ You might give clearer examples to help the reader.
 
 The software discussion is good, but needs a conclusion.
 
-I’m not sure what Chapter 3 is meant to be, it appears to belong in the Lit Review still.
-
 The LSEPI could also be tidied in places but covers the important parts.
 Overall this has some good content and you are well set for the project to start some 
 experiments, but the document itself can be refined a bit for the final version.
@@ -39,6 +37,7 @@ You add a note
 	"I Used a website to convert the data from multi line to single line, 
 	because the data was too big to fit into a database. 
 	By using this website, it sped up the process of me doing it manually." 
+
 Make sure you discuss challenges like this in your implementation chapter, to show what you had to overcome and how you did so.
 
 The design chapter could start off by establishing exactly what questions you are intending to tackle. 

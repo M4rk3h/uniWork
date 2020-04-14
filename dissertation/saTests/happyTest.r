@@ -2,7 +2,7 @@
 # Install packages
 install.packages(c("tidyverse", "tidytext",
                    "tidyr", "textdata","tibble",
-                   "tm",))
+                   "tm"))
 
 # Load packages
 library(tidyverse)
@@ -13,9 +13,9 @@ library(tm)
 library(dplyr)
 library(ggplot2)
 ## If TidyText doesn't install
-# install from github
-library(remotes)
-install_github("juliasilge/tidytext")
+## install from github
+## library(remotes)
+## install_github("juliasilge/tidytext")
 
 # Import csv's you want 
 ## Try with simple csv's
@@ -32,6 +32,7 @@ head(happyTib)
 happyAfinn <- happyTib %>% 
   unnest_tokens(word, Words) %>%
   inner_join(get_sentiments("afinn"))
+head(happyAfinn)
 
 happyBing <- happyTib %>% 
   unnest_tokens(word, Words) %>%
@@ -71,7 +72,7 @@ songSentimentAfin <- tidySongs %>%
 
 # Plot it onto a graph
 ## Deleting 2 songs ## ERROR
-plotOne <- ggplot(songSentiment, aes(index, sentiment, fill = ID)) +
+plotOne <- ggplot(happyAfinn, aes(index, sentiment, fill = ID)) +
   geom_col(show.legend = TRUE) +
   facet_wrap(~ID, ncol = 2, scales = "free_x")
 
