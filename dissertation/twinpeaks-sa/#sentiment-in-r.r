@@ -78,7 +78,7 @@ positiveafinns1e5 <- afinns1e5 %>% filter(value >= 0)
 positiveafinns1e6 <- afinns1e6 %>% filter(value >= 0)
 positiveafinns1e7 <- afinns1e7 %>% filter(value >= 0)
 positiveafinns1e8 <- afinns1e8 %>% filter(value >= 0)
-## afinn Filter Positive
+## bing Filter Positive
 positivebings1e1 <- bings1e1 %>% filter(sentiment == 'positive')
 positivebings1e2 <- bings1e2 %>% filter(sentiment == 'positive')
 positivebings1e3 <- bings1e3 %>% filter(sentiment == 'positive')
@@ -142,6 +142,83 @@ countNBs1e5 <- count(negativebings1e5, vars = "Episode")
 countNBs1e6 <- count(negativebings1e6, vars = "Episode")
 countNBs1e7 <- count(negativebings1e7, vars = "Episode")
 countNBs1e8 <- count(negativebings1e8, vars = "Episode")
+## Top 10 Positive words
+## afinn
+s1e1PosAfinn <- positiveAfinns1e1 %>% count(word) %>% arrange(desc(n))
+s1e2PosAfinn <- positiveAfinns1e2 %>% count(word) %>% arrange(desc(n))
+s1e3PosAfinn <- positiveAfinns1e3 %>% count(word) %>% arrange(desc(n))
+s1e4PosAfinn <- positiveAfinns1e4 %>% count(word) %>% arrange(desc(n))
+s1e5PosAfinn <- positiveAfinns1e5 %>% count(word) %>% arrange(desc(n))
+s1e6PosAfinn <- positiveAfinns1e6 %>% count(word) %>% arrange(desc(n))
+s1e7PosAfinn <- positiveAfinns1e7 %>% count(word) %>% arrange(desc(n))
+s1e8PosAfinn <- positiveAfinns1e8 %>% count(word) %>% arrange(desc(n))
+## bing
+s1e1PosBing <- positiveBings1e1 %>% count(word) %>% arrange(desc(n))
+s1e2PosBing <- positiveBings1e2 %>% count(word) %>% arrange(desc(n))
+s1e3PosBing <- positiveBings1e3 %>% count(word) %>% arrange(desc(n))
+s1e4PosBing <- positiveBings1e4 %>% count(word) %>% arrange(desc(n))
+s1e5PosBing <- positiveBings1e5 %>% count(word) %>% arrange(desc(n))
+s1e6PosBing <- positiveBings1e6 %>% count(word) %>% arrange(desc(n))
+s1e7PosBing <- positiveBings1e7 %>% count(word) %>% arrange(desc(n))
+s1e8PosBing <- positiveBings1e8 %>% count(word) %>% arrange(desc(n))
+## Top 10 Negative words
+## afinn
+s1e1NegAfinn <- negativeAfinns1e1 %>% count(word) %>% arrange(desc(n))
+s1e2NegAfinn <- negativeAfinns1e2 %>% count(word) %>% arrange(desc(n))
+s1e3NegAfinn <- negativeAfinns1e3 %>% count(word) %>% arrange(desc(n))
+s1e4NegAfinn <- negativeAfinns1e4 %>% count(word) %>% arrange(desc(n))
+s1e5NegAfinn <- negativeAfinns1e5 %>% count(word) %>% arrange(desc(n))
+s1e6NegAfinn <- negativeAfinns1e6 %>% count(word) %>% arrange(desc(n))
+s1e7NegAfinn <- negativeAfinns1e7 %>% count(word) %>% arrange(desc(n))
+s1e8NegAfinn <- negativeAfinns1e8 %>% count(word) %>% arrange(desc(n))
+## bing
+s1e1NegBing <- negativeBings1e1 %>% count(word) %>% arrange(desc(n))
+s1e2NegBing <- negativeBings1e2 %>% count(word) %>% arrange(desc(n))
+s1e3NegBing <- negativeBings1e3 %>% count(word) %>% arrange(desc(n))
+s1e4NegBing <- negativeBings1e4 %>% count(word) %>% arrange(desc(n))
+s1e5NegBing <- negativeBings1e5 %>% count(word) %>% arrange(desc(n))
+s1e6NegBing <- negativeBings1e6 %>% count(word) %>% arrange(desc(n))
+s1e7NegBing <- negativeBings1e7 %>% count(word) %>% arrange(desc(n))
+s1e8NegBing <- negativeBings1e8 %>% count(word) %>% arrange(desc(n))
+
+## Save Season 1 Afinns
+# Positive
+write.csv(s1e1PosAfinn, file = "top-ten/PosAfinns1e1.csv")
+write.csv(s1e2PosAfinn, file = "top-ten/PosAfinns1e2.csv")
+write.csv(s1e3PosAfinn, file = "top-ten/PosAfinns1e3.csv")
+write.csv(s1e4PosAfinn, file = "top-ten/PosAfinns1e4.csv")
+write.csv(s1e5PosAfinn, file = "top-ten/PosAfinns1e5.csv")
+write.csv(s1e6PosAfinn, file = "top-ten/PosAfinns1e6.csv")
+write.csv(s1e7PosAfinn, file = "top-ten/PosAfinns1e7.csv")
+write.csv(s1e8PosAfinn, file = "top-ten/PosAfinns1e8.csv")
+# Negative
+write.csv(s1e1NegAfinn, file = "top-ten/NegAfinns1e1.csv")
+write.csv(s1e2NegAfinn, file = "top-ten/NegAfinns1e2.csv")
+write.csv(s1e3NegAfinn, file = "top-ten/NegAfinns1e3.csv")
+write.csv(s1e4NegAfinn, file = "top-ten/NegAfinns1e4.csv")
+write.csv(s1e5NegAfinn, file = "top-ten/NegAfinns1e5.csv")
+write.csv(s1e6NegAfinn, file = "top-ten/NegAfinns1e6.csv")
+write.csv(s1e7NegAfinn, file = "top-ten/NegAfinns1e7.csv")
+write.csv(s1e8NegAfinn, file = "top-ten/NegAfinns1e8.csv")
+## Save Season 1 Bings
+# Positive
+write.csv(s1e1PosBing, file = "top-ten/PosBings1e1.csv")
+write.csv(s1e2PosBing, file = "top-ten/PosBings1e2.csv")
+write.csv(s1e3PosBing, file = "top-ten/PosBings1e3.csv")
+write.csv(s1e4PosBing, file = "top-ten/PosBings1e4.csv")
+write.csv(s1e5PosBing, file = "top-ten/PosBings1e5.csv")
+write.csv(s1e6PosBing, file = "top-ten/PosBings1e6.csv")
+write.csv(s1e7PosBing, file = "top-ten/PosBings1e7.csv")
+write.csv(s1e8PosBing, file = "top-ten/PosBings1e8.csv")
+# Negative
+write.csv(s1e1NegBing, file = "top-ten/NegBings1e1.csv")
+write.csv(s1e2NegBing, file = "top-ten/NegBings1e2.csv")
+write.csv(s1e3NegBing, file = "top-ten/NegBings1e3.csv")
+write.csv(s1e4NegBing, file = "top-ten/NegBings1e4.csv")
+write.csv(s1e5NegBing, file = "top-ten/NegBings1e5.csv")
+write.csv(s1e6NegBing, file = "top-ten/NegBings1e6.csv")
+write.csv(s1e7NegBing, file = "top-ten/NegBings1e7.csv")
+write.csv(s1e8NegBing, file = "top-ten/NegBings1e8.csv")
 
 ## Season 2
 ## Import Datasets
@@ -466,6 +543,55 @@ countNBs2e19 <- count(negativebings2e19, vars = "Episode")
 countNBs2e20 <- count(negativebings2e20, vars = "Episode")
 countNBs2e21 <- count(negativebings2e21, vars = "Episode")
 countNBs2e22 <- count(negativebings2e22, vars = "Episode")
+## Top 10 Positive words
+## afinn
+s2e1PosAfinn <- positiveafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e2PosAfinn <- positiveafinns2e2 %>% count(word) %>% arrange(desc(n))
+s2e3PosAfinn <- positiveafinns2e3 %>% count(word) %>% arrange(desc(n))
+s2e4PosAfinn <- positiveafinns2e4 %>% count(word) %>% arrange(desc(n))
+s2e5PosAfinn <- positiveafinns2e5 %>% count(word) %>% arrange(desc(n))
+s2e6PosAfinn <- positiveafinns2e6 %>% count(word) %>% arrange(desc(n))
+s2e7PosAfinn <- positiveafinns2e7 %>% count(word) %>% arrange(desc(n))
+s2e8PosAfinn <- positiveafinns2e8 %>% count(word) %>% arrange(desc(n))
+s2e9PosAfinn <- positiveafinns2e9 %>% count(word) %>% arrange(desc(n))
+s2e10PosAfinn <- positiveafinns2e10 %>% count(word) %>% arrange(desc(n))
+s2e11PosAfinn <- positiveafinns2e11 %>% count(word) %>% arrange(desc(n))
+s2e12PosAfinn <- positiveafinns2e12 %>% count(word) %>% arrange(desc(n))
+s2e13PosAfinn <- positiveafinns2e13 %>% count(word) %>% arrange(desc(n))
+s2e14PosAfinn <- positiveafinns2e14 %>% count(word) %>% arrange(desc(n))
+s2e15PosAfinn <- positiveafinns2e15 %>% count(word) %>% arrange(desc(n))
+s2e16PosAfinn <- positiveafinns2e16 %>% count(word) %>% arrange(desc(n))
+s2e17PosAfinn <- positiveafinns2e17 %>% count(word) %>% arrange(desc(n))
+s2e18PosAfinn <- positiveafinns2e18 %>% count(word) %>% arrange(desc(n))
+s2e19PosAfinn <- positiveafinns2e19 %>% count(word) %>% arrange(desc(n))
+s2e20PosAfinn <- positiveafinns2e20 %>% count(word) %>% arrange(desc(n))
+s2e21PosAfinn <- positiveafinns2e21 %>% count(word) %>% arrange(desc(n))
+s2e22PosAfinn <- positiveafinns2e22 %>% count(word) %>% arrange(desc(n))
+# Negatives
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+s2e1NegAfinn <- negativeafinns2e1 %>% count(word) %>% arrange(desc(n))
+
+
 
 ## Season 3
 ## Import Datasets
@@ -506,7 +632,7 @@ tibs3e15 <- tibble(Episode = s3e15[,1], Words = s3e15[,2])
 tibs3e16 <- tibble(Episode = s3e16[,1], Words = s3e16[,2])
 tibs3e17 <- tibble(Episode = s3e17[,1], Words = s3e17[,2])
 tibs3e18 <- tibble(Episode = s3e18[,1], Words = s3e18[,2])
-## Affin
+## Afinn
 afinns3e1 <- tibs3e1 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 afinns3e2 <- tibs3e2 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
 afinns3e3 <- tibs3e3 %>% unnest_tokens(word, Words) %>% inner_join(get_sentiments("afinn"))
@@ -723,14 +849,17 @@ season1 <- bind_rows(s1e1,s1e2,s1e3,s1e4,s1e5,s1e6,s1e7,s1e8)
 season2 <- bind_rows(s2e1,s2e2,s2e3,s2e4,s2e5,s2e6,s2e7,s2e8,s2e9,s2e10,s2e11,s2e12,s2e13,s2e14,s2e15,s2e16,s2e17,s2e18,s2e19,s2e20,s2e21,s2e22)
 season3 <- bind_rows(s3e1,s3e2,s3e3,s3e4,s3e5,s3e6,s3e7,s3e8,s3e9,s3e10,s3e11,s3e12,s3e13,s3e14,s3e15,s3e16,s3e17,s3e18)
 
+
+s2ap <- bind_rows(s2e1PosAfinn,s2e2PosAfinn,s2e3PosAfinn,s2e4PosAfinn,s2e5PosAfinn,s2e6PosAfinn,s2e7PosAfinn,s2e8PosAfinn,s2e9PosAfinn,s2e10PosAfinn,s2e11PosAfinn,s2e12PosAfinn,s2e13PosAfinn,s2e14PosAfinn,s2e15PosAfinn,s2e16PosAfinn,s2e17PosAfinn,s2e18PosAfinn,s2e19PosAfinn,s2e20PosAfinn,s2e21PosAfinn,s2e22PosAfinn)
+s2an <- bind_rows()
+
+write.csv(s2ap, file = "top-ten/season2/full.csv")
 ## Src = https://www.youtube.com/watch?v=BqNTcewq0k0
 #Word Cloud
 library(wordcloud)
 library(reshape2)
-cloudS1 <- afinns3e1 %>% with(afinns3e1, !(word =="word"))
-
 #Basic Wordcloud
-cloudS1T2 <- afinns1e1 %>% with(afinns1e1, !(word =="value")) %>% count(word) %>% with (wordcloud(word, n, max.words = 100))
-
+wordCloudS1 <- tibSeason1 %>% with(tibSeason1, !(word =="value")) %>% count(word) %>% with (wordcloud(word, n, max.words = 100))
 #Wordcloud group +-
 afinns1e1 %>% count(word, value, sort=TRUE) %>% acast(word ~ value, value.var = "n", fill = 0) %>% comparison.cloud(colors = c("#F8766D","#00BFC4"), max.words = 100)
+
