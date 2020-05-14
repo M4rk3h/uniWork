@@ -7,6 +7,7 @@ library(tidyverse)
 library(tidyr)
 library(stringr)
 library(readr)
+library(textdata)
 
 ## Season 2
 ## Import Datasets

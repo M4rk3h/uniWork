@@ -7,6 +7,7 @@ library(tidyverse)
 library(tidyr)
 library(stringr)
 library(readr)
+library(textdata)
 ## Season 1
 ## Import Datasets
 s1e1 <- read.csv("s1e1-mod.txt", sep=",", header=TRUE, stringsAsFactors = FALSE)
@@ -230,6 +231,7 @@ write.csv(s1e8Negbing, file = "top-ten/season1/Negbings1e8.csv")
 
 ## Season One has all episodes tokenized.
 seasonOne <- bind_rows(tokenS1E1,tokenS1E2,tokenS1E3,tokenS1E4,tokenS1E5,tokenS1E6,tokenS1E7,tokenS1E8)
+
 ## Positive Words, with value and count
 affinPosS1 <- seasonOne %>% inner_join(get_sentiments('afinn')) %>%
   count(word, value, sort = TRUE) %>% ungroup() %>% filter(value >= 1)
@@ -239,6 +241,7 @@ affinNegS1 <- seasonOne %>% inner_join(get_sentiments('afinn')) %>%
 ## Count the bing words.
 countBingS1 <- seasonOne %>% inner_join(get_sentiments('bing')) %>%
   count(word, sentiment, sort = TRUE) %>% ungroup()
+
 ## Save them both out
 write.csv(affinPosS1, file = "top-ten/#APS1.csv")
 write.csv(affinNegS1, file = "top-ten/#ANS1.csv")

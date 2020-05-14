@@ -1,3 +1,5 @@
+## Install Packages
+install.packages(c("dplyr", "tidytext", "tidyverse", "tidry", "stringr", "readr", "textdata"))
 ## Load Libraries
 library(dplyr)
 library(tidytext)
@@ -5,6 +7,7 @@ library(tidyverse)
 library(tidyr)
 library(stringr)
 library(readr)
+library(textdata)
 ## Season 1
 ## Import Datasets
 s1e1 <- read.csv("s1e1-mod.txt", sep=",", header=TRUE, stringsAsFactors = FALSE)
@@ -841,25 +844,3 @@ countNBs3e15 <- count(negativeBs3e15, vars = "Episode")
 countNBs3e16 <- count(negativeBs3e16, vars = "Episode")
 countNBs3e17 <- count(negativeBs3e17, vars = "Episode")
 countNBs3e18 <- count(negativeBs3e18, vars = "Episode")
-
-## Look up loughlin dictionary
-
-# Bing rows
-season1 <- bind_rows(s1e1,s1e2,s1e3,s1e4,s1e5,s1e6,s1e7,s1e8)
-season2 <- bind_rows(s2e1,s2e2,s2e3,s2e4,s2e5,s2e6,s2e7,s2e8,s2e9,s2e10,s2e11,s2e12,s2e13,s2e14,s2e15,s2e16,s2e17,s2e18,s2e19,s2e20,s2e21,s2e22)
-season3 <- bind_rows(s3e1,s3e2,s3e3,s3e4,s3e5,s3e6,s3e7,s3e8,s3e9,s3e10,s3e11,s3e12,s3e13,s3e14,s3e15,s3e16,s3e17,s3e18)
-
-
-s2ap <- bind_rows(s2e1PosAfinn,s2e2PosAfinn,s2e3PosAfinn,s2e4PosAfinn,s2e5PosAfinn,s2e6PosAfinn,s2e7PosAfinn,s2e8PosAfinn,s2e9PosAfinn,s2e10PosAfinn,s2e11PosAfinn,s2e12PosAfinn,s2e13PosAfinn,s2e14PosAfinn,s2e15PosAfinn,s2e16PosAfinn,s2e17PosAfinn,s2e18PosAfinn,s2e19PosAfinn,s2e20PosAfinn,s2e21PosAfinn,s2e22PosAfinn)
-s2an <- bind_rows()
-
-write.csv(s2ap, file = "top-ten/season2/full.csv")
-## Src = https://www.youtube.com/watch?v=BqNTcewq0k0
-#Word Cloud
-library(wordcloud)
-library(reshape2)
-#Basic Wordcloud
-wordCloudS1 <- tibSeason1 %>% with(tibSeason1, !(word =="value")) %>% count(word) %>% with (wordcloud(word, n, max.words = 100))
-#Wordcloud group +-
-afinns1e1 %>% count(word, value, sort=TRUE) %>% acast(word ~ value, value.var = "n", fill = 0) %>% comparison.cloud(colors = c("#F8766D","#00BFC4"), max.words = 100)
-
